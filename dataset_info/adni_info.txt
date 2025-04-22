@@ -1,0 +1,49 @@
+The Alzheimer’s Disease Neuroimaging Initiative (ADNI) is a multiphase, longitudinal, and multisite study aimed at identifying and validating biomarkers for early detection, tracking progression, and evaluating potential therapeutic interventions for Alzheimer’s disease (AD). Since its inception in 2004, ADNI has been a collaborative effort involving academic institutions, industry partners, and government agencies, with funding from the National Institute on Aging (NIA), the National Institutes of Health (NIH), and private pharmaceutical companies.
+The study recruits participants across the Alzheimer’s disease (AD) spectrum, including:
+•	Cognitively Normal (CN): Individuals without significant memory or cognitive impairment.
+•	Mild Cognitive Impairment (MCI): A transitional stage between normal aging and AD, characterized by memory decline but preserved daily function.
+•	Alzheimer’s Disease (AD): Patients with clinically diagnosed AD dementia, exhibiting progressive cognitive decline and functional impairment.
+
+ADNI has progressed through multiple phases to expand its scope and data collection. ADNI-1 (2004–2011) established standardized protocols for imaging, biomarkers, and clinical assessments. ADNI-GO (2010–2011) introduced an early mild cognitive impairment (EMCI) cohort to detect Alzheimer’s disease at an earlier stage. ADNI-2 (2011–2016) further enhanced data collection by incorporating advanced neuroimaging techniques and fluid biomarkers. ADNI-3 (2016–Present) continues to refine imaging methods, including 7T MRI and PET, while integrating digital cognitive testing and novel biomarker discovery.
+The ADNI dataset integrates multimodal biomarkers to study structural and functional brain changes, genetic predisposition, and fluid-based markers of neurodegeneration.  and contribute to a growing body of knowledge on AD. The dataset is continuously evolving, supporting new methodologies in artificial intelligence (AI), machine learning (ML), and biomarker discovery to advance early diagnosis and potential treatment strategies for AD.
+For this study, only baseline measures were used, providing a cross-sectional snapshot of demographic, clinical, cognitive, neuropsychiatric, biomarker, and neuroimaging data at the participant’s first evaluation. The selected baseline ADNI measures provide a multimodal dataset for studying Alzheimer’s disease diagnosis, cognitive decline, and neurodegeneration. These variables offer insights into demographic risk factors, neurocognitive function, psychiatric symptoms, biofluid markers, and structural/functional brain changes. The combination of clinical, biomarker, and neuroimaging features ensures a comprehensive evaluation of AD progression at baseline. The selected measures (variables) categorized by domain are provided in Supplementary Data 1, offering a structured overview of the variables used in this study. Additionally, descriptive statistics for each measure, including mean, standard deviation, and range, are presented in Supplementary Table 1, summarizing the distribution and characteristics of the dataset.
+Selected Measures by Domain
+1. Subject Information & Demographics
+•	PHASE, ID, SITEID, PTID, RID, VISCODE: Study phase, unique participant identifiers, site ID, and visit code.
+•	DIAGNOSIS, DIAGNOSIS_Str, DX: Baseline diagnosis categorizing participants as CN, MCI, or AD.
+•	AGE, PTEDUCAT, PTETHCAT, PTGENDER, PTMARRY, PTRACCAT: Key demographic variables including age, education, ethnicity, gender, marital status, and race, which help assess population diversity and risk factors.
+2. Physical Characteristics
+•	VSWEIGHT, VSHEIGHT: Participant’s weight (kg) and height (cm), used to assess general health status.
+•	VSBPSYS, VSBPDIA: Systolic and diastolic blood pressure (mmHg), relevant to vascular health and AD risk.
+•	VSPULSE, VSRESP: Pulse rate (bpm) and respiration rate, indicating cardiovascular and respiratory function.
+3. Cognitive Assessments
+•	MMSCORE, MOCA: Global cognition tests; MMSE and MoCA detect cognitive impairment.
+•	CLOCKSCOR, COPYSCOR: Clock Drawing and Copy Tests, evaluating visuospatial and executive function.
+•	AVLT (AVTOT1–AVTOT6, AVTOTB, AVDEL30MIN, AVDELTOT): Auditory Verbal Learning Test (AVLT) measuring memory recall and learning.
+•	Digit Span (DSPANFOR, DSPANFLTH, DSPANBAC, DSPANBLTH): Assesses working memory and attention.
+•	Category Fluency (CATANIMSC, CATVEGESC, CATANPERS, CATANINTR, CATVGPERS, CATVGINTR): Measures verbal fluency and executive control.
+•	TRAASCOR, TRABSCOR: Trail Making Test (Parts A & B) assessing processing speed and cognitive flexibility.
+•	BNTTOTAL, MINTTOTAL, ANART: Language and naming tests evaluating word retrieval and verbal fluency.
+•	DIGITSCOR: Digit Symbol Substitution Test (DSST), assessing processing speed and attention.
+•	RAVLT_immediate, RAVLT_learning, RAVLT_forgetting, RAVLT_perc_forgetting, LDELTOTAL: Verbal memory tests tracking learning and retention.
+•	ADAS11, ADAS13, ADASQ4: Alzheimer’s Disease Assessment Scale-Cognitive Subscale (ADAS-Cog), a disease severity measure.
+•	FAQ: Functional Activities Questionnaire, assessing daily living function.
+•	mPACCdigit, mPACCtrailsB: Composite cognitive measures integrating processing speed and executive function.
+4. Neuropsychiatric Evaluations
+•	NPIASEV–NPILSEV, NPISCORE: Neuropsychiatric Inventory Questionnaire (NPI-Q) assessing behavioral symptoms like depression, agitation, hallucinations, and sleep disturbances.
+•	CDGLOBAL, CDRSB: Clinical Dementia Rating (CDR) scale, evaluating dementia severity.
+•	GDTOTAL: Geriatric Depression Scale (GDS) screening for depressive symptoms.
+5. Biofluid Biomarkers
+•	ABETA40, ABETA42: CSF amyloid-beta 40 & 42 levels, indicating amyloid plaque deposition (lower Aβ42 is linked to AD).
+•	TAU, PTAU: Total tau and phosphorylated tau (p-tau) levels, reflecting neurodegeneration and tau pathology in AD.
+6. MRI and PET Features
+•	MRI Measures (Ventricles, Hippocampus, WholeBrain, Entorhinal, Fusiform, MidTemp, ICV):
+o	Ventricular expansion reflects brain atrophy.
+o	Hippocampal and entorhinal atrophy are early AD biomarkers.
+o	Whole brain, fusiform, and middle temporal lobe atrophy track neurodegeneration.
+o	Intracranial volume (ICV) is used for normalization.
+•	PET Measures (FDG, PIB, AV45, FBB):
+o	FDG-PET measures glucose metabolism, with reduced uptake in AD.
+o	PIB-PET, AV45-PET, FBB-PET detect amyloid plaque deposition, aiding in early AD diagnosis.
+•	Everyday Cognition (EcogPtMem–EcogPtTotal, EcogSPMem–EcogSPTotal):
+o	Self-reported and study partner-reported assessments of cognitive decline in memory, language, visuospatial ability, planning, and attention.

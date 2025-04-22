@@ -1,0 +1,13 @@
+This dataset is derived from MIMIC-IV, a large, freely-available database comprising deidentified health-related data from patients who were admitted to the critical care units of the Beth Israel Deaconess Medical Center between 2008 and 2019.
+
+The objective of this dataset is to predict patient mortality based on various clinical measurements and vital signs collected during ICU stays. Most measurements represent median values aggregated over the patient's ICU stay, including:
+
+- Vital Signs: Heart rate (HRbpm), arterial blood pressure (ABPmmmHg), central venous pressure (CVPmmHg), respiratory rate (RRinspmin), temperature, and oxygen saturation (SpO2)
+- Blood Gas Values: Arterial PO2, PCO2, pH, base excess, and the PaO2/FiO2 ratio
+- Laboratory Results: Complete blood count (hemoglobin, hematocrit, WBC, platelets), comprehensive metabolic panel (sodium, potassium, chloride, BUN, creatinine), liver function tests (AST, bilirubin), and cardiac markers (CK-CPK, BNP)
+- Neurological Status: Glasgow Coma Scale (GCS) components (eye opening, verbal response, motor response)
+- Ventilator Parameters: FiO2, PEEP levels, and respiratory compliance
+
+The dataset also includes important patient characteristics and comorbidities such as age, gender, BMI, diabetes, hypertension, obesity, and heart failure. Service-related features (NMED, NSURG, TSURG, etc.) indicate the type of care unit. Key outcome variables include organ dysfunction, Sepsis-3 criteria met, and mortality flag.
+
+Each row represents a unique patient stay in the ICU, with features carefully selected to represent key clinical indicators relevant to critical care outcomes. The target variable 'mortality_flag' indicates whether the patient survived their ICU stay.
