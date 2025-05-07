@@ -1,36 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="node" attr.name="entity_type" attr.type="string"/>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="edge" attr.name="relationship" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_type" attr.type="string"/>
 <graph edgedefault="directed"><node id="mortality_flag">
   <data key="d0">TARGET_NODE</data>
 </node>
-<node id="Cardiovascular System">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Respiratory System">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Renal Function">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Hematological System">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Liver Function">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Neurological Status">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Inflammatory Response">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Fluid and Electrolyte Balance">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Infection and Sepsis">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Critical Care Interventions">
+<node id="Cardiovascular Function">
   <data key="d0">INTERMEDIATE_NODE</data>
 </node>
 <node id="HRbpm">
@@ -45,46 +19,40 @@
 <node id="NBPsmmHg">
   <data key="d0">INPUT_NODE</data>
 </node>
+<node id="NBPdmmHg">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="BrainNatiureticPeptideBNP">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="CKCPK">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Epinephrinemg_avg">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Dobutaminemg_avg">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Norepinephrinemg_avg">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="heart_failure">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Respiratory Function">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
 <node id="RRinspmin">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="PO2ArterialmmHg">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="Hemoglobingdl">
-  <data key="d0">INPUT_NODE</data>
-</node>
 <node id="PCO2ArterialmmHg">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="SpO2">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Hematocritserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="ArterialBaseExcess">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="BrainNatiureticPeptideBNP">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Sepsis3">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="gender">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="diabetes">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="hypertension">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="heart_failure">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="BMI">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="PHArterial">
@@ -96,19 +64,37 @@
 <node id="TotalPEEPLevelcmH2O">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="LacticAcid">
+<node id="PCO2VenousmmHg">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="CompliancecmH2OLseconds">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="PaO2_FiO2">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="organ_dysfunction">
-  <data key="d0">INPUT_NODE</data>
+<node id="Renal Function">
+  <data key="d0">INTERMEDIATE_NODE</data>
 </node>
 <node id="Creatinineserum">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="BUN">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Sodiumserum">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Potassiumserum">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Chlorideserum">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Calciumnon-ionized">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="IonizedCalcium">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="BUNAlbumin">
@@ -120,44 +106,56 @@
 <node id="eGFR">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="WBC">
+<node id="FoleymL_sum">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="PlateletCount">
+<node id="Liver Function">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="AST">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="TotalBilirubin">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="Calciumnon-ionized">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Sodiumserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Potassiumserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="HCO3serum">
-  <data key="d0">INPUT_NODE</data>
-</node>
 <node id="Albumin">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="GCS">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="AST">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTT">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="INR">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="Chlorideserum">
+<node id="PTT">
   <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Inflammatory Response">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="WBC">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="TemperatureFF">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="ArterialBaseExcess">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="LacticAcid">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="CReactiveProteinCRP">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PlateletCount">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Sepsis3">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="organ_dysfunction">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Neurological Status">
+  <data key="d0">INTERMEDIATE_NODE</data>
 </node>
 <node id="EyeOpening">
   <data key="d0">INPUT_NODE</data>
@@ -168,55 +166,67 @@
 <node id="MotorResponse">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="TemperatureFF">
+<node id="GCS">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Metabolic and Acid-Base Balance">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="Aniongap">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="HCO3serum">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="Glucoseserum">
   <data key="d0">INPUT_NODE</data>
 </node>
+<node id="Coagulation System">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="Hemoglobingdl">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Hematocritserum">
+  <data key="d0">INPUT_NODE</data>
+</node>
 <node id="LDH">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="CReactiveProteinCRP">
-  <data key="d0">INPUT_NODE</data>
+<node id="Infection and Sepsis Response">
+  <data key="d0">INTERMEDIATE_NODE</data>
 </node>
-<node id="IonizedCalcium">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="NBPdmmHg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Norepinephrinemg_avg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Epinephrinemg_avg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Dobutaminemg_avg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PCO2VenousmmHg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Aniongap">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CompliancecmH2OLseconds">
-  <data key="d0">INPUT_NODE</data>
+<node id="Mechanical Ventilation Impact">
+  <data key="d0">INTERMEDIATE_NODE</data>
 </node>
 <node id="anchor_age">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="CKCPK">
+<node id="gender">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="FoleymL_sum">
+<node id="diabetes">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="hypertension">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="obesity">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="BMI">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="NMED">
   <data key="d0">INPUT_NODE</data>
 </node>
+<node id="NSURG">
+  <data key="d0">INPUT_NODE</data>
+</node>
 <node id="TSURG">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="CMED">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="VSURG">
@@ -225,204 +235,475 @@
 <node id="TRAUM">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="obesity">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="NSURG">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CMED">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<edge source="Cardiovascular System" target="mortality_flag"/>
-<edge source="Respiratory System" target="mortality_flag"/>
-<edge source="Renal Function" target="mortality_flag"/>
-<edge source="Hematological System" target="mortality_flag"/>
-<edge source="Liver Function" target="mortality_flag"/>
-<edge source="Neurological Status" target="mortality_flag"/>
-<edge source="Inflammatory Response" target="mortality_flag"/>
-<edge source="Fluid and Electrolyte Balance" target="mortality_flag"/>
-<edge source="Infection and Sepsis" target="mortality_flag"/>
-<edge source="Critical Care Interventions" target="mortality_flag"/>
-<edge source="HRbpm" target="Cardiovascular System"/>
-<edge source="HRbpm" target="Infection and Sepsis"/>
-<edge source="HRbpm" target="Critical Care Interventions"/>
-<edge source="ABPmmmHg" target="Cardiovascular System"/>
-<edge source="ABPmmmHg" target="Critical Care Interventions"/>
-<edge source="CVPmmHg" target="Cardiovascular System"/>
-<edge source="CVPmmHg" target="Fluid and Electrolyte Balance"/>
-<edge source="CVPmmHg" target="Critical Care Interventions"/>
-<edge source="NBPsmmHg" target="Cardiovascular System"/>
-<edge source="NBPsmmHg" target="Critical Care Interventions"/>
-<edge source="RRinspmin" target="Cardiovascular System"/>
-<edge source="RRinspmin" target="Respiratory System"/>
-<edge source="RRinspmin" target="Critical Care Interventions"/>
-<edge source="PO2ArterialmmHg" target="Cardiovascular System"/>
-<edge source="PO2ArterialmmHg" target="Respiratory System"/>
-<edge source="PO2ArterialmmHg" target="Critical Care Interventions"/>
-<edge source="Hemoglobingdl" target="Cardiovascular System"/>
-<edge source="Hemoglobingdl" target="Hematological System"/>
-<edge source="Hemoglobingdl" target="Liver Function"/>
-<edge source="Hemoglobingdl" target="Fluid and Electrolyte Balance"/>
-<edge source="Hemoglobingdl" target="Critical Care Interventions"/>
-<edge source="PCO2ArterialmmHg" target="Cardiovascular System"/>
-<edge source="PCO2ArterialmmHg" target="Critical Care Interventions"/>
-<edge source="SpO2" target="Cardiovascular System"/>
-<edge source="SpO2" target="Respiratory System"/>
-<edge source="SpO2" target="Critical Care Interventions"/>
-<edge source="Hematocritserum" target="Cardiovascular System"/>
-<edge source="Hematocritserum" target="Hematological System"/>
-<edge source="Hematocritserum" target="Liver Function"/>
-<edge source="Hematocritserum" target="Inflammatory Response"/>
-<edge source="Hematocritserum" target="Fluid and Electrolyte Balance"/>
-<edge source="ArterialBaseExcess" target="Cardiovascular System"/>
-<edge source="ArterialBaseExcess" target="Respiratory System"/>
-<edge source="ArterialBaseExcess" target="Hematological System"/>
-<edge source="ArterialBaseExcess" target="Fluid and Electrolyte Balance"/>
-<edge source="ArterialBaseExcess" target="Infection and Sepsis"/>
-<edge source="ArterialBaseExcess" target="Critical Care Interventions"/>
-<edge source="BrainNatiureticPeptideBNP" target="Cardiovascular System"/>
-<edge source="Sepsis3" target="Cardiovascular System"/>
-<edge source="Sepsis3" target="Respiratory System"/>
-<edge source="Sepsis3" target="Hematological System"/>
-<edge source="Sepsis3" target="Liver Function"/>
-<edge source="Sepsis3" target="Infection and Sepsis"/>
-<edge source="Sepsis3" target="Critical Care Interventions"/>
-<edge source="gender" target="Cardiovascular System"/>
-<edge source="diabetes" target="Cardiovascular System"/>
-<edge source="hypertension" target="Cardiovascular System"/>
-<edge source="heart_failure" target="Cardiovascular System"/>
-<edge source="heart_failure" target="Infection and Sepsis"/>
-<edge source="BMI" target="Cardiovascular System"/>
-<edge source="PHArterial" target="Respiratory System"/>
-<edge source="PHArterial" target="Liver Function"/>
-<edge source="PHArterial" target="Neurological Status"/>
-<edge source="FiO2" target="Respiratory System"/>
-<edge source="TotalPEEPLevelcmH2O" target="Respiratory System"/>
-<edge source="TotalPEEPLevelcmH2O" target="Hematological System"/>
-<edge source="TotalPEEPLevelcmH2O" target="Critical Care Interventions"/>
-<edge source="LacticAcid" target="Respiratory System"/>
-<edge source="LacticAcid" target="Liver Function"/>
-<edge source="LacticAcid" target="Inflammatory Response"/>
-<edge source="LacticAcid" target="Fluid and Electrolyte Balance"/>
-<edge source="LacticAcid" target="Infection and Sepsis"/>
-<edge source="PaO2_FiO2" target="Respiratory System"/>
-<edge source="PaO2_FiO2" target="Neurological Status"/>
-<edge source="PaO2_FiO2" target="Infection and Sepsis"/>
-<edge source="PaO2_FiO2" target="Critical Care Interventions"/>
-<edge source="organ_dysfunction" target="Respiratory System"/>
-<edge source="organ_dysfunction" target="Renal Function"/>
-<edge source="organ_dysfunction" target="Hematological System"/>
-<edge source="organ_dysfunction" target="Liver Function"/>
-<edge source="organ_dysfunction" target="Neurological Status"/>
-<edge source="organ_dysfunction" target="Inflammatory Response"/>
-<edge source="organ_dysfunction" target="Fluid and Electrolyte Balance"/>
-<edge source="organ_dysfunction" target="Infection and Sepsis"/>
-<edge source="organ_dysfunction" target="Critical Care Interventions"/>
-<edge source="Creatinineserum" target="Renal Function"/>
-<edge source="Creatinineserum" target="Liver Function"/>
-<edge source="Creatinineserum" target="Inflammatory Response"/>
-<edge source="Creatinineserum" target="Fluid and Electrolyte Balance"/>
-<edge source="Creatinineserum" target="Infection and Sepsis"/>
-<edge source="BUN" target="Renal Function"/>
-<edge source="BUN" target="Hematological System"/>
-<edge source="BUN" target="Liver Function"/>
-<edge source="BUN" target="Inflammatory Response"/>
-<edge source="BUN" target="Fluid and Electrolyte Balance"/>
-<edge source="BUN" target="Infection and Sepsis"/>
-<edge source="BUNAlbumin" target="Renal Function"/>
-<edge source="BUNAlbumin" target="Fluid and Electrolyte Balance"/>
-<edge source="BUNCreatinine" target="Renal Function"/>
-<edge source="BUNCreatinine" target="Fluid and Electrolyte Balance"/>
-<edge source="eGFR" target="Renal Function"/>
-<edge source="eGFR" target="Hematological System"/>
-<edge source="eGFR" target="Liver Function"/>
-<edge source="eGFR" target="Inflammatory Response"/>
-<edge source="eGFR" target="Infection and Sepsis"/>
-<edge source="WBC" target="Hematological System"/>
-<edge source="WBC" target="Liver Function"/>
-<edge source="WBC" target="Inflammatory Response"/>
-<edge source="WBC" target="Infection and Sepsis"/>
-<edge source="PlateletCount" target="Hematological System"/>
-<edge source="PlateletCount" target="Inflammatory Response"/>
-<edge source="TotalBilirubin" target="Hematological System"/>
-<edge source="TotalBilirubin" target="Liver Function"/>
-<edge source="TotalBilirubin" target="Inflammatory Response"/>
-<edge source="TotalBilirubin" target="Fluid and Electrolyte Balance"/>
-<edge source="TotalBilirubin" target="Infection and Sepsis"/>
-<edge source="Calciumnon-ionized" target="Hematological System"/>
-<edge source="Calciumnon-ionized" target="Fluid and Electrolyte Balance"/>
-<edge source="Sodiumserum" target="Hematological System"/>
-<edge source="Sodiumserum" target="Liver Function"/>
-<edge source="Sodiumserum" target="Inflammatory Response"/>
-<edge source="Sodiumserum" target="Fluid and Electrolyte Balance"/>
-<edge source="Potassiumserum" target="Hematological System"/>
-<edge source="Potassiumserum" target="Liver Function"/>
-<edge source="Potassiumserum" target="Fluid and Electrolyte Balance"/>
-<edge source="HCO3serum" target="Hematological System"/>
-<edge source="HCO3serum" target="Inflammatory Response"/>
-<edge source="HCO3serum" target="Fluid and Electrolyte Balance"/>
-<edge source="Albumin" target="Hematological System"/>
-<edge source="Albumin" target="Liver Function"/>
-<edge source="Albumin" target="Inflammatory Response"/>
-<edge source="Albumin" target="Fluid and Electrolyte Balance"/>
-<edge source="GCS" target="Hematological System"/>
-<edge source="GCS" target="Liver Function"/>
-<edge source="GCS" target="Neurological Status"/>
-<edge source="GCS" target="Critical Care Interventions"/>
-<edge source="AST" target="Liver Function"/>
-<edge source="AST" target="Inflammatory Response"/>
-<edge source="PTT" target="Liver Function"/>
-<edge source="INR" target="Liver Function"/>
-<edge source="Chlorideserum" target="Liver Function"/>
-<edge source="Chlorideserum" target="Inflammatory Response"/>
-<edge source="Chlorideserum" target="Fluid and Electrolyte Balance"/>
-<edge source="EyeOpening" target="Neurological Status"/>
-<edge source="VerbalResponse" target="Neurological Status"/>
-<edge source="MotorResponse" target="Neurological Status"/>
-<edge source="TemperatureFF" target="Neurological Status"/>
-<edge source="TemperatureFF" target="Infection and Sepsis"/>
-<edge source="TemperatureFF" target="Critical Care Interventions"/>
-<edge source="Glucoseserum" target="Inflammatory Response"/>
-<edge source="Glucoseserum" target="Fluid and Electrolyte Balance"/>
-<edge source="LDH" target="Inflammatory Response"/>
-<edge source="CReactiveProteinCRP" target="Inflammatory Response"/>
-<edge source="CReactiveProteinCRP" target="Infection and Sepsis"/>
-<edge source="IonizedCalcium" target="Fluid and Electrolyte Balance"/>
-<edge source="NBPdmmHg" target="Critical Care Interventions"/>
-<edge source="Norepinephrinemg_avg" target="Critical Care Interventions"/>
-<edge source="Epinephrinemg_avg" target="Critical Care Interventions"/>
-<edge source="Dobutaminemg_avg" target="Critical Care Interventions"/>
-<edge source="PCO2VenousmmHg" target="Cardiovascular System"/>
-<edge source="PCO2VenousmmHg" target="Respiratory System"/>
-<edge source="Aniongap" target="Cardiovascular System"/>
-<edge source="Aniongap" target="Renal Function"/>
-<edge source="Aniongap" target="Hematological System"/>
-<edge source="Aniongap" target="Fluid and Electrolyte Balance"/>
-<edge source="CompliancecmH2OLseconds" target="Cardiovascular System"/>
-<edge source="CompliancecmH2OLseconds" target="Respiratory System"/>
-<edge source="anchor_age" target="Cardiovascular System"/>
-<edge source="anchor_age" target="Neurological Status"/>
-<edge source="CKCPK" target="Renal Function"/>
-<edge source="CKCPK" target="Hematological System"/>
-<edge source="CKCPK" target="Inflammatory Response"/>
-<edge source="FoleymL_sum" target="Renal Function"/>
-<edge source="FoleymL_sum" target="Liver Function"/>
-<edge source="FoleymL_sum" target="Fluid and Electrolyte Balance"/>
-<edge source="FoleymL_sum" target="Infection and Sepsis"/>
-<edge source="FoleymL_sum" target="Critical Care Interventions"/>
-<edge source="NMED" target="Renal Function"/>
-<edge source="NMED" target="Liver Function"/>
-<edge source="NMED" target="Inflammatory Response"/>
-<edge source="NMED" target="Infection and Sepsis"/>
-<edge source="NMED" target="Critical Care Interventions"/>
-<edge source="TSURG" target="Inflammatory Response"/>
-<edge source="TSURG" target="Critical Care Interventions"/>
-<edge source="VSURG" target="Inflammatory Response"/>
-<edge source="VSURG" target="Critical Care Interventions"/>
-<edge source="TRAUM" target="Inflammatory Response"/>
-<edge source="TRAUM" target="Critical Care Interventions"/>
-<edge source="obesity" target="Infection and Sepsis"/>
-<edge source="NSURG" target="Critical Care Interventions"/>
-<edge source="CMED" target="Critical Care Interventions"/>
+<edge source="Cardiovascular Function" target="mortality_flag">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="HRbpm" target="Cardiovascular Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="HRbpm" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="HRbpm" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="HRbpm" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ABPmmmHg" target="Cardiovascular Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ABPmmmHg" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ABPmmmHg" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ABPmmmHg" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CVPmmHg" target="Cardiovascular Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CVPmmHg" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CVPmmHg" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CVPmmHg" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NBPsmmHg" target="Cardiovascular Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NBPdmmHg" target="Cardiovascular Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BrainNatiureticPeptideBNP" target="Cardiovascular Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BrainNatiureticPeptideBNP" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CKCPK" target="Cardiovascular Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Epinephrinemg_avg" target="Cardiovascular Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Dobutaminemg_avg" target="Cardiovascular Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Norepinephrinemg_avg" target="Cardiovascular Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="heart_failure" target="Cardiovascular Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="heart_failure" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Respiratory Function" target="mortality_flag">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="RRinspmin" target="Respiratory Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="RRinspmin" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="RRinspmin" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="RRinspmin" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PO2ArterialmmHg" target="Respiratory Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PO2ArterialmmHg" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PO2ArterialmmHg" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PO2ArterialmmHg" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="Respiratory Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="SpO2" target="Respiratory Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="SpO2" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="SpO2" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="SpO2" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PHArterial" target="Respiratory Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PHArterial" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PHArterial" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PHArterial" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PHArterial" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="FiO2" target="Respiratory Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="FiO2" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="FiO2" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="Respiratory Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PCO2VenousmmHg" target="Respiratory Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="Respiratory Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PaO2_FiO2" target="Respiratory Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PaO2_FiO2" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PaO2_FiO2" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Renal Function" target="mortality_flag">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Creatinineserum" target="Renal Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Creatinineserum" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Creatinineserum" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BUN" target="Renal Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BUN" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BUN" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BUN" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Sodiumserum" target="Renal Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Sodiumserum" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Sodiumserum" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Potassiumserum" target="Renal Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Potassiumserum" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Potassiumserum" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Chlorideserum" target="Renal Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Chlorideserum" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Calciumnon-ionized" target="Renal Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Calciumnon-ionized" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Calciumnon-ionized" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="IonizedCalcium" target="Renal Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="IonizedCalcium" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="IonizedCalcium" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BUNAlbumin" target="Renal Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BUNAlbumin" target="Liver Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BUNAlbumin" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BUNAlbumin" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BUNCreatinine" target="Renal Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BUNCreatinine" target="Liver Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BUNCreatinine" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="eGFR" target="Renal Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="FoleymL_sum" target="Renal Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Liver Function" target="mortality_flag">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AST" target="Liver Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AST" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AST" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TotalBilirubin" target="Liver Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TotalBilirubin" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TotalBilirubin" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Albumin" target="Liver Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Albumin" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="INR" target="Liver Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="INR" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="INR" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTT" target="Liver Function">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTT" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTT" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Inflammatory Response" target="mortality_flag">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="WBC" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="WBC" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="WBC" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TemperatureFF" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TemperatureFF" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ArterialBaseExcess" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ArterialBaseExcess" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ArterialBaseExcess" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ArterialBaseExcess" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="LacticAcid" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="LacticAcid" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="LacticAcid" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="LacticAcid" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CReactiveProteinCRP" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CReactiveProteinCRP" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CReactiveProteinCRP" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PlateletCount" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PlateletCount" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PlateletCount" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Sepsis3" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Sepsis3" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Sepsis3" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="organ_dysfunction" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="organ_dysfunction" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="organ_dysfunction" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Neurological Status" target="mortality_flag">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EyeOpening" target="Neurological Status">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="VerbalResponse" target="Neurological Status">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="MotorResponse" target="Neurological Status">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="GCS" target="Neurological Status">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Metabolic and Acid-Base Balance" target="mortality_flag">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Aniongap" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Aniongap" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="HCO3serum" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Glucoseserum" target="Metabolic and Acid-Base Balance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Coagulation System" target="mortality_flag">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Hemoglobingdl" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Hematocritserum" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="LDH" target="Coagulation System">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Infection and Sepsis Response" target="mortality_flag">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Mechanical Ventilation Impact" target="mortality_flag">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="anchor_age" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="gender" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="diabetes" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="hypertension" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="obesity" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BMI" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NMED" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NSURG" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TSURG" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CMED" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="VSURG" target="Mechanical Ventilation Impact">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TRAUM" target="Inflammatory Response">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TRAUM" target="Infection and Sepsis Response">
+  <data key="d1">evidence</data>
+</edge>
 </graph></graphml>

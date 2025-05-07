@@ -1,0 +1,48 @@
+{
+    "session_id": "missing-features-mimic",
+    "user_id": null,
+    "memory": null,
+    "session_data": {
+        "session_state": {
+            "missing_features_mimic": [
+                {
+                    "source": "NMED",
+                    "target": "Infection and Sepsis Response"
+                },
+                {
+                    "source": "NSURG",
+                    "target": "Mechanical Ventilation Impact"
+                },
+                {
+                    "source": "TSURG",
+                    "target": "Mechanical Ventilation Impact"
+                },
+                {
+                    "source": "CMED",
+                    "target": "Infection and Sepsis Response"
+                },
+                {
+                    "source": "VSURG",
+                    "target": "Mechanical Ventilation Impact"
+                },
+                {
+                    "source": "TRAUM",
+                    "target": "Inflammatory Response"
+                },
+                {
+                    "source": "TRAUM",
+                    "target": "Infection and Sepsis Response"
+                }
+            ]
+        }
+    },
+    "extra_data": null,
+    "created_at": null,
+    "updated_at": 1746563625,
+    "workflow_id": "8806a41d-03a4-4e18-9767-42a9f7843802",
+    "workflow_data": {
+        "name": "MissingFeatureAssignmentWorkflow",
+        "workflow_id": "8806a41d-03a4-4e18-9767-42a9f7843802",
+        "description": "Assigns remaining features to one or more intermediate nodes and caches the result."
+    }
+}

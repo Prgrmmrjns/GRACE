@@ -14,10 +14,25 @@ Welcome to **GRACE**! This project leverages knowledge graphs and large language
      - `DATASET_PATH`: Path to your dataset CSV file
      - `TARGET_COL`: Name of the target column
      - `PREDICTION_TASK`: Name of the prediction task (e.g., 'Mortality Risk', 'Diagnosis')
+     - `LLM_PROVIDER`: Determine whether to use OPENAI LLMs or Ollama
+     - `MODEL`: Set the model that performs graph creation and interpretation
 2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
+
+3. **(Optionally) Set up vector database**
+```docker run -d \
+  -e POSTGRES_DB=ai \
+  -e POSTGRES_USER=ai \
+  -e POSTGRES_PASSWORD=ai \
+  -e PGDATA=/var/lib/postgresql/data/pgdata \
+  -v pgvolume:/var/lib/postgresql/data \
+  -p 5532:5432 \
+  --name pgvector \
+  agnohq/pgvector:16
+  ```
+
 3. **Run the main script:**
    ```bash
    python main.py
@@ -33,7 +48,7 @@ Welcome to **GRACE**! This project leverages knowledge graphs and large language
 - `visualizations.py` — Image generation and plotting
 - `train.py` — Dimensionality reduction logic
 - `interpretability.py` — Explainability logic (now includes LLM models)
-- `build_kg.py` — Knowledge graph generation from scientific articles
+- `create_kg.py` — Knowledge graph generation from scientific articles
 - `create_graph_structure.py` — Validated graph structure creation
 - `graph_utils.py` — Graph structure utilities
 - `create_prompt.py` — Custom prompt engineering for Lightrag
@@ -43,13 +58,9 @@ Welcome to **GRACE**! This project leverages knowledge graphs and large language
 
 - [ ] 🔗 **Improved graph creation:** Allow input nodes to connect to multiple intermediate nodes (e.g., CRP → cardiovascular & respiratory systems)
 - [ ] ✂️ **Revise pruning method:** Prevent removal of predictive features, especially for the MIMIC dataset
-- [ ] 🤖 **Support more LLM providers:** Add Ollama and other model providers (currently only OpenAI is supported)
+- [x] 🤖 **Support more LLM providers:** Both OpenAI and Ollama are now supported for knowledge graph creation and explainability tasks.
 - [ ] 🩺 **Refined interpretability:** Make explanations more structured and useful for clinicians, researchers, and patients
 
 ## 💡 Get Involved
 
 Contributions, suggestions, and feedback are welcome! Feel free to open issues or submit pull requests.
-
----
-
-Made with ❤️ for explainable AI in healthcare.

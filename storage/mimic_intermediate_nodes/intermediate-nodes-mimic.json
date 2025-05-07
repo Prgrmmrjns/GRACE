@@ -1,0 +1,30 @@
+{
+    "session_id": "intermediate-nodes-mimic",
+    "user_id": null,
+    "memory": null,
+    "session_data": {
+        "session_state": {
+            "intermediate_nodes_mimic": [
+                "Cardiovascular Function",
+                "Respiratory Function",
+                "Renal Function",
+                "Liver Function",
+                "Inflammatory Response",
+                "Neurological Status",
+                "Metabolic and Acid-Base Balance",
+                "Coagulation System",
+                "Infection and Sepsis Response",
+                "Mechanical Ventilation Impact"
+            ]
+        }
+    },
+    "extra_data": null,
+    "created_at": null,
+    "updated_at": 1746563598,
+    "workflow_id": "73083188-d4c0-408e-b13b-b7412311d919",
+    "workflow_data": {
+        "name": "IntermediateNodeFinderWorkflow",
+        "workflow_id": "73083188-d4c0-408e-b13b-b7412311d919",
+        "description": "Finds and caches intermediate nodes for a dataset."
+    }
+}

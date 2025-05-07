@@ -1,8 +1,8 @@
 from typing import List, Dict
 from pydantic import BaseModel, Field
 from enum import Enum
-import copy
 import networkx as nx
+import lightgbm as lgb
 
 class Removed_Nodes_List(BaseModel):
     removed_nodes: List[str] = Field(description="List of removed nodes")
@@ -28,6 +28,11 @@ class Node(BaseModel):
     name: str = Field(description="Node name")
     node_type: NodeType = Field(description="Type of node (INPUT_NODE, INTERMEDIATE_NODE, TARGET_NODE, or ISOLATED_NODE)")
     edges: List[Edge] = Field(description="List of edges connecting this node to others", default_factory=list)
+    context: str = Field(default="", description="Node-level summary for context")
+
+class KnowledgeGraph(BaseModel):
+    nodes: List[Node] = Field(description="List of all nodes in the graph")
+    isolated_nodes: List[Node] = Field(description="List of isolated nodes", default_factory=list)
 
 class IntermediateNodes(BaseModel):
     nodes: List[str] = Field(..., description="List of intermediate node names")
@@ -35,12 +40,10 @@ class IntermediateNodes(BaseModel):
 class SelectedFeatures(BaseModel):
     features: List[str] = Field(..., description="List of selected features")
 
-class MissingFeatures(BaseModel):
-    assignments: Dict[str, List[str]] = Field(..., description="Dictionary mapping intermediate nodes to their features")
-
-class KnowledgeGraph(BaseModel):
-    nodes: List[Node] = Field(description="List of all nodes in the graph")
-    isolated_nodes: List[Node] = Field(description="List of isolated nodes", default_factory=list)
+# Response model for missing feature assignments as a list of edges
+class MissingFeatureAssignments(BaseModel):
+    """Response model for assigning missing features to intermediate nodes as a list of edges."""
+    edges: List[Edge] = Field(..., description="List of edges from feature (source) to intermediate node (target)")
 
 def get_active_nodes(graph: KnowledgeGraph, removed_nodes: set) -> List[str]:
     """Get list of active input nodes from the graph excluding removed nodes"""
@@ -115,11 +118,12 @@ def nx_to_knowledgegraph(G_nx: nx.Graph) -> KnowledgeGraph:
                 target=tgt.strip('"'),
             ))
         
+        
         # Create the node
         new_node = Node(
             name=node.strip('"'),
             node_type=node_type,
-            edges=edges_for_node
+            edges=edges_for_node,
         )
         
         # If it's marked as isolated in the graphml, add to isolated_nodes

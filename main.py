@@ -1,75 +1,58 @@
 from sklearn.model_selection import train_test_split
-import pandas as pd
-import numpy as np
 import networkx as nx
-import lightgbm as lgb
-from graph_utils import implement_graph_changes, nx_to_knowledgegraph
-from train import optimize_intermediate_nodes, analyze_node_relationships, evaluate_final_model
-from create_kg import build_kg
-from params import DATASET_PATH, DATASET_NAME, TARGET_COL, MODEL, METRIC, VERBOSE, LOAD_KG
+import pandas as pd
+from create_kg import run_kg_workflows
+from graph_utils import nx_to_knowledgegraph, NodeType
+from train import graph_based_optimization
+from visualizations import visualize_knowledge_graph
+from params import DATASET_PATH, DATASET_NAME, TARGET_COL, METRIC, LOAD_KG, VISUALIZE_KG, get_base_model, get_callbacks
 
 def main():
-    
-    # Run the refinement process
     df = pd.read_csv(DATASET_PATH, encoding='utf-8')
     X = df.drop(columns=[TARGET_COL])
     y = df[TARGET_COL]
-    unique_classes = len(np.unique(y))
-    
-    # Set up model parameters
-    model_params = {
-        'objective': 'binary' if unique_classes == 2 else 'multiclass',
-        'learning_rate': 0.1,
-        'n_estimators': 1000,
-        'min_split_gain': 0,
-        'random_state': 42,
-        'num_threads': 6,
-        'data_sample_strategy': 'goss',
-        'use_quantized_grad': True,
-        'verbosity': -1
-    }
-    
-    model = lgb.LGBMClassifier(**model_params)
-    callbacks = [lgb.early_stopping(stopping_rounds=5, verbose=False)]
-    
-    # Create train/val/test splits
+    base_model = get_base_model()
+    callbacks = get_callbacks()
     X_temp, X_test, y_temp, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
     X_train, X_val, y_train, y_val = train_test_split(X_temp, y_temp, test_size=0.1, random_state=42)
-
-    # Load initial graph structure
     if LOAD_KG:
         graph_path = f"kg/{DATASET_NAME}.graphml"
         raw_graph_nx = nx.read_graphml(graph_path)
     else:
-        raw_graph_nx = build_kg(DATASET_PATH, DATASET_NAME, TARGET_COL, MODEL, valid_features=list(X.columns))
+        raw_graph_nx = run_kg_workflows()
+    knowledge_graph = nx_to_knowledgegraph(raw_graph_nx)
+    if VISUALIZE_KG:
+        # visualize initial KG
+        initial_node_groups_for_viz = {}
+        for node in knowledge_graph.nodes:
+            if node.node_type == NodeType.INTERMEDIATE:
+                initial_node_groups_for_viz[node.name] = [e.source for e in node.edges if any(n.name == e.source and n.node_type==NodeType.INPUT for n in knowledge_graph.nodes)]
+        visualize_knowledge_graph(raw_graph_nx, DATASET_NAME + "_initial", initial_node_groups_for_viz, initial_node_groups_for_viz)
 
-    # Convert to Pydantic KnowledgeGraph model for optimization functions
-    current_graph = nx_to_knowledgegraph(raw_graph_nx)
-    removed_nodes = set()
-        
-    # First round optimization - Select best features for each intermediate node
-    X_train_intermediate, X_val_intermediate, X_test_intermediate, features_to_remove, intermediate_to_selected_features, intermediate_models = optimize_intermediate_nodes(
-        current_graph, removed_nodes, X_train, y_train, X_val, y_val, X_test, model, callbacks, METRIC, VERBOSE
+    # This node_groups is the initial configuration for the optimization process
+    node_groups_pre_optimization = {}
+    for node in knowledge_graph.nodes:
+        if node.node_type == NodeType.INPUT:
+            for edge in node.edges:
+                target_node = next((n for n in knowledge_graph.nodes if n.name == edge.target), None)
+                if target_node and target_node.node_type == NodeType.INTERMEDIATE:
+                    if edge.target not in node_groups_pre_optimization:
+                        node_groups_pre_optimization[edge.target] = []
+                    node_groups_pre_optimization[edge.target].append(node.name)
+
+    optimized_node_groups = graph_based_optimization(
+        X_train, y_train, X_val, y_val, X_test, y_test, 
+        node_groups_pre_optimization, 
+        base_model, METRIC, callbacks,
+        raw_graph_nx,
+        DATASET_NAME
     )
 
-    # Update model and graph with first round results
-    removed_nodes.update(features_to_remove)
-    current_graph = implement_graph_changes(current_graph, {"remove_nodes": list(features_to_remove)})
-        
-    # Second round optimization - Perform error correction between intermediate nodes
-    X_train_intermediate, X_val_intermediate, X_test_intermediate, removed_intermediate_nodes = analyze_node_relationships(
-        y_train, X_val, y_val, X_train_intermediate, X_val_intermediate, X_test_intermediate, intermediate_to_selected_features, intermediate_models, model, callbacks, METRIC, VERBOSE
-    )
-    
-    # Also update removed_nodes with any removed intermediate nodes
-    removed_nodes.update(removed_intermediate_nodes)
-    
-    # Evaluate on test set
-    test_score = evaluate_final_model(X_train_intermediate, X_val_intermediate, X_test_intermediate, y_train, y_val, y_test, model, callbacks, METRIC)
-    print(f"Test {METRIC.upper()}: {test_score:.4f}")
-    
-    # isualize the knowledge graph and modeling process
-    #visualize_post_training_graph(graphml_template, removed_nodes,dataset)
+    if VISUALIZE_KG:
+        optimized_kg_path = f"kg/{DATASET_NAME}_optimized.graphml"
+        optimized_graph_for_viz = nx.read_graphml(optimized_kg_path)
+        final_groups_to_pass_to_viz = optimized_node_groups if optimized_node_groups is not None else node_groups_pre_optimization
+        visualize_knowledge_graph(optimized_graph_for_viz, DATASET_NAME+"_post_optimization", node_groups_pre_optimization, final_groups_to_pass_to_viz)
 
 if __name__ == "__main__":
     main() 
