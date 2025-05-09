@@ -5,31 +5,21 @@
     "session_data": {
         "session_state": {
             "intermediate_nodes_adni": [
-                "Neurodegeneration Pathways",
-                "Amyloid Plaque Accumulation",
-                "Tau Protein Pathology",
-                "Cognitive Decline Mechanisms",
-                "Memory Impairment Processes",
-                "Executive Function Deficits",
-                "Visuospatial Dysfunction",
-                "Neuroinflammation",
-                "Vascular Health Impact",
-                "Psychiatric Symptomatology",
-                "Genetic and Demographic Risk Factors",
-                "Brain Atrophy and Structural Changes",
-                "Metabolic Dysfunction in Brain",
-                "Functional Brain Connectivity",
-                "Daily Living Functional Impairment"
+                "Cognitive Function Markers",
+                "Neurodegenerative Biomarkers",
+                "Neuropsychiatric Symptoms",
+                "Vascular Health Indicators",
+                "Amyloid and Tau Pathology"
             ]
         }
     },
     "extra_data": null,
     "created_at": null,
-    "updated_at": 1746538331,
-    "workflow_id": "0681dca0-843b-4d96-8c3e-6a84c848a4c3",
+    "updated_at": 1746740347,
+    "workflow_id": "ccfbf0d9-77b5-4273-9661-75a1a56bdb47",
     "workflow_data": {
         "name": "IntermediateNodeFinderWorkflow",
-        "workflow_id": "0681dca0-843b-4d96-8c3e-6a84c848a4c3",
+        "workflow_id": "ccfbf0d9-77b5-4273-9661-75a1a56bdb47",
         "description": "Finds and caches intermediate nodes for a dataset."
     }
 }

@@ -1,140 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="edge" attr.name="relationship" attr.type="string"/>
-<key id="d0" for="node" attr.name="entity_type" attr.type="string"/>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="node" attr.name="entity_type" attr.type="string"/>
 <graph edgedefault="directed"><node id="DIAGNOSIS">
   <data key="d0">TARGET_NODE</data>
 </node>
-<node id="Neurodegeneration Pathways">
+<node id="Cognitive Function Markers">
   <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="ABETA42">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="TAU">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTAU">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Hippocampus">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Entorhinal">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="FDG">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Ventricles">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Amyloid Plaque Accumulation">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="ABETA40">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PIB">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="AV45">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="FBB">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Tau Protein Pathology">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Cognitive Decline Mechanisms">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="MMSCORE">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="AVDEL30MIN">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Memory Impairment Processes">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="RAVLT_immediate">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="RAVLT_learning">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="RAVLT_forgetting">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="LDELTOTAL">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="FAQ">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Executive Function Deficits">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="TRAASCOR">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="TRABSCOR">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="DIGITSCOR">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CATANIMSC">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CATVEGESC">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CATANPERS">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Visuospatial Dysfunction">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="CLOCKSCOR">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="COPYSCOR">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogPtVisspat">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogSPVisspat">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Fusiform">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="MidTemp">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="MOCA">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Neuroinflammation">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Vascular Health Impact">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="VSBPSYS">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="VSBPDIA">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="VSWEIGHT">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="VSHEIGHT">
-  <data key="d0">INPUT_NODE</data>
 </node>
 <node id="VSPULSE">
   <data key="d0">INPUT_NODE</data>
@@ -142,88 +12,13 @@
 <node id="VSRESP">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="AGE">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Psychiatric Symptomatology">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="NPIASEV">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="NPISCORE">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="GDTOTAL">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CDGLOBAL">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CDRSB">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="NPIBSEV">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="NPILSEV">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Genetic and Demographic Risk Factors">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="PTEDUCAT">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTETHCAT">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTGENDER">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTRACCAT">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Brain Atrophy and Structural Changes">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="WholeBrain">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="ICV">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Metabolic Dysfunction in Brain">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Functional Brain Connectivity">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Daily Living Functional Impairment">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="EcogPtTotal">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogSPTotal">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="ADAS13">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="AVTOT1">
+<node id="MMSCORE">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="AVTOT2">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="AVTOT3">
-  <data key="d0">INPUT_NODE</data>
-</node>
 <node id="AVTOT4">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="AVTOT5">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="AVTOT6">
@@ -235,865 +30,217 @@
 <node id="DSPANFOR">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="DSPANFLTH">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="DSPANBAC">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="DSPANBLTH">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CATANINTR">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CATVGPERS">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CATVGINTR">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="BNTTOTAL">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="AVDELTOT">
+<node id="ANART">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="MINTTOTAL">
   <data key="d0">INPUT_NODE</data>
 </node>
+<node id="NPIASEV">
+  <data key="d0">INPUT_NODE</data>
+</node>
 <node id="NPICSEV">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="NPIDSEV">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="NPIESEV">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="NPIFSEV">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="NPIGSEV">
-  <data key="d0">INPUT_NODE</data>
-</node>
 <node id="NPIHSEV">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="NPIISEV">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="NPIJSEV">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="NPIKSEV">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="CDRSB.1">
+<node id="NPILSEV">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="ADAS11">
+<node id="NPISCORE">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="CDGLOBAL">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="GDTOTAL">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="ABETA42">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="TAU">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="ADASQ4">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="MMSE">
+<node id="RAVLT_forgetting">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="RAVLT_perc_forgetting">
+<node id="FAQ">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="mPACCdigit">
+<node id="WholeBrain">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="mPACCtrailsB">
+<node id="Fusiform">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="EcogPtMem">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogPtLang">
+<node id="MidTemp">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="EcogPtPlan">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="EcogPtOrgan">
-  <data key="d0">INPUT_NODE</data>
-</node>
 <node id="EcogPtDivatt">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="EcogSPMem">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogSPLang">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogSPPlan">
+<node id="EcogSPVisspat">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="EcogSPOrgan">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="EcogSPDivatt">
+<node id="FDG">
   <data key="d0">INPUT_NODE</data>
 </node>
-<edge source="Neurodegeneration Pathways" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ABETA42" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="ABETA42" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="ABETA42" target="Genetic and Demographic Risk Factors">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="ABETA42" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="ABETA42" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="ABETA42" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="ABETA42" target="Tau Protein Pathology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="TAU" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="TAU" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="TAU" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="TAU" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="TAU" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="TAU" target="Tau Protein Pathology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTAU" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTAU" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTAU" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTAU" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTAU" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTAU" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTAU" target="Tau Protein Pathology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Hippocampus" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Hippocampus" target="Functional Brain Connectivity">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Hippocampus" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Hippocampus" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Hippocampus" target="Tau Protein Pathology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Hippocampus" target="Vascular Health Impact">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Hippocampus" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Entorhinal" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Entorhinal" target="Functional Brain Connectivity">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Entorhinal" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Entorhinal" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="FDG" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="FDG" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="FDG" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Ventricles" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Ventricles" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Ventricles" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Ventricles" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Amyloid Plaque Accumulation" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ABETA40" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PIB" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PIB" target="Functional Brain Connectivity">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PIB" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PIB" target="Tau Protein Pathology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PIB" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AV45" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="FBB" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="FBB" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Tau Protein Pathology" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Cognitive Decline Mechanisms" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="MMSCORE" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MMSCORE" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MMSCORE" target="Functional Brain Connectivity">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MMSCORE" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVDEL30MIN" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVDEL30MIN" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Memory Impairment Processes" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="RAVLT_immediate" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="RAVLT_immediate" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="RAVLT_learning" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="RAVLT_learning" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="RAVLT_learning" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="RAVLT_forgetting" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="RAVLT_forgetting" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="RAVLT_forgetting" target="Vascular Health Impact">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="LDELTOTAL" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="LDELTOTAL" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="LDELTOTAL" target="Vascular Health Impact">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="FAQ" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="FAQ" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="FAQ" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Executive Function Deficits" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="TRAASCOR" target="Genetic and Demographic Risk Factors">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="TRAASCOR" target="Tau Protein Pathology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="TRABSCOR" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="TRABSCOR" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="DIGITSCOR" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="DIGITSCOR" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CATANIMSC" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CATANIMSC" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CATVEGESC" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CATVEGESC" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CATANPERS" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CATANPERS" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Visuospatial Dysfunction" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CLOCKSCOR" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="COPYSCOR" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="COPYSCOR" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtVisspat" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogSPVisspat" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Fusiform" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Fusiform" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MidTemp" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MidTemp" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MidTemp" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MidTemp" target="Tau Protein Pathology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MidTemp" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MOCA" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MOCA" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MOCA" target="Functional Brain Connectivity">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MOCA" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Neuroinflammation" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Vascular Health Impact" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="VSBPSYS" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="VSBPSYS" target="Tau Protein Pathology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="VSBPSYS" target="Vascular Health Impact">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="VSBPDIA" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="VSWEIGHT" target="Vascular Health Impact">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="VSHEIGHT" target="Functional Brain Connectivity">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="VSHEIGHT" target="Vascular Health Impact">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="VSPULSE" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="VSPULSE" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="VSPULSE" target="Vascular Health Impact">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="VSRESP" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="VSRESP" target="Vascular Health Impact">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AGE" target="Genetic and Demographic Risk Factors">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AGE" target="Tau Protein Pathology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AGE" target="Vascular Health Impact">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AGE" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Psychiatric Symptomatology" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIASEV" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIASEV" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIASEV" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIASEV" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPISCORE" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPISCORE" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPISCORE" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPISCORE" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="GDTOTAL" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="GDTOTAL" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="GDTOTAL" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CDGLOBAL" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CDRSB" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CDRSB" target="Functional Brain Connectivity">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CDRSB" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CDRSB" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CDRSB" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIBSEV" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIBSEV" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPILSEV" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Genetic and Demographic Risk Factors" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PTEDUCAT" target="Genetic and Demographic Risk Factors">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTEDUCAT" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTETHCAT" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTETHCAT" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTETHCAT" target="Genetic and Demographic Risk Factors">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTGENDER" target="Genetic and Demographic Risk Factors">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTGENDER" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTRACCAT" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="PTRACCAT" target="Genetic and Demographic Risk Factors">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Brain Atrophy and Structural Changes" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="WholeBrain" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="WholeBrain" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="WholeBrain" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="ICV" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="ICV" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="ICV" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="Metabolic Dysfunction in Brain" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Functional Brain Connectivity" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Daily Living Functional Impairment" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtTotal" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtTotal" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogSPTotal" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogSPTotal" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="ADAS13" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOT1" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOT2" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOT3" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOT3" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOT3" target="Vascular Health Impact">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOT4" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOT4" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOT5" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOT5" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOT6" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOT6" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOTB" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOTB" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVTOTB" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="DSPANFOR" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="DSPANFLTH" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="DSPANFLTH" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="DSPANBAC" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="DSPANBAC" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="DSPANBLTH" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="DSPANBLTH" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="DSPANBLTH" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CATANINTR" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CATVGPERS" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CATVGINTR" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CATVGINTR" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CATVGINTR" target="Tau Protein Pathology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="BNTTOTAL" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="AVDELTOT" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MINTTOTAL" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPICSEV" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPICSEV" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIDSEV" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIESEV" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIFSEV" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIFSEV" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIFSEV" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIGSEV" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIHSEV" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIHSEV" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIISEV" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIJSEV" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIKSEV" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIKSEV" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIKSEV" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="NPIKSEV" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CDRSB.1" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CDRSB.1" target="Genetic and Demographic Risk Factors">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CDRSB.1" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CDRSB.1" target="Tau Protein Pathology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="CDRSB.1" target="Vascular Health Impact">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="ADAS11" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="ADASQ4" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="MMSE" target="Cognitive Decline Mechanisms">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="RAVLT_perc_forgetting" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="RAVLT_perc_forgetting" target="Functional Brain Connectivity">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="RAVLT_perc_forgetting" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="mPACCdigit" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="mPACCdigit" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="mPACCtrailsB" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="mPACCtrailsB" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="mPACCtrailsB" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtMem" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtLang" target="Amyloid Plaque Accumulation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtLang" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtLang" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtLang" target="Visuospatial Dysfunction">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtPlan" target="Brain Atrophy and Structural Changes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtPlan" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtPlan" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtOrgan" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtOrgan" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtDivatt" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtDivatt" target="Memory Impairment Processes">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtDivatt" target="Metabolic Dysfunction in Brain">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtDivatt" target="Neurodegeneration Pathways">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogPtDivatt" target="Neuroinflammation">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogSPMem" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogSPMem" target="Functional Brain Connectivity">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogSPLang" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogSPLang" target="Executive Function Deficits">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogSPPlan" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogSPPlan" target="Functional Brain Connectivity">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogSPOrgan" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogSPDivatt" target="Daily Living Functional Impairment">
-  <data key="d1">evidence_optimized</data>
-</edge>
-<edge source="EcogSPDivatt" target="Psychiatric Symptomatology">
-  <data key="d1">evidence_optimized</data>
-</edge>
+<node id="PIB">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="FBB">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Vascular Health Indicators">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="VSWEIGHT">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="VSBPDIA">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Neuropsychiatric Symptoms">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="NPIBSEV">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="NPIISEV">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="CDRSB">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="MMSE">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="RAVLT_immediate">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="RAVLT_learning">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="RAVLT_perc_forgetting">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Ventricles">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="ICV">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogPtVisspat">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="AV45">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Neurodegenerative Biomarkers">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="Hippocampus">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Entorhinal">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Amyloid and Tau Pathology">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="ABETA40">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<edge source="Cognitive Function Markers" target="DIAGNOSIS"/>
+<edge source="VSPULSE" target="Cognitive Function Markers"/>
+<edge source="VSRESP" target="Cognitive Function Markers"/>
+<edge source="MMSCORE" target="Cognitive Function Markers"/>
+<edge source="AVTOT2" target="Cognitive Function Markers"/>
+<edge source="AVTOT4" target="Cognitive Function Markers"/>
+<edge source="AVTOT6" target="Cognitive Function Markers"/>
+<edge source="AVTOTB" target="Cognitive Function Markers"/>
+<edge source="DSPANFOR" target="Cognitive Function Markers"/>
+<edge source="ANART" target="Cognitive Function Markers"/>
+<edge source="MINTTOTAL" target="Cognitive Function Markers"/>
+<edge source="NPIASEV" target="Cognitive Function Markers"/>
+<edge source="NPICSEV" target="Cognitive Function Markers"/>
+<edge source="NPIFSEV" target="Cognitive Function Markers"/>
+<edge source="NPIFSEV" target="Neuropsychiatric Symptoms"/>
+<edge source="NPIHSEV" target="Cognitive Function Markers"/>
+<edge source="NPIKSEV" target="Cognitive Function Markers"/>
+<edge source="NPIKSEV" target="Neuropsychiatric Symptoms"/>
+<edge source="NPILSEV" target="Cognitive Function Markers"/>
+<edge source="NPILSEV" target="Neuropsychiatric Symptoms"/>
+<edge source="NPISCORE" target="Cognitive Function Markers"/>
+<edge source="NPISCORE" target="Neuropsychiatric Symptoms"/>
+<edge source="CDGLOBAL" target="Cognitive Function Markers"/>
+<edge source="CDGLOBAL" target="Neuropsychiatric Symptoms"/>
+<edge source="GDTOTAL" target="Cognitive Function Markers"/>
+<edge source="GDTOTAL" target="Neuropsychiatric Symptoms"/>
+<edge source="ABETA42" target="Cognitive Function Markers"/>
+<edge source="ABETA42" target="Amyloid and Tau Pathology"/>
+<edge source="TAU" target="Cognitive Function Markers"/>
+<edge source="TAU" target="Neurodegenerative Biomarkers"/>
+<edge source="TAU" target="Amyloid and Tau Pathology"/>
+<edge source="ADASQ4" target="Cognitive Function Markers"/>
+<edge source="RAVLT_forgetting" target="Cognitive Function Markers"/>
+<edge source="FAQ" target="Cognitive Function Markers"/>
+<edge source="WholeBrain" target="Cognitive Function Markers"/>
+<edge source="WholeBrain" target="Amyloid and Tau Pathology"/>
+<edge source="Fusiform" target="Cognitive Function Markers"/>
+<edge source="MidTemp" target="Cognitive Function Markers"/>
+<edge source="MidTemp" target="Neurodegenerative Biomarkers"/>
+<edge source="EcogPtPlan" target="Cognitive Function Markers"/>
+<edge source="EcogPtDivatt" target="Cognitive Function Markers"/>
+<edge source="EcogPtDivatt" target="Neuropsychiatric Symptoms"/>
+<edge source="EcogSPVisspat" target="Cognitive Function Markers"/>
+<edge source="EcogSPOrgan" target="Cognitive Function Markers"/>
+<edge source="EcogSPOrgan" target="Neuropsychiatric Symptoms"/>
+<edge source="FDG" target="Cognitive Function Markers"/>
+<edge source="FDG" target="Neurodegenerative Biomarkers"/>
+<edge source="PIB" target="Cognitive Function Markers"/>
+<edge source="PIB" target="Neuropsychiatric Symptoms"/>
+<edge source="FBB" target="Cognitive Function Markers"/>
+<edge source="Vascular Health Indicators" target="DIAGNOSIS"/>
+<edge source="VSWEIGHT" target="Vascular Health Indicators"/>
+<edge source="VSBPDIA" target="Vascular Health Indicators"/>
+<edge source="Neuropsychiatric Symptoms" target="DIAGNOSIS"/>
+<edge source="NPIBSEV" target="Neuropsychiatric Symptoms"/>
+<edge source="NPIISEV" target="Neuropsychiatric Symptoms"/>
+<edge source="CDRSB" target="Neuropsychiatric Symptoms"/>
+<edge source="MMSE" target="Neuropsychiatric Symptoms"/>
+<edge source="RAVLT_immediate" target="Neuropsychiatric Symptoms"/>
+<edge source="RAVLT_learning" target="Neuropsychiatric Symptoms"/>
+<edge source="RAVLT_perc_forgetting" target="Neuropsychiatric Symptoms"/>
+<edge source="Ventricles" target="Neuropsychiatric Symptoms"/>
+<edge source="Ventricles" target="Amyloid and Tau Pathology"/>
+<edge source="ICV" target="Neuropsychiatric Symptoms"/>
+<edge source="ICV" target="Neurodegenerative Biomarkers"/>
+<edge source="ICV" target="Amyloid and Tau Pathology"/>
+<edge source="EcogPtVisspat" target="Neuropsychiatric Symptoms"/>
+<edge source="AV45" target="Neuropsychiatric Symptoms"/>
+<edge source="AV45" target="Amyloid and Tau Pathology"/>
+<edge source="Neurodegenerative Biomarkers" target="DIAGNOSIS"/>
+<edge source="Hippocampus" target="Neurodegenerative Biomarkers"/>
+<edge source="Hippocampus" target="Amyloid and Tau Pathology"/>
+<edge source="Entorhinal" target="Neurodegenerative Biomarkers"/>
+<edge source="Amyloid and Tau Pathology" target="DIAGNOSIS"/>
+<edge source="ABETA40" target="Amyloid and Tau Pathology"/>
 </graph></graphml>

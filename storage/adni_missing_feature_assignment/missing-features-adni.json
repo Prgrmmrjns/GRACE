@@ -6,191 +6,23 @@
         "session_state": {
             "missing_features_adni": [
                 {
-                    "source": "AVTOT1",
-                    "target": "Memory Impairment Processes"
-                },
-                {
-                    "source": "AVTOT2",
-                    "target": "Memory Impairment Processes"
-                },
-                {
-                    "source": "AVTOT3",
-                    "target": "Memory Impairment Processes"
-                },
-                {
-                    "source": "AVTOT4",
-                    "target": "Memory Impairment Processes"
-                },
-                {
-                    "source": "AVTOT5",
-                    "target": "Memory Impairment Processes"
-                },
-                {
-                    "source": "AVTOT6",
-                    "target": "Memory Impairment Processes"
-                },
-                {
-                    "source": "AVTOTB",
-                    "target": "Memory Impairment Processes"
-                },
-                {
-                    "source": "DSPANFOR",
-                    "target": "Executive Function Deficits"
-                },
-                {
-                    "source": "DSPANFLTH",
-                    "target": "Executive Function Deficits"
-                },
-                {
-                    "source": "DSPANBAC",
-                    "target": "Executive Function Deficits"
-                },
-                {
-                    "source": "DSPANBLTH",
-                    "target": "Executive Function Deficits"
-                },
-                {
-                    "source": "CATANINTR",
-                    "target": "Executive Function Deficits"
-                },
-                {
-                    "source": "CATVGPERS",
-                    "target": "Executive Function Deficits"
-                },
-                {
-                    "source": "CATVGINTR",
-                    "target": "Executive Function Deficits"
-                },
-                {
-                    "source": "BNTTOTAL",
-                    "target": "Cognitive Decline Mechanisms"
-                },
-                {
-                    "source": "AVDELTOT",
-                    "target": "Memory Impairment Processes"
-                },
-                {
-                    "source": "ANART",
-                    "target": "Cognitive Decline Mechanisms"
-                },
-                {
-                    "source": "MINTTOTAL",
-                    "target": "Cognitive Decline Mechanisms"
-                },
-                {
-                    "source": "NPICSEV",
-                    "target": "Psychiatric Symptomatology"
-                },
-                {
-                    "source": "NPIDSEV",
-                    "target": "Psychiatric Symptomatology"
-                },
-                {
-                    "source": "NPIESEV",
-                    "target": "Psychiatric Symptomatology"
-                },
-                {
-                    "source": "NPIFSEV",
-                    "target": "Psychiatric Symptomatology"
-                },
-                {
-                    "source": "NPIGSEV",
-                    "target": "Psychiatric Symptomatology"
-                },
-                {
-                    "source": "NPIHSEV",
-                    "target": "Psychiatric Symptomatology"
-                },
-                {
-                    "source": "NPIISEV",
-                    "target": "Psychiatric Symptomatology"
-                },
-                {
-                    "source": "NPIJSEV",
-                    "target": "Psychiatric Symptomatology"
-                },
-                {
-                    "source": "NPIKSEV",
-                    "target": "Psychiatric Symptomatology"
+                    "source": "CDRSB.1",
+                    "target": "Neurodegenerative Biomarkers"
                 },
                 {
                     "source": "CDRSB.1",
-                    "target": "Daily Living Functional Impairment"
-                },
-                {
-                    "source": "ADAS11",
-                    "target": "Cognitive Decline Mechanisms"
-                },
-                {
-                    "source": "ADASQ4",
-                    "target": "Cognitive Decline Mechanisms"
-                },
-                {
-                    "source": "MMSE",
-                    "target": "Cognitive Decline Mechanisms"
-                },
-                {
-                    "source": "RAVLT_perc_forgetting",
-                    "target": "Memory Impairment Processes"
-                },
-                {
-                    "source": "mPACCdigit",
-                    "target": "Executive Function Deficits"
-                },
-                {
-                    "source": "mPACCtrailsB",
-                    "target": "Executive Function Deficits"
-                },
-                {
-                    "source": "EcogPtMem",
-                    "target": "Daily Living Functional Impairment"
-                },
-                {
-                    "source": "EcogPtLang",
-                    "target": "Daily Living Functional Impairment"
-                },
-                {
-                    "source": "EcogPtPlan",
-                    "target": "Daily Living Functional Impairment"
-                },
-                {
-                    "source": "EcogPtOrgan",
-                    "target": "Daily Living Functional Impairment"
-                },
-                {
-                    "source": "EcogPtDivatt",
-                    "target": "Daily Living Functional Impairment"
-                },
-                {
-                    "source": "EcogSPMem",
-                    "target": "Daily Living Functional Impairment"
-                },
-                {
-                    "source": "EcogSPLang",
-                    "target": "Daily Living Functional Impairment"
-                },
-                {
-                    "source": "EcogSPPlan",
-                    "target": "Daily Living Functional Impairment"
-                },
-                {
-                    "source": "EcogSPOrgan",
-                    "target": "Daily Living Functional Impairment"
-                },
-                {
-                    "source": "EcogSPDivatt",
-                    "target": "Daily Living Functional Impairment"
+                    "target": "Neuropsychiatric Symptoms"
                 }
             ]
         }
     },
     "extra_data": null,
     "created_at": null,
-    "updated_at": 1746538364,
-    "workflow_id": "2235b8cc-f25f-4106-8fc0-b937758a86b5",
+    "updated_at": 1746740533,
+    "workflow_id": "e8a684df-b16a-464e-8283-fa7fa152f51b",
     "workflow_data": {
         "name": "MissingFeatureAssignmentWorkflow",
-        "workflow_id": "2235b8cc-f25f-4106-8fc0-b937758a86b5",
+        "workflow_id": "e8a684df-b16a-464e-8283-fa7fa152f51b",
         "description": "Assigns remaining features to one or more intermediate nodes and caches the result."
     }
 }

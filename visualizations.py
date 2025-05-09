@@ -17,16 +17,10 @@ NODE_SIZES = {
 
 EDGE_STYLES = {
     'input_to_intermediate': {
-        'color': '#FFA07A', # Light Salmon for original
+        'color': '#FFA07A', # Orange
         'style': 'solid',
         'width': 2.0,
         'alpha': 0.7
-    },
-    'added_input_to_intermediate': { # Style for added edges
-        'color': '#32CD32', # LimeGreen for added
-        'style': 'dashed',
-        'width': 2.0,
-        'alpha': 0.8
     },
     'intermediate_to_target': {
         'color': '#4169E1', # Royal Blue
@@ -36,231 +30,125 @@ EDGE_STYLES = {
     }
 }
 
-def visualize_knowledge_graph(G, dataset, initial_node_groups, final_node_groups):
-    """
-    Visualize the knowledge graph with a radial layout and styled nodes/edges.
-    - Target node at the center
-    - Intermediate nodes in a middle circle
-    - Input nodes in multiple concentric circles at the periphery
-    - Distinguishes original vs. added input-to-intermediate edges.
-    Only INPUT_NODE, INTERMEDIATE_NODE, and TARGET_NODE are shown.
+def visualize_knowledge_graph(G, dataset, node_groups, store_graph=False):
+    graph = nx.DiGraph()
+    node_attributes_from_G = {
+        n: {
+            'entity_type': G.nodes[n].get('entity_type', 'UNKNOWN'), 
+            **G.nodes[n] 
+           } 
+        for n in G if G.has_node(n)
+    }
 
-    Args:
-        G: NetworkX graph to visualize (should contain all nodes)
-        dataset: Name for saving the graph
-        initial_node_groups (dict): {intermediate_node: [initial_input_features]}
-        final_node_groups (dict): {intermediate_node: [final_input_features]}
-    """
-    vis_G = G.copy() # Work on a copy to avoid modifying the original graph object
-    
-    # Remove isolated nodes from the graph copy before any visualization logic
-    isolates = list(nx.isolates(vis_G))
-    vis_G.remove_nodes_from(isolates)
-    # if isolates: # Optional: for debugging if nodes disappear unexpectedly
-    #     print(f"Visualization: Removed {len(isolates)} isolated nodes: {isolates}")
+    target_nodes_in_G = [n for n, d in G.nodes(data=True) if d.get('entity_type') == 'TARGET_NODE']
+    for tn in target_nodes_in_G:
+        graph.add_node(tn, **node_attributes_from_G[tn])
 
-    # Identify nodes by type from the (potentially) modified vis_G
-    input_nodes = [n for n, d in vis_G.nodes(data=True) if d.get('entity_type') == 'INPUT_NODE']
-    intermediate_nodes = [n for n, d in vis_G.nodes(data=True) if d.get('entity_type') == 'INTERMEDIATE_NODE']
-    target_nodes = [n for n, d in vis_G.nodes(data=True) if d.get('entity_type') == 'TARGET_NODE']
+    for inter_node, final_features in node_groups.items():
+        graph.add_node(inter_node, **node_attributes_from_G[inter_node])
+        for input_feat in final_features:
+            if input_feat in node_attributes_from_G and \
+                node_attributes_from_G[input_feat].get('entity_type') == 'INPUT_NODE':
+                if not graph.has_node(input_feat):
+                    graph.add_node(input_feat, **node_attributes_from_G[input_feat])
+                graph.add_edge(input_feat, inter_node)
+        
+        for tn in target_nodes_in_G:
+            graph.add_edge(inter_node, tn)
     
-    # Calculate how many input nodes we have to adjust sizing
+    if store_graph:
+        output_graphml_path = f"kg/{dataset}.graphml" 
+        nx.write_graphml(graph, output_graphml_path)
+    
+    input_nodes = [n for n, d in graph.nodes(data=True) if d.get('entity_type') == 'INPUT_NODE']
+    intermediate_nodes = [n for n, d in graph.nodes(data=True) if d.get('entity_type') == 'INTERMEDIATE_NODE']
+    target_nodes = [n for n, d in graph.nodes(data=True) if d.get('entity_type') == 'TARGET_NODE']
+    
     total_input_count = len(input_nodes)
+    node_size_scale = max(0.3, min(1.0, 100.0 / max(1, total_input_count))) if total_input_count > 0 else 1.0
+    font_size_scale = max(0.4, min(1.0, 60.0 / max(1, total_input_count))) if total_input_count > 0 else 1.0
     
-    # Scale node size and font size inversely with number of input nodes
-    node_size_scale = max(0.3, min(1.0, 100.0 / max(1, total_input_count)))
-    font_size_scale = max(0.4, min(1.0, 60.0 / max(1, total_input_count)))
-    
-    # Adjust node sizes based on scaling factor
     scaled_node_sizes = {
-        'INPUT_NODE': int(NODE_SIZES['INPUT_NODE'] * node_size_scale),
-        'INTERMEDIATE_NODE': NODE_SIZES['INTERMEDIATE_NODE'],
-        'TARGET_NODE': NODE_SIZES['TARGET_NODE'],
+        'INPUT_NODE': int(NODE_SIZES.get('INPUT_NODE', 300) * node_size_scale),
+        'INTERMEDIATE_NODE': NODE_SIZES.get('INTERMEDIATE_NODE', 1500),
+        'TARGET_NODE': NODE_SIZES.get('TARGET_NODE', 2500),
     }
     
-    # Calculate number of circles needed for input nodes
-    max_nodes_per_circle = 30  # Maximum number of nodes per circle to prevent overcrowding
-    num_input_circles = max(1, int(np.ceil(total_input_count / max_nodes_per_circle)))
+    max_nodes_per_circle = 30  
+    num_input_circles = max(1, int(np.ceil(total_input_count / max_nodes_per_circle))) if total_input_count > 0 else 1
     
     pos = {}
-    # Place target node at center
-    if target_nodes:
-        pos[target_nodes[0]] = (0, 0)
-        
-    # Place intermediate nodes in a circle
+    pos[target_nodes[0]] = (0, 0) 
+    for i, tn in enumerate(target_nodes[1:]):
+        angle = 2 * np.pi * i / max(1, len(target_nodes)-1)
+        pos[tn] = (0.5 * np.cos(angle), 0.5 * np.sin(angle))
+
     radius_intermediate = 2.0
     for i, node in enumerate(intermediate_nodes):
         angle = 2 * np.pi * i / max(1, len(intermediate_nodes))
-        pos[node] = (
-            radius_intermediate * np.cos(angle),
-            radius_intermediate * np.sin(angle)
-        )
+        pos[node] = (radius_intermediate * np.cos(angle), radius_intermediate * np.sin(angle))
+
+    base_radius = 4.0 
+    radius_increment = 0.8  
     
-    # Place input nodes across multiple concentric circles at the periphery
-    # Start with the innermost circle for input nodes
-    base_radius = 4.0  # Starting radius for input nodes
-    radius_increment = 0.8  # Increase in radius per circle
-    
-    # Distribute input nodes evenly across the circles
-    nodes_per_circle = [min(max_nodes_per_circle, total_input_count - i * max_nodes_per_circle) 
-                        for i in range(num_input_circles)]
-    
+    nodes_per_circle_dist = [min(max_nodes_per_circle, total_input_count - i * max_nodes_per_circle) 
+                            for i in range(num_input_circles)]
     input_idx = 0
     for circle_idx in range(num_input_circles):
         radius = base_radius + circle_idx * radius_increment
-        nodes_this_circle = nodes_per_circle[circle_idx]
+        nodes_this_circle = nodes_per_circle_dist[circle_idx]
+        if nodes_this_circle == 0: continue
         
         for j in range(nodes_this_circle):
-            if input_idx < total_input_count:
+            if input_idx < total_input_count: 
                 node = input_nodes[input_idx]
                 angle = 2 * np.pi * j / nodes_this_circle
-                # Add a small angular offset for each circle to prevent nodes from different circles aligning
-                angle_offset = circle_idx * (np.pi / max(1, nodes_this_circle * 2))
-                pos[node] = (
-                    radius * np.cos(angle + angle_offset),
-                    radius * np.sin(angle + angle_offset)
-                )
+                angle_offset = circle_idx * (np.pi / max(1, nodes_this_circle * 2)) 
+                pos[node] = (radius * np.cos(angle + angle_offset), radius * np.sin(angle + angle_offset))
                 input_idx += 1
     
     plt.figure(figsize=(28, 28))
     
-    # Draw all input nodes with the same style
-    nx.draw_networkx_nodes(
-        vis_G, pos,
-        nodelist=input_nodes,
-        node_color=NODE_COLORS['INPUT_NODE'],
-        node_size=scaled_node_sizes['INPUT_NODE'],
-        alpha=0.9
-    )
+    nx.draw_networkx_nodes(graph, pos, nodelist=input_nodes, node_color=NODE_COLORS.get('INPUT_NODE', 'skyblue'), node_size=scaled_node_sizes['INPUT_NODE'], alpha=0.9)
+    nx.draw_networkx_nodes(graph, pos, nodelist=intermediate_nodes, node_color=NODE_COLORS.get('INTERMEDIATE_NODE', 'lightgreen'), node_size=scaled_node_sizes['INTERMEDIATE_NODE'], alpha=0.9)
+    nx.draw_networkx_nodes(graph, pos, nodelist=target_nodes, node_color=NODE_COLORS.get('TARGET_NODE', 'salmon'), node_size=scaled_node_sizes['TARGET_NODE'], alpha=0.9)
     
-    # Draw intermediate and target nodes
-    for node_type, nodelist in zip(['INTERMEDIATE_NODE', 'TARGET_NODE'], [intermediate_nodes, target_nodes]):
-        nx.draw_networkx_nodes(
-            vis_G, pos,
-            nodelist=nodelist,
-            node_color=NODE_COLORS[node_type],
-            node_size=scaled_node_sizes[node_type],
-            alpha=0.9
-        )
+    input_edges = set()
+    for u, v_node in graph.edges():
+        if graph.nodes[u].get('entity_type') == 'INPUT_NODE' and graph.nodes[v_node].get('entity_type') == 'INTERMEDIATE_NODE':
+            input_edges.add((u, v_node))
+
+    intermediate_to_target = []
+    for u, v_node in graph.edges():
+        if graph.nodes[u].get('entity_type') == 'INTERMEDIATE_NODE' and graph.nodes[v_node].get('entity_type') == 'TARGET_NODE':
+            intermediate_to_target.append((u,v_node))
+
+    style_input_orig = EDGE_STYLES.get('input_to_intermediate', {'color': 'gray', 'style': 'solid', 'width': 1.5, 'alpha': 0.7})
+    style_inter_target = EDGE_STYLES.get('intermediate_to_target', {'color': 'red', 'style': 'solid', 'width': 2.0, 'alpha': 0.8})
+
+    nx.draw_networkx_edges(graph, pos, edgelist=input_edges, 
+                            edge_color=style_input_orig['color'], style=style_input_orig['style'], 
+                            width=style_input_orig['width'], alpha=style_input_orig['alpha'], 
+                            arrows=True, arrowsize=20, arrowstyle='-|>')
+
+    nx.draw_networkx_edges(graph, pos, edgelist=intermediate_to_target, 
+                            edge_color=style_inter_target['color'], style=style_inter_target['style'], 
+                            width=style_inter_target['width'], alpha=style_inter_target['alpha'], 
+                            arrows=True, arrowsize=25, arrowstyle='-|>')
     
-    # Refined logic for collecting input-to-intermediate edges
-    _original_input_edges_set = set()
-    _added_input_edges_set = set()
-
-    initial_features_lookup = {}
-    # Ensure initial_node_groups is not None before iterating
-    if initial_node_groups: 
-        for inter, feats in initial_node_groups.items():
-            # Ensure the intermediate node from the group exists in vis_G
-            if vis_G.has_node(inter) and vis_G.nodes[inter].get('entity_type') == 'INTERMEDIATE_NODE':
-                initial_features_lookup[inter] = set(feats)
-
-    # Case 1: final_node_groups is primary, if it's not None AND not empty
-    if final_node_groups: 
-        for inter_node, features_in_final_group in final_node_groups.items():
-            if not (vis_G.has_node(inter_node) and vis_G.nodes[inter_node].get('entity_type') == 'INTERMEDIATE_NODE'):
-                continue
-            current_initial_set = initial_features_lookup.get(inter_node, set())
-            for input_node in features_in_final_group:
-                if vis_G.has_node(input_node) and \
-                   vis_G.nodes[input_node].get('entity_type') == 'INPUT_NODE' and \
-                   vis_G.has_edge(input_node, inter_node): # Check edge existence in vis_G
-                    edge = (input_node, inter_node)
-                    if input_node in current_initial_set: 
-                        _original_input_edges_set.add(edge)
-                    else: 
-                        _added_input_edges_set.add(edge)
-    
-    elif initial_node_groups: 
-        for inter_node, features_in_initial_group in initial_node_groups.items():
-            if not (vis_G.has_node(inter_node) and vis_G.nodes[inter_node].get('entity_type') == 'INTERMEDIATE_NODE'):
-                continue
-            for input_node in features_in_initial_group:
-                if vis_G.has_node(input_node) and \
-                   vis_G.nodes[input_node].get('entity_type') == 'INPUT_NODE' and \
-                   vis_G.has_edge(input_node, inter_node): # Check edge existence in vis_G
-                    _original_input_edges_set.add((input_node, inter_node))
-
-    if not _original_input_edges_set and not _added_input_edges_set:
-        for u, v_node in vis_G.edges(): # Iterate edges from vis_G
-            if vis_G.has_node(u) and vis_G.nodes[u].get('entity_type') == 'INPUT_NODE' and \
-               vis_G.has_node(v_node) and vis_G.nodes[v_node].get('entity_type') == 'INTERMEDIATE_NODE':
-                _original_input_edges_set.add((u, v_node))
-    
-    original_input_edges = list(_original_input_edges_set)
-    added_input_edges = list(_added_input_edges_set - _original_input_edges_set)
-
-    intermediate_to_target = [(u, v) for u, v in vis_G.edges() if # Iterate edges from vis_G
-                             vis_G.has_node(u) and vis_G.has_node(v) and 
-                             vis_G.nodes[u].get('entity_type') == 'INTERMEDIATE_NODE' and
-                             vis_G.nodes[v].get('entity_type') == 'TARGET_NODE']
-
-    # Draw Original Input -> Intermediate Edges
-    if original_input_edges:
-        nx.draw_networkx_edges(
-            vis_G, pos, # Use vis_G
-            edgelist=original_input_edges,
-            edge_color=EDGE_STYLES['input_to_intermediate']['color'],
-            style=EDGE_STYLES['input_to_intermediate']['style'],
-            width=EDGE_STYLES['input_to_intermediate']['width'],
-            alpha=EDGE_STYLES['input_to_intermediate']['alpha'],
-            arrows=True,
-            arrowsize=20,
-            arrowstyle='-|>'
-        )
-
-    # Draw Added Input -> Intermediate Edges
-    if added_input_edges:
-        nx.draw_networkx_edges(
-            vis_G, pos, # Use vis_G
-            edgelist=added_input_edges,
-            edge_color=EDGE_STYLES['added_input_to_intermediate']['color'],
-            style=EDGE_STYLES['added_input_to_intermediate']['style'],
-            width=EDGE_STYLES['added_input_to_intermediate']['width'],
-            alpha=EDGE_STYLES['added_input_to_intermediate']['alpha'],
-            arrows=True,
-            arrowsize=20,
-            arrowstyle='-|>'
-        )
-
-    # Draw Intermediate -> Target Edges
-    if intermediate_to_target:
-        nx.draw_networkx_edges(
-            vis_G, pos, # Use vis_G
-            edgelist=intermediate_to_target,
-            edge_color=EDGE_STYLES['intermediate_to_target']['color'],
-            style=EDGE_STYLES['intermediate_to_target']['style'],
-            width=EDGE_STYLES['intermediate_to_target']['width'],
-            alpha=EDGE_STYLES['intermediate_to_target']['alpha'],
-            arrows=True,
-            arrowsize=25,
-            arrowstyle='-|>'
-        )
-    
-    # Draw labels for all nodes present in vis_G
-    label_nodes = input_nodes + intermediate_nodes + target_nodes
-    # Scale font size based on number of input nodes
+    label_nodes = [n for n in graph.nodes() if pos.get(n) is not None] 
     font_size = int(12 * font_size_scale)
-    nx.draw_networkx_labels(vis_G, pos, labels={n: n for n in label_nodes}, font_size=font_size, font_color='black') # Use vis_G
+    nx.draw_networkx_labels(graph, pos, labels={n: n for n in label_nodes}, font_size=font_size, font_color='black')
     
-    # Add a legend explaining the node colors and edge styles
-    legend_labels = {
-        'Input Features': plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=NODE_COLORS['INPUT_NODE'], markersize=10),
-        'Intermediate Nodes': plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=NODE_COLORS['INTERMEDIATE_NODE'], markersize=15),
-        'Target': plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=NODE_COLORS['TARGET_NODE'], markersize=20),
-        'Input -> Intermediate Edge': plt.Line2D([0], [0], color=EDGE_STYLES['input_to_intermediate']['color'], linestyle=EDGE_STYLES['input_to_intermediate']['style'], linewidth=EDGE_STYLES['input_to_intermediate']['width']),
-        'Intermediate->Target Edge': plt.Line2D([0], [0], color=EDGE_STYLES['intermediate_to_target']['color'], linestyle=EDGE_STYLES['intermediate_to_target']['style'], linewidth=EDGE_STYLES['intermediate_to_target']['width']),
-    }
-    
-    # Conditionally add "Added Input Edge (Optimized)" to the legend if there are any such edges
-    if added_input_edges:
-        legend_labels['Added Input Edge (Optimized)'] = plt.Line2D([0], [0], color=EDGE_STYLES['added_input_to_intermediate']['color'], linestyle=EDGE_STYLES['added_input_to_intermediate']['style'], linewidth=EDGE_STYLES['added_input_to_intermediate']['width'])
-    
+    legend_labels = {}
+    legend_labels['Input Nodes'] = plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=NODE_COLORS.get('INPUT_NODE', 'skyblue'), markersize=10)
+    legend_labels['Intermediate Nodes'] = plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=NODE_COLORS.get('INTERMEDIATE_NODE', 'lightgreen'), markersize=15)
+    legend_labels['Target'] = plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=NODE_COLORS.get('TARGET_NODE', 'salmon'), markersize=20)
+    legend_labels['Input -> Intermediate'] = plt.Line2D([0], [0], color=style_input_orig['color'], linestyle=style_input_orig['style'], linewidth=style_input_orig['width'])
+    legend_labels['Intermediate -> Target'] = plt.Line2D([0], [0], color=style_inter_target['color'], linestyle=style_inter_target['style'], linewidth=style_inter_target['width'])
     plt.legend(legend_labels.values(), legend_labels.keys(), loc='lower right', fontsize=14)
-    
     plt.axis('off')
-    os.makedirs('graphs', exist_ok=True)
-    output_path = f"graphs/{dataset}_graph.png"
-    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    os.makedirs('images', exist_ok=True) 
+    output_viz_path = f"images/{dataset}.png" 
+    plt.savefig(output_viz_path, dpi=300, bbox_inches='tight')
     plt.close()
-    return output_path

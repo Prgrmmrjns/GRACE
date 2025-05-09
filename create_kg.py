@@ -10,7 +10,6 @@ from agno.agent import Agent, RunResponse
 from pydantic import BaseModel, Field
 from agno.models.openai import OpenAIChat
 from agno.models.ollama import Ollama
-from agno.vectordb.milvus import Milvus
 from agno.vectordb.pgvector import PgVector, SearchType
 from agno.knowledge.arxiv import ArxivKnowledgeBase
 from agno.storage.json import JsonStorage
@@ -34,11 +33,8 @@ def get_feature_names_and_description():
     return feature_names, dataset_description
 
 def get_knowledge_base():
-    if VECTOR_DB == 'PGVECTOR':
-        db_url = "postgresql+psycopg://ai:ai@localhost:5532/ai"
-        vector_db = PgVector(table_name="articles", db_url=db_url, search_type=SearchType.hybrid, embedder=OpenAIEmbedder())
-    else:
-        vector_db = Milvus(collection="articles", uri="./milvus.db")
+    db_url = "postgresql+psycopg://ai:ai@localhost:5532/ai"
+    vector_db = PgVector(table_name="articles", db_url=db_url, search_type=SearchType.hybrid, embedder=OpenAIEmbedder())
     return ArxivKnowledgeBase(queries=KEYWORDS, vector_db=vector_db)
 
 # --- Workflows ---
@@ -75,7 +71,7 @@ mechanisms, organ systems, factors or other entities that can best explain the t
 Dataset Description: {dataset_description}
 Available Features: {feature_names}
 Instructions:
-- Propose around 8-10 entities that best capture the key mechanisms connecting the features to {target_name}. Make the amount of entities dependent on the amount of features.
+- Propose 5 entities that best capture the key mechanisms connecting the features to {target_name}. Make sure each features can be assigned to one of the entities.
 - These entities (intermediate nodes) should be made-up terms (e.g., mechanisms, organ systems, etc.) and must NOT be any of the dataset features.
 - Only the input nodes (features) should be from the provided feature list.
 - Do NOT invent any input nodes or features.
@@ -92,7 +88,6 @@ Candidate features: {candidate_features}
 Instructions:
  - From the candidate features, select only those relevant to the entity.
  - Use the exact feature names provided.
- - Select up to 15 features.
  - Do NOT invent any features or use any names not in the candidate features list.
  - Never use the target column ('{target_name}') or any column not in the provided feature list as an input feature.
  - Any names not in the provided feature list will be ignored.
@@ -169,7 +164,6 @@ class MissingFeatureAssignmentWorkflow(NoMemoryWorkflow):
         prompt = add_missing_features_prompt(intermediate_nodes, remaining_features, TARGET_COL, dataset_description)
         resp = agent.run(prompt)
         edges = resp.content.edges
-        print(f'Missing edge suggestions: {edges}')
         self.session_state[cache_key] = edges
         yield RunResponse(run_id=self.run_id, content={"step": "missing_features", "edges": edges})
 
