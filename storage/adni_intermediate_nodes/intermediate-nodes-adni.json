@@ -5,21 +5,26 @@
     "session_data": {
         "session_state": {
             "intermediate_nodes_adni": [
-                "Cognitive Function Markers",
-                "Neurodegenerative Biomarkers",
-                "Neuropsychiatric Symptoms",
-                "Vascular Health Indicators",
-                "Amyloid and Tau Pathology"
+                "Neurodegeneration and Brain Atrophy",
+                "Amyloid and Tau Pathology",
+                "Cognitive Function and Memory Performance",
+                "Neuropsychiatric and Behavioral Symptoms",
+                "Vascular and Cardiovascular Health",
+                "Demographic and Genetic Risk Factors",
+                "Functional and Daily Living Abilities",
+                "Neuroimaging Biomarkers",
+                "Biofluid Biomarkers",
+                "Global Cognitive Screening"
             ]
         }
     },
     "extra_data": null,
     "created_at": null,
-    "updated_at": 1746740347,
-    "workflow_id": "ccfbf0d9-77b5-4273-9661-75a1a56bdb47",
+    "updated_at": 1747231646,
+    "workflow_id": "29546b4f-beb1-45a3-a48a-74812909b24f",
     "workflow_data": {
         "name": "IntermediateNodeFinderWorkflow",
-        "workflow_id": "ccfbf0d9-77b5-4273-9661-75a1a56bdb47",
+        "workflow_id": "29546b4f-beb1-45a3-a48a-74812909b24f",
         "description": "Finds and caches intermediate nodes for a dataset."
     }
 }

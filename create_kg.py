@@ -1,10 +1,8 @@
 import os
 import csv
 import networkx as nx
-from params import DATASET_PATH, DATASET_NAME, TARGET_COL, MODEL, LLM_PROVIDER, KEYWORDS, VECTOR_DB, LOAD_AGENT_RESPONSES
+from params import DATASET_PATH, DATASET_NAME, TARGET_COL, MODEL, LLM_PROVIDER, KEYWORDS, LOAD_AGENT_RESPONSES
 from typing import List, Iterator
-import pandas as pd
-import numpy as np
 from graph_utils import NodeType, IntermediateNodes, SelectedFeatures, MissingFeatureAssignments
 from agno.agent import Agent, RunResponse
 from pydantic import BaseModel, Field
@@ -71,7 +69,8 @@ mechanisms, organ systems, factors or other entities that can best explain the t
 Dataset Description: {dataset_description}
 Available Features: {feature_names}
 Instructions:
-- Propose 5 entities that best capture the key mechanisms connecting the features to {target_name}. Make sure each features can be assigned to one of the entities.
+- Propose 5-10 entities that best capture the key mechanisms connecting the features to {target_name}. Make sure each features can be assigned to one of the entities.
+- These entities should be highly specific and detailed.
 - These entities (intermediate nodes) should be made-up terms (e.g., mechanisms, organ systems, etc.) and must NOT be any of the dataset features.
 - Only the input nodes (features) should be from the provided feature list.
 - Do NOT invent any input nodes or features.
@@ -153,7 +152,7 @@ class MissingFeatureAssignmentWorkflow(NoMemoryWorkflow):
             yield RunResponse(run_id=self.run_id, content={"step": "missing_features", "edges": []})
             return
         model = get_model()
-        feature_names, dataset_description = get_feature_names_and_description()
+        _, dataset_description = get_feature_names_and_description()
         knowledge_base = get_knowledge_base()
         cache_key = f"missing_features_{DATASET_NAME}"
         if not recreate_search and self.session_state.get(cache_key):

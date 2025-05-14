@@ -4,25 +4,10 @@
 <graph edgedefault="directed"><node id="DIAGNOSIS">
   <data key="d0">TARGET_NODE</data>
 </node>
-<node id="Cognitive Function Markers">
+<node id="Neurodegeneration and Brain Atrophy">
   <data key="d0">INTERMEDIATE_NODE</data>
 </node>
 <node id="AGE">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTEDUCAT">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTETHCAT">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTGENDER">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTMARRY">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTRACCAT">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="VSWEIGHT">
@@ -43,7 +28,76 @@
 <node id="VSRESP">
   <data key="d0">INPUT_NODE</data>
 </node>
+<node id="Ventricles">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Hippocampus">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="WholeBrain">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Entorhinal">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Fusiform">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="MidTemp">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="ICV">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="ABETA40">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="ABETA42">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="TAU">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PTAU">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="FDG">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PIB">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="AV45">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="FBB">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Amyloid and Tau Pathology">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="Cognitive Function and Memory Performance">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="PTEDUCAT">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PTETHCAT">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PTGENDER">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PTMARRY">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PTRACCAT">
+  <data key="d0">INPUT_NODE</data>
+</node>
 <node id="MMSCORE">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="MOCA">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="CLOCKSCOR">
@@ -71,6 +125,12 @@
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="AVTOTB">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="AVDEL30MIN">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="AVDELTOT">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="DSPANFOR">
@@ -115,17 +175,89 @@
 <node id="BNTTOTAL">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="AVDEL30MIN">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="AVDELTOT">
+<node id="MINTTOTAL">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="ANART">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="MINTTOTAL">
+<node id="RAVLT_immediate">
   <data key="d0">INPUT_NODE</data>
+</node>
+<node id="RAVLT_learning">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="RAVLT_forgetting">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="RAVLT_perc_forgetting">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="LDELTOTAL">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="ADAS11">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="ADAS13">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="ADASQ4">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="FAQ">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="mPACCdigit">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="mPACCtrailsB">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogPtMem">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogPtLang">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogPtVisspat">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogPtPlan">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogPtOrgan">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogPtDivatt">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogPtTotal">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogSPMem">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogSPLang">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogSPVisspat">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogSPPlan">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogSPOrgan">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogSPDivatt">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EcogSPTotal">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d0">INTERMEDIATE_NODE</data>
 </node>
 <node id="NPIASEV">
   <data key="d0">INPUT_NODE</data>
@@ -175,730 +307,652 @@
 <node id="GDTOTAL">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="ABETA40">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="ABETA42">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="TAU">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTAU">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="ADAS11">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="ADAS13">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="ADASQ4">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="MMSE">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="RAVLT_immediate">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="RAVLT_learning">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="RAVLT_forgetting">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="RAVLT_perc_forgetting">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="LDELTOTAL">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="FAQ">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="mPACCdigit">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="mPACCtrailsB">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Ventricles">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Hippocampus">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="WholeBrain">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Entorhinal">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Fusiform">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="MidTemp">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="ICV">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="MOCA">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogPtMem">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogPtLang">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogPtVisspat">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogPtPlan">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogPtOrgan">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogPtDivatt">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogPtTotal">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogSPMem">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogSPLang">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogSPVisspat">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogSPPlan">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogSPOrgan">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogSPDivatt">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="EcogSPTotal">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="FDG">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PIB">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="AV45">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="FBB">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Neurodegenerative Biomarkers">
+<node id="Vascular and Cardiovascular Health">
   <data key="d0">INTERMEDIATE_NODE</data>
 </node>
-<node id="Neuropsychiatric Symptoms">
+<node id="Demographic and Genetic Risk Factors">
   <data key="d0">INTERMEDIATE_NODE</data>
 </node>
-<node id="Vascular Health Indicators">
+<node id="Functional and Daily Living Abilities">
   <data key="d0">INTERMEDIATE_NODE</data>
 </node>
-<node id="Amyloid and Tau Pathology">
+<node id="Neuroimaging Biomarkers">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="Biofluid Biomarkers">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="Global Cognitive Screening">
   <data key="d0">INTERMEDIATE_NODE</data>
 </node>
 <node id="CDRSB.1">
   <data key="d0">INPUT_NODE</data>
 </node>
-<edge source="Cognitive Function Markers" target="DIAGNOSIS">
+<node id="MMSE">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<edge source="Neurodegeneration and Brain Atrophy" target="DIAGNOSIS">
   <data key="d1">evidence</data>
 </edge>
-<edge source="AGE" target="Cognitive Function Markers">
+<edge source="AGE" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="PTEDUCAT" target="Cognitive Function Markers">
+<edge source="AGE" target="Cognitive Function and Memory Performance">
   <data key="d1">evidence</data>
 </edge>
-<edge source="PTETHCAT" target="Cognitive Function Markers">
+<edge source="AGE" target="Vascular and Cardiovascular Health">
   <data key="d1">evidence</data>
 </edge>
-<edge source="PTGENDER" target="Cognitive Function Markers">
+<edge source="AGE" target="Demographic and Genetic Risk Factors">
   <data key="d1">evidence</data>
 </edge>
-<edge source="PTMARRY" target="Cognitive Function Markers">
+<edge source="AGE" target="Global Cognitive Screening">
   <data key="d1">evidence</data>
 </edge>
-<edge source="PTRACCAT" target="Cognitive Function Markers">
+<edge source="VSWEIGHT" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="VSWEIGHT" target="Cognitive Function Markers">
+<edge source="VSWEIGHT" target="Vascular and Cardiovascular Health">
   <data key="d1">evidence</data>
 </edge>
-<edge source="VSWEIGHT" target="Vascular Health Indicators">
+<edge source="VSHEIGHT" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="VSHEIGHT" target="Cognitive Function Markers">
+<edge source="VSHEIGHT" target="Vascular and Cardiovascular Health">
   <data key="d1">evidence</data>
 </edge>
-<edge source="VSHEIGHT" target="Vascular Health Indicators">
+<edge source="VSBPSYS" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="VSBPSYS" target="Cognitive Function Markers">
+<edge source="VSBPSYS" target="Vascular and Cardiovascular Health">
   <data key="d1">evidence</data>
 </edge>
-<edge source="VSBPSYS" target="Vascular Health Indicators">
+<edge source="VSBPDIA" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="VSBPDIA" target="Cognitive Function Markers">
+<edge source="VSBPDIA" target="Vascular and Cardiovascular Health">
   <data key="d1">evidence</data>
 </edge>
-<edge source="VSBPDIA" target="Vascular Health Indicators">
+<edge source="VSPULSE" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="VSPULSE" target="Cognitive Function Markers">
+<edge source="VSPULSE" target="Vascular and Cardiovascular Health">
   <data key="d1">evidence</data>
 </edge>
-<edge source="VSPULSE" target="Vascular Health Indicators">
+<edge source="VSRESP" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="VSRESP" target="Cognitive Function Markers">
+<edge source="VSRESP" target="Vascular and Cardiovascular Health">
   <data key="d1">evidence</data>
 </edge>
-<edge source="VSRESP" target="Vascular Health Indicators">
+<edge source="Ventricles" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="MMSCORE" target="Cognitive Function Markers">
+<edge source="Ventricles" target="Neuroimaging Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="CLOCKSCOR" target="Cognitive Function Markers">
+<edge source="Hippocampus" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="COPYSCOR" target="Cognitive Function Markers">
+<edge source="Hippocampus" target="Neuroimaging Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="AVTOT1" target="Cognitive Function Markers">
+<edge source="WholeBrain" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="AVTOT2" target="Cognitive Function Markers">
+<edge source="WholeBrain" target="Neuroimaging Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="AVTOT3" target="Cognitive Function Markers">
+<edge source="Entorhinal" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="AVTOT4" target="Cognitive Function Markers">
+<edge source="Entorhinal" target="Neuroimaging Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="AVTOT5" target="Cognitive Function Markers">
+<edge source="Fusiform" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="AVTOT6" target="Cognitive Function Markers">
+<edge source="Fusiform" target="Neuroimaging Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="AVTOTB" target="Cognitive Function Markers">
+<edge source="MidTemp" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="DSPANFOR" target="Cognitive Function Markers">
+<edge source="MidTemp" target="Neuroimaging Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="DSPANFLTH" target="Cognitive Function Markers">
+<edge source="ICV" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="DSPANBAC" target="Cognitive Function Markers">
+<edge source="ICV" target="Neuroimaging Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="DSPANBLTH" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CATANIMSC" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CATANPERS" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CATANINTR" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CATVEGESC" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CATVGPERS" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CATVGINTR" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="TRAASCOR" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="TRABSCOR" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="DIGITSCOR" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BNTTOTAL" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="AVDEL30MIN" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="AVDELTOT" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ANART" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="MINTTOTAL" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIASEV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIASEV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIBSEV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIBSEV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPICSEV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPICSEV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIDSEV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIDSEV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIESEV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIESEV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIFSEV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIFSEV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIGSEV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIGSEV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIHSEV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIHSEV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIISEV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIISEV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIJSEV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIJSEV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIKSEV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPIKSEV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPILSEV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPILSEV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPISCORE" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NPISCORE" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CDGLOBAL" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CDGLOBAL" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CDRSB" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CDRSB" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="GDTOTAL" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="GDTOTAL" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ABETA40" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ABETA40" target="Neurodegenerative Biomarkers">
+<edge source="ABETA40" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
 <edge source="ABETA40" target="Amyloid and Tau Pathology">
   <data key="d1">evidence</data>
 </edge>
-<edge source="ABETA42" target="Cognitive Function Markers">
+<edge source="ABETA40" target="Biofluid Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="ABETA42" target="Neurodegenerative Biomarkers">
+<edge source="ABETA42" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
 <edge source="ABETA42" target="Amyloid and Tau Pathology">
   <data key="d1">evidence</data>
 </edge>
-<edge source="TAU" target="Cognitive Function Markers">
+<edge source="ABETA42" target="Biofluid Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="TAU" target="Neurodegenerative Biomarkers">
+<edge source="TAU" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
 <edge source="TAU" target="Amyloid and Tau Pathology">
   <data key="d1">evidence</data>
 </edge>
-<edge source="PTAU" target="Cognitive Function Markers">
+<edge source="TAU" target="Biofluid Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="PTAU" target="Neurodegenerative Biomarkers">
+<edge source="PTAU" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
 <edge source="PTAU" target="Amyloid and Tau Pathology">
   <data key="d1">evidence</data>
 </edge>
-<edge source="ADAS11" target="Cognitive Function Markers">
+<edge source="PTAU" target="Biofluid Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="ADAS11" target="Neuropsychiatric Symptoms">
+<edge source="FDG" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
-<edge source="ADAS13" target="Cognitive Function Markers">
+<edge source="FDG" target="Neuroimaging Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="ADAS13" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ADASQ4" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ADASQ4" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="MMSE" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="MMSE" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="RAVLT_immediate" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="RAVLT_immediate" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="RAVLT_learning" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="RAVLT_learning" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="RAVLT_forgetting" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="RAVLT_forgetting" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="RAVLT_perc_forgetting" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="RAVLT_perc_forgetting" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="LDELTOTAL" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="LDELTOTAL" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="FAQ" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="FAQ" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="mPACCdigit" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="mPACCdigit" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="mPACCtrailsB" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="mPACCtrailsB" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Ventricles" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Ventricles" target="Neurodegenerative Biomarkers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Ventricles" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Ventricles" target="Amyloid and Tau Pathology">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Hippocampus" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Hippocampus" target="Neurodegenerative Biomarkers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Hippocampus" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Hippocampus" target="Amyloid and Tau Pathology">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="WholeBrain" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="WholeBrain" target="Neurodegenerative Biomarkers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="WholeBrain" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="WholeBrain" target="Amyloid and Tau Pathology">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Entorhinal" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Entorhinal" target="Neurodegenerative Biomarkers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Entorhinal" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Entorhinal" target="Amyloid and Tau Pathology">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Fusiform" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Fusiform" target="Neurodegenerative Biomarkers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Fusiform" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Fusiform" target="Amyloid and Tau Pathology">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="MidTemp" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="MidTemp" target="Neurodegenerative Biomarkers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="MidTemp" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="MidTemp" target="Amyloid and Tau Pathology">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ICV" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ICV" target="Neurodegenerative Biomarkers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ICV" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ICV" target="Amyloid and Tau Pathology">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="MOCA" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="MOCA" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtMem" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtMem" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtLang" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtLang" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtVisspat" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtVisspat" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtPlan" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtPlan" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtOrgan" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtOrgan" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtDivatt" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtDivatt" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtTotal" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogPtTotal" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPMem" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPMem" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPLang" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPLang" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPVisspat" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPVisspat" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPPlan" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPPlan" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPOrgan" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPOrgan" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPDivatt" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPDivatt" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPTotal" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EcogSPTotal" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="FDG" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="FDG" target="Neurodegenerative Biomarkers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="FDG" target="Neuropsychiatric Symptoms">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="FDG" target="Amyloid and Tau Pathology">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PIB" target="Cognitive Function Markers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PIB" target="Neurodegenerative Biomarkers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PIB" target="Neuropsychiatric Symptoms">
+<edge source="PIB" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
 <edge source="PIB" target="Amyloid and Tau Pathology">
   <data key="d1">evidence</data>
 </edge>
-<edge source="AV45" target="Cognitive Function Markers">
+<edge source="PIB" target="Neuroimaging Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="AV45" target="Neurodegenerative Biomarkers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="AV45" target="Neuropsychiatric Symptoms">
+<edge source="AV45" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
 <edge source="AV45" target="Amyloid and Tau Pathology">
   <data key="d1">evidence</data>
 </edge>
-<edge source="FBB" target="Cognitive Function Markers">
+<edge source="AV45" target="Neuroimaging Biomarkers">
   <data key="d1">evidence</data>
 </edge>
-<edge source="FBB" target="Neurodegenerative Biomarkers">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="FBB" target="Neuropsychiatric Symptoms">
+<edge source="FBB" target="Neurodegeneration and Brain Atrophy">
   <data key="d1">evidence</data>
 </edge>
 <edge source="FBB" target="Amyloid and Tau Pathology">
   <data key="d1">evidence</data>
 </edge>
-<edge source="Neurodegenerative Biomarkers" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="DIAGNOSIS">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Vascular Health Indicators" target="DIAGNOSIS">
+<edge source="FBB" target="Neuroimaging Biomarkers">
   <data key="d1">evidence</data>
 </edge>
 <edge source="Amyloid and Tau Pathology" target="DIAGNOSIS">
   <data key="d1">evidence</data>
 </edge>
-<edge source="CDRSB.1" target="Neurodegenerative Biomarkers">
+<edge source="Cognitive Function and Memory Performance" target="DIAGNOSIS">
   <data key="d1">evidence</data>
 </edge>
-<edge source="CDRSB.1" target="Neuropsychiatric Symptoms">
+<edge source="PTEDUCAT" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTEDUCAT" target="Demographic and Genetic Risk Factors">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTEDUCAT" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTETHCAT" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTETHCAT" target="Demographic and Genetic Risk Factors">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTETHCAT" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTGENDER" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTGENDER" target="Demographic and Genetic Risk Factors">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTGENDER" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTMARRY" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTMARRY" target="Demographic and Genetic Risk Factors">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTMARRY" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTRACCAT" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTRACCAT" target="Demographic and Genetic Risk Factors">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="PTRACCAT" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="MMSCORE" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="MMSCORE" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="MOCA" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="MOCA" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CLOCKSCOR" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CLOCKSCOR" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="COPYSCOR" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="COPYSCOR" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOT1" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOT1" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOT2" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOT2" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOT3" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOT3" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOT4" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOT4" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOT5" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOT5" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOT6" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOT6" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOTB" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVTOTB" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVDEL30MIN" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVDEL30MIN" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVDELTOT" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="AVDELTOT" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="DSPANFOR" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="DSPANFOR" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="DSPANFLTH" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="DSPANFLTH" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="DSPANBAC" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="DSPANBAC" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="DSPANBLTH" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="DSPANBLTH" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CATANIMSC" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CATANIMSC" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CATANPERS" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CATANPERS" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CATANINTR" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CATANINTR" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CATVEGESC" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CATVEGESC" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CATVGPERS" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CATVGPERS" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CATVGINTR" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CATVGINTR" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TRAASCOR" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TRAASCOR" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TRABSCOR" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="TRABSCOR" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="DIGITSCOR" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="DIGITSCOR" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BNTTOTAL" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="BNTTOTAL" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="MINTTOTAL" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="MINTTOTAL" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ANART" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ANART" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="RAVLT_immediate" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="RAVLT_immediate" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="RAVLT_learning" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="RAVLT_learning" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="RAVLT_forgetting" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="RAVLT_forgetting" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="RAVLT_perc_forgetting" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="RAVLT_perc_forgetting" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="LDELTOTAL" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="LDELTOTAL" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ADAS11" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ADAS11" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ADAS13" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ADAS13" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ADASQ4" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="ADASQ4" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="FAQ" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="FAQ" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="FAQ" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="mPACCdigit" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="mPACCdigit" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="mPACCtrailsB" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="mPACCtrailsB" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtMem" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtMem" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtLang" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtLang" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtVisspat" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtVisspat" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtPlan" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtPlan" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtOrgan" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtOrgan" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtDivatt" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtDivatt" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtTotal" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogPtTotal" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPMem" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPMem" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPLang" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPLang" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPVisspat" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPVisspat" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPPlan" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPPlan" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPOrgan" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPOrgan" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPDivatt" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPDivatt" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPTotal" target="Cognitive Function and Memory Performance">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="EcogSPTotal" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Neuropsychiatric and Behavioral Symptoms" target="DIAGNOSIS">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPIASEV" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPIBSEV" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPICSEV" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPIDSEV" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPIESEV" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPIFSEV" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPIGSEV" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPIHSEV" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPIISEV" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPIJSEV" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPIKSEV" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPILSEV" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="NPISCORE" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CDGLOBAL" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CDRSB" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="GDTOTAL" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Vascular and Cardiovascular Health" target="DIAGNOSIS">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Demographic and Genetic Risk Factors" target="DIAGNOSIS">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Functional and Daily Living Abilities" target="DIAGNOSIS">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Neuroimaging Biomarkers" target="DIAGNOSIS">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Biofluid Biomarkers" target="DIAGNOSIS">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="Global Cognitive Screening" target="DIAGNOSIS">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CDRSB.1" target="Neuropsychiatric and Behavioral Symptoms">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="CDRSB.1" target="Functional and Daily Living Abilities">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="MMSE" target="Global Cognitive Screening">
+  <data key="d1">evidence</data>
+</edge>
+<edge source="MMSE" target="Cognitive Function and Memory Performance">
   <data key="d1">evidence</data>
 </edge>
 </graph></graphml>

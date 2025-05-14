@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1200"
+   height="1000"
+   version="1.1"
+   id="svg76"
+   sodipodi:docname="grace_workflow.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   inkscape:export-filename="images/grace_workflow.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview76"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.77588404"
+     inkscape:cx="534.22932"
+     inkscape:cy="606.40505"
+     inkscape:window-width="1728"
+     inkscape:window-height="966"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg76" />
+  <!-- Background -->
+  <defs
+     id="defs2">
+    <linearGradient
+       id="bg-gradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#f5f7fa;stop-opacity:1"
+         id="stop1" />
+      <stop
+         offset="100%"
+         style="stop-color:#e4e8f0;stop-opacity:1"
+         id="stop2" />
+    </linearGradient>
+    <!-- Patterns for graphs -->
+    <pattern
+       id="dots"
+       width="10"
+       height="10"
+       patternUnits="userSpaceOnUse">
+      <circle
+         cx="5"
+         cy="5"
+         r="1"
+         fill="#333"
+         id="circle2" />
+    </pattern>
+    <marker
+       id="arrowhead-7"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="10,3.5 0,7 0,0 "
+         fill="#2c3e50"
+         id="polygon29-9" />
+    </marker>
+    <marker
+       id="arrowhead-7-8"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0,7 0,0 10,3.5 "
+         fill="#2c3e50"
+         id="polygon29-9-0" />
+    </marker>
+  </defs>
+  <rect
+     width="100%"
+     height="100%"
+     fill="url(#bg-gradient)"
+     id="rect2" />
+  <text
+     x="600"
+     y="50"
+     font-family="Arial"
+     font-size="32"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#2c3e50"
+     id="text2">GRACE Workflow</text>
+  <text
+     x="600"
+     y="80"
+     font-family="Arial"
+     font-size="20"
+     text-anchor="middle"
+     fill="#34495e"
+     id="text3">Graph-based Dimensionality Reduction and Context-Enhanced Explainability</text>
+  <!-- SECTION 1: Knowledge Graph Creation -->
+  <rect
+     x="50"
+     y="120"
+     width="500"
+     height="350"
+     rx="10"
+     ry="10"
+     fill="#3498db"
+     fill-opacity="0.1"
+     stroke="#3498db"
+     stroke-width="2"
+     id="rect3" />
+  <text
+     x="300"
+     y="150"
+     font-family="Arial"
+     font-size="24"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#3498db"
+     id="text4">1. Knowledge Graph Creation (RAG)</text>
+  <!-- Step 1.1 -->
+  <circle
+     cx="120"
+     cy="200"
+     r="25"
+     fill="#3498db"
+     id="circle4" />
+  <text
+     x="120"
+     cy="206"
+     font-family="Arial"
+     font-size="20"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text5">1</text>
+  <text
+     x="246.67867"
+     y="205.29053"
+     font-family="Arial"
+     font-size="16px"
+     fill="#2c3e50"
+     id="text6">Suggest Biological Mechanisms</text>
+  <rect
+     x="160"
+     y="180"
+     width="30"
+     height="30"
+     fill="none"
+     stroke="#34495e"
+     stroke-width="1"
+     id="rect6" />
+  <text
+     x="175"
+     y="202"
+     font-family="Arial"
+     font-size="20"
+     text-anchor="middle"
+     fill="#34495e"
+     id="text7">📊</text>
+  <text
+     x="88.647858"
+     y="241.16211"
+     font-family="Arial"
+     font-size="12px"
+     fill="#7f8c8d"
+     font-style="italic"
+     id="text8">Icon: Graph/Network</text>
+  <!-- Step 1.2 -->
+  <circle
+     cx="120"
+     cy="280"
+     r="25"
+     fill="#3498db"
+     id="circle8" />
+  <text
+     x="120"
+     cy="286"
+     font-family="Arial"
+     font-size="20"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text9">2</text>
+  <text
+     x="225.51654"
+     y="295.87158"
+     font-family="Arial"
+     font-size="16px"
+     fill="#2c3e50"
+     id="text10">Connect Input Features to Mechanisms</text>
+  <rect
+     x="160"
+     y="260"
+     width="30"
+     height="30"
+     fill="none"
+     stroke="#34495e"
+     stroke-width="1"
+     id="rect10" />
+  <text
+     x="175"
+     y="282"
+     font-family="Arial"
+     font-size="20"
+     text-anchor="middle"
+     fill="#34495e"
+     id="text11">🔗</text>
+  <text
+     x="90.764061"
+     y="320.104"
+     font-family="Arial"
+     font-size="12px"
+     fill="#7f8c8d"
+     font-style="italic"
+     id="text12">Icon: Connection/Link</text>
+  <!-- Step 1.3 -->
+  <circle
+     cx="120"
+     cy="360"
+     r="25"
+     fill="#3498db"
+     id="circle12" />
+  <text
+     x="120"
+     cy="366"
+     font-family="Arial"
+     font-size="20"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text13">3</text>
+  <text
+     x="258.31784"
+     y="386.45264"
+     font-family="Arial"
+     font-size="16px"
+     fill="#2c3e50"
+     id="text14">Connect Missing Features</text>
+  <rect
+     x="160"
+     y="340"
+     width="30"
+     height="30"
+     fill="none"
+     stroke="#34495e"
+     stroke-width="1"
+     id="rect14" />
+  <text
+     x="175"
+     y="362"
+     font-family="Arial"
+     font-size="20"
+     text-anchor="middle"
+     fill="#34495e"
+     id="text15">🧩</text>
+  <text
+     x="99.228912"
+     y="405.39453"
+     font-family="Arial"
+     font-size="12px"
+     fill="#7f8c8d"
+     font-style="italic"
+     id="text16">Icon: Puzzle Piece</text>
+  <!-- Workflow arrow -->
+  <path
+     d="M 300 470 L 300 520"
+     stroke="#2c3e50"
+     stroke-width="3"
+     fill="none"
+     marker-end="url(#arrowhead)"
+     id="path16" />
+  <path
+     d="m 905.04797,469.76179 v 50"
+     stroke="#2c3e50"
+     stroke-width="3"
+     fill="none"
+     marker-end="url(#arrowhead-7)"
+     id="path16-3"
+     style="marker-end:url(#arrowhead-7)" />
+  <!-- SECTION 2: Graph Optimization -->
+  <rect
+     x="50"
+     y="520"
+     width="500"
+     height="350"
+     rx="10"
+     ry="10"
+     fill="#e74c3c"
+     fill-opacity="0.1"
+     stroke="#e74c3c"
+     stroke-width="2"
+     id="rect16" />
+  <text
+     x="300"
+     y="550"
+     font-family="Arial"
+     font-size="24"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#e74c3c"
+     id="text17">2. Graph Optimization</text>
+  <!-- Step 2.1 -->
+  <circle
+     cx="120"
+     cy="600"
+     r="25"
+     fill="#e74c3c"
+     id="circle17" />
+  <text
+     x="120"
+     cy="606"
+     font-family="Arial"
+     font-size="20"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text18">1</text>
+  <text
+     x="217.0517"
+     y="596.82568"
+     font-family="Arial"
+     font-size="16px"
+     fill="#2c3e50"
+     id="text19">Multi-objective Optimization (Optuna)</text>
+  <rect
+     x="160"
+     y="580"
+     width="30"
+     height="30"
+     fill="none"
+     stroke="#34495e"
+     stroke-width="1"
+     id="rect19" />
+  <text
+     x="175"
+     y="602"
+     font-family="Arial"
+     font-size="20"
+     text-anchor="middle"
+     fill="#34495e"
+     id="text20">⚙️</text>
+  <text
+     x="94.99649"
+     y="640.104"
+     font-family="Arial"
+     font-size="12px"
+     fill="#7f8c8d"
+     font-style="italic"
+     id="text21">Icon: Gear/Settings</text>
+  <!-- Step 2.2 -->
+  <circle
+     cx="120"
+     cy="680"
+     r="25"
+     fill="#e74c3c"
+     id="circle21" />
+  <text
+     x="120"
+     cy="686"
+     font-family="Arial"
+     font-size="20"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text22">2</text>
+  <text
+     x="211.76117"
+     y="674.70947"
+     font-family="Arial"
+     font-size="16px"
+     fill="#2c3e50"
+     id="text23">Train Models (Node Ensemble)</text>
+  <rect
+     x="160"
+     y="660"
+     width="30"
+     height="30"
+     fill="none"
+     stroke="#34495e"
+     stroke-width="1"
+     id="rect23" />
+  <text
+     x="175"
+     y="682"
+     font-family="Arial"
+     font-size="20"
+     text-anchor="middle"
+     fill="#34495e"
+     id="text24">🧠</text>
+  <text
+     x="105.57755"
+     y="720.104"
+     font-family="Arial"
+     font-size="12px"
+     fill="#7f8c8d"
+     font-style="italic"
+     id="text25">Icon: Brain/ML</text>
+  <!-- Step 2.3 -->
+  <circle
+     cx="120"
+     cy="760"
+     r="25"
+     fill="#e74c3c"
+     id="circle25" />
+  <text
+     x="120"
+     cy="766"
+     font-family="Arial"
+     font-size="20"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text26">3</text>
+  <text
+     x="235.03951"
+     y="744.12842"
+     font-family="Arial"
+     font-size="16px"
+     fill="#2c3e50"
+     id="text27">Prediction Explainability</text>
+  <rect
+     x="160"
+     y="740"
+     width="30"
+     height="30"
+     fill="none"
+     stroke="#34495e"
+     stroke-width="1"
+     id="rect27" />
+  <text
+     x="175"
+     y="762"
+     font-family="Arial"
+     font-size="20"
+     text-anchor="middle"
+     fill="#34495e"
+     id="text28">🔮</text>
+  <text
+     x="350"
+     y="780"
+     font-family="Arial"
+     font-size="12"
+     fill="#7f8c8d"
+     font-style="italic"
+     id="text29">Icon: Crystal Ball</text>
+  <!-- Arrow definition -->
+  <defs
+     id="defs29">
+    <marker
+       id="arrowhead"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#2c3e50"
+         id="polygon29" />
+    </marker>
+  </defs>
+  <!-- KNOWLEDGE GRAPHS -->
+  <!-- Initial Knowledge Graph -->
+  <rect
+     x="600"
+     y="120"
+     width="550"
+     height="350"
+     rx="10"
+     ry="10"
+     fill="#9b59b6"
+     fill-opacity="0.1"
+     stroke="#9b59b6"
+     stroke-width="2"
+     id="rect29" />
+  <text
+     x="875"
+     y="150"
+     font-family="Arial"
+     font-size="24"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#9b59b6"
+     id="text30">Initial Knowledge Graph</text>
+  <!-- Target Node -->
+  <circle
+     cx="875"
+     cy="200"
+     r="30"
+     fill="#e74c3c"
+     stroke="#c0392b"
+     stroke-width="2"
+     id="circle30" />
+  <text
+     x="875"
+     cy="205"
+     font-family="Arial"
+     font-size="14"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text31">Target</text>
+  <!-- Intermediate Nodes -->
+  <circle
+     cx="785"
+     cy="280"
+     r="25"
+     fill="#3498db"
+     stroke="#2980b9"
+     stroke-width="2"
+     id="circle31" />
+  <text
+     x="785"
+     cy="285"
+     font-family="Arial"
+     font-size="12"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text32">Mech 1</text>
+  <circle
+     cx="875"
+     cy="280"
+     r="25"
+     fill="#3498db"
+     stroke="#2980b9"
+     stroke-width="2"
+     id="circle32" />
+  <text
+     x="875"
+     cy="285"
+     font-family="Arial"
+     font-size="12"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text33">Mech 2</text>
+  <circle
+     cx="965"
+     cy="280"
+     r="25"
+     fill="#3498db"
+     stroke="#2980b9"
+     stroke-width="2"
+     id="circle33" />
+  <text
+     x="965"
+     cy="285"
+     font-family="Arial"
+     font-size="12"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text34">Mech 3</text>
+  <!-- Input Nodes -->
+  <circle
+     cx="700"
+     cy="360"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle34" />
+  <text
+     x="700"
+     cy="365"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text35">F1</text>
+  <circle
+     cx="750"
+     cy="360"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle35" />
+  <text
+     x="750"
+     cy="365"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text36">F2</text>
+  <circle
+     cx="800"
+     cy="360"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle36" />
+  <text
+     x="800"
+     cy="365"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text37">F3</text>
+  <circle
+     cx="850"
+     cy="360"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle37" />
+  <text
+     x="850"
+     cy="365"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text38">F4</text>
+  <circle
+     cx="900"
+     cy="360"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle38" />
+  <text
+     x="900"
+     cy="365"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text39">F5</text>
+  <circle
+     cx="950"
+     cy="360"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle39" />
+  <text
+     x="950"
+     cy="365"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text40">F6</text>
+  <circle
+     cx="1000"
+     cy="360"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle40" />
+  <text
+     x="1000"
+     cy="365"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text41">F7</text>
+  <circle
+     cx="1050"
+     cy="360"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle41" />
+  <text
+     x="1050"
+     cy="365"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text42">F8</text>
+  <!-- Connections from Intermediate to Target -->
+  <line
+     x1="785"
+     y1="255"
+     x2="865"
+     y2="225"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line42" />
+  <line
+     x1="875"
+     y1="255"
+     x2="875"
+     y2="230"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line43" />
+  <line
+     x1="965"
+     y1="255"
+     x2="885"
+     y2="225"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line44" />
+  <!-- Connections from Input to Intermediate -->
+  <line
+     x1="700"
+     y1="340"
+     x2="775"
+     y2="295"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line45" />
+  <line
+     x1="750"
+     y1="340"
+     x2="780"
+     y2="305"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line46" />
+  <line
+     x1="800"
+     y1="340"
+     x2="790"
+     y2="305"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line47" />
+  <line
+     x1="850"
+     y1="340"
+     x2="875"
+     y2="305"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line48" />
+  <line
+     x1="900"
+     y1="340"
+     x2="885"
+     y2="305"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line49" />
+  <line
+     x1="950"
+     y1="340"
+     x2="960"
+     y2="305"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line50" />
+  <line
+     x1="1000"
+     y1="340"
+     x2="970"
+     y2="305"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line51" />
+  <line
+     x1="1050"
+     y1="340"
+     x2="975"
+     y2="295"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line52" />
+  <!-- Many feature connections -->
+  <line
+     x1="800"
+     y1="340"
+     x2="875"
+     y2="305"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     stroke-dasharray="4"
+     id="line53" />
+  <line
+     x1="850"
+     y1="340"
+     x2="780"
+     y2="305"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     stroke-dasharray="4"
+     id="line54" />
+  <line
+     x1="900"
+     y1="340"
+     x2="960"
+     y2="305"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     stroke-dasharray="4"
+     id="line55" />
+  <!-- Optimized Knowledge Graph -->
+  <rect
+     x="600"
+     y="520"
+     width="550"
+     height="350"
+     rx="10"
+     ry="10"
+     fill="#16a085"
+     fill-opacity="0.1"
+     stroke="#16a085"
+     stroke-width="2"
+     id="rect55" />
+  <text
+     x="875"
+     y="550"
+     font-family="Arial"
+     font-size="24"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#16a085"
+     id="text55">Optimized Knowledge Graph</text>
+  <!-- Target Node -->
+  <circle
+     cx="875"
+     cy="600"
+     r="30"
+     fill="#e74c3c"
+     stroke="#c0392b"
+     stroke-width="2"
+     id="circle55" />
+  <text
+     x="875"
+     cy="605"
+     font-family="Arial"
+     font-size="14"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text56">Target</text>
+  <!-- Intermediate Nodes -->
+  <circle
+     cx="785"
+     cy="680"
+     r="25"
+     fill="#3498db"
+     stroke="#2980b9"
+     stroke-width="2"
+     id="circle56" />
+  <text
+     x="785"
+     cy="685"
+     font-family="Arial"
+     font-size="12"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text57">Mech 1</text>
+  <circle
+     cx="875"
+     cy="680"
+     r="25"
+     fill="#3498db"
+     stroke="#2980b9"
+     stroke-width="2"
+     id="circle57" />
+  <text
+     x="875"
+     cy="685"
+     font-family="Arial"
+     font-size="12"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text58">Mech 2</text>
+  <circle
+     cx="965"
+     cy="680"
+     r="25"
+     fill="#3498db"
+     stroke="#2980b9"
+     stroke-width="2"
+     id="circle58" />
+  <text
+     x="965"
+     cy="685"
+     font-family="Arial"
+     font-size="12"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text59">Mech 3</text>
+  <!-- Input Nodes (fewer connections) -->
+  <circle
+     cx="730"
+     cy="760"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle59" />
+  <text
+     x="730"
+     cy="765"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text60">F1</text>
+  <circle
+     cx="785"
+     cy="760"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle60" />
+  <text
+     x="785"
+     cy="765"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text61">F3</text>
+  <circle
+     cx="875"
+     cy="760"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle61" />
+  <text
+     x="875"
+     cy="765"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text62">F4</text>
+  <circle
+     cx="965"
+     cy="760"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle62" />
+  <text
+     x="965"
+     cy="765"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text63">F6</text>
+  <circle
+     cx="1020"
+     cy="760"
+     r="20"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle63" />
+  <text
+     x="1020"
+     cy="765"
+     font-family="Arial"
+     font-size="10"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="white"
+     id="text64">F7</text>
+  <!-- Connections from Intermediate to Target -->
+  <line
+     x1="785"
+     y1="655"
+     x2="865"
+     y2="625"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line64" />
+  <line
+     x1="875"
+     y1="655"
+     x2="875"
+     y2="630"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line65" />
+  <line
+     x1="965"
+     y1="655"
+     x2="885"
+     y2="625"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line66" />
+  <!-- Connections from Input to Intermediate (simplified) -->
+  <line
+     x1="730"
+     y1="740"
+     x2="775"
+     y2="705"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line67" />
+  <line
+     x1="785"
+     y1="740"
+     x2="785"
+     y2="705"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line68" />
+  <line
+     x1="875"
+     y1="740"
+     x2="875"
+     y2="705"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line69" />
+  <line
+     x1="965"
+     y1="740"
+     x2="965"
+     y2="705"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line70" />
+  <line
+     x1="1020"
+     y1="740"
+     x2="975"
+     y2="705"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line71" />
+  <!-- Legend -->
+  <rect
+     x="100"
+     y="900"
+     width="1000"
+     height="80"
+     rx="5"
+     ry="5"
+     fill="#ecf0f1"
+     stroke="#bdc3c7"
+     stroke-width="1"
+     id="rect71" />
+  <text
+     x="600"
+     y="925"
+     font-family="Arial"
+     font-size="18"
+     font-weight="bold"
+     text-anchor="middle"
+     fill="#2c3e50"
+     id="text71">Legend</text>
+  <!-- Target node legend -->
+  <circle
+     cx="150"
+     cy="950"
+     r="15"
+     fill="#e74c3c"
+     stroke="#c0392b"
+     stroke-width="2"
+     id="circle71" />
+  <text
+     x="180"
+     y="955"
+     font-family="Arial"
+     font-size="14"
+     fill="#2c3e50"
+     id="text72">Target Node</text>
+  <!-- Intermediate node legend -->
+  <circle
+     cx="300"
+     cy="950"
+     r="15"
+     fill="#3498db"
+     stroke="#2980b9"
+     stroke-width="2"
+     id="circle72" />
+  <text
+     x="330"
+     y="955"
+     font-family="Arial"
+     font-size="14"
+     fill="#2c3e50"
+     id="text73">Intermediate Node (Mechanism)</text>
+  <!-- Feature node legend -->
+  <circle
+     cx="550"
+     cy="950"
+     r="15"
+     fill="#2ecc71"
+     stroke="#27ae60"
+     stroke-width="2"
+     id="circle73" />
+  <text
+     x="580"
+     y="955"
+     font-family="Arial"
+     font-size="14"
+     fill="#2c3e50"
+     id="text74">Input Node (Feature)</text>
+  <!-- Connection legend -->
+  <line
+     x1="700"
+     y1="950"
+     x2="750"
+     y2="950"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     id="line74" />
+  <text
+     x="780"
+     y="955"
+     font-family="Arial"
+     font-size="14"
+     fill="#2c3e50"
+     id="text75">Connection</text>
+  <!-- Dashed connection legend -->
+  <line
+     x1="850"
+     y1="950"
+     x2="900"
+     y2="950"
+     stroke="#7f8c8d"
+     stroke-width="2"
+     stroke-dasharray="4"
+     id="line75" />
+  <text
+     x="940"
+     y="955"
+     font-family="Arial"
+     font-size="14"
+     fill="#2c3e50"
+     id="text76">Removed in Optimization</text>
+</svg>

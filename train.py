@@ -1,83 +1,163 @@
-import optuna
 from sklearn.metrics import accuracy_score, roc_auc_score
 import pandas as pd
 from sklearn.base import clone
-from params import model_fit
+import multiprocessing
+import functools
+import optuna
+
+def objective(trial, param_names, intermediate_nodes, all_features, X_train, y_train, X_val, y_val, model, METRIC, node_model_predictions_cache):
+    """Optuna objective function to evaluate a specific graph configuration."""
+    # Get binary parameters from optuna
+    current_params_dict = {p_name: trial.suggest_categorical(p_name, [0, 1]) for p_name in param_names}
+    
+    # Build node groups from active parameters
+    current_node_groups = {node: [] for node in intermediate_nodes}
+    active_edges_count = 0
+    for p_name, is_active in current_params_dict.items():
+        if is_active:
+            feature, node = p_name.rsplit("_", 1)
+            if feature in all_features and node in intermediate_nodes:
+                current_node_groups[node].append(feature)
+                active_edges_count += 1
+    
+    # Initialize DataFrames for node outputs
+    X_train_graph = pd.DataFrame(index=X_train.index)
+    X_val_graph = pd.DataFrame(index=X_val.index)
+
+    # Process each node sequentially
+    for node_key, features_list in current_node_groups.items():
+        if not features_list:
+            continue
+            
+        if len(features_list) == 1:
+            # Single feature just gets passed through
+            feature_name = features_list[0]
+            X_train_graph[node_key] = X_train[feature_name]
+            X_val_graph[node_key] = X_val[feature_name]
+        else:
+            # Multiple features require a model
+            cache_key = tuple(sorted(features_list))
+            
+            # Use cached predictions if available
+            if cache_key in node_model_predictions_cache:
+                train_pred, val_pred = node_model_predictions_cache[cache_key]
+            else:
+                # Train the model sequentially (no parallelization)
+                model = clone(model)
+                model.fit(X_train[features_list], y_train, eval_set=[(X_val[features_list], y_val)], verbose=False)
+    
+                train_pred = model.predict(X_train[features_list]) if METRIC == 'accuracy' else model.predict_proba(X_train[features_list])[:, 1]
+                val_pred = model.predict(X_val[features_list]) if METRIC == 'accuracy' else model.predict_proba(X_val[features_list])[:, 1]
+                # Cache the results
+                node_model_predictions_cache[cache_key] = (train_pred, val_pred)
+                
+            X_train_graph[node_key] = train_pred
+            X_val_graph[node_key] = val_pred
+
+    active_edges_count += len(X_train_graph.columns)
+    # Train and evaluate the ensemble model
+    ensemble_model = clone(model)
+    ensemble_model.fit(X_train_graph, y_train, eval_set=[(X_val_graph, y_val)], verbose=False)
+    
+    val_preds = ensemble_model.predict(X_val_graph) if METRIC == 'accuracy' else ensemble_model.predict_proba(X_val_graph)[:, 1]
+    performance = accuracy_score(y_val, val_preds) if METRIC == 'accuracy' else roc_auc_score(y_val, val_preds)
+    
+    # Return multiple objectives: maximize performance, minimize edges
+    return performance, -active_edges_count
 
 def graph_based_optimization(X_train, y_train, X_val, y_val, initial_node_groups, model, METRIC, n_trials_optuna=2000):
-    original_feature_map = {name: list(feats) for name, feats in initial_node_groups.items()}
-
-    def evaluate_graph(current_config):
-        X_train_graph = pd.DataFrame(index=X_train.index)
-        X_val_graph = pd.DataFrame(index=X_val.index)
-        all_input_features_used_in_trial = set()
-        active_node_names_eval = []
-        for name, feats in current_config.items():
-            if feats: 
-                all_input_features_used_in_trial.update(feats)
-                node_model = clone(model) 
-                model_fit(node_model, X_train[feats], y_train, X_val[feats], y_val)
-                X_train_graph.loc[:, name] = node_model.predict(X_train[feats]) if METRIC == 'accuracy' else node_model.predict_proba(X_train[feats])[:, 1]
-                X_val_graph.loc[:, name] = node_model.predict(X_val[feats]) if METRIC == 'accuracy' else node_model.predict_proba(X_val[feats])[:, 1]
-                active_node_names_eval.append(name)
-            
-        num_unique_input_features = len(all_input_features_used_in_trial)
-        if not active_node_names_eval or X_train_graph.shape[1] == 0:
-             return (0.0, num_unique_input_features) 
-        
-        X_train_graph = X_train_graph[active_node_names_eval]
-        X_val_graph = X_val_graph[active_node_names_eval]
-        ensemble_model = clone(model) 
-        model_fit(ensemble_model, X_train_graph, y_train, X_val_graph, y_val)
-        val_preds = ensemble_model.predict(X_val_graph) if METRIC == 'accuracy' else ensemble_model.predict_proba(X_val_graph)[:, 1]
-        score = accuracy_score(y_val, val_preds) if METRIC == 'accuracy' else roc_auc_score(y_val, val_preds)
-        return score, num_unique_input_features
-
-    initial_config_for_eval = initial_node_groups 
-    initial_val_score, initial_num_unique_input_features = evaluate_graph(initial_config_for_eval)
-    print(f"Initial Configuration - Score ({METRIC.upper()}): {initial_val_score:.4f}, Input Features: {initial_num_unique_input_features}")
-
-    def optuna_objective(trial):
-        current_trial_node_groups = {} 
-        for group_name, original_features_in_group in original_feature_map.items():
-            selected_features_for_group = []
-            if original_features_in_group: 
-                for feature in original_features_in_group:
-                    if trial.suggest_categorical(f"feature_{group_name}_{feature}", [True, False]):
-                        selected_features_for_group.append(feature)
-            current_trial_node_groups[group_name] = selected_features_for_group
-        return evaluate_graph(current_trial_node_groups)
-
-    optuna.logging.set_verbosity(optuna.logging.WARNING)
-    pruner = optuna.pruners.MedianPruner(n_warmup_steps=10) 
-    study = optuna.create_study(directions=['maximize', 'minimize'], pruner=pruner) 
-    study.optimize(optuna_objective, n_trials=n_trials_optuna, show_progress_bar=True, n_jobs=-1)
+    """Optimize the graph structure using Optuna with multi-objective optimization."""
+    # Create shared cache for node model predictions
+    manager = multiprocessing.Manager()
+    node_model_predictions_cache = manager.dict()
     
+    # Extract features and intermediate nodes
+    all_features = list(X_train.columns)
+    intermediate_nodes = list(initial_node_groups.keys())
+    
+    # Find valid feature-node connections
+    valid_connections = set()
+    for node, features in initial_node_groups.items():
+        for feature in features:
+            if feature in all_features:
+                valid_connections.add((feature, node))
+            
+    # Create parameter names for optimization
+    param_names = []
+    for feature in all_features:
+        for node in intermediate_nodes:
+            if (feature, node) in valid_connections:
+                param_names.append(f"{feature}_{node}")
+
+    # Set Optuna logging level
+    optuna.logging.set_verbosity(optuna.logging.WARNING)
+    
+    # Prepare objective function with partial
+    objective_fn = functools.partial(
+        objective,
+        param_names=param_names,
+        intermediate_nodes=intermediate_nodes,
+        all_features=all_features,
+        X_train=X_train, y_train=y_train,
+        X_val=X_val, y_val=y_val,
+        model=model, METRIC=METRIC,
+        node_model_predictions_cache=node_model_predictions_cache
+    )
+    
+    # Create and run multi-objective Optuna study
+    study = optuna.create_study(directions=['maximize', 'maximize'])
+    study.optimize(objective_fn, n_trials=n_trials_optuna, show_progress_bar=True, n_jobs=-1)
+    
+    # Get best trials (Pareto front)
     best_trials = study.best_trials
-    for i, trial_info in enumerate(best_trials):
-        print(f"  Pareto Solution #{i+1} (Trial {trial_info.number}): Score={trial_info.values[0]:.4f}, Unique Input Features={trial_info.values[1]}")
-
-    # Select best overall trial (highest score, then fewest features)
-    best_overall_trial = best_trials[0]
-    for trial_info in best_trials[1:]:
-        if trial_info.values[0] > best_overall_trial.values[0]:
-            best_overall_trial = trial_info
-        elif trial_info.values[0] == best_overall_trial.values[0] and trial_info.values[1] < best_overall_trial.values[1]:
-            best_overall_trial = trial_info
-                
-    print(f"\nSelected Best Overall Trial (Highest Score, then Fewest Unique Input Features): Trial {best_overall_trial.number}") # Restored print
-    print(f"  Score ({METRIC.upper()}): {best_overall_trial.values[0]:.4f}")
-    print(f"  Num Unique Input Features: {best_overall_trial.values[1]}")
-
-    # Reconstruct optimized node groups from the best trial
-    optimized_node_groups = {}
-    for group_name, original_features_in_group in original_feature_map.items():
-        selected_features = []
-        if original_features_in_group: 
-            for feature in original_features_in_group:
-                if best_overall_trial.params.get(f"feature_{group_name}_{feature}", False):
-                    selected_features.append(feature)
-        # Store the result for the group (might be empty list)
-        optimized_node_groups[group_name] = selected_features
-    print(f"  Resulting Optimized Node Groups Configuration: {optimized_node_groups}") # Restored print
+    
+    # Define a combined metric to balance performance and edge reduction
+    # Formula: score = performance - edge_penalty * (edge_count / max_edges)
+    # Higher edge_penalty values favor sparser graphs
+    edge_penalty = 0.2  # Adjust this to control performance vs. sparsity tradeoff
+    max_edges = max(-t.values[1] for t in best_trials) if best_trials else 1
+    
+    # Calculate combined scores for each solution
+    combined_scores = []
+    for trial in best_trials:
+        perf = trial.values[0]
+        edges = -trial.values[1]
+        normalized_edges = edges / max_edges if max_edges > 0 else 0
+        combined_score = perf - edge_penalty * normalized_edges
+        combined_scores.append((trial, combined_score))
+    
+    # Sort by combined score and select best solution
+    sorted_combined = sorted(combined_scores, key=lambda x: x[1], reverse=True)
+    best_trial = sorted_combined[0][0]
+    best_params = best_trial.params
+    performance_score = best_trial.values[0]
+    edge_count = -best_trial.values[1]
+    
+    # Build optimized node groups from best parameters
+    optimized_node_groups = {node: [] for node in intermediate_nodes}
+    used_features = set()
+    
+    for p_name, is_active in best_params.items():
+        if is_active:
+            feature, node = p_name.rsplit("_", 1)
+            if feature in all_features and node in intermediate_nodes:
+                optimized_node_groups[node].append(feature)
+                used_features.add(feature)
+    
+    # Remove intermediate nodes without any features
+    optimized_node_groups = {node: features for node, features in optimized_node_groups.items() if features}
+    
+    print(f"Val {METRIC.upper()} Score: {performance_score:.4f}, Features: {len(used_features)}, Edges: {edge_count}")
+    
+    # For information, show the Pareto front
+    print("\nPareto front solutions:")
+    for i, (trial, combined_score) in enumerate(sorted_combined[:min(5, len(sorted_combined))]):
+        perf = trial.values[0]
+        edges = -trial.values[1]
+        print(f"  Solution {i+1}: {METRIC.upper()}={perf:.4f}, Edges={edges}, Combined={combined_score:.4f}")
+        
+    # Explain the choice
+    print(f"\nSelected solution with best balance using edge_penalty={edge_penalty}")
+    print(f"This favors solutions with fewer edges while maintaining good performance")
+        
     return optimized_node_groups

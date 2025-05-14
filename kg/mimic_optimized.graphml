@@ -3,11 +3,20 @@
 <graph edgedefault="directed"><node id="mortality_flag">
   <data key="d0">TARGET_NODE</data>
 </node>
-<node id="Cardiovascular Function">
+<node id="Cardiovascular Function and Hemodynamics">
   <data key="d0">INTERMEDIATE_NODE</data>
 </node>
 <node id="HRbpm">
   <data key="d0">INPUT_NODE</data>
+</node>
+<node id="NBPdmmHg">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="FoleymL_sum">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Sepsis and Organ Dysfunction">
+  <data key="d0">INTERMEDIATE_NODE</data>
 </node>
 <node id="CVPmmHg">
   <data key="d0">INPUT_NODE</data>
@@ -15,67 +24,19 @@
 <node id="PO2ArterialmmHg">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="PCO2ArterialmmHg">
+<node id="AST">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="Hematocritserum">
+<node id="LacticAcid">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="WBC">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Creatinineserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Glucoseserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="LDH">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Sodiumserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="TemperatureFF">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Calciumnon-ionized">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CKCPK">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="TotalBilirubin">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Aniongap">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Potassiumserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CReactiveProteinCRP">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Albumin">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="INR">
+<node id="PlateletCount">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="anchor_age">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="gender">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="FoleymL_sum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="diabetes">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="BMI">
+<node id="hypertension">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="NMED">
@@ -84,229 +45,54 @@
 <node id="NSURG">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="TSURG">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="VSURG">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="TRAUM">
-  <data key="d0">INPUT_NODE</data>
+<node id="Renal Function and Electrolyte Balance">
+  <data key="d0">INTERMEDIATE_NODE</data>
 </node>
 <node id="BUNCreatinine">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Inflammatory and Immune Response">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="Sepsis3">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Liver Function and Metabolic Status">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="Albumin">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Neurological and Cognitive Status">
+  <data key="d0">INTERMEDIATE_NODE</data>
+</node>
+<node id="EyeOpening">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="GCS">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="PaO2_FiO2">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="organ_dysfunction">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Sepsis3">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="NBPsmmHg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="NBPdmmHg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Sepsis Pathophysiology">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Hemoglobingdl">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="AST">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PHArterial">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="ArterialBaseExcess">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="BUN">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="HCO3serum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="BrainNatiureticPeptideBNP">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="heart_failure">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Organ Dysfunction">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="ABPmmmHg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Chlorideserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="TotalPEEPLevelcmH2O">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PlateletCount">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTT">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Dobutaminemg_avg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Norepinephrinemg_avg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="obesity">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CMED">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Respiratory Failure">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="CompliancecmH2OLseconds">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="RRinspmin">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PCO2VenousmmHg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Metabolic Disturbance">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="IonizedCalcium">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="LacticAcid">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="BUNAlbumin">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="eGFR">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Neurological Status">
-  <data key="d0">UNKNOWN</data>
-</node>
-<edge source="Cardiovascular Function" target="mortality_flag"/>
-<edge source="HRbpm" target="Cardiovascular Function"/>
-<edge source="HRbpm" target="Organ Dysfunction"/>
-<edge source="CVPmmHg" target="Cardiovascular Function"/>
-<edge source="CVPmmHg" target="Organ Dysfunction"/>
-<edge source="PO2ArterialmmHg" target="Cardiovascular Function"/>
-<edge source="PO2ArterialmmHg" target="Organ Dysfunction"/>
-<edge source="PO2ArterialmmHg" target="Respiratory Failure"/>
-<edge source="PCO2ArterialmmHg" target="Cardiovascular Function"/>
-<edge source="PCO2ArterialmmHg" target="Sepsis Pathophysiology"/>
-<edge source="PCO2ArterialmmHg" target="Respiratory Failure"/>
-<edge source="Hematocritserum" target="Cardiovascular Function"/>
-<edge source="Hematocritserum" target="Sepsis Pathophysiology"/>
-<edge source="Hematocritserum" target="Organ Dysfunction"/>
-<edge source="WBC" target="Cardiovascular Function"/>
-<edge source="WBC" target="Sepsis Pathophysiology"/>
-<edge source="WBC" target="Organ Dysfunction"/>
-<edge source="WBC" target="Metabolic Disturbance"/>
-<edge source="Creatinineserum" target="Cardiovascular Function"/>
-<edge source="Creatinineserum" target="Sepsis Pathophysiology"/>
-<edge source="Creatinineserum" target="Metabolic Disturbance"/>
-<edge source="Glucoseserum" target="Cardiovascular Function"/>
-<edge source="Glucoseserum" target="Organ Dysfunction"/>
-<edge source="Glucoseserum" target="Metabolic Disturbance"/>
-<edge source="LDH" target="Cardiovascular Function"/>
-<edge source="LDH" target="Sepsis Pathophysiology"/>
-<edge source="LDH" target="Organ Dysfunction"/>
-<edge source="Sodiumserum" target="Cardiovascular Function"/>
-<edge source="TemperatureFF" target="Cardiovascular Function"/>
-<edge source="TemperatureFF" target="Sepsis Pathophysiology"/>
-<edge source="Calciumnon-ionized" target="Cardiovascular Function"/>
-<edge source="CKCPK" target="Cardiovascular Function"/>
-<edge source="TotalBilirubin" target="Cardiovascular Function"/>
-<edge source="TotalBilirubin" target="Metabolic Disturbance"/>
-<edge source="Aniongap" target="Cardiovascular Function"/>
-<edge source="Potassiumserum" target="Cardiovascular Function"/>
-<edge source="Potassiumserum" target="Metabolic Disturbance"/>
-<edge source="CReactiveProteinCRP" target="Cardiovascular Function"/>
-<edge source="CReactiveProteinCRP" target="Sepsis Pathophysiology"/>
-<edge source="CReactiveProteinCRP" target="Organ Dysfunction"/>
-<edge source="Albumin" target="Cardiovascular Function"/>
-<edge source="Albumin" target="Sepsis Pathophysiology"/>
-<edge source="Albumin" target="Metabolic Disturbance"/>
-<edge source="INR" target="Cardiovascular Function"/>
-<edge source="INR" target="Sepsis Pathophysiology"/>
-<edge source="INR" target="Metabolic Disturbance"/>
-<edge source="anchor_age" target="Cardiovascular Function"/>
-<edge source="gender" target="Cardiovascular Function"/>
-<edge source="FoleymL_sum" target="Cardiovascular Function"/>
-<edge source="FoleymL_sum" target="Organ Dysfunction"/>
-<edge source="diabetes" target="Cardiovascular Function"/>
-<edge source="BMI" target="Cardiovascular Function"/>
-<edge source="BMI" target="Sepsis Pathophysiology"/>
-<edge source="BMI" target="Organ Dysfunction"/>
-<edge source="NMED" target="Cardiovascular Function"/>
-<edge source="NMED" target="Organ Dysfunction"/>
-<edge source="NSURG" target="Cardiovascular Function"/>
-<edge source="NSURG" target="Sepsis Pathophysiology"/>
-<edge source="TSURG" target="Cardiovascular Function"/>
-<edge source="VSURG" target="Cardiovascular Function"/>
-<edge source="VSURG" target="Sepsis Pathophysiology"/>
-<edge source="TRAUM" target="Cardiovascular Function"/>
-<edge source="BUNCreatinine" target="Cardiovascular Function"/>
-<edge source="GCS" target="Cardiovascular Function"/>
-<edge source="GCS" target="Organ Dysfunction"/>
-<edge source="PaO2_FiO2" target="Cardiovascular Function"/>
-<edge source="PaO2_FiO2" target="Organ Dysfunction"/>
-<edge source="organ_dysfunction" target="Cardiovascular Function"/>
-<edge source="Sepsis3" target="Cardiovascular Function"/>
-<edge source="Sepsis3" target="Sepsis Pathophysiology"/>
-<edge source="NBPsmmHg" target="Cardiovascular Function"/>
-<edge source="NBPdmmHg" target="Cardiovascular Function"/>
-<edge source="Sepsis Pathophysiology" target="mortality_flag"/>
-<edge source="Hemoglobingdl" target="Sepsis Pathophysiology"/>
-<edge source="Hemoglobingdl" target="Organ Dysfunction"/>
-<edge source="Hemoglobingdl" target="Metabolic Disturbance"/>
-<edge source="AST" target="Sepsis Pathophysiology"/>
-<edge source="PHArterial" target="Sepsis Pathophysiology"/>
-<edge source="PHArterial" target="Organ Dysfunction"/>
-<edge source="ArterialBaseExcess" target="Sepsis Pathophysiology"/>
-<edge source="BUN" target="Sepsis Pathophysiology"/>
-<edge source="BUN" target="Organ Dysfunction"/>
-<edge source="HCO3serum" target="Sepsis Pathophysiology"/>
-<edge source="HCO3serum" target="Organ Dysfunction"/>
-<edge source="HCO3serum" target="Metabolic Disturbance"/>
-<edge source="BrainNatiureticPeptideBNP" target="Sepsis Pathophysiology"/>
-<edge source="heart_failure" target="Sepsis Pathophysiology"/>
-<edge source="Organ Dysfunction" target="mortality_flag"/>
-<edge source="ABPmmmHg" target="Organ Dysfunction"/>
-<edge source="Chlorideserum" target="Organ Dysfunction"/>
-<edge source="TotalPEEPLevelcmH2O" target="Organ Dysfunction"/>
-<edge source="PlateletCount" target="Organ Dysfunction"/>
-<edge source="PTT" target="Organ Dysfunction"/>
-<edge source="PTT" target="Metabolic Disturbance"/>
-<edge source="Dobutaminemg_avg" target="Organ Dysfunction"/>
-<edge source="Norepinephrinemg_avg" target="Organ Dysfunction"/>
-<edge source="obesity" target="Organ Dysfunction"/>
-<edge source="CMED" target="Organ Dysfunction"/>
-<edge source="Respiratory Failure" target="mortality_flag"/>
-<edge source="CompliancecmH2OLseconds" target="Respiratory Failure"/>
-<edge source="RRinspmin" target="Respiratory Failure"/>
-<edge source="PCO2VenousmmHg" target="Respiratory Failure"/>
-<edge source="Metabolic Disturbance" target="mortality_flag"/>
-<edge source="IonizedCalcium" target="Metabolic Disturbance"/>
-<edge source="LacticAcid" target="Metabolic Disturbance"/>
-<edge source="BUNAlbumin" target="Metabolic Disturbance"/>
-<edge source="eGFR" target="Metabolic Disturbance"/>
-<edge source="Neurological Status" target="mortality_flag"/>
+<edge source="Cardiovascular Function and Hemodynamics" target="mortality_flag"/>
+<edge source="HRbpm" target="Cardiovascular Function and Hemodynamics"/>
+<edge source="NBPdmmHg" target="Cardiovascular Function and Hemodynamics"/>
+<edge source="FoleymL_sum" target="Cardiovascular Function and Hemodynamics"/>
+<edge source="Sepsis and Organ Dysfunction" target="mortality_flag"/>
+<edge source="CVPmmHg" target="Sepsis and Organ Dysfunction"/>
+<edge source="PO2ArterialmmHg" target="Sepsis and Organ Dysfunction"/>
+<edge source="AST" target="Sepsis and Organ Dysfunction"/>
+<edge source="LacticAcid" target="Sepsis and Organ Dysfunction"/>
+<edge source="PlateletCount" target="Sepsis and Organ Dysfunction"/>
+<edge source="anchor_age" target="Sepsis and Organ Dysfunction"/>
+<edge source="hypertension" target="Sepsis and Organ Dysfunction"/>
+<edge source="NMED" target="Sepsis and Organ Dysfunction"/>
+<edge source="NSURG" target="Sepsis and Organ Dysfunction"/>
+<edge source="Renal Function and Electrolyte Balance" target="mortality_flag"/>
+<edge source="BUNCreatinine" target="Renal Function and Electrolyte Balance"/>
+<edge source="Inflammatory and Immune Response" target="mortality_flag"/>
+<edge source="Sepsis3" target="Inflammatory and Immune Response"/>
+<edge source="Liver Function and Metabolic Status" target="mortality_flag"/>
+<edge source="Albumin" target="Liver Function and Metabolic Status"/>
+<edge source="Neurological and Cognitive Status" target="mortality_flag"/>
+<edge source="EyeOpening" target="Neurological and Cognitive Status"/>
+<edge source="GCS" target="Neurological and Cognitive Status"/>
 </graph></graphml>
