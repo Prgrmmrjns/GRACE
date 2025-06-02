@@ -1,0 +1,2181 @@
+{
+    "session_id": "missing-adni-1",
+    "user_id": null,
+    "memory": null,
+    "session_data": {
+        "session_state": {
+            "missing_features_adni_11": [
+                {
+                    "feature": "AGE",
+                    "interactions": [
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Age influences various physiological and cognitive functions, affecting blood pressure, vascular health, and neurodegeneration markers. Older age is associated with increased blood pressure, vascular risk factors, and cognitive decline, which are interconnected in AD pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "PTEDUCAT",
+                    "interactions": [
+                        "AGE",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Educational level impacts cognitive reserve and influences neuropsychological test performance. It interacts with demographic factors and vascular health, affecting susceptibility to neurodegeneration and cognitive decline.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "PTETHCAT",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Ethnicity can influence vascular risk profiles and genetic predispositions, affecting blood pressure and neurodegeneration pathways. These interactions are relevant for understanding disparities in AD risk.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "PTGENDER",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Gender differences influence vascular health, cognitive decline, and biomarker profiles, affecting disease progression and presentation in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "PTMARRY",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Marital status can impact social engagement and cognitive reserve, indirectly influencing neurodegeneration and vascular health interactions.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "PTRACCAT",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Race/ethnicity influences genetic and environmental factors affecting vascular health, neurodegeneration, and biomarker profiles, relevant in AD pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "VSWEIGHT",
+                    "interactions": [
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Body weight impacts cardiovascular health, influencing blood pressure, pulse, and respiratory function, which are interconnected with neurodegeneration processes.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "VSHEIGHT",
+                    "interactions": [
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Height relates to vascular and metabolic health, affecting blood pressure and cerebrovascular integrity, which are relevant in AD progression.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "VSBPSYS",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Systolic blood pressure influences cerebrovascular health, impacting neurodegeneration and cognitive decline in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "VSBPDIA",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Diastolic blood pressure affects vascular integrity and cerebral perfusion, contributing to neurodegeneration and cognitive impairment.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "VSPULSE",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Pulse rate reflects cardiovascular health; abnormalities can influence cerebral blood flow and neurodegeneration processes.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "VSRESP",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Respiratory rate impacts oxygen delivery, affecting brain metabolism and neurodegeneration, especially in vulnerable regions in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "MMSCORE",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Global cognitive score interacts with demographic and vascular factors, reflecting the combined influence on neurodegeneration and clinical symptoms.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "CLOCKSCOR",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "COPYSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Executive function assessments relate to vascular health and neurodegeneration, with disruptions indicating progression in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "COPYSCOR",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "AVTOT1",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Visuospatial and executive function tests are affected by neurodegeneration and vascular factors, reflecting disease severity.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "AVTOT1",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT2"
+                    ],
+                    "explanation": "Memory recall measures are directly impacted by hippocampal atrophy and tau pathology, which are influenced by vascular and demographic factors.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "AVTOT2",
+                    "interactions": [
+                        "AGE",
+                        "PTEDUCAT",
+                        "PTETHCAT",
+                        "PTGENDER",
+                        "PTMARRY",
+                        "PTRACCAT",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP",
+                        "MMSCORE",
+                        "CLOCKSCOR",
+                        "COPYSCOR",
+                        "AVTOT1"
+                    ],
+                    "explanation": "Memory retention is affected by neurodegeneration and vascular health, with interactions indicating disease progression.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "AVTOT6",
+                    "interactions": [
+                        "AVTOTB",
+                        "AVDEL30MIN",
+                        "AVDELTOT",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVTOTB",
+                        "AVDEL30MIN"
+                    ],
+                    "explanation": "AVTOT6 (total score at the sixth trial) and AVTOTB (total score at baseline) are both measures of verbal learning and memory, reflecting the progression of memory encoding. Their interaction captures the consistency and change in verbal memory performance, which is crucial in AD pathology. The AVDEL30MIN and AVDELTOT measure delayed recall and retention, directly related to hippocampal function and tau pathology, which influence each other during disease progression.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "AVTOTB",
+                    "interactions": [
+                        "AVTOT6",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDEL30MIN",
+                        "AVDELTOT",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVTOT6",
+                        "AVDEL30MIN"
+                    ],
+                    "explanation": "Baseline total verbal memory score (AVTOTB) interacts with immediate recall scores (AVTOT1–AVTOT5) and delayed recall measures (AVDEL30MIN, AVDELTOT), reflecting the encoding, consolidation, and retrieval processes. These interactions are indicative of hippocampal integrity and tau pathology, which are central to AD neurodegeneration.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "DSPANFOR",
+                    "interactions": [
+                        "DSPANFLTH",
+                        "DSPANBAC",
+                        "DSPANBLTH",
+                        "DigiTSCOR",
+                        "AVTOT6",
+                        "AVTOTB",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDEL30MIN",
+                        "AVDELTOT"
+                    ],
+                    "explanation": "Forward digit span (DSPANFOR) assesses working memory capacity, which interacts with phonological loop functions and attention systems. Its relationship with other working memory measures (DSPANFLTH, DSPANBAC, DSPANBLTH) and neuropsychological tests like Digit Symbol (DIGITSCOR) reflects the integrity of prefrontal and parietal networks affected in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "DSPANFLTH",
+                    "interactions": [
+                        "DSPANFOR",
+                        "DSPANBAC",
+                        "DSPANBLTH",
+                        "DigiTSCOR",
+                        "AVTOT6",
+                        "AVTOTB",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDEL30MIN",
+                        "AVDELTOT"
+                    ],
+                    "explanation": "Backward digit span (DSPANBLTH) measures working memory and executive function, interacting with forward span and other cognitive tests. These interactions reflect the integrity of dorsolateral prefrontal cortex circuits, which are impacted by tau pathology in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "DSPANBAC",
+                    "interactions": [
+                        "DSPANFOR",
+                        "DSPANFLTH",
+                        "DSPANBLTH",
+                        "DigiTSCOR",
+                        "AVTOT6",
+                        "AVTOTB",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDEL30MIN",
+                        "AVDELTOT"
+                    ],
+                    "explanation": "Backward digit span (DSPANBAC) assesses complex working memory and manipulation of information, interacting with other span measures and processing speed tests. These interactions are indicative of executive network integrity, compromised in AD due to neurodegeneration.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "DSPANBLTH",
+                    "interactions": [
+                        "DSPANFOR",
+                        "DSPANFLTH",
+                        "DSPANBAC",
+                        "DigiTSCOR",
+                        "AVTOT6",
+                        "AVTOTB",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDEL30MIN",
+                        "AVDELTOT"
+                    ],
+                    "explanation": "Backward digit span (DSPANBLTH) and digit symbol (DigiTSCOR) interactions reflect working memory and processing speed, both affected by tau-related neurodegeneration. Their relationship indicates the extent of cognitive decline in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "CATANIMSC",
+                    "interactions": [
+                        "CATVGPERS",
+                        "CATVGINTR",
+                        "CATVEGESC",
+                        "CATVGPERS",
+                        "CATVGINTR",
+                        "CATANINTR",
+                        "CATANPERS",
+                        "CATVGPERS",
+                        "CATVGINTR",
+                        "CATANINTR",
+                        "CATANPERS",
+                        "CATVEGESC",
+                        "CATVGPERS",
+                        "CATVGINTR"
+                    ],
+                    "explanation": "Verbal fluency (CATANIMSC) interacts with semantic (CATVGPERS, CATVGINTR) and phonemic (CATANPERS) fluency measures, reflecting language networks and executive functions. These are affected by tau pathology and neurodegeneration in language-related cortical regions.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "CATANPERS",
+                    "interactions": [
+                        "CATANIMSC",
+                        "CATVGPERS",
+                        "CATVGINTR",
+                        "CATVEGESC",
+                        "CATVGPERS",
+                        "CATVGINTR",
+                        "CATANINTR",
+                        "CATANIMSC",
+                        "CATVGPERS",
+                        "CATVGINTR",
+                        "CATVEGESC",
+                        "CATVGPERS",
+                        "CATVGINTR"
+                    ],
+                    "explanation": "Phonemic fluency (CATANPERS) interacts with semantic fluency and other language measures, indicating the integrity of frontal and temporal language networks, which are compromised in AD due to tau accumulation.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "CATVEGESC",
+                    "interactions": [
+                        "CATANIMSC",
+                        "CATVGPERS",
+                        "CATVGINTR",
+                        "CATANPERS",
+                        "CATVGPERS",
+                        "CATVGINTR",
+                        "CATANINTR",
+                        "CATANIMSC",
+                        "CATVGPERS",
+                        "CATVGINTR",
+                        "CATANPERS",
+                        "CATVGPERS",
+                        "CATVGINTR"
+                    ],
+                    "explanation": "Semantic fluency (CATVEGESC) interacts with other language and executive measures, reflecting temporal and frontal lobe function, affected by neurodegeneration in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "CATVGPERS",
+                    "interactions": [
+                        "CATANIMSC",
+                        "CATANPERS",
+                        "CATVEGESC",
+                        "CATVGINTR",
+                        "CATANINTR",
+                        "CATANIMSC",
+                        "CATVGINTR",
+                        "CATANPERS",
+                        "CATVEGESC",
+                        "CATVGINTR",
+                        "CATANINTR",
+                        "CATANIMSC"
+                    ],
+                    "explanation": "Semantic fluency (CATVGPERS) interacts with phonemic and other language measures, indicating semantic network integrity, which deteriorates with tau pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "CATVGINTR",
+                    "interactions": [
+                        "CATANIMSC",
+                        "CATVGPERS",
+                        "CATVEGESC",
+                        "CATANPERS",
+                        "CATVGPERS",
+                        "CATANINTR",
+                        "CATANIMSC",
+                        "CATVGPERS",
+                        "CATANPERS",
+                        "CATVEGESC",
+                        "CATVGPERS"
+                    ],
+                    "explanation": "Intrusion errors in fluency tasks (CATVGINTR) reflect executive control and semantic network integrity, affected by neurodegeneration and tau pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "TRAASCOR",
+                    "interactions": [
+                        "TRABSCOR",
+                        "DigiTSCOR",
+                        "AVTOT6",
+                        "AVTOTB",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDEL30MIN",
+                        "AVDELTOT",
+                        "MMSE",
+                        "MOCA",
+                        "ADAS11"
+                    ],
+                    "explanation": "Trail Making Test Part A (TRAASCOR) and Part B (TRABSCOR) measure processing speed and cognitive flexibility, respectively. Their interaction reflects frontoparietal network integrity, compromised in AD due to tau and neurodegeneration.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "TRABSCOR",
+                    "interactions": [
+                        "TRAASCOR",
+                        "DigiTSCOR",
+                        "AVTOT6",
+                        "AVTOTB",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDEL30MIN",
+                        "AVDELTOT",
+                        "MMSE",
+                        "MOCA",
+                        "ADAS11"
+                    ],
+                    "explanation": "Trail Making Test Part B (TRABSCOR) interacts with Part A (TRAASCOR) and other executive function measures, indicating frontal lobe health affected by tau pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "DIGITSCOR",
+                    "interactions": [
+                        "DSPANFOR",
+                        "DSPANFLTH",
+                        "DSPANBAC",
+                        "DSPANBLTH",
+                        "DigiTSCOR",
+                        "AVTOT6",
+                        "AVTOTB",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDEL30MIN",
+                        "AVDELTOT"
+                    ],
+                    "explanation": "Digit Symbol Substitution Test (DIGITSCOR) assesses processing speed and working memory, interacting with digit span measures and verbal memory, reflecting widespread neurodegeneration.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "BNTTOTAL",
+                    "interactions": [
+                        "ANART",
+                        "MINTTOTAL",
+                        "AVTOT6",
+                        "AVTOTB",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDEL30MIN",
+                        "AVDELTOT",
+                        "MMSE",
+                        "MOCA",
+                        "ADAS11"
+                    ],
+                    "explanation": "Boston Naming Test (BNTTOTAL) interacts with other language and semantic memory measures, indicating temporal lobe integrity affected by tau pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "AVDEL30MIN",
+                    "interactions": [
+                        "AVTOT6",
+                        "AVTOTB",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDELTOT",
+                        "DigiTSCOR",
+                        "MMSE",
+                        "MOCA",
+                        "ADAS11"
+                    ],
+                    "explanation": "Delayed recall (AVDEL30MIN) interacts with immediate memory scores and processing speed measures, reflecting hippocampal and cortical integrity compromised in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "AVDELTOT",
+                    "interactions": [
+                        "AVTOT6",
+                        "AVTOTB",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDEL30MIN",
+                        "DigiTSCOR",
+                        "MMSE",
+                        "MOCA",
+                        "ADAS11"
+                    ],
+                    "explanation": "Total delayed recall (AVDELTOT) interacts with immediate recall and processing speed, indicating consolidation processes affected by tau pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "ANART",
+                    "interactions": [
+                        "BNTTOTAL",
+                        "MINTTOTAL",
+                        "AVTOT6",
+                        "AVTOTB",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDEL30MIN",
+                        "AVDELTOT",
+                        "MMSE",
+                        "MOCA",
+                        "ADAS11"
+                    ],
+                    "explanation": "American National Adult Reading Test (ANART) interacts with language and semantic memory measures, reflecting premorbid intelligence and cortical integrity, impacted in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "MINTTOTAL",
+                    "interactions": [
+                        "ANART",
+                        "BNTTOTAL",
+                        "AVTOT6",
+                        "AVTOTB",
+                        "AVTOT1",
+                        "AVTOT2",
+                        "AVTOT3",
+                        "AVTOT4",
+                        "AVTOT5",
+                        "AVDEL30MIN",
+                        "AVDELTOT",
+                        "MMSE",
+                        "MOCA",
+                        "ADAS11"
+                    ],
+                    "explanation": "Mini-Mental State Examination (MMSE) total score interacts with other cognitive measures, serving as a global indicator of cognitive decline influenced by neurodegeneration.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPIASEV",
+                    "interactions": [
+                        "NPILSEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Neuropsychiatric symptoms such as agitation, depression, and psychosis are often associated with underlying neurodegeneration and biomarker changes, reflecting interconnected pathological processes in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPIBSEV",
+                    "interactions": [
+                        "NPILSEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIASEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Behavioral and neuropsychiatric symptoms are linked to neurodegeneration and biomarker alterations, indicating interconnected disease mechanisms.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPICSEV",
+                    "interactions": [
+                        "NPILSEV",
+                        "NPIASEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Cognitive impairment correlates with neuropsychiatric symptoms and biomarker changes, reflecting the interconnected progression of AD pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPIDSEV",
+                    "interactions": [
+                        "NPILSEV",
+                        "NPIASEV",
+                        "NPICSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Neurodegeneration markers are associated with neuropsychiatric symptoms, indicating interconnected disease processes in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPIESEV",
+                    "interactions": [
+                        "NPILSEV",
+                        "NPIASEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Neuropsychiatric symptoms such as depression and agitation are linked to neurodegeneration and biomarker alterations, reflecting interconnected mechanisms.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPIFSEV",
+                    "interactions": [
+                        "NPILSEV",
+                        "NPIASEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Vascular factors influence neurodegeneration and neuropsychiatric symptoms, indicating interconnected vascular and neurodegenerative pathways in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPIGSEV",
+                    "interactions": [
+                        "NPILSEV",
+                        "NPIASEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Vascular pathology impacts neurodegeneration and neuropsychiatric symptoms, reflecting interconnected vascular and neurodegenerative processes.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPIHSEV",
+                    "interactions": [
+                        "NPILSEV",
+                        "NPIASEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Neurodegeneration markers are associated with neuropsychiatric symptoms, indicating interconnected disease mechanisms.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPIISEV",
+                    "interactions": [
+                        "NPILSEV",
+                        "NPIASEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Neurodegeneration and neuropsychiatric symptoms are interconnected, reflecting shared pathological pathways in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPIJSEV",
+                    "interactions": [
+                        "NPILSEV",
+                        "NPIASEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Behavioral symptoms like agitation are linked to neurodegeneration and biomarker changes, indicating interconnected disease processes.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPIKSEV",
+                    "interactions": [
+                        "NPILSEV",
+                        "NPIASEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Vascular and neurodegenerative interactions influence neuropsychiatric symptoms, reflecting interconnected pathways in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPILSEV",
+                    "interactions": [
+                        "NPIASEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Limbic system involvement links neuropsychiatric symptoms with neurodegeneration and biomarker alterations in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "NPISCORE",
+                    "interactions": [
+                        "NPIASEV",
+                        "NPILSEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "CDGLOBAL",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Composite neuropsychiatric scores reflect the overall severity of behavioral symptoms associated with neurodegeneration.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "CDGLOBAL",
+                    "interactions": [
+                        "NPIASEV",
+                        "NPILSEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDRSB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Global cognitive decline correlates with neuropsychiatric symptoms and biomarker changes, indicating interconnected disease progression.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "CDRSB",
+                    "interactions": [
+                        "NPIASEV",
+                        "NPILSEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Clinical Dementia Rating scale scores are associated with neurodegeneration and neuropsychiatric symptoms, reflecting interconnected disease severity markers.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "GDTOTAL",
+                    "interactions": [
+                        "NPIASEV",
+                        "NPILSEV",
+                        "NPICSEV",
+                        "NPIDSEV",
+                        "NPIESEV",
+                        "NPIFSEV",
+                        "NPIGSEV",
+                        "NPIHSEV",
+                        "NPIISEV",
+                        "NPIJSEV",
+                        "NPIKSEV",
+                        "NPIBSEV",
+                        "NPISCORE",
+                        "CDGLOBAL",
+                        "CDRSB"
+                    ],
+                    "explanation": "Geriatric Depression Scale scores are linked to neurodegeneration and neuropsychiatric symptoms, indicating interconnected pathways in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "ABETA40",
+                    "interactions": [
+                        "ABETA42",
+                        "TAU",
+                        "PTAU",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp",
+                        "ICV",
+                        "FDG",
+                        "PIB",
+                        "AV45",
+                        "FBB"
+                    ],
+                    "explanation": "Amyloid-beta 40 levels interact with other amyloid species, tau pathology, and neurodegeneration markers, reflecting core AD pathological processes.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "ABETA42",
+                    "interactions": [
+                        "ABETA40",
+                        "TAU",
+                        "PTAU",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp",
+                        "ICV",
+                        "FDG",
+                        "PIB",
+                        "AV45",
+                        "FBB"
+                    ],
+                    "explanation": "Lower CSF Aβ42 levels are associated with amyloid deposition and neurodegeneration, central to AD pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "TAU",
+                    "interactions": [
+                        "ABETA42",
+                        "ABETA40",
+                        "PTAU",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp",
+                        "ICV",
+                        "FDG",
+                        "PIB",
+                        "AV45",
+                        "FBB"
+                    ],
+                    "explanation": "Tau levels correlate with neurodegeneration and amyloid pathology, reflecting disease progression in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "PTAU",
+                    "interactions": [
+                        "ABETA42",
+                        "ABETA40",
+                        "TAU",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp",
+                        "ICV",
+                        "FDG",
+                        "PIB",
+                        "AV45",
+                        "FBB"
+                    ],
+                    "explanation": "Phosphorylated tau is a proximal marker of neurofibrillary tangle formation and neurodegeneration, interconnected with amyloid pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "CDRSB.1",
+                    "interactions": [
+                        "CDRSB",
+                        "FAQ",
+                        "MMSE",
+                        "ADAS11",
+                        "ADAS13",
+                        "ADASQ4",
+                        "RAVLT_immediate",
+                        "RAVLT_learning",
+                        "RAVLT_forgetting",
+                        "RAVLT_perc_forgetting",
+                        "LDELTOTAL",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "The CDR Sum of Boxes (CDRSB.1) assesses dementia severity and correlates with neurodegeneration markers like ventricles and hippocampal atrophy, as well as cognitive tests such as MMSE and ADAS scores, reflecting disease progression.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "ADAS11",
+                    "interactions": [
+                        "ADAS13",
+                        "ADASQ4",
+                        "MMSE",
+                        "RAVLT_immediate",
+                        "RAVLT_learning",
+                        "RAVLT_forgetting",
+                        "RAVLT_perc_forgetting",
+                        "LDELTOTAL",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "ADAS11 measures cognitive severity, which is linked to neurodegeneration (ventricular expansion, hippocampal atrophy) and memory performance (RAVLT), reflecting disease impact on cognition.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "ADAS13",
+                    "interactions": [
+                        "ADAS11",
+                        "ADASQ4",
+                        "MMSE",
+                        "RAVLT_immediate",
+                        "RAVLT_learning",
+                        "RAVLT_forgetting",
+                        "RAVLT_perc_forgetting",
+                        "LDELTOTAL",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "ADAS13, similar to ADAS11, assesses cognitive decline associated with neurodegeneration and memory impairment, with correlations to structural brain changes.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "ADASQ4",
+                    "interactions": [
+                        "ADAS11",
+                        "ADAS13",
+                        "MMSE",
+                        "RAVLT_immediate",
+                        "RAVLT_learning",
+                        "RAVLT_forgetting",
+                        "RAVLT_perc_forgetting",
+                        "LDELTOTAL",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "ADASQ4 evaluates specific cognitive domains affected by neurodegeneration, which are reflected in structural MRI features and memory tests.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "MMSE",
+                    "interactions": [
+                        "ADAS11",
+                        "ADAS13",
+                        "ADASQ4",
+                        "RAVLT_immediate",
+                        "RAVLT_learning",
+                        "RAVLT_forgetting",
+                        "RAVLT_perc_forgetting",
+                        "LDELTOTAL",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "MMSE provides a global cognitive score that correlates with neurodegeneration markers and memory performance, indicating disease severity.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "RAVLT_immediate",
+                    "interactions": [
+                        "RAVLT_learning",
+                        "RAVLT_forgetting",
+                        "RAVLT_perc_forgetting",
+                        "LDELTOTAL",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "RAVLT assesses verbal memory, directly linked to hippocampal atrophy and neurodegeneration, reflecting memory impairment in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "RAVLT_learning",
+                    "interactions": [
+                        "RAVLT_immediate",
+                        "RAVLT_forgetting",
+                        "RAVLT_perc_forgetting",
+                        "LDELTOTAL",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "Learning scores relate to memory encoding processes affected by hippocampal and temporal lobe atrophy, key in AD pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "RAVLT_forgetting",
+                    "interactions": [
+                        "RAVLT_immediate",
+                        "RAVLT_learning",
+                        "RAVLT_perc_forgetting",
+                        "LDELTOTAL",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "Forgetting measures reflect memory retention deficits associated with neurodegeneration in hippocampal and temporal regions.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "RAVLT_perc_forgetting",
+                    "interactions": [
+                        "RAVLT_immediate",
+                        "RAVLT_learning",
+                        "RAVLT_forgetting",
+                        "LDELTOTAL",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "Percentage forgetting indicates memory decline severity, linked to structural brain atrophy and neurodegeneration.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "LDELTOTAL",
+                    "interactions": [
+                        "RAVLT_immediate",
+                        "RAVLT_learning",
+                        "RAVLT_forgetting",
+                        "RAVLT_perc_forgetting",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "Total learning score reflects memory capacity, which correlates with hippocampal volume and neurodegeneration markers.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "FAQ",
+                    "interactions": [
+                        "MMSE",
+                        "ADAS11",
+                        "ADAS13",
+                        "ADASQ4",
+                        "RAVLT_immediate",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "Functional Activities Questionnaire assesses daily functioning, which deteriorates with neurodegeneration and cognitive decline.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "mPACCdigit",
+                    "interactions": [
+                        "mPACCtrailsB",
+                        "MMSE",
+                        "ADAS11",
+                        "ADAS13",
+                        "ADASQ4",
+                        "RAVLT_immediate",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "Composite cognitive measure involving digit span and trails, sensitive to neurodegeneration and hippocampal atrophy.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "mPACCtrailsB",
+                    "interactions": [
+                        "mPACCdigit",
+                        "MMSE",
+                        "ADAS11",
+                        "ADAS13",
+                        "ADASQ4",
+                        "RAVLT_immediate",
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "Trails B assesses executive function and processing speed, affected by frontal and temporal lobe atrophy in AD.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "Ventricles",
+                    "interactions": [
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp",
+                        "ICV",
+                        "VSBPSYS",
+                        "VSBPDIA",
+                        "VSPULSE",
+                        "VSRESP"
+                    ],
+                    "explanation": "Ventricular expansion indicates brain atrophy, correlating with hippocampal and cortical volume loss, reflecting neurodegeneration.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "Hippocampus",
+                    "interactions": [
+                        "Ventricles",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp",
+                        "ICV",
+                        "ABETA42",
+                        "TAU",
+                        "PTAU",
+                        "VSBPSYS",
+                        "VSBPDIA"
+                    ],
+                    "explanation": "Hippocampal atrophy is an early biomarker of AD, closely linked to memory deficits and amyloid/tau pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "WholeBrain",
+                    "interactions": [
+                        "Ventricles",
+                        "Hippocampus",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp",
+                        "ICV",
+                        "ABETA42",
+                        "TAU",
+                        "PTAU"
+                    ],
+                    "explanation": "Global brain atrophy reflects widespread neurodegeneration, associated with cognitive decline and biomarker changes.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "Entorhinal",
+                    "interactions": [
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Fusiform",
+                        "MidTemp",
+                        "ICV",
+                        "ABETA42",
+                        "TAU",
+                        "PTAU"
+                    ],
+                    "explanation": "Entorhinal cortex atrophy is an early AD marker, affecting memory circuits and correlating with tau and amyloid levels.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "Fusiform",
+                    "interactions": [
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "MidTemp",
+                        "ICV"
+                    ],
+                    "explanation": "Fusiform atrophy impacts visual and object recognition, associated with neurodegeneration in temporal regions.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "MidTemp",
+                    "interactions": [
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "ICV"
+                    ],
+                    "explanation": "Mid-temporal atrophy reflects neurodegeneration affecting language and memory functions, relevant in AD progression.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "ICV",
+                    "interactions": [
+                        "Ventricles",
+                        "Hippocampus",
+                        "WholeBrain",
+                        "Entorhinal",
+                        "Fusiform",
+                        "MidTemp"
+                    ],
+                    "explanation": "Intracranial volume normalization accounts for head size, influencing measurements of atrophy and structural biomarkers.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "MOCA",
+                    "interactions": [
+                        "MMSE",
+                        "ADAS11",
+                        "ADAS13",
+                        "RAVLT_learning",
+                        "RAVLT_forgetting",
+                        "EcogPtMem",
+                        "EcogSPMem",
+                        "Hippocampus",
+                        "Entorhinal",
+                        "FDG",
+                        "PIB",
+                        "AV45",
+                        "FBB",
+                        "Ventricles"
+                    ],
+                    "explanation": "MOCA assesses global cognitive function, which is influenced by neurodegeneration markers like hippocampal atrophy, tau pathology, and amyloid deposition. Its performance correlates with neuroimaging and fluid biomarkers, reflecting underlying AD pathology.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "EcogPtMem",
+                    "interactions": [
+                        "EcogSPMem",
+                        "EcogPtLang",
+                        "EcogPtVisspat",
+                        "EcogPtPlan",
+                        "EcogPtOrgan",
+                        "EcogPtDivatt",
+                        "EcogPtTotal",
+                        "FDG",
+                        "PIB",
+                        "AV45",
+                        "FBB",
+                        "Hippocampus",
+                        "Entorhinal",
+                        "Ventricles"
+                    ],
+                    "explanation": "Self-reported memory decline (EcogPtMem) is directly related to neurodegeneration in hippocampal and entorhinal regions, and correlates with amyloid and tau pathology, as well as glucose hypometabolism observed in FDG-PET.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "EcogPtLang",
+                    "interactions": [
+                        "EcogSPVisspat",
+                        "EcogPtMem",
+                        "EcogPtVisspat",
+                        "EcogPtPlan",
+                        "EcogPtOrgan",
+                        "EcogPtDivatt",
+                        "EcogPtTotal",
+                        "AV45",
+                        "FBB",
+                        "PIB",
+                        "Tau",
+                        "Hippocampus",
+                        "Entorhinal",
+                        "Ventricles"
+                    ],
+                    "explanation": "Language function decline is associated with neurodegeneration in temporal regions, which are affected by tau and amyloid pathology, and can be reflected in neuroimaging and fluid biomarkers.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "EcogPtVisspat",
+                    "interactions": [
+                        "EcogSPVisspat",
+                        "EcogPtMem",
+                        "EcogPtLang",
+                        "EcogPtPlan",
+                        "EcogPtOrgan",
+                        "EcogPtDivatt",
+                        "EcogPtTotal",
+                        "FBB",
+                        "PIB",
+                        "AV45",
+                        "Tau",
+                        "Fusiform",
+                        "MidTemp",
+                        "Ventricles"
+                    ],
+                    "explanation": "Visuospatial deficits relate to atrophy in fusiform and temporal regions, influenced by tau and amyloid accumulation, impacting neuroimaging features and cognitive assessments.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "EcogPtPlan",
+                    "interactions": [
+                        "EcogSPPlan",
+                        "EcogPtMem",
+                        "EcogPtLang",
+                        "EcogPtVisspat",
+                        "EcogPtOrgan",
+                        "EcogPtDivatt",
+                        "EcogPtTotal",
+                        "Ventricles",
+                        "Hippocampus",
+                        "Entorhinal",
+                        "FDG",
+                        "PIB",
+                        "AV45",
+                        "FBB"
+                    ],
+                    "explanation": "Planning and executive functions are affected by frontal and temporal atrophy, which are modulated by tau and amyloid pathology, reflected in neuroimaging and biomarker measures.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "EcogPtOrgan",
+                    "interactions": [
+                        "EcogSPOrgan",
+                        "EcogPtMem",
+                        "EcogPtLang",
+                        "EcogPtVisspat",
+                        "EcogPtPlan",
+                        "EcogPtDivatt",
+                        "EcogPtTotal",
+                        "Ventricles",
+                        "Hippocampus",
+                        "Entorhinal",
+                        "FDG",
+                        "PIB",
+                        "AV45",
+                        "FBB"
+                    ],
+                    "explanation": "Organizational and daily functioning decline correlates with neurodegeneration in multiple brain regions affected by AD pathology, influencing neuroimaging and clinical assessments.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "EcogPtDivatt",
+                    "interactions": [
+                        "EcogSPDivatt",
+                        "EcogPtMem",
+                        "EcogPtLang",
+                        "EcogPtVisspat",
+                        "EcogPtPlan",
+                        "EcogPtOrgan",
+                        "EcogPtTotal",
+                        "Ventricles",
+                        "Tau",
+                        "Hippocampus",
+                        "Entorhinal",
+                        "FBB",
+                        "PIB",
+                        "AV45"
+                    ],
+                    "explanation": "Divatt (divided attention) deficits are linked to frontal and parietal atrophy, influenced by tau and amyloid accumulation, affecting neuroimaging and cognitive performance.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "EcogPtTotal",
+                    "interactions": [
+                        "EcogSPTotal",
+                        "EcogPtMem",
+                        "EcogPtLang",
+                        "EcogPtVisspat",
+                        "EcogPtPlan",
+                        "EcogPtOrgan",
+                        "EcogPtDivatt",
+                        "Ventricles",
+                        "Hippocampus",
+                        "Entorhinal",
+                        "FDG",
+                        "PIB",
+                        "AV45",
+                        "FBB"
+                    ],
+                    "explanation": "Overall daily functioning decline reflects widespread neurodegeneration, associated with tau and amyloid pathology, and measurable via neuroimaging and fluid biomarkers.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "FDG",
+                    "interactions": [
+                        "PIB",
+                        "AV45",
+                        "FBB",
+                        "Tau",
+                        "Hippocampus",
+                        "Entorhinal",
+                        "Ventricles",
+                        "MMSE",
+                        "ADAS11",
+                        "ADAS13",
+                        "RAVLT_learning",
+                        "EcogPtMem",
+                        "EcogPtLang",
+                        "EcogPtVisspat"
+                    ],
+                    "explanation": "FDG-PET measures glucose hypometabolism, which correlates with amyloid and tau pathology, neurodegeneration in hippocampal and entorhinal regions, and cognitive decline.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "PIB",
+                    "interactions": [
+                        "AV45",
+                        "FBB",
+                        "FDG",
+                        "Tau",
+                        "Hippocampus",
+                        "Entorhinal",
+                        "Ventricles",
+                        "MMSE",
+                        "ADAS11",
+                        "ADAS13",
+                        "RAVLT_learning",
+                        "EcogPtMem",
+                        "EcogPtLang",
+                        "EcogPtVisspat"
+                    ],
+                    "explanation": "PIB-PET detects amyloid plaques, which precede tau pathology and neurodegeneration, influencing neuroimaging features and cognitive assessments.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "AV45",
+                    "interactions": [
+                        "PIB",
+                        "FBB",
+                        "FDG",
+                        "Tau",
+                        "Hippocampus",
+                        "Entorhinal",
+                        "Ventricles",
+                        "MMSE",
+                        "ADAS11",
+                        "ADAS13",
+                        "RAVLT_learning",
+                        "EcogPtMem",
+                        "EcogPtLang",
+                        "EcogPtVisspat"
+                    ],
+                    "explanation": "AV45-PET imaging visualizes amyloid deposition, which interacts with tau pathology and neurodegeneration markers, affecting cognitive and structural features.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "FBB",
+                    "interactions": [
+                        "PIB",
+                        "AV45",
+                        "FDG",
+                        "Tau",
+                        "Hippocampus",
+                        "Entorhinal",
+                        "Ventricles",
+                        "MMSE",
+                        "ADAS11",
+                        "ADAS13",
+                        "RAVLT_learning",
+                        "EcogPtMem",
+                        "EcogPtLang",
+                        "EcogPtVisspat"
+                    ],
+                    "explanation": "FBB-PET is another tracer for amyloid, with similar interactions as other amyloid measures, influencing downstream tau pathology and neurodegeneration.",
+                    "citations": [
+                        "Research Report"
+                    ]
+                },
+                {
+                    "feature": "AVTOT3",
+                    "interactions": [
+                        "EcogPtLang",
+                        "COPYSCOR",
+                        "PTGENDER",
+                        "FDG",
+                        "AVDEL30MIN",
+                        "TRAASCOR",
+                        "CATVEGESC",
+                        "AVTOT4",
+                        "CLOCKSCOR",
+                        "EcogPtTotal",
+                        "FAQ",
+                        "VSRESP"
+                    ],
+                    "explanation": "Default interactions assigned for AVTOT3 - should be reviewed and refined based on domain knowledge.",
+                    "citations": []
+                },
+                {
+                    "feature": "AVTOT4",
+                    "interactions": [
+                        "Entorhinal",
+                        "GDTOTAL",
+                        "PTMARRY",
+                        "PTGENDER",
+                        "VSRESP",
+                        "CATANINTR",
+                        "CATVGPERS",
+                        "RAVLT_immediate",
+                        "MidTemp",
+                        "mPACCtrailsB",
+                        "CATANIMSC",
+                        "EcogSPOrgan"
+                    ],
+                    "explanation": "Default interactions assigned for AVTOT4 - should be reviewed and refined based on domain knowledge.",
+                    "citations": []
+                },
+                {
+                    "feature": "AVTOT5",
+                    "interactions": [
+                        "EcogPtPlan",
+                        "EcogSPVisspat",
+                        "FAQ",
+                        "CDRSB",
+                        "CATVEGESC",
+                        "TAU",
+                        "Entorhinal",
+                        "AVDEL30MIN",
+                        "AGE",
+                        "FBB",
+                        "AVTOTB",
+                        "GDTOTAL"
+                    ],
+                    "explanation": "Default interactions assigned for AVTOT5 - should be reviewed and refined based on domain knowledge.",
+                    "citations": []
+                },
+                {
+                    "feature": "CATANINTR",
+                    "interactions": [
+                        "NPIESEV",
+                        "AVDEL30MIN",
+                        "AVTOT5",
+                        "CATANPERS",
+                        "FBB",
+                        "CLOCKSCOR",
+                        "VSRESP",
+                        "NPIJSEV",
+                        "MMSCORE",
+                        "NPIGSEV",
+                        "NPIFSEV",
+                        "MidTemp"
+                    ],
+                    "explanation": "Default interactions assigned for CATANINTR - should be reviewed and refined based on domain knowledge.",
+                    "citations": []
+                },
+                {
+                    "feature": "EcogSPMem",
+                    "interactions": [
+                        "TRABSCOR",
+                        "PTRACCAT",
+                        "EcogSPTotal",
+                        "TAU",
+                        "RAVLT_perc_forgetting",
+                        "AVTOT1",
+                        "NPIISEV",
+                        "VSPULSE",
+                        "FAQ",
+                        "AVDELTOT",
+                        "MOCA",
+                        "ICV"
+                    ],
+                    "explanation": "Default interactions assigned for EcogSPMem - should be reviewed and refined based on domain knowledge.",
+                    "citations": []
+                },
+                {
+                    "feature": "EcogSPLang",
+                    "interactions": [
+                        "NPIGSEV",
+                        "Ventricles",
+                        "DSPANBAC",
+                        "EcogSPPlan",
+                        "VSBPSYS",
+                        "PTRACCAT",
+                        "EcogPtPlan",
+                        "CATVEGESC",
+                        "AVDELTOT",
+                        "VSPULSE",
+                        "MMSCORE",
+                        "NPIISEV"
+                    ],
+                    "explanation": "Default interactions assigned for EcogSPLang - should be reviewed and refined based on domain knowledge.",
+                    "citations": []
+                },
+                {
+                    "feature": "EcogSPVisspat",
+                    "interactions": [
+                        "BNTTOTAL",
+                        "TAU",
+                        "EcogPtMem",
+                        "NPIGSEV",
+                        "AVTOT6",
+                        "NPIHSEV",
+                        "NPIFSEV",
+                        "CATANIMSC",
+                        "EcogPtOrgan",
+                        "DIGITSCOR",
+                        "EcogSPLang",
+                        "EcogPtTotal"
+                    ],
+                    "explanation": "Default interactions assigned for EcogSPVisspat - should be reviewed and refined based on domain knowledge.",
+                    "citations": []
+                },
+                {
+                    "feature": "EcogSPPlan",
+                    "interactions": [
+                        "EcogPtLang",
+                        "VSBPDIA",
+                        "Fusiform",
+                        "EcogPtMem",
+                        "AVTOTB",
+                        "RAVLT_perc_forgetting",
+                        "EcogSPTotal",
+                        "CATVGINTR",
+                        "AVTOT6",
+                        "PTAU",
+                        "NPIISEV",
+                        "DIGITSCOR"
+                    ],
+                    "explanation": "Default interactions assigned for EcogSPPlan - should be reviewed and refined based on domain knowledge.",
+                    "citations": []
+                },
+                {
+                    "feature": "EcogSPOrgan",
+                    "interactions": [
+                        "EcogPtMem",
+                        "EcogSPMem",
+                        "mPACCdigit",
+                        "CATANINTR",
+                        "EcogPtTotal",
+                        "NPIBSEV",
+                        "VSHEIGHT",
+                        "CATVEGESC",
+                        "PTMARRY",
+                        "NPIASEV",
+                        "NPILSEV",
+                        "DIGITSCOR"
+                    ],
+                    "explanation": "Default interactions assigned for EcogSPOrgan - should be reviewed and refined based on domain knowledge.",
+                    "citations": []
+                },
+                {
+                    "feature": "EcogSPDivatt",
+                    "interactions": [
+                        "VSBPSYS",
+                        "CATANPERS",
+                        "mPACCtrailsB",
+                        "EcogSPPlan",
+                        "NPIASEV",
+                        "EcogPtVisspat",
+                        "ADASQ4",
+                        "NPIKSEV",
+                        "EcogPtLang",
+                        "TAU",
+                        "AVTOT4",
+                        "TRABSCOR"
+                    ],
+                    "explanation": "Default interactions assigned for EcogSPDivatt - should be reviewed and refined based on domain knowledge.",
+                    "citations": []
+                },
+                {
+                    "feature": "EcogSPTotal",
+                    "interactions": [
+                        "AVTOT3",
+                        "CATVGINTR",
+                        "PIB",
+                        "mPACCdigit",
+                        "RAVLT_perc_forgetting",
+                        "TRABSCOR",
+                        "Hippocampus",
+                        "CDRSB",
+                        "NPILSEV",
+                        "NPIGSEV",
+                        "CATANINTR",
+                        "RAVLT_immediate"
+                    ],
+                    "explanation": "Default interactions assigned for EcogSPTotal - should be reviewed and refined based on domain knowledge.",
+                    "citations": []
+                }
+            ]
+        }
+    },
+    "extra_data": null,
+    "created_at": null,
+    "updated_at": 1748859786,
+    "workflow_id": "b978ce61-2dd9-4388-ba86-cd0e5521eb1d",
+    "workflow_data": {
+        "name": "MissingFeatureAssignmentWorkflow",
+        "workflow_id": "b978ce61-2dd9-4388-ba86-cd0e5521eb1d",
+        "description": "Generates interactions for any missing features."
+    }
+}

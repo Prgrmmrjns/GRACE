@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="edge" attr.name="relationship" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_type" attr.type="string"/>
+<graph edgedefault="undirected"><node id="CDGLOBAL">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="CDRSB">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="CDRSB.1">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="LDELTOTAL">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="mPACCdigit">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="mPACCtrailsB">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<edge source="CDGLOBAL" target="CDRSB">
+  <data key="d1">interaction</data>
+</edge>
+<edge source="CDRSB" target="CDRSB.1">
+  <data key="d1">interaction</data>
+</edge>
+<edge source="CDRSB.1" target="LDELTOTAL">
+  <data key="d1">interaction</data>
+</edge>
+<edge source="mPACCdigit" target="mPACCtrailsB">
+  <data key="d1">interaction</data>
+</edge>
+</graph></graphml>

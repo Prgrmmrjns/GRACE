@@ -1,13 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="edge" attr.name="relationship" attr.type="string"/>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d3" for="edge" attr.name="citations" attr.type="string"/>
+<key id="d2" for="edge" attr.name="explanation" attr.type="string"/>
+<key id="d1" for="edge" attr.name="relationship" attr.type="string"/>
 <key id="d0" for="node" attr.name="entity_type" attr.type="string"/>
-<graph edgedefault="directed"><node id="mortality_flag">
-  <data key="d0">TARGET_NODE</data>
-</node>
-<node id="Cardiovascular Function and Hemodynamics">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="HRbpm">
+<graph edgedefault="directed"><node id="HRbpm">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="ABPmmmHg">
@@ -22,7 +18,124 @@
 <node id="NBPdmmHg">
   <data key="d0">INPUT_NODE</data>
 </node>
+<node id="RRinspmin">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PO2ArterialmmHg">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Hemoglobingdl">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PCO2ArterialmmHg">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="SpO2">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Hematocritserum">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="WBC">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="AST">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Chlorideserum">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Creatinineserum">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Glucoseserum">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="LDH">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Sodiumserum">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="EyeOpening">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="TemperatureFF">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PHArterial">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="FiO2">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="VerbalResponse">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="MotorResponse">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="TotalPEEPLevelcmH2O">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="ArterialBaseExcess">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="BUN">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Calciumnon-ionized">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="CKCPK">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="IonizedCalcium">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="LacticAcid">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="TotalBilirubin">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PCO2VenousmmHg">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Aniongap">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Potassiumserum">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="HCO3serum">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="CReactiveProteinCRP">
+  <data key="d0">INPUT_NODE</data>
+</node>
 <node id="BrainNatiureticPeptideBNP">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Albumin">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PlateletCount">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PTT">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="INR">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="CompliancecmH2OLseconds">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="anchor_age">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="gender">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="Epinephrinemg_avg">
@@ -37,184 +150,19 @@
 <node id="FoleymL_sum">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="heart_failure">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="anchor_age">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="gender">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="BMI">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Respiratory Function and Gas Exchange">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="RRinspmin">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PO2ArterialmmHg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PCO2ArterialmmHg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="SpO2">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PHArterial">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="FiO2">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="TotalPEEPLevelcmH2O">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="ArterialBaseExcess">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PCO2VenousmmHg">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="HCO3serum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CompliancecmH2OLseconds">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PaO2_FiO2">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Inflammatory and Immune Response">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="WBC">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CReactiveProteinCRP">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PlateletCount">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="TemperatureFF">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="LacticAcid">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="BUN">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Albumin">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="TotalBilirubin">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Sepsis3">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Renal Function and Electrolyte Balance">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Chlorideserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Creatinineserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Sodiumserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Calciumnon-ionized">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="IonizedCalcium">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Aniongap">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Potassiumserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="BUNAlbumin">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="BUNCreatinine">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="eGFR">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Liver Function and Metabolic Status">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="AST">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Glucoseserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Neurological and Cognitive Status">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="EyeOpening">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="VerbalResponse">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="MotorResponse">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="GCS">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Coagulation and Hemostasis">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Hemoglobingdl">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Hematocritserum">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="PTT">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="INR">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="Metabolic and Endocrine Regulation">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="LDH">
-  <data key="d0">INPUT_NODE</data>
-</node>
 <node id="diabetes">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="hypertension">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="obesity">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="Mechanical Ventilation and Respiratory Support">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="Sepsis and Organ Dysfunction">
-  <data key="d0">INTERMEDIATE_NODE</data>
-</node>
-<node id="hypertension">
+<node id="heart_failure">
   <data key="d0">INPUT_NODE</data>
 </node>
-<node id="organ_dysfunction">
-  <data key="d0">INPUT_NODE</data>
-</node>
-<node id="CKCPK">
+<node id="BMI">
   <data key="d0">INPUT_NODE</data>
 </node>
 <node id="NMED">
@@ -235,424 +183,5245 @@
 <node id="TRAUM">
   <data key="d0">INPUT_NODE</data>
 </node>
-<edge source="Cardiovascular Function and Hemodynamics" target="mortality_flag">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="HRbpm" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="HRbpm" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ABPmmmHg" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ABPmmmHg" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CVPmmHg" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CVPmmHg" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NBPsmmHg" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NBPdmmHg" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BrainNatiureticPeptideBNP" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BrainNatiureticPeptideBNP" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Epinephrinemg_avg" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Dobutaminemg_avg" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Norepinephrinemg_avg" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="FoleymL_sum" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="FoleymL_sum" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="heart_failure" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="heart_failure" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="anchor_age" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="anchor_age" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="gender" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="gender" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BMI" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BMI" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Respiratory Function and Gas Exchange" target="mortality_flag">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="RRinspmin" target="Respiratory Function and Gas Exchange">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="RRinspmin" target="Mechanical Ventilation and Respiratory Support">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="RRinspmin" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PO2ArterialmmHg" target="Respiratory Function and Gas Exchange">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PO2ArterialmmHg" target="Mechanical Ventilation and Respiratory Support">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PO2ArterialmmHg" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PCO2ArterialmmHg" target="Respiratory Function and Gas Exchange">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PCO2ArterialmmHg" target="Mechanical Ventilation and Respiratory Support">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PCO2ArterialmmHg" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="SpO2" target="Respiratory Function and Gas Exchange">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="SpO2" target="Mechanical Ventilation and Respiratory Support">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="SpO2" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PHArterial" target="Respiratory Function and Gas Exchange">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PHArterial" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="FiO2" target="Respiratory Function and Gas Exchange">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="FiO2" target="Mechanical Ventilation and Respiratory Support">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="FiO2" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="TotalPEEPLevelcmH2O" target="Respiratory Function and Gas Exchange">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="TotalPEEPLevelcmH2O" target="Mechanical Ventilation and Respiratory Support">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="TotalPEEPLevelcmH2O" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ArterialBaseExcess" target="Respiratory Function and Gas Exchange">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="ArterialBaseExcess" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PCO2VenousmmHg" target="Respiratory Function and Gas Exchange">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="HCO3serum" target="Respiratory Function and Gas Exchange">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="HCO3serum" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="HCO3serum" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CompliancecmH2OLseconds" target="Respiratory Function and Gas Exchange">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CompliancecmH2OLseconds" target="Mechanical Ventilation and Respiratory Support">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CompliancecmH2OLseconds" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PaO2_FiO2" target="Respiratory Function and Gas Exchange">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PaO2_FiO2" target="Mechanical Ventilation and Respiratory Support">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Inflammatory and Immune Response" target="mortality_flag">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="WBC" target="Inflammatory and Immune Response">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="WBC" target="Coagulation and Hemostasis">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="WBC" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CReactiveProteinCRP" target="Inflammatory and Immune Response">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PlateletCount" target="Inflammatory and Immune Response">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PlateletCount" target="Coagulation and Hemostasis">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PlateletCount" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="TemperatureFF" target="Inflammatory and Immune Response">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="LacticAcid" target="Inflammatory and Immune Response">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="LacticAcid" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="LacticAcid" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BUN" target="Inflammatory and Immune Response">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BUN" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BUN" target="Liver Function and Metabolic Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BUN" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BUN" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Albumin" target="Inflammatory and Immune Response">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Albumin" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Albumin" target="Liver Function and Metabolic Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Albumin" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="TotalBilirubin" target="Inflammatory and Immune Response">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="TotalBilirubin" target="Liver Function and Metabolic Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="TotalBilirubin" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Sepsis3" target="Inflammatory and Immune Response">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Sepsis3" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Renal Function and Electrolyte Balance" target="mortality_flag">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Chlorideserum" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Chlorideserum" target="Liver Function and Metabolic Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Creatinineserum" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Creatinineserum" target="Liver Function and Metabolic Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Creatinineserum" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Sodiumserum" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Sodiumserum" target="Liver Function and Metabolic Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Calciumnon-ionized" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Calciumnon-ionized" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="IonizedCalcium" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="IonizedCalcium" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Aniongap" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Aniongap" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Potassiumserum" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Potassiumserum" target="Liver Function and Metabolic Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Potassiumserum" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Potassiumserum" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BUNAlbumin" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BUNAlbumin" target="Liver Function and Metabolic Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BUNAlbumin" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BUNCreatinine" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BUNCreatinine" target="Liver Function and Metabolic Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="BUNCreatinine" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="eGFR" target="Renal Function and Electrolyte Balance">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="eGFR" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Liver Function and Metabolic Status" target="mortality_flag">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="AST" target="Liver Function and Metabolic Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="AST" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Glucoseserum" target="Liver Function and Metabolic Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Glucoseserum" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Neurological and Cognitive Status" target="mortality_flag">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="EyeOpening" target="Neurological and Cognitive Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="VerbalResponse" target="Neurological and Cognitive Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="MotorResponse" target="Neurological and Cognitive Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="GCS" target="Neurological and Cognitive Status">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Coagulation and Hemostasis" target="mortality_flag">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Hemoglobingdl" target="Coagulation and Hemostasis">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Hematocritserum" target="Coagulation and Hemostasis">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="PTT" target="Coagulation and Hemostasis">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="INR" target="Coagulation and Hemostasis">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Metabolic and Endocrine Regulation" target="mortality_flag">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="LDH" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="diabetes" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="diabetes" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="obesity" target="Metabolic and Endocrine Regulation">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="obesity" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Mechanical Ventilation and Respiratory Support" target="mortality_flag">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="Sepsis and Organ Dysfunction" target="mortality_flag">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="hypertension" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="organ_dysfunction" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CKCPK" target="Cardiovascular Function and Hemodynamics">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NMED" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="NSURG" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="TSURG" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="CMED" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="VSURG" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
-</edge>
-<edge source="TRAUM" target="Sepsis and Organ Dysfunction">
-  <data key="d1">evidence</data>
+<node id="BUNAlbumin">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="BUNCreatinine">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="GCS">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="PaO2_FiO2">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="organ_dysfunction">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="Sepsis3">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<node id="eGFR">
+  <data key="d0">INPUT_NODE</data>
+</node>
+<edge source="HRbpm" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="Norepinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="Epinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="Dobutaminemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HRbpm" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="Norepinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="Epinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="Dobutaminemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ABPmmmHg" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CVPmmHg" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPsmmHg" target="Hematocritserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NBPdmmHg" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="RRinspmin" target="Hematocritserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PO2ArterialmmHg" target="Hematocritserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="LDH">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="anchor_age">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="gender">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="diabetes">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="obesity">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="BMI">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="CMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="VSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="TRAUM">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="BUNCreatinine">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hemoglobingdl" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="HCO3serum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2ArterialmmHg" target="Hematocritserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="PHArterial">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="SpO2" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hematocritserum" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hematocritserum" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hematocritserum" target="CReactiveProteinCRP">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hematocritserum" target="LDH">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hematocritserum" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hematocritserum" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hematocritserum" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hematocritserum" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hematocritserum" target="gender">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hematocritserum" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hematocritserum" target="HCO3serum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Hematocritserum" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="LDH">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="CReactiveProteinCRP">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="PlateletCount">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="anchor_age">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="gender">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="diabetes">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="obesity">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="BMI">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="CMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="VSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="TRAUM">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="Aniongap">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="Chlorideserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="WBC" target="Dobutaminemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="Calciumnon-ionized">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="Chlorideserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="LDH">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="AST" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Chlorideserum" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Chlorideserum" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Chlorideserum" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Chlorideserum" target="HCO3serum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Chlorideserum" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Chlorideserum" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Chlorideserum" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Chlorideserum" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Chlorideserum" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Chlorideserum" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Chlorideserum" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Chlorideserum" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="Chlorideserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="HCO3serum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="LDH">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="PHArterial">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="ArterialBaseExcess">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="PTT">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="INR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="anchor_age">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="diabetes">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="obesity">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="BMI">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="BUNCreatinine">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Creatinineserum" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="HCO3serum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Glucoseserum" target="Hematocritserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LDH" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LDH" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LDH" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LDH" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LDH" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LDH" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LDH" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LDH" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LDH" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LDH" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LDH" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LDH" target="Hematocritserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="Chlorideserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="HCO3serum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="BUNCreatinine">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sodiumserum" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="VerbalResponse">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="EyeOpening" target="MotorResponse">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="VerbalResponse">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="MotorResponse">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="PCO2VenousmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="CReactiveProteinCRP">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TemperatureFF" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PHArterial" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PHArterial" target="ArterialBaseExcess">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PHArterial" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PHArterial" target="HCO3serum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PHArterial" target="PCO2VenousmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PHArterial" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PHArterial" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PHArterial" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PHArterial" target="Aniongap">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FiO2" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FiO2" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FiO2" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FiO2" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FiO2" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FiO2" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FiO2" target="Epinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FiO2" target="Dobutaminemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FiO2" target="Norepinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FiO2" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VerbalResponse" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VerbalResponse" target="MotorResponse">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VerbalResponse" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VerbalResponse" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VerbalResponse" target="CReactiveProteinCRP">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VerbalResponse" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="MotorResponse" target="VerbalResponse">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="MotorResponse" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="MotorResponse" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="MotorResponse" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="MotorResponse" target="CReactiveProteinCRP">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="MotorResponse" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="PHArterial">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="PCO2VenousmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="Epinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="Dobutaminemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="Norepinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ArterialBaseExcess" target="PHArterial">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ArterialBaseExcess" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ArterialBaseExcess" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ArterialBaseExcess" target="HCO3serum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ArterialBaseExcess" target="PCO2VenousmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ArterialBaseExcess" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="ArterialBaseExcess" target="Aniongap">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="Chlorideserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="LDH">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="PTT">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="INR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="anchor_age">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="diabetes">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="obesity">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUN" target="BMI">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Calciumnon-ionized" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Calciumnon-ionized" target="IonizedCalcium">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Calciumnon-ionized" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Calciumnon-ionized" target="Albumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Calciumnon-ionized" target="CKCPK">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CKCPK" target="Calciumnon-ionized">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CKCPK" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CKCPK" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CKCPK" target="IonizedCalcium">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CKCPK" target="Potassiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="IonizedCalcium" target="Calciumnon-ionized">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="IonizedCalcium" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="IonizedCalcium" target="Albumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="IonizedCalcium" target="CKCPK">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="Chlorideserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="LDH">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="PHArterial">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="ArterialBaseExcess">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="CKCPK">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="HCO3serum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="PCO2VenousmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="Aniongap">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="Potassiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="BrainNatiureticPeptideBNP">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="PTT">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="INR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="anchor_age">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="Epinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="Dobutaminemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="Norepinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="diabetes">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="obesity">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="BMI">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="BUNCreatinine">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="LacticAcid" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="PHArterial">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="VerbalResponse">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="MotorResponse">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="ArterialBaseExcess">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="Calciumnon-ionized">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="CKCPK">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="IonizedCalcium">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="HCO3serum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="Albumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="Aniongap">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="CReactiveProteinCRP">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="BrainNatiureticPeptideBNP">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="PlateletCount">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="PTT">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="INR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="anchor_age">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="gender">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="Epinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="Dobutaminemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="Norepinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="diabetes">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="obesity">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="BMI">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TotalBilirubin" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2VenousmmHg" target="PHArterial">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2VenousmmHg" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2VenousmmHg" target="ArterialBaseExcess">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2VenousmmHg" target="HCO3serum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2VenousmmHg" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2VenousmmHg" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PCO2VenousmmHg" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Aniongap" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Aniongap" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Aniongap" target="HCO3serum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Aniongap" target="PHArterial">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Aniongap" target="ArterialBaseExcess">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Aniongap" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Potassiumserum" target="CKCPK">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Potassiumserum" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Potassiumserum" target="BUNCreatinine">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Potassiumserum" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HCO3serum" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HCO3serum" target="Chlorideserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HCO3serum" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HCO3serum" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HCO3serum" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HCO3serum" target="PHArterial">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HCO3serum" target="ArterialBaseExcess">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HCO3serum" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HCO3serum" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HCO3serum" target="PCO2VenousmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HCO3serum" target="Aniongap">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="HCO3serum" target="Hematocritserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CReactiveProteinCRP" target="VerbalResponse">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CReactiveProteinCRP" target="MotorResponse">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CReactiveProteinCRP" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CReactiveProteinCRP" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CReactiveProteinCRP" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CReactiveProteinCRP" target="Hematocritserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BrainNatiureticPeptideBNP" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BrainNatiureticPeptideBNP" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BrainNatiureticPeptideBNP" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Albumin" target="Calciumnon-ionized">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Albumin" target="IonizedCalcium">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Albumin" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Albumin" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PlateletCount" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PlateletCount" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PlateletCount" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PTT" target="INR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PTT" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PTT" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PTT" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PTT" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PTT" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PTT" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PTT" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PTT" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="INR" target="PTT">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="INR" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="INR" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="INR" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="INR" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="INR" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="INR" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="INR" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="PCO2VenousmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="PTT">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CompliancecmH2OLseconds" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="anchor_age" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="anchor_age" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="anchor_age" target="obesity">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="anchor_age" target="diabetes">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="anchor_age" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="anchor_age" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="anchor_age" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="anchor_age" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="anchor_age" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="anchor_age" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="anchor_age" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="anchor_age" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="gender" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="gender" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="gender" target="diabetes">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="gender" target="obesity">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="gender" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="gender" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="gender" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="gender" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="gender" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="gender" target="Hematocritserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Epinephrinemg_avg" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Epinephrinemg_avg" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Epinephrinemg_avg" target="Norepinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Epinephrinemg_avg" target="Dobutaminemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Epinephrinemg_avg" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Epinephrinemg_avg" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Epinephrinemg_avg" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Epinephrinemg_avg" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Epinephrinemg_avg" target="FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Epinephrinemg_avg" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Epinephrinemg_avg" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Dobutaminemg_avg" target="Epinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Dobutaminemg_avg" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Dobutaminemg_avg" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Dobutaminemg_avg" target="Norepinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Dobutaminemg_avg" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Dobutaminemg_avg" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Dobutaminemg_avg" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Dobutaminemg_avg" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Dobutaminemg_avg" target="FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Dobutaminemg_avg" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Dobutaminemg_avg" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Dobutaminemg_avg" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Norepinephrinemg_avg" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Norepinephrinemg_avg" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Norepinephrinemg_avg" target="Epinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Norepinephrinemg_avg" target="Dobutaminemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Norepinephrinemg_avg" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Norepinephrinemg_avg" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Norepinephrinemg_avg" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Norepinephrinemg_avg" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Norepinephrinemg_avg" target="FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Norepinephrinemg_avg" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Norepinephrinemg_avg" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="Chlorideserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="LDH">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="PTT">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="INR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="FoleymL_sum" target="Hematocritserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="diabetes" target="anchor_age">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="diabetes" target="gender">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="diabetes" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="diabetes" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="diabetes" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="diabetes" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="diabetes" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="diabetes" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="diabetes" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="diabetes" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="anchor_age">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="gender">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="BUNCreatinine">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="hypertension" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="obesity" target="anchor_age">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="obesity" target="gender">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="obesity" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="obesity" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="obesity" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="obesity" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="obesity" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="obesity" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="obesity" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="obesity" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="obesity" target="BMI">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="anchor_age">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="gender">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="Norepinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="Epinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="Dobutaminemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="BUNCreatinine">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="heart_failure" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BMI" target="obesity">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BMI" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BMI" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BMI" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BMI" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BMI" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BMI" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BMI" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BMI" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="Chlorideserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="LDH">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="CMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="VSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="TRAUM">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NMED" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="Chlorideserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="LDH">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="CMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="VSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="TRAUM">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="NSURG" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="Chlorideserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="LDH">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="CMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="VSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="TRAUM">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TSURG" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CMED" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CMED" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CMED" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CMED" target="VSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CMED" target="TRAUM">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CMED" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CMED" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CMED" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="CMED" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VSURG" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VSURG" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VSURG" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VSURG" target="CMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VSURG" target="TRAUM">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VSURG" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VSURG" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VSURG" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="VSURG" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TRAUM" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TRAUM" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TRAUM" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TRAUM" target="CMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TRAUM" target="VSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TRAUM" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TRAUM" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TRAUM" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="TRAUM" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="BUNCreatinine">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="Albumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNAlbumin" target="Hematocritserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNCreatinine" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNCreatinine" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNCreatinine" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNCreatinine" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNCreatinine" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNCreatinine" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNCreatinine" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNCreatinine" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNCreatinine" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNCreatinine" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="BUNCreatinine" target="Potassiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="AST">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="Chlorideserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="Glucoseserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="LDH">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="VerbalResponse">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="MotorResponse">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="GCS" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="PaO2_FiO2" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="HRbpm">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="ABPmmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="CVPmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="NBPsmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="NBPdmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="RRinspmin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="PO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="PCO2ArterialmmHg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="SpO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="EyeOpening">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="PTT">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="INR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="anchor_age">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="gender">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="Epinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="Dobutaminemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="Norepinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="diabetes">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="obesity">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="BMI">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="CMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="VSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="TRAUM">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="BUNCreatinine">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="organ_dysfunction" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="PlateletCount">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="PTT">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="INR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="CompliancecmH2OLseconds">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="anchor_age">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="gender">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="Epinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="Dobutaminemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="Norepinephrinemg_avg">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="FoleymL_sum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="diabetes">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="obesity">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="BMI">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="NMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="NSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="TSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="CMED">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="VSURG">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="TRAUM">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="BUNCreatinine">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="GCS">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="PaO2_FiO2">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="TotalBilirubin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="WBC">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="TemperatureFF">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="Sepsis3" target="eGFR">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="BUN">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="BrainNatiureticPeptideBNP">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="BUNAlbumin">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="BUNCreatinine">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="Creatinineserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="Sodiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="Potassiumserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="Hemoglobingdl">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="organ_dysfunction">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="Sepsis3">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="hypertension">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="heart_failure">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="LacticAcid">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+</edge>
+<edge source="eGFR" target="Hematocritserum">
+  <data key="d1">interaction</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
 </edge>
 </graph></graphml>

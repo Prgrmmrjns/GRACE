@@ -1,0 +1,1114 @@
+{
+    "session_id": "missing-mimic-1",
+    "user_id": null,
+    "memory": null,
+    "session_data": {
+        "session_state": {
+            "missing_features_mimic_2": [
+                {
+                    "feature": "HRbpm",
+                    "interactions": [
+                        "ABPmmmHg",
+                        "WBC",
+                        "LacticAcid",
+                        "TemperatureFF",
+                        "SpO2",
+                        "Creatinineserum",
+                        "Glucoseserum",
+                        "Age",
+                        "Norepinephrinemg_avg",
+                        "FoleymL_sum",
+                        "BUN",
+                        "Hemoglobingdl",
+                        "TotalPEEPLevelcmH2O",
+                        "organ_dysfunction"
+                    ]
+                },
+                {
+                    "feature": "ABPmmmHg",
+                    "interactions": [
+                        "HRbpm",
+                        "CVPmmHg",
+                        "WBC",
+                        "LacticAcid",
+                        "TemperatureFF",
+                        "SpO2",
+                        "Creatinineserum",
+                        "BUN",
+                        "TotalPEEPLevelcmH2O",
+                        "organ_dysfunction",
+                        "Age",
+                        "Norepinephrinemg_avg",
+                        "FoleymL_sum",
+                        "GCS",
+                        "PaO2_FiO2"
+                    ]
+                },
+                {
+                    "feature": "CVPmmHg",
+                    "interactions": [
+                        "ABPmmmHg",
+                        "Hemoglobingdl",
+                        "WBC",
+                        "Creatinineserum",
+                        "BUN",
+                        "TotalPEEPLevelcmH2O",
+                        "organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "PaO2_FiO2"
+                    ]
+                },
+                {
+                    "feature": "NBPsmmHg",
+                    "interactions": [
+                        "ABPmmmHg",
+                        "WBC",
+                        "LacticAcid",
+                        "TemperatureFF",
+                        "SpO2",
+                        "Creatinineserum",
+                        "BUN",
+                        "TotalPEEPLevelcmH2O",
+                        "organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "PaO2_FiO2"
+                    ]
+                },
+                {
+                    "feature": "NBPdmmHg",
+                    "interactions": [
+                        "ABPmmmHg",
+                        "WBC",
+                        "LacticAcid",
+                        "TemperatureFF",
+                        "SpO2",
+                        "Creatinineserum",
+                        "BUN",
+                        "TotalPEEPLevelcmH2O",
+                        "organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "PaO2_FiO2"
+                    ]
+                },
+                {
+                    "feature": "RRinspmin",
+                    "interactions": [
+                        "SpO2",
+                        "TemperatureFF",
+                        "LacticAcid",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "AST",
+                        "PaO2_FiO2",
+                        "CompliancecmH2OLseconds",
+                        "organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "BUN"
+                    ]
+                },
+                {
+                    "feature": "PO2ArterialmmHg",
+                    "interactions": [
+                        "SpO2",
+                        "RRinspmin",
+                        "TemperatureFF",
+                        "LacticAcid",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "AST",
+                        "PaO2_FiO2",
+                        "CompliancecmH2OLseconds",
+                        "organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "BUN"
+                    ]
+                },
+                {
+                    "feature": "Hemoglobingdl",
+                    "interactions": [
+                        "WBC",
+                        "LacticAcid",
+                        "SpO2",
+                        "AST",
+                        "Creatinineserum",
+                        "BUN",
+                        "TotalPEEPLevelcmH2O",
+                        "organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "PaO2_FiO2"
+                    ]
+                },
+                {
+                    "feature": "PCO2ArterialmmHg",
+                    "interactions": [
+                        "PaO2ArterialmmHg",
+                        "LacticAcid",
+                        "TemperatureFF",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "AST",
+                        "BUN",
+                        "pH",
+                        "HCO3serum",
+                        "CompliancecmH2OLseconds",
+                        "organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "Bilirubin"
+                    ]
+                },
+                {
+                    "feature": "SpO2",
+                    "interactions": [
+                        "HRbpm",
+                        "ABPmmmHg",
+                        "RRinspmin",
+                        "TemperatureFF",
+                        "LacticAcid",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "AST",
+                        "PaO2_FiO2",
+                        "CompliancecmH2OLseconds",
+                        "organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "BUN"
+                    ]
+                },
+                {
+                    "feature": "AST",
+                    "interactions": [
+                        "LacticAcid",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "Creatinineserum",
+                        "BUN",
+                        "TotalBilirubin",
+                        "Organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "Calciumnon-ionized"
+                    ]
+                },
+                {
+                    "feature": "Chlorideserum",
+                    "interactions": [
+                        "Sodiumserum",
+                        "BUN",
+                        "Creatinineserum",
+                        "pH",
+                        "HCO3serum",
+                        "LacticAcid",
+                        "AST",
+                        "Organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "Bilirubin"
+                    ]
+                },
+                {
+                    "feature": "Creatinineserum",
+                    "interactions": [
+                        "BUN",
+                        "Hemoglobingdl",
+                        "WBC",
+                        "LacticAcid",
+                        "AST",
+                        "pH",
+                        "HCO3serum",
+                        "Organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "Bilirubin"
+                    ]
+                },
+                {
+                    "feature": "Glucoseserum",
+                    "interactions": [
+                        "LacticAcid",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "AST",
+                        "BUN",
+                        "pH",
+                        "HCO3serum",
+                        "Organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "Bilirubin"
+                    ]
+                },
+                {
+                    "feature": "LDH",
+                    "interactions": [
+                        "LacticAcid",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "AST",
+                        "Creatinineserum",
+                        "BUN",
+                        "Organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "Bilirubin"
+                    ]
+                },
+                {
+                    "feature": "Sodiumserum",
+                    "interactions": [
+                        "Chlorideserum",
+                        "BUN",
+                        "Creatinineserum",
+                        "pH",
+                        "HCO3serum",
+                        "LacticAcid",
+                        "AST",
+                        "Organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "Bilirubin"
+                    ]
+                },
+                {
+                    "feature": "EyeOpening",
+                    "interactions": [
+                        "GCS",
+                        "TemperatureFF",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "AST",
+                        "PaO2_FiO2",
+                        "organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "BUN",
+                        "Bilirubin"
+                    ]
+                },
+                {
+                    "feature": "TemperatureFF",
+                    "interactions": [
+                        "HRbpm",
+                        "ABPmmmHg",
+                        "RRinspmin",
+                        "SpO2",
+                        "LacticAcid",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "AST",
+                        "PaO2_FiO2",
+                        "organ_dysfunction",
+                        "Age",
+                        "FoleymL_sum",
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "Trauma",
+                        "GCS",
+                        "BUN"
+                    ]
+                },
+                {
+                    "feature": "PHArterial",
+                    "interactions": [
+                        "LacticAcid",
+                        "ArterialBaseExcess",
+                        "TotalBilirubin",
+                        "HCO3serum",
+                        "PCO2VenousmmHg",
+                        "TotalPEEPLevelcmH2O",
+                        "SpO2",
+                        "Creatinineserum"
+                    ]
+                },
+                {
+                    "feature": "FiO2",
+                    "interactions": [
+                        "SpO2",
+                        "PaO2_FiO2",
+                        "CompliancecmH2OLseconds",
+                        "TotalPEEPLevelcmH2O",
+                        "LacticAcid",
+                        "TemperatureFF",
+                        "BloodPressure",
+                        "HeartRate"
+                    ]
+                },
+                {
+                    "feature": "VerbalResponse",
+                    "interactions": [
+                        "GCS",
+                        "MotorResponse",
+                        "EyeOpening",
+                        "TotalBilirubin",
+                        "CReactiveProteinCRP",
+                        "TemperatureFF",
+                        "BloodPressure",
+                        "HeartRate"
+                    ]
+                },
+                {
+                    "feature": "MotorResponse",
+                    "interactions": [
+                        "GCS",
+                        "VerbalResponse",
+                        "EyeOpening",
+                        "TotalBilirubin",
+                        "CReactiveProteinCRP",
+                        "TemperatureFF",
+                        "BloodPressure",
+                        "HeartRate"
+                    ]
+                },
+                {
+                    "feature": "TotalPEEPLevelcmH2O",
+                    "interactions": [
+                        "CompliancecmH2OLseconds",
+                        "FiO2",
+                        "SpO2",
+                        "LacticAcid",
+                        "BloodPressure",
+                        "HeartRate",
+                        "PCO2VenousmmHg",
+                        "TemperatureFF"
+                    ]
+                },
+                {
+                    "feature": "ArterialBaseExcess",
+                    "interactions": [
+                        "PHArterial",
+                        "LacticAcid",
+                        "TotalBilirubin",
+                        "HCO3serum",
+                        "PCO2VenousmmHg",
+                        "BloodPressure",
+                        "HeartRate",
+                        "Creatinineserum"
+                    ]
+                },
+                {
+                    "feature": "BUN",
+                    "interactions": [
+                        "Creatinineserum",
+                        "BUNAlbumin",
+                        "eGFR",
+                        "Hemoglobingdl",
+                        "Electrolytes",
+                        "BloodPressure",
+                        "HeartRate",
+                        "TotalBilirubin"
+                    ]
+                },
+                {
+                    "feature": "Calciumnon-ionized",
+                    "interactions": [
+                        "IonizedCalcium",
+                        "TotalBilirubin",
+                        "Albumin",
+                        "PTH",
+                        "Electrolytes",
+                        "BloodPressure",
+                        "HeartRate",
+                        "CKCPK"
+                    ]
+                },
+                {
+                    "feature": "CKCPK",
+                    "interactions": [
+                        "Calciumnon-ionized",
+                        "Electrolytes",
+                        "LacticAcid",
+                        "TotalBilirubin",
+                        "MuscleMass",
+                        "HeartRate",
+                        "BloodPressure",
+                        "PTH"
+                    ]
+                },
+                {
+                    "feature": "IonizedCalcium",
+                    "interactions": [
+                        "Calciumnon-ionized",
+                        "TotalBilirubin",
+                        "Albumin",
+                        "PTH",
+                        "Electrolytes",
+                        "BloodPressure",
+                        "HeartRate",
+                        "CKCPK"
+                    ]
+                },
+                {
+                    "feature": "LacticAcid",
+                    "interactions": [
+                        "PHArterial",
+                        "ArterialBaseExcess",
+                        "TotalBilirubin",
+                        "HCO3serum",
+                        "BloodPressure",
+                        "HeartRate",
+                        "TemperatureFF",
+                        "Creatinineserum"
+                    ]
+                },
+                {
+                    "feature": "TotalBilirubin",
+                    "interactions": [
+                        "PHArterial",
+                        "ArterialBaseExcess",
+                        "LacticAcid",
+                        "HCO3serum",
+                        "LiverFunctionTests",
+                        "BloodPressure",
+                        "HeartRate",
+                        "Albumin"
+                    ]
+                },
+                {
+                    "feature": "PCO2VenousmmHg",
+                    "interactions": [
+                        "PHArterial",
+                        "HCO3serum",
+                        "LacticAcid",
+                        "BloodPressure",
+                        "HeartRate",
+                        "CompliancecmH2OLseconds",
+                        "TemperatureFF",
+                        "Pneumothorax"
+                    ]
+                },
+                {
+                    "feature": "Aniongap",
+                    "interactions": [
+                        "LacticAcid",
+                        "TotalBilirubin",
+                        "HCO3serum",
+                        "PHArterial",
+                        "ArterialBaseExcess",
+                        "Electrolytes",
+                        "BloodPressure",
+                        "HeartRate"
+                    ]
+                },
+                {
+                    "feature": "Potassiumserum",
+                    "interactions": [
+                        "Electrolytes",
+                        "RenalFunction",
+                        "BloodPressure",
+                        "HeartRate",
+                        "PTH",
+                        "AcidBaseStatus",
+                        "CKCPK",
+                        "LacticAcid"
+                    ]
+                },
+                {
+                    "feature": "HCO3serum",
+                    "interactions": [
+                        "PHArterial",
+                        "ArterialBaseExcess",
+                        "LacticAcid",
+                        "PCO2VenousmmHg",
+                        "TotalBilirubin",
+                        "Electrolytes",
+                        "BloodPressure",
+                        "HeartRate"
+                    ]
+                },
+                {
+                    "feature": "CReactiveProteinCRP",
+                    "interactions": [
+                        "TotalBilirubin",
+                        "LiverFunctionTests",
+                        "TemperatureFF",
+                        "BloodPressure",
+                        "HeartRate",
+                        "WBC",
+                        "Procalcitonin",
+                        "OrganDysfunction"
+                    ]
+                },
+                {
+                    "feature": "BrainNatiureticPeptideBNP",
+                    "interactions": [
+                        "HeartFailure",
+                        "BloodPressure",
+                        "HeartRate",
+                        "Electrolytes",
+                        "RenalFunction",
+                        "LacticAcid",
+                        "TotalBilirubin",
+                        "eGFR"
+                    ]
+                },
+                {
+                    "feature": "Albumin",
+                    "interactions": [
+                        "TotalBilirubin",
+                        "Calciumnon-ionized",
+                        "Electrolytes",
+                        "LiverFunctionTests",
+                        "CRP",
+                        "BloodPressure",
+                        "HeartRate",
+                        "TotalBilirubin"
+                    ]
+                },
+                {
+                    "feature": "PlateletCount",
+                    "interactions": [
+                        "TotalBilirubin",
+                        "CRP",
+                        "WBC",
+                        "OrganDysfunction",
+                        "BloodPressure",
+                        "HeartRate",
+                        "Sepsis3",
+                        "OrganDysfunction"
+                    ]
+                },
+                {
+                    "feature": "PTT",
+                    "interactions": [
+                        "INR",
+                        "CompliancecmH2OLseconds",
+                        "FoleymL_sum",
+                        "BUN",
+                        "Creatinineserum",
+                        "TotalBilirubin",
+                        "LacticAcid",
+                        "organ_dysfunction",
+                        "Sepsis3"
+                    ]
+                },
+                {
+                    "feature": "INR",
+                    "interactions": [
+                        "PTT",
+                        "FoleymL_sum",
+                        "BUN",
+                        "Creatinineserum",
+                        "TotalBilirubin",
+                        "LacticAcid",
+                        "organ_dysfunction",
+                        "Sepsis3"
+                    ]
+                },
+                {
+                    "feature": "CompliancecmH2OLseconds",
+                    "interactions": [
+                        "ABPmmmHg",
+                        "HRbpm",
+                        "LacticAcid",
+                        "TotalBilirubin",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "FiO2",
+                        "TotalPEEPLevelcmH2O"
+                    ]
+                },
+                {
+                    "feature": "anchor_age",
+                    "interactions": [
+                        "heart_failure",
+                        "hypertension",
+                        "obesity",
+                        "diabetes",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "BUN",
+                        "Creatinineserum",
+                        "TotalBilirubin",
+                        "LacticAcid",
+                        "WBC",
+                        "Hemoglobingdl"
+                    ]
+                },
+                {
+                    "feature": "gender",
+                    "interactions": [
+                        "heart_failure",
+                        "hypertension",
+                        "diabetes",
+                        "obesity",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "TotalBilirubin"
+                    ]
+                },
+                {
+                    "feature": "Epinephrinemg_avg",
+                    "interactions": [
+                        "HRbpm",
+                        "ABPmmmHg",
+                        "Norepinephrinemg_avg",
+                        "Dobutaminemg_avg",
+                        "TotalPEEPLevelcmH2O",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "LacticAcid",
+                        "FiO2",
+                        "TotalBilirubin"
+                    ]
+                },
+                {
+                    "feature": "Dobutaminemg_avg",
+                    "interactions": [
+                        "HRbpm",
+                        "ABPmmmHg",
+                        "Epinephrinemg_avg",
+                        "Norepinephrinemg_avg",
+                        "TotalPEEPLevelcmH2O",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "LacticAcid",
+                        "FiO2",
+                        "TotalBilirubin"
+                    ]
+                },
+                {
+                    "feature": "Norepinephrinemg_avg",
+                    "interactions": [
+                        "HRbpm",
+                        "ABPmmmHg",
+                        "Epinephrinemg_avg",
+                        "Dobutaminemg_avg",
+                        "TotalPEEPLevelcmH2O",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "LacticAcid",
+                        "FiO2",
+                        "TotalBilirubin"
+                    ]
+                },
+                {
+                    "feature": "FoleymL_sum",
+                    "interactions": [
+                        "BUN",
+                        "Creatinineserum",
+                        "TotalBilirubin",
+                        "LacticAcid",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "TotalPEEPLevelcmH2O"
+                    ]
+                },
+                {
+                    "feature": "diabetes",
+                    "interactions": [
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "BUN",
+                        "Creatinineserum",
+                        "TotalBilirubin",
+                        "LacticAcid",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "Age"
+                    ]
+                },
+                {
+                    "feature": "hypertension",
+                    "interactions": [
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "BUN",
+                        "Creatinineserum",
+                        "TotalBilirubin",
+                        "LacticAcid",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "Age"
+                    ]
+                },
+                {
+                    "feature": "obesity",
+                    "interactions": [
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "BUN",
+                        "Creatinineserum",
+                        "TotalBilirubin",
+                        "LacticAcid",
+                        "WBC",
+                        "Hemoglobingdl",
+                        "Age"
+                    ]
+                },
+                {
+                    "feature": "heart_failure",
+                    "interactions": [
+                        "ABPmmmHg",
+                        "HRbpm",
+                        "Norepinephrinemg_avg",
+                        "Epinephrinemg_avg",
+                        "Dobutaminemg_avg",
+                        "TotalPEEPLevelcmH2O",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "LacticAcid",
+                        "FiO2"
+                    ]
+                },
+                {
+                    "feature": "BMI",
+                    "interactions": [
+                        "obesity",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "BUN",
+                        "Creatinineserum",
+                        "TotalBilirubin",
+                        "LacticAcid",
+                        "WBC",
+                        "Hemoglobingdl"
+                    ]
+                },
+                {
+                    "feature": "NMED",
+                    "interactions": [
+                        "NSURG",
+                        "TSURG",
+                        "CMED",
+                        "VSURG",
+                        "TRAUM",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "WBC",
+                        "Hemoglobingdl"
+                    ]
+                },
+                {
+                    "feature": "NSURG",
+                    "interactions": [
+                        "NMED",
+                        "TSURG",
+                        "CMED",
+                        "VSURG",
+                        "TRAUM",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "WBC",
+                        "Hemoglobingdl"
+                    ]
+                },
+                {
+                    "feature": "TSURG",
+                    "interactions": [
+                        "NMED",
+                        "NSURG",
+                        "CMED",
+                        "VSURG",
+                        "TRAUM",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "WBC",
+                        "Hemoglobingdl"
+                    ]
+                },
+                {
+                    "feature": "CMED",
+                    "interactions": [
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "VSURG",
+                        "TRAUM",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "WBC",
+                        "Hemoglobingdl"
+                    ]
+                },
+                {
+                    "feature": "VSURG",
+                    "interactions": [
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "CMED",
+                        "TRAUM",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "WBC",
+                        "Hemoglobingdl"
+                    ]
+                },
+                {
+                    "feature": "TRAUM",
+                    "interactions": [
+                        "NMED",
+                        "NSURG",
+                        "TSURG",
+                        "CMED",
+                        "VSURG",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "WBC",
+                        "Hemoglobingdl"
+                    ]
+                },
+                {
+                    "feature": "BUNAlbumin",
+                    "interactions": [
+                        "BUNCreatinine",
+                        "Albumin",
+                        "TotalBilirubin",
+                        "Creatinineserum",
+                        "eGFR",
+                        "Hemoglobingdl",
+                        "Sodiumserum",
+                        "LacticAcid",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "age",
+                        "hypertension",
+                        "heart_failure"
+                    ]
+                },
+                {
+                    "feature": "BUNCreatinine",
+                    "interactions": [
+                        "BUNAlbumin",
+                        "Creatinineserum",
+                        "eGFR",
+                        "Hemoglobingdl",
+                        "LacticAcid",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "age",
+                        "hypertension",
+                        "heart_failure",
+                        "Sodiumserum",
+                        "Potassiumserum",
+                        "BloodPressure",
+                        "FluidBalance"
+                    ]
+                },
+                {
+                    "feature": "GCS",
+                    "interactions": [
+                        "Hemoglobingdl",
+                        "WBC",
+                        "TemperatureFF",
+                        "PaO2_FiO2",
+                        "SpO2",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "age",
+                        "hypertension",
+                        "heart_failure",
+                        "NMED",
+                        "NSURG",
+                        "Trauma",
+                        "brain injury"
+                    ]
+                },
+                {
+                    "feature": "PaO2_FiO2",
+                    "interactions": [
+                        "SpO2",
+                        "LacticAcid",
+                        "TemperatureFF",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "ARDS",
+                        "MechanicalVentilation",
+                        "BloodPressure",
+                        "Hemoglobingdl",
+                        "WBC",
+                        "Pco2ArterialmmHg",
+                        "CompliancecmH2OLseconds",
+                        "NMED",
+                        "NSURG"
+                    ]
+                },
+                {
+                    "feature": "organ_dysfunction",
+                    "interactions": [
+                        "Sepsis3",
+                        "PaO2_FiO2",
+                        "BUNCreatinine",
+                        "GCS",
+                        "LacticAcid",
+                        "TotalBilirubin",
+                        "Hemoglobingdl",
+                        "WBC",
+                        "BloodPressure",
+                        "TemperatureFF",
+                        "CardiacMarkers",
+                        "Electrolytes",
+                        "Age",
+                        "Comorbidities"
+                    ]
+                },
+                {
+                    "feature": "Sepsis3",
+                    "interactions": [
+                        "organ_dysfunction",
+                        "PaO2_FiO2",
+                        "LacticAcid",
+                        "BUNCreatinine",
+                        "GCS",
+                        "TotalBilirubin",
+                        "WBC",
+                        "BloodPressure",
+                        "TemperatureFF",
+                        "Hemoglobingdl",
+                        "Electrolytes",
+                        "Age",
+                        "comorbidities"
+                    ]
+                },
+                {
+                    "feature": "eGFR",
+                    "interactions": [
+                        "BUNCreatinine",
+                        "BUNAlbumin",
+                        "Creatinineserum",
+                        "Sodiumserum",
+                        "Potassiumserum",
+                        "Hemoglobingdl",
+                        "organ_dysfunction",
+                        "Sepsis3",
+                        "Age",
+                        "hypertension",
+                        "heart_failure",
+                        "FluidBalance",
+                        "BloodPressure",
+                        "LacticAcid"
+                    ]
+                },
+                {
+                    "feature": "Hematocritserum",
+                    "interactions": [
+                        "Glucoseserum",
+                        "NBPsmmHg",
+                        "CReactiveProteinCRP",
+                        "LDH",
+                        "eGFR",
+                        "PCO2ArterialmmHg",
+                        "FoleymL_sum",
+                        "PO2ArterialmmHg",
+                        "gender",
+                        "BUNAlbumin",
+                        "HCO3serum",
+                        "RRinspmin"
+                    ]
+                },
+                {
+                    "feature": "WBC",
+                    "interactions": [
+                        "NSURG",
+                        "NBPdmmHg",
+                        "NBPsmmHg",
+                        "RRinspmin",
+                        "Creatinineserum",
+                        "Glucoseserum",
+                        "Aniongap",
+                        "PlateletCount",
+                        "ABPmmmHg",
+                        "CReactiveProteinCRP",
+                        "Chlorideserum",
+                        "Dobutaminemg_avg"
+                    ]
+                }
+            ]
+        }
+    },
+    "extra_data": null,
+    "created_at": null,
+    "updated_at": 1748863172,
+    "workflow_id": "f419569d-fecb-440d-88a5-52afc34b51ee",
+    "workflow_data": {
+        "name": "MissingFeatureAssignmentWorkflow",
+        "workflow_id": "f419569d-fecb-440d-88a5-52afc34b51ee",
+        "description": "Generates interactions for any missing features."
+    }
+}

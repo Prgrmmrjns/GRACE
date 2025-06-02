@@ -2,13 +2,11 @@ import time
 from sklearn.model_selection import train_test_split
 import pandas as pd
 import numpy as np
-from catboost import CatBoostClassifier
+import lightgbm as lgb
 from sklearn.decomposition import PCA
 from sklearn.metrics import accuracy_score, roc_auc_score
 import warnings
-from params import CATBOOST_PARAMS
-
-VAL_SIZE = 0.5
+from params import LIGHTGBM_PARAMS, TEST_SIZE, VAL_SIZE
 
 # Suppress all warnings
 warnings.filterwarnings("ignore")
@@ -64,7 +62,7 @@ def main(dataset_name, n_splits=5):
     for i in range(n_splits):
         # For each fold, use a different random seed to ensure diversity
         X_train_val, X_test, y_train_val, y_test = train_test_split(
-            X, y, test_size=VAL_SIZE, stratify=y, random_state=42+i
+            X, y, test_size=TEST_SIZE, stratify=y, random_state=42+i
         )
         
         # Store indices for this fold
@@ -86,11 +84,15 @@ def main(dataset_name, n_splits=5):
         
         start_time = time.time()
         
-        model_baseline = CatBoostClassifier(**CATBOOST_PARAMS)
+        if unique_classes == 2:
+            model_baseline = lgb.LGBMClassifier(objective='binary', **LIGHTGBM_PARAMS)
+        else:
+            model_baseline = lgb.LGBMClassifier(objective='multiclass', num_class=unique_classes, **LIGHTGBM_PARAMS)
+            
         model_baseline.fit(
             X_train, y_train, 
             eval_set=(X_val, y_val),
-            verbose=False
+            callbacks=[lgb.early_stopping(10, verbose=False)]
         )
         
         y_pred = model_baseline.predict(X_test)
@@ -144,11 +146,15 @@ def main(dataset_name, n_splits=5):
         X_val_pca = pca.transform(X_val_for_pca)
         X_test_pca = pca.transform(X_test_for_pca)
         
-        model_pca = CatBoostClassifier(**CATBOOST_PARAMS)
+        if unique_classes == 2:
+            model_pca = lgb.LGBMClassifier(objective='binary', **LIGHTGBM_PARAMS)
+        else:
+            model_pca = lgb.LGBMClassifier(objective='multiclass', num_class=unique_classes, **LIGHTGBM_PARAMS)
+
         model_pca.fit(
             X_train_pca, y_train, 
             eval_set=(X_val_pca, y_val),
-            verbose=False
+            callbacks=[lgb.early_stopping(10, verbose=False)]
         )
         
         y_pred = model_pca.predict(X_test_pca)
@@ -184,11 +190,15 @@ def main(dataset_name, n_splits=5):
         start_time = time.time()
         
         # Train a model on all features
-        model_all = CatBoostClassifier(**CATBOOST_PARAMS)
+        if unique_classes == 2:
+            model_all = lgb.LGBMClassifier(objective='binary', **LIGHTGBM_PARAMS)
+        else:
+            model_all = lgb.LGBMClassifier(objective='multiclass', num_class=unique_classes, **LIGHTGBM_PARAMS)
+            
         model_all.fit(
             X_train, y_train,
             eval_set=(X_val, y_val),
-            verbose=False
+            callbacks=[lgb.early_stopping(10, verbose=False)]
         )
         
         # Get feature importances and select top 50%
@@ -203,11 +213,15 @@ def main(dataset_name, n_splits=5):
         X_test_rfe = X_test[selected_features]
         
         # Train on reduced feature set
-        model_rfe = CatBoostClassifier(**CATBOOST_PARAMS)
+        if unique_classes == 2:
+            model_rfe = lgb.LGBMClassifier(objective='binary', **LIGHTGBM_PARAMS)
+        else:
+            model_rfe = lgb.LGBMClassifier(objective='multiclass', num_class=unique_classes, **LIGHTGBM_PARAMS)
+            
         model_rfe.fit(
             X_train_rfe, y_train, 
             eval_set=(X_val_rfe, y_val),
-            verbose=False
+            callbacks=[lgb.early_stopping(10, verbose=False)]
         )
         
         y_pred = model_rfe.predict(X_test_rfe)
@@ -237,6 +251,6 @@ def main(dataset_name, n_splits=5):
         print(f"{method} - Avg {metric}: {avg_score:.4f}, Avg Runtime: {avg_runtime:.2f}s, Avg Features: {avg_features:.1f}")
 
 if __name__ == "__main__":
-    dataset_name = 'mimic'
+    dataset_name = 'adni'
     print(f"Running {dataset_name} baseline")
     main(dataset_name)

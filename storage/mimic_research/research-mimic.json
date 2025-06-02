@@ -1,0 +1,28 @@
+{
+    "session_id": "research-mimic",
+    "user_id": null,
+    "memory": null,
+    "session_data": {
+        "session_state": {
+            "research_report_mimic": {
+                "report": "The literature indicates that critical illness and sepsis involve complex immune dysregulation, endothelial dysfunction, and organ failure mechanisms. Sepsis is characterized by an initial hyperactivation of innate immunity, particularly TH17-like responses, leading to cytokine storms and neutrophil overactivation, which contribute to tissue damage and organ dysfunction. Simultaneously, there is a failure of adaptive immunity, including downregulation of TCR, BCR signaling, and MHC expression, impairing pathogen clearance and immune regulation. Endothelial dysfunction, marked by increased oxidative stress, glycocalyx degradation, and increased vascular permeability, is a shared feature in sepsis, aging, and chronic diseases, predisposing to worse outcomes. Respiratory failure, a common cause of mortality, is linked to immune overactivation and tissue damage in the lungs, with early prediction models based on physiological data showing high predictive accuracy. Laboratory biomarkers such as PCT, bilirubin, NLR, platelets, lactic acid, ESR, and GCS score are effective in predicting bacteremia and sepsis progression. Pathophysiologically, the dysregulation of immune responses, endothelial integrity, and metabolic homeostasis underpins the progression to organ failure and mortality in ICU patients.",
+                "citations": [
+                    "http://arxiv.org/pdf/1311.4384v1",
+                    "http://arxiv.org/pdf/2007.01413v1",
+                    "http://arxiv.org/pdf/2105.08923v2",
+                    "http://arxiv.org/pdf/1711.11153v1",
+                    "http://arxiv.org/pdf/2111.14078v2"
+                ]
+            }
+        }
+    },
+    "extra_data": null,
+    "created_at": null,
+    "updated_at": 1748863053,
+    "workflow_id": "83470982-f1ce-4c25-aff8-2b96f86555b2",
+    "workflow_data": {
+        "name": "ResearchWorkflow",
+        "workflow_id": "83470982-f1ce-4c25-aff8-2b96f86555b2",
+        "description": "Conducts extensive research on disease mechanisms using the knowledge base."
+    }
+}

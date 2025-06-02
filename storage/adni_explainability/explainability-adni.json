@@ -1,0 +1,26 @@
+{
+    "session_id": "explainability-adni",
+    "user_id": null,
+    "memory": null,
+    "session_data": {
+        "session_state": {
+            "explainability_adni": {
+                "summary": "The model predicts diagnosis primarily based on global cognitive function (CDGLOBAL) and specific cognitive assessments such as CDRSB and LDELTOTAL, capturing neurodegenerative processes associated with cognitive decline. It leverages interactions between these features, reflecting interconnected pathological mechanisms in neurodegeneration, such as amyloid accumulation, tau pathology, and synaptic dysfunction.",
+                "feature_importance_analysis": "CDGLOBAL, with the highest importance score, likely represents overall cognitive impairment, a hallmark of neurodegenerative diseases like Alzheimer's. CDRSB and CDRSB.1 are detailed assessments of cognitive and functional decline, correlating with disease severity. LDELTOTAL measures memory performance, crucial in early diagnosis. mPACCtrailsB and mPACCdigit assess executive function and processing speed, reflecting frontal lobe involvement and neural network integrity.",
+                "interaction_analysis": "The interaction between CDGLOBAL and CDRSB suggests that global cognitive decline amplifies the predictive value of specific cognitive deficits. The interaction between CDRSB and CDRSB.1 indicates that different cognitive domains are interconnected, with deficits in one domain influencing others. LDELTOTAL's interaction with CDRSB.1 underscores the link between memory impairment and broader cognitive decline. The bilateral interaction between mPACCtrailsB and mPACCdigit highlights the interconnectedness of executive function and processing speed, both affected in neurodegeneration.",
+                "clinical_insights": "Clinically, the model emphasizes the importance of comprehensive cognitive assessments in diagnosing neurodegenerative conditions. The features identified are routinely used in clinical settings, supporting interpretability. The interactions suggest that a combined evaluation of multiple cognitive domains provides a more accurate diagnosis. This model could assist in early detection, monitor disease progression, and tailor interventions based on specific cognitive profiles.",
+                "limitations": "The model is based on a specific dataset (adni) and may not generalize across diverse populations or settings. The reliance on selected features may overlook other relevant biomarkers such as neuroimaging or genetic data. Potential biases include sample selection bias and the limited scope of features. The model's interpretability is constrained by the knowledge graph's predefined interactions, which may not capture all biological complexities.",
+                "recommendations": "For clinical use, the model should be validated prospectively in diverse cohorts. Integrating additional biomarkers could enhance accuracy. The model can serve as a decision support tool, aiding clinicians in early diagnosis and monitoring. Further research should explore dynamic interactions over time and incorporate multimodal data to improve robustness and biological plausibility."
+            }
+        }
+    },
+    "extra_data": null,
+    "created_at": null,
+    "updated_at": 1748867690,
+    "workflow_id": "703d4b24-c303-4499-b4d3-dbc2666e905b",
+    "workflow_data": {
+        "name": "ExplainabilityWorkflow",
+        "workflow_id": "703d4b24-c303-4499-b4d3-dbc2666e905b",
+        "description": "Generates comprehensive explainability report for the trained model."
+    }
+}

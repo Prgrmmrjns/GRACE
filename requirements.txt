@@ -6,5 +6,10 @@ matplotlib
 pydantic
 requests
 lightgbm
-lime
+xgboost
+shap
 agno
+catboost
+reportlab
+optuna
+seaborn

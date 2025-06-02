@@ -1,0 +1,30 @@
+{
+    "session_id": "keywords-adni",
+    "user_id": null,
+    "memory": null,
+    "session_data": {
+        "session_state": {
+            "keywords_adni": [
+                "Alzheimer's disease pathophysiology",
+                "neurodegeneration biomarkers",
+                "amyloid-beta and tau pathology",
+                "brain atrophy and hippocampal atrophy",
+                "vascular risk factors in AD",
+                "neuroimaging in Alzheimer's",
+                "cognitive decline predictors",
+                "genetic risk factors for AD",
+                "neuropsychiatric symptoms in dementia",
+                "fluid biomarkers in neurodegeneration"
+            ]
+        }
+    },
+    "extra_data": null,
+    "created_at": null,
+    "updated_at": 1748859555,
+    "workflow_id": "b123c355-6485-49a0-a209-57b4e0db49b2",
+    "workflow_data": {
+        "name": "KeywordGenerationWorkflow",
+        "workflow_id": "b123c355-6485-49a0-a209-57b4e0db49b2",
+        "description": "Generates relevant keywords for literature search based on dataset and prediction task."
+    }
+}
