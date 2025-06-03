@@ -7,7 +7,10 @@ from agno.agent import Agent, RunResponse
 from agno.knowledge.arxiv import ArxivKnowledgeBase
 from agno.storage.json import JsonStorage
 from agno.workflow import Workflow
-from graph_utils import ResearchReport, BatchFeatureInteractions, Keywords
+from graph_utils import ResearchReport, Keywords, DiseaseMechanisms, MechanismFeatureAssignments
+import warnings
+warnings.filterwarnings("ignore")
+
 
 def get_feature_names_and_description():
     with open(DATASET_PATH, "r", encoding="utf-8") as f:
@@ -18,38 +21,6 @@ def get_feature_names_and_description():
         dataset_description = f.read().strip()
     return feature_names, dataset_description
 
-def verify_and_clean_interactions(all_feature_interactions):
-    """
-    Verify feature interactions and remove any self-loops.
-    Returns cleaned interactions and prints warnings for any issues found.
-    """
-    cleaned_interactions = []
-    self_loops_found = 0
-    
-    for interaction in all_feature_interactions:
-        original_count = len(interaction['interactions'])
-        # Remove self-loops
-        cleaned_interaction_list = [target for target in interaction['interactions'] if target != interaction['feature']]
-        
-        if len(cleaned_interaction_list) < original_count:
-            self_loops_found += 1
-            print(f"WARNING: Removed self-loop for feature '{interaction['feature']}' (was interacting with itself)")
-        
-        # Create new interaction dict with cleaned list
-        cleaned_interaction = {
-            'feature': interaction['feature'],
-            'interactions': cleaned_interaction_list
-        }
-        cleaned_interactions.append(cleaned_interaction)
-    
-    if self_loops_found > 0:
-        print(f"VERIFICATION: Found and removed {self_loops_found} self-loops from feature interactions")
-    else:
-        print("VERIFICATION: No self-loops detected - all interactions are valid")
-    
-    return cleaned_interactions
-
-# --- Workflows ---
 class NoMemoryWorkflow(Workflow):
     def get_workflow_session(self):
         ws = super().get_workflow_session()
@@ -94,10 +65,7 @@ class ResearchWorkflow(NoMemoryWorkflow):
         cache_key = f"research_report_{DATASET_NAME}"
         if not recreate_search and self.session_state.get(cache_key):
             cached_report = self.session_state[cache_key]
-            if isinstance(cached_report, dict):
-                report_data = ResearchReport(**cached_report)
-            else:
-                report_data = cached_report
+            report_data = ResearchReport(**cached_report)
             yield RunResponse(run_id=self.run_id, content={"step": "research", "report_data": report_data})
             return
         
@@ -126,155 +94,194 @@ Your research should help identify the most relevant biological/medical mechanis
         self.session_state[cache_key] = report_data
         yield RunResponse(run_id=self.run_id, content={"step": "research", "report_data": report_data})
 
-class FeatureInteractionConstraintsWorkflow(NoMemoryWorkflow):
-    description: str = "Identifies feature interactions for every feature based on research findings."
+class DiseaseMechanismWorkflow(NoMemoryWorkflow):
+    description: str = "Identifies 5-10 central disease mechanisms for the prediction task."
 
     def run(self, research_report, feature_names, dataset_description, recreate_search: bool = False):
-        cache_key = f"feature_interactions_{DATASET_NAME}"
+        cache_key = f"disease_mechanisms_{DATASET_NAME}"
         if not recreate_search and self.session_state.get(cache_key):
-            cached_interactions = self.session_state[cache_key]
-            yield RunResponse(run_id=self.run_id, content={"step": "feature_interactions", "all_feature_interactions": cached_interactions})
+            cached_mechanisms = self.session_state[cache_key]
+            yield RunResponse(run_id=self.run_id, content={"step": "mechanisms", "mechanisms": cached_mechanisms})
             return
         
-        agent = Agent(model=LLM_MODEL, response_model=BatchFeatureInteractions)
+        agent = Agent(model=LLM_MODEL, response_model=DiseaseMechanisms)
         
-        # Process features in batches of 20
-        batch_size = 20
-        all_feature_interactions = []
-        
-        for i in range(0, len(feature_names), batch_size):
-            batch_features = feature_names[i:i+batch_size]
-            
-            print(f"Processing batch {i//batch_size + 1}: {len(batch_features)} features ({batch_features[:3]}...)")
-            prompt = f"""Based on the research findings below, identify feature interactions for each feature in the current batch.
+        prompt = f"""Based on the research report below, identify 5-10 central disease mechanisms that are most relevant for the prediction task.
 
 Research Report:
 {research_report.report}
 
-Key Findings:
-{chr(10).join(research_report.key_findings) if hasattr(research_report, 'key_findings') else 'No key findings available'}
+Citations:
+{chr(10).join(research_report.citations)}
 
 Dataset Description: {dataset_description}
+Available Features: {feature_names}
 Prediction Task: Predicting {TARGET_COL}
 
-Current Batch Features: {batch_features}
-All Available Features: {feature_names}
+Instructions:
+- Identify 5-10 core disease mechanisms/pathways that are central to the prediction task
+- Each mechanism should represent a major biological system or process (e.g., cardiovascular dysfunction, metabolic dysregulation, inflammatory response, etc.)
+- Mechanisms should be broad enough to encompass multiple features but specific enough to be medically meaningful
+- Focus on mechanisms that have strong literature support and clear connections to the target outcome
+- Provide detailed descriptions of how each mechanism relates to the prediction task
+- Include supporting citations from the research
+
+Return 5-10 disease mechanisms that will serve as the foundation for organizing feature interactions."""
+
+        resp = agent.run(prompt)
+        mechanisms = resp.content.mechanisms
+        print(f'Identified {len(mechanisms)} disease mechanisms:')
+        for mech in mechanisms:
+            print(f'  - {mech.name}')
+        
+        self.session_state[cache_key] = mechanisms
+        yield RunResponse(run_id=self.run_id, content={"step": "mechanisms", "mechanisms": mechanisms})
+
+class MechanismFeatureAssignmentWorkflow(NoMemoryWorkflow):
+    description: str = "Assigns features to disease mechanisms."
+
+    def run(self, mechanisms, feature_names, dataset_description, recreate_search: bool = False):
+        cache_key = f"mechanism_assignments_{DATASET_NAME}"
+        if not recreate_search and self.session_state.get(cache_key):
+            cached_assignments = self.session_state[cache_key]
+            yield RunResponse(run_id=self.run_id, content={"step": "assignments", "assignments": cached_assignments})
+            return
+        
+        agent = Agent(model=LLM_MODEL, response_model=MechanismFeatureAssignments)
+        
+        mechanism_list = [f"{m.name}: {m.description}" for m in mechanisms]
+        
+        prompt = f"""Assign each feature to the most relevant disease mechanisms based on biological/medical knowledge.
+
+Disease Mechanisms:
+{chr(10).join(mechanism_list)}
+
+Dataset Description: {dataset_description}
+Available Features: {feature_names}
+Prediction Task: Predicting {TARGET_COL}
 
 Instructions:
-- For EACH feature in the 'Current Batch Features' list, identify which OTHER features from 'All Available Features' it should interact with.
-- A feature should NOT interact with itself (NO SELF-LOOPS ALLOWED).
-- CRITICAL: Never include the feature itself in its interaction list.
-- Focus on biologically/medically meaningful interactions based on the research findings. Ensure these are scientific FACTS.
-- Each feature should interact with 8-15 other features on average to create a dense, interconnected network.
-- Consider BOTH direct and indirect biological relationships:
-  * Direct: Features within the same biological system (e.g., cardiovascular, renal, metabolic).
-  * Indirect: Features across different systems that influence each other (e.g., cardiovascular affecting renal, metabolic affecting cardiovascular).
-  * Compensatory: Features that compensate for dysfunction in other systems.
-  * Cascade effects: Features that trigger downstream effects in other systems.
-- For each feature in the 'Current Batch Features', provide:
-  * The feature name (must be one of the 'Current Batch Features').
-  * A list of other features it should interact with (use exact feature names from 'All Available Features') - aim for 8-15 interactions per feature.
-  * A concise and factual explanation of why these interactions are biologically relevant, based on scientific evidence.
-  * Citations from the research supporting these interactions.
-- Examples of dense interactions:
-  * Heart rate might interact with: blood pressure, vasopressors, lactate, temperature, oxygen saturation, creatinine, BUN, pH, bicarbonate, hemoglobin, white blood cell count, glucose, age, mechanical ventilation.
-  * Creatinine might interact with: BUN, urine output, electrolytes, blood pressure, heart rate, fluid balance, hemoglobin, pH, bicarbonate, lactate, vasopressors, diuretics, age, comorbidities.
-  * Lactate might interact with: pH, bicarbonate, oxygen levels, blood pressure, heart rate, temperature, glucose, hemoglobin, mechanical ventilation, vasopressors, creatinine, liver function tests.
+- CRITICAL: EVERY single feature from the Available Features list MUST be assigned to at least one mechanism
+- Features should be assigned to multiple mechanisms when biologically relevant (aim for 2-3 mechanisms per feature on average)
+- Each mechanism should have many features assigned to it (aim for 15-30 features per mechanism)
+- Focus on biological/medical relevance and scientific accuracy
+- Be generous with assignments - if a feature could plausibly relate to a mechanism, include it
+- Consider both direct and indirect relationships (e.g., metabolic features affecting cardiovascular mechanisms)
+- Provide explanations for why features belong to each mechanism
 
-Return a list of interaction objects. This list should ONLY contain interaction objects for the features explicitly listed in 'Current Batch Features' for this specific batch. Ensure the response is concise, scientifically accurate, and avoids any redundancies.
-The number of interaction objects in your response must exactly match the number of features in 'Current Batch Features'.
-"""
+VERIFICATION: The total number of unique features across all mechanism assignments must equal {len(feature_names)} features.
 
-            resp = agent.run(prompt)
-            batch_interactions_from_llm = resp.content.interactions
-            
-            # Filter batch_interactions to only include features from the current batch_features
-            current_batch_set = set(batch_features)
-            
-            # Deduplicate and filter
-            processed_features_in_this_batch = set()
-            final_batch_interactions = []
+Return assignments of features to each disease mechanism."""
 
-            for fi in batch_interactions_from_llm:
-                if fi.feature in current_batch_set and fi.feature not in processed_features_in_this_batch:
-                    # Ensure interactions are not with the feature itself
-                    cleaned_interactions = [inter_f for inter_f in fi.interactions if inter_f != fi.feature]
-                    
-                    # Convert to dictionary format
-                    interaction_dict = {
-                        'feature': fi.feature,
-                        'interactions': cleaned_interactions
-                    }
-                    final_batch_interactions.append(interaction_dict)
-                    processed_features_in_this_batch.add(fi.feature)
+        resp = agent.run(prompt)
+        assignments = resp.content.assignments
+        
+        # Check for unassigned features and retry if needed
+        assigned_features = set()
+        for assignment in assignments:
+            assigned_features.update(assignment.features)
+            print(f'{assignment.mechanism}: {len(assignment.features)} features')
+        
+        unassigned = set(feature_names) - assigned_features
+        
+        # If there are unassigned features, make a second call to assign them
+        if unassigned:
+            print(f'Found {len(unassigned)} unassigned features. Assigning them now...')
             
-            # If the LLM didn't return interactions for all features in the batch, log a warning or handle as needed.
-            # For now, we'll just proceed with what was returned and correctly filtered.
-            if len(final_batch_interactions) < len(batch_features):
-                print(f"  WARNING: LLM returned interactions for {len(final_batch_interactions)} features, but batch size was {len(batch_features)}. Missing features: {current_batch_set - processed_features_in_this_batch}")
+            retry_prompt = f"""The following features were not assigned to any disease mechanism. Please assign each of these features to the most appropriate mechanism(s) from the list below.
 
-            all_feature_interactions.extend(final_batch_interactions)
-            
-            print(f"  Successfully processed and added interactions for {len(final_batch_interactions)} features in batch.")
-        
-        print(f'Generated interactions for {len(all_feature_interactions)} features total')
-        for interaction in all_feature_interactions:
-            print(f'  - {interaction["feature"]}: {len(interaction["interactions"])} interactions')
-        
-        self.session_state[cache_key] = all_feature_interactions
-        yield RunResponse(run_id=self.run_id, content={"step": "feature_interactions", "all_feature_interactions": all_feature_interactions})
+Unassigned Features: {list(unassigned)}
 
-class MissingFeatureAssignmentWorkflow(NoMemoryWorkflow):
-    description: str = "Generates interactions for any missing features."
+Disease Mechanisms:
+{chr(10).join(mechanism_list)}
 
-    def run(self, all_feature_interactions, unassigned_features, feature_names, dataset_description, arxiv_kb, recreate_search: bool = False):
-        if not unassigned_features:
-            yield RunResponse(run_id=self.run_id, content={"step": "missing_features", "updated_interactions": all_feature_interactions})
-            return
+Instructions:
+- Assign EVERY feature in the unassigned list to at least one mechanism
+- Be generous with assignments - consider indirect relationships
+- Features can be assigned to multiple mechanisms if relevant
+- Provide explanations for the assignments
+
+Return assignments for the unassigned features."""
+
+            retry_resp = agent.run(retry_prompt)
+            retry_assignments = retry_resp.content.assignments
             
-        cache_key = f"missing_features_{DATASET_NAME}_{len(unassigned_features)}"
-        if not recreate_search and self.session_state.get(cache_key):
-            cached_interactions = self.session_state[cache_key]
-            yield RunResponse(run_id=self.run_id, content={"step": "missing_features", "updated_interactions": cached_interactions})
-            return
-        
-        print(f"Generating interactions for {len(unassigned_features)} missing features...")
-        
-        # Create interactions for missing features by assigning them to 3-5 random existing features
-        import random
-        random.seed(42)  # For reproducibility
-        
-        updated_interactions = all_feature_interactions.copy()
-        assigned_features = [interaction['feature'] for interaction in all_feature_interactions]
-        
-        for feature in unassigned_features:
-            # Select 8-12 random features to interact with (dense network)
-            available_features = [f for f in feature_names if f != feature]
-            num_interactions = min(12, max(8, len(available_features)))
-            selected_interactions = random.sample(available_features, num_interactions)
+            # Merge the retry assignments with original assignments
+            assignment_dict = {a.mechanism: a for a in assignments}
             
-            new_interaction = {
+            for retry_assignment in retry_assignments:
+                if retry_assignment.mechanism in assignment_dict:
+                    # Add features to existing mechanism
+                    existing_features = set(assignment_dict[retry_assignment.mechanism].features)
+                    new_features = set(retry_assignment.features)
+                    combined_features = list(existing_features | new_features)
+                    assignment_dict[retry_assignment.mechanism].features = combined_features
+                else:
+                    # This shouldn't happen but handle it
+                    assignments.append(retry_assignment)
+            
+            assignments = list(assignment_dict.values())
+        
+        # Final verification
+        final_assigned_features = set()
+        for assignment in assignments:
+            final_assigned_features.update(assignment.features)
+            print(f'{assignment.mechanism}: {len(assignment.features)} features')
+        
+        final_unassigned = set(feature_names) - final_assigned_features
+        if final_unassigned:
+            print(f'WARNING: {len(final_unassigned)} features still unassigned: {list(final_unassigned)}')
+        else:
+            print(f'SUCCESS: All {len(feature_names)} features assigned to mechanisms')
+        
+        self.session_state[cache_key] = assignments
+        yield RunResponse(run_id=self.run_id, content={"step": "assignments", "assignments": assignments})
+
+def create_interactions_from_mechanisms(assignments, feature_names):
+    """Create feature interactions based on mechanism assignments."""
+    feature_interactions = []
+    
+    # Create a mapping of features to their mechanisms
+    feature_to_mechanisms = {}
+    for assignment in assignments:
+        for feature in assignment.features:
+            if feature not in feature_to_mechanisms:
+                feature_to_mechanisms[feature] = []
+            feature_to_mechanisms[feature].append(assignment.mechanism)
+    
+    # For each feature, find interactions with other features in the same mechanisms
+    for feature in feature_names:
+        if feature not in feature_to_mechanisms:
+            continue
+            
+        interactions = set()
+        
+        # Find all features that share at least one mechanism with this feature
+        for mechanism in feature_to_mechanisms[feature]:
+            for assignment in assignments:
+                if assignment.mechanism == mechanism:
+                    for other_feature in assignment.features:
+                        if other_feature != feature and other_feature in feature_names:
+                            interactions.add(other_feature)
+        
+        if interactions:
+            feature_interactions.append({
                 'feature': feature,
-                'interactions': selected_interactions
-            }
-            updated_interactions.append(new_interaction)
-            print(f"Assigned {feature} to interact with {len(selected_interactions)} features: {selected_interactions}")
-        
-        print(f'Success: Generated interactions for all {len(unassigned_features)} missing features')
-        
-        self.session_state[cache_key] = updated_interactions
-        yield RunResponse(run_id=self.run_id, content={"step": "missing_features", "updated_interactions": updated_interactions})
+                'interactions': list(interactions)
+            })
+    
+    return feature_interactions
 
 def run_kg_workflows(arxiv_kb: ArxivKnowledgeBase, recreate_search: bool = False):
     """
-    Run the comprehensive workflow:
+    Run the mechanism-based workflow:
     1. Generate keywords
     2. Conduct research using the knowledge base
-    3. Identify mechanisms and assign features
-    4. Ensure all features are assigned (iterative process)
+    3. Identify central disease mechanisms
+    4. Assign features to mechanisms
+    5. Create interactions based on mechanism assignments
     """
     
-    # Get feature names and dataset description once at the beginning
     feature_names, dataset_description = get_feature_names_and_description()
     feature_names_set = set(feature_names)
     
@@ -304,67 +311,36 @@ def run_kg_workflows(arxiv_kb: ArxivKnowledgeBase, recreate_search: bool = False
         if hasattr(resp, 'content') and isinstance(resp.content, dict) and 'report_data' in resp.content:
             research_report = resp.content['report_data']
     
-    # 4. Identify feature interaction constraints
-    print("Step 4: Identifying feature interaction constraints...")
-    storage_dir_interactions = os.path.join("storage", f"{DATASET_NAME}_interactions")
-    os.makedirs(storage_dir_interactions, exist_ok=True)
-    workflow_storage_interactions = JsonStorage(dir_path=storage_dir_interactions)
-    wf_interactions = FeatureInteractionConstraintsWorkflow(session_id=f"interactions-{DATASET_NAME}", storage=workflow_storage_interactions)
+    # 4. Identify disease mechanisms
+    print("Step 4: Identifying disease mechanisms...")
+    storage_dir_mechanisms = os.path.join("storage", f"{DATASET_NAME}_mechanisms")
+    os.makedirs(storage_dir_mechanisms, exist_ok=True)
+    workflow_storage_mechanisms = JsonStorage(dir_path=storage_dir_mechanisms)
+    wf_mechanisms = DiseaseMechanismWorkflow(session_id=f"mechanisms-{DATASET_NAME}", storage=workflow_storage_mechanisms)
     
-    all_feature_interactions = None
-    for resp in wf_interactions.run(research_report=research_report, feature_names=feature_names, dataset_description=dataset_description, recreate_search=recreate_search):
-        if hasattr(resp, 'content') and isinstance(resp.content, dict) and 'all_feature_interactions' in resp.content:
-            all_feature_interactions = resp.content['all_feature_interactions']
+    mechanisms = None
+    for resp in wf_mechanisms.run(research_report=research_report, feature_names=feature_names, dataset_description=dataset_description, recreate_search=recreate_search):
+        if hasattr(resp, 'content') and isinstance(resp.content, dict) and 'mechanisms' in resp.content:
+            mechanisms = resp.content['mechanisms']
     
-    if all_feature_interactions is None:
-        raise ValueError("Could not generate feature interactions")
+    # 5. Assign features to mechanisms
+    print("Step 5: Assigning features to mechanisms...")
+    storage_dir_assignments = os.path.join("storage", f"{DATASET_NAME}_assignments")
+    os.makedirs(storage_dir_assignments, exist_ok=True)
+    workflow_storage_assignments = JsonStorage(dir_path=storage_dir_assignments)
+    wf_assignments = MechanismFeatureAssignmentWorkflow(session_id=f"assignments-{DATASET_NAME}", storage=workflow_storage_assignments)
     
-    # Verify and clean interactions to remove any self-loops
-    print("Step 4.5: Verifying and cleaning feature interactions...")
-    all_feature_interactions = verify_and_clean_interactions(all_feature_interactions)
+    assignments = None
+    for resp in wf_assignments.run(mechanisms=mechanisms, feature_names=feature_names, dataset_description=dataset_description, recreate_search=recreate_search):
+        if hasattr(resp, 'content') and isinstance(resp.content, dict) and 'assignments' in resp.content:
+            assignments = resp.content['assignments']
     
-    # 5. Check for unassigned features and assign them iteratively
-    iteration = 0
+    # 6. Create feature interactions from mechanism assignments
+    print("Step 6: Creating feature interactions from mechanisms...")
+    all_feature_interactions = create_interactions_from_mechanisms(assignments, feature_names)
     
-    while True:
-        iteration += 1
-        print(f"Step 5.{iteration}: Checking for unassigned features...")
-        
-        # Check which features have interactions defined
-        assigned_features = set()
-        for interaction in all_feature_interactions:
-            if interaction['feature'] in feature_names_set:
-                assigned_features.add(interaction['feature'])
-        
-        unassigned_features = [f for f in feature_names if f not in assigned_features]
-        
-        if not unassigned_features:
-            print("All features have interactions defined!")
-            break
-        
-        print(f"Found {len(unassigned_features)} unassigned features: {unassigned_features}")
-        print("Generating interactions for missing features...")
-        
-        # Use the missing feature assignment workflow
-        storage_dir_missing = os.path.join("storage", f"{DATASET_NAME}_missing_features")
-        os.makedirs(storage_dir_missing, exist_ok=True)
-        workflow_storage_missing = JsonStorage(dir_path=storage_dir_missing)
-        wf_missing = MissingFeatureAssignmentWorkflow(session_id=f"missing-{DATASET_NAME}-{iteration}", storage=workflow_storage_missing)
-        
-        updated_interactions = None
-        for resp in wf_missing.run(all_feature_interactions=all_feature_interactions, unassigned_features=unassigned_features, feature_names=feature_names, dataset_description=dataset_description, arxiv_kb=arxiv_kb, recreate_search=recreate_search):
-            if hasattr(resp, 'content') and isinstance(resp.content, dict) and 'updated_interactions' in resp.content:
-                updated_interactions = resp.content['updated_interactions']
-        
-        all_feature_interactions = updated_interactions
-    
-    # Final verification to ensure no self-loops exist
-    print("Step 5.final: Final verification of all feature interactions...")
-    all_feature_interactions = verify_and_clean_interactions(all_feature_interactions)
-    
-    # 6. Build the NetworkX graph with feature interactions
-    print("Step 6: Building knowledge graph...")
-    
+    # 7. Build the NetworkX graph with feature interactions
+    print("Step 7: Building knowledge graph...")
     G = nx.DiGraph()
     
     # Add all feature nodes
@@ -372,35 +348,21 @@ def run_kg_workflows(arxiv_kb: ArxivKnowledgeBase, recreate_search: bool = False
         if not G.has_node(feature):
             G.add_node(feature, entity_type='INPUT_NODE')
     
+    # Add mechanism nodes
+    for assignment in assignments:
+        mechanism_name = f"MECHANISM_{assignment.mechanism.replace(' ', '_').upper()}"
+        G.add_node(mechanism_name, entity_type='INTERMEDIATE_NODE')
+    
     # Add edges for feature interactions
     total_edges = 0
-    self_loops_prevented = 0
     for interaction in all_feature_interactions:
         if interaction['feature'] in feature_names_set:
             for target_feature in interaction['interactions']:
-                if target_feature in feature_names_set:
-                    # Prevent self-loops at graph level as final safety check
-                    if interaction['feature'] == target_feature:
-                        self_loops_prevented += 1
-                        print(f"GRAPH WARNING: Prevented self-loop for {interaction['feature']}")
-                        continue
-                    
-                    # Add bidirectional edges for interactions
-                    if not G.has_edge(interaction['feature'], target_feature):
-                        G.add_edge(interaction['feature'], target_feature, 
-                                 relationship="interaction",
-                                 explanation="",
-                                 citations="")
-                        total_edges += 1
-                    if not G.has_edge(target_feature, interaction['feature']):
-                        G.add_edge(target_feature, interaction['feature'], 
-                                 relationship="interaction",
-                                 explanation="",
-                                 citations="")
-                        total_edges += 1
-    
-    if self_loops_prevented > 0:
-        print(f"GRAPH VERIFICATION: Prevented {self_loops_prevented} self-loops at graph building stage")
+                G.add_edge(interaction['feature'], target_feature, 
+                            relationship="interaction",
+                            explanation="",
+                            citations="")
+                total_edges += 1
     
     # Save the graph
     kg_dir = "kg"
@@ -408,5 +370,5 @@ def run_kg_workflows(arxiv_kb: ArxivKnowledgeBase, recreate_search: bool = False
     kg_path = os.path.join(kg_dir, f"{DATASET_NAME}.graphml")
     nx.write_graphml(G, kg_path)
     
-    print(f"Knowledge graph created with {len(all_feature_interactions)} feature interaction definitions and {total_edges} interaction edges")
+    print(f"Knowledge graph created with {len(mechanisms)} mechanisms, {len(all_feature_interactions)} feature interaction definitions and {total_edges} interaction edges")
     return G

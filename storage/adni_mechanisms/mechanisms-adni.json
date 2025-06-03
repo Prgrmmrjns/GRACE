@@ -1,0 +1,71 @@
+{
+    "session_id": "mechanisms-adni",
+    "user_id": null,
+    "memory": null,
+    "session_data": {
+        "session_state": {
+            "disease_mechanisms_adni": [
+                {
+                    "name": "Amyloid and Tau Pathology (ATN Pathway)",
+                    "description": "The accumulation of amyloid-beta (Aβ) plaques and hyperphosphorylated tau (p-tau) tangles in the brain are hallmark features of Alzheimer's disease. These pathologies are reflected in biofluid biomarkers (CSF Aβ42, tau, p-tau) and can be visualized with PET imaging. Amyloid pathology typically precedes tau pathology, which then leads to neurodegeneration. These processes are causally linked to synaptic dysfunction, neuronal loss, and ultimately cognitive decline, making them central to the prediction of AD diagnosis.",
+                    "citations": [
+                        "http://arxiv.org/pdf/2005.12385v1",
+                        "http://arxiv.org/pdf/2004.02141v2"
+                    ]
+                },
+                {
+                    "name": "Neurodegeneration and Brain Atrophy",
+                    "description": "Neurodegeneration, as measured by structural MRI (e.g., hippocampal and entorhinal cortex atrophy, ventricular enlargement, whole-brain atrophy), is a robust marker of AD. These changes reflect the loss of neurons and synapses and are directly linked to cognitive impairment and functional decline. PET imaging (FDG-PET) also reveals reduced glucose metabolism in affected regions, further indicating neurodegeneration. These imaging features are highly predictive of disease status and progression.",
+                    "citations": [
+                        "http://arxiv.org/pdf/2505.18416v1",
+                        "http://arxiv.org/pdf/2004.02141v2"
+                    ]
+                },
+                {
+                    "name": "Cognitive and Functional Decline",
+                    "description": "Cognitive impairment, as measured by neuropsychological tests (MMSE, MoCA, AVLT, etc.), and loss of daily living skills (FAQ, CDRSB) are direct clinical manifestations of underlying AD pathology. These assessments capture the impact of neurodegeneration on memory, executive function, language, and daily function, and are sensitive to both early and advanced stages of the disease. They are essential for distinguishing between CN, MCI, and AD in the prediction task.",
+                    "citations": [
+                        "http://arxiv.org/pdf/2410.18972v1"
+                    ]
+                },
+                {
+                    "name": "Neuropsychiatric Symptoms and Network Dysfunction",
+                    "description": "Neuropsychiatric symptoms such as depression, agitation, hallucinations, and other behavioral changes (measured by NPI-Q, GDS) are common in AD and MCI. These symptoms are linked to specific patterns of brain atrophy and network dysfunction, and may precede or accompany cognitive decline. Their presence provides additional predictive value for disease status and progression.",
+                    "citations": [
+                        "http://arxiv.org/pdf/2505.18416v1"
+                    ]
+                },
+                {
+                    "name": "Vascular Dysfunction and Cerebrovascular Disease",
+                    "description": "Vascular health, including hypertension, pulse, and other cardiovascular measures, is associated with increased risk of AD. Mechanisms involve cerebral small vessel disease, microbleeds, and impaired clearance of amyloid, which can exacerbate neurodegeneration and cognitive impairment. Vascular dysfunction is thus an important modifier of AD risk and progression.",
+                    "citations": [
+                        "http://arxiv.org/pdf/2410.18972v1"
+                    ]
+                },
+                {
+                    "name": "Genetic and Proteomic Risk Factors",
+                    "description": "Genetic factors, most notably the presence of the APOE4 allele, significantly increase the risk of AD. Other proteomic markers and metabolic pathways (e.g., adiponectin-linked proteins) also contribute to disease risk and progression. These factors influence susceptibility to amyloid and tau pathology, neurodegeneration, and clinical presentation, and are important for stratifying risk in predictive models.",
+                    "citations": [
+                        "http://arxiv.org/pdf/2502.04288v1"
+                    ]
+                },
+                {
+                    "name": "Demographic and Cognitive Reserve Modifiers",
+                    "description": "Demographic factors such as age, education, gender, ethnicity, and race influence both the risk and clinical presentation of AD. For example, lower education is associated with lower cognitive reserve, which may accelerate the clinical manifestation of pathology. These factors modulate the relationship between biomarkers, neurodegeneration, and cognitive outcomes, and are essential covariates in predictive modeling.",
+                    "citations": [
+                        "http://arxiv.org/pdf/2502.04288v1"
+                    ]
+                }
+            ]
+        }
+    },
+    "extra_data": null,
+    "created_at": null,
+    "updated_at": 1748946352,
+    "workflow_id": "320de6c6-2907-489a-9f44-c391325dc2b9",
+    "workflow_data": {
+        "name": "DiseaseMechanismWorkflow",
+        "workflow_id": "320de6c6-2907-489a-9f44-c391325dc2b9",
+        "description": "Identifies 5-10 central disease mechanisms for the prediction task."
+    }
+}

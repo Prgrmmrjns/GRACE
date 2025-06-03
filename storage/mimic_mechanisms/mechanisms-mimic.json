@@ -1,0 +1,87 @@
+{
+    "session_id": "mechanisms-mimic",
+    "user_id": null,
+    "memory": null,
+    "session_data": {
+        "session_state": {
+            "disease_mechanisms_mimic": [
+                {
+                    "name": "Shock and Hypoperfusion",
+                    "description": "Shock, characterized by hypotension, tachycardia, and tissue hypoperfusion, leads to inadequate oxygen delivery to organs. This results in metabolic acidosis (low pH, elevated lactate), multi-organ dysfunction, and is a direct driver of ICU mortality. Features such as low blood pressure, high heart rate, low base excess, and elevated lactate are key indicators of this mechanism.",
+                    "citations": [
+                        "arxiv:1408.6553v1",
+                        "arxiv:2105.04414v1"
+                    ]
+                },
+                {
+                    "name": "Respiratory Failure and Hypoxemia (including ARDS)",
+                    "description": "Severe respiratory dysfunction, as seen in ARDS, is marked by hypoxemia (low PaO2/FiO2), high ventilator requirements (FiO2, PEEP), and low compliance. These derangements reflect critical lung injury and are strongly associated with increased mortality in the ICU. Features such as SpO2, PaO2/FiO2, ventilator settings, and compliance are central to this mechanism.",
+                    "citations": [
+                        "arxiv:1704.06300v1",
+                        "arxiv:2403.19355v1"
+                    ]
+                },
+                {
+                    "name": "Sepsis and Immune Dysregulation",
+                    "description": "Sepsis is a syndrome of dysregulated immune response to infection, leading to systemic inflammation, cytokine storm, endothelial injury, and coagulopathy. This process results in multi-organ failure and is a leading cause of ICU mortality. Features such as WBC, CRP, Sepsis-3 criteria, and organ dysfunction scores are linked to this pathway.",
+                    "citations": [
+                        "arxiv:1311.4384v1",
+                        "arxiv:2505.01264v1"
+                    ]
+                },
+                {
+                    "name": "Multi-Organ Dysfunction (MODS)",
+                    "description": "Failure of multiple organ systems (renal, hepatic, cardiac, neurological) is a final common pathway to death in critical illness. Laboratory markers (creatinine, BUN, AST, bilirubin, BNP, GCS) reflect the function of these organs. The presence and severity of organ dysfunction are strong predictors of mortality.",
+                    "citations": [
+                        "arxiv:2403.19355v1",
+                        "arxiv:1408.6553v1"
+                    ]
+                },
+                {
+                    "name": "Cardiovascular Dysfunction and Myocardial Injury",
+                    "description": "Acute or chronic cardiac dysfunction, including heart failure and myocardial injury, contributes to poor perfusion and increased mortality. Elevated cardiac markers (CK-CPK, BNP), arrhythmias, and hemodynamic instability are key features. This mechanism is especially relevant in patients with pre-existing cardiac disease or acute cardiac events.",
+                    "citations": [
+                        "arxiv:1408.6553v1"
+                    ]
+                },
+                {
+                    "name": "Metabolic and Electrolyte Derangements",
+                    "description": "Disturbances in metabolic homeostasis (e.g., hyperglycemia, acidosis, electrolyte imbalances) are common in critical illness and contribute to organ dysfunction and mortality. Features such as sodium, potassium, glucose, calcium, and acid-base status (pH, HCO3, base excess) are central to this mechanism.",
+                    "citations": [
+                        "arxiv:2403.19355v1"
+                    ]
+                },
+                {
+                    "name": "Neurological Dysfunction and Coma",
+                    "description": "Impaired neurological status, as measured by the Glasgow Coma Scale (GCS), is a strong predictor of mortality. Coma or severe encephalopathy may result from primary brain injury, metabolic derangements, or multi-organ failure.",
+                    "citations": [
+                        "arxiv:1310.3217v1"
+                    ]
+                },
+                {
+                    "name": "Endothelial Dysfunction and Coagulopathy",
+                    "description": "Endothelial injury, common in sepsis and chronic disease, leads to increased vascular permeability, tissue edema, and coagulopathy (e.g., DIC). This contributes to organ failure and is reflected in laboratory markers such as platelets, INR, and PTT.",
+                    "citations": [
+                        "arxiv:2505.01264v1"
+                    ]
+                },
+                {
+                    "name": "Comorbidities and Baseline Vulnerability",
+                    "description": "Pre-existing conditions such as advanced age, diabetes, hypertension, obesity, and heart failure increase susceptibility to critical illness and worsen outcomes. These factors impair immune response, promote endothelial dysfunction, and amplify the risk of organ failure and death.",
+                    "citations": [
+                        "arxiv:2505.01264v1"
+                    ]
+                }
+            ]
+        }
+    },
+    "extra_data": null,
+    "created_at": null,
+    "updated_at": 1748948979,
+    "workflow_id": "cc3e1236-881d-4736-afd5-c7958679b114",
+    "workflow_data": {
+        "name": "DiseaseMechanismWorkflow",
+        "workflow_id": "cc3e1236-881d-4736-afd5-c7958679b114",
+        "description": "Identifies 5-10 central disease mechanisms for the prediction task."
+    }
+}

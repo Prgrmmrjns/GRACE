@@ -5,7 +5,7 @@ import pandas as pd
 import optuna
 from sklearn.base import clone
 from sklearn.metrics import accuracy_score, roc_auc_score
-from params import MIN_SHAP_THRESHOLD_RANGE, MIN_INTERACTION_THRESHOLD_RANGE, N_TRIALS, FEATURE_PENALTY_COEFF, EDGE_PENALTY_COEFF, MODEL_TYPE, fit_model
+from params import MIN_SHAP_THRESHOLD_RANGE, MIN_INTERACTION_THRESHOLD_RANGE, N_TRIALS, FEATURE_PENALTY_COEFF, EDGE_PENALTY_COEFF
 
 def build_constraints_from_interactions(feature_interactions, features):
     constraints_set = set()
@@ -26,23 +26,12 @@ def build_constraints_from_interactions(feature_interactions, features):
 
 def set_interaction_constraints(model, constraints, feature_names=None):
     """Set interaction constraints for both LightGBM and XGBoost models."""
-    if constraints:
-        if MODEL_TYPE == "lightgbm":
-            # For LightGBM, ensure we're not setting empty constraints
-            if not constraints or all(len(group) == 0 for group in constraints):
-                return model
-            # Check if any constraints are empty and filter them out
-            valid_constraints = [group for group in constraints if len(group) > 0]
-            if valid_constraints:
-                model.set_params(interaction_constraints=valid_constraints)
-        elif MODEL_TYPE == "xgboost":
-            # Convert indices to feature names for XGBoost
-            xgb_constraints = []
-            for constraint_group in constraints:
-                feature_name_group = [feature_names[idx] for idx in constraint_group if idx < len(feature_names)]
-                if feature_name_group:
-                    xgb_constraints.append(feature_name_group)
-            model.set_params(interaction_constraints=xgb_constraints)
+    xgb_constraints = []
+    for constraint_group in constraints:
+        feature_name_group = [feature_names[idx] for idx in constraint_group if idx < len(feature_names)]
+        if feature_name_group:
+            xgb_constraints.append(feature_name_group)
+    model.set_params(interaction_constraints=xgb_constraints)
     return model
 
 def calculate_shap_values(model, X_train, X_val):
@@ -57,7 +46,7 @@ def calculate_shap_values(model, X_train, X_val):
         best_class = np.argmax(class_shap_importance)
         shap_vals = shap_vals[:, :, best_class]
     
-    return shap_vals, X_train
+    return shap_vals
     
 def shap_based_selection(shap_values, feature_interactions, feature_names, min_shap_threshold, min_interaction_threshold, dataset_name):
     mean_abs_shap = np.mean(np.abs(shap_values), axis=0)
@@ -92,7 +81,6 @@ def shap_based_selection(shap_values, feature_interactions, feature_names, min_s
                     interaction_obj['feature'] != interacting_feature):
                     feature_has_edge[interaction_obj['feature']] = True
                     feature_has_edge[interacting_feature] = True
-                    
                     f1_idx = selected_features.index(interaction_obj['feature'])
                     f2_idx = selected_features.index(interacting_feature)
                     
@@ -133,77 +121,89 @@ def shap_based_selection(shap_values, feature_interactions, feature_names, min_s
     return features_with_edges, G_filtered, filtered_edge_count
 
 def optimize_thresholds(X_train, X_val, y_train, y_val, shap_values, feature_interactions, 
-                       feature_names, ml_model, metric, early_stopping_callback):
+                       feature_names, ml_model, metric, early_stopping_rounds):
     
     # Pre-compute mean absolute SHAP values
     mean_abs_shap = np.mean(np.abs(shap_values), axis=0)
     
+    # Pre-compute feature interaction mappings for faster lookup
+    feature_to_interactions = {}
+    for interaction_obj in feature_interactions:
+        feature_to_interactions[interaction_obj['feature']] = set(interaction_obj['interactions'])
+    
+    # Pre-compute feature name to index mapping
+    feature_name_to_idx = {name: idx for idx, name in enumerate(feature_names)}
+    
     def objective(trial):
-        min_shap_threshold = trial.suggest_float('min_shap_threshold', *MIN_SHAP_THRESHOLD_RANGE, log=True)
-        min_interaction_threshold = trial.suggest_float('min_interaction_threshold', *MIN_INTERACTION_THRESHOLD_RANGE, log=True)
+        min_shap_threshold = trial.suggest_float('min_shap_threshold', *MIN_SHAP_THRESHOLD_RANGE)
+        min_interaction_threshold = trial.suggest_float('min_interaction_threshold', *MIN_INTERACTION_THRESHOLD_RANGE)
         
-        # Fast feature selection
-        selected_indices = [i for i, shap_importance in enumerate(mean_abs_shap) if shap_importance > min_shap_threshold]
-        if len(selected_indices) < 3:
-            return 0.0
+        # Fast feature selection using numpy masking
+        selected_mask = mean_abs_shap > min_shap_threshold
+        selected_indices = np.where(selected_mask)[0]
         
-        # Initialize the selected features list and build interaction matrix
+        # Use numpy indexing for feature names and SHAP values
         selected_features = [feature_names[i] for i in selected_indices]
+        selected_features_set = set(selected_features)
         selected_shap_values = shap_values[:, selected_indices]
+        
+        # Fast correlation matrix computation
         interaction_matrix = np.corrcoef(selected_shap_values.T)
         
-        # Create a mapping to track features with edges
-        feature_has_edge = {feature: False for feature in selected_features}
+        # Vectorized interaction processing
+        valid_edges = []
+        features_with_edges = set()
         
-        # Fast edge counting with interaction threshold filtering
-        filtered_interactions = []
-        
-        for interaction_obj in feature_interactions:
-            if interaction_obj['feature'] in selected_features:
-                f1_idx = selected_features.index(interaction_obj['feature'])
-                valid_interactions = []
+        for i, feature in enumerate(selected_features):
+            if feature in feature_to_interactions:
+                # Fast set intersection
+                valid_targets = selected_features_set & feature_to_interactions[feature]
                 
-                for interacting_feature in interaction_obj['interactions']:
-                    if (interacting_feature in selected_features and 
-                        interaction_obj['feature'] != interacting_feature):
-                        f2_idx = selected_features.index(interacting_feature)
-                        
-                        # Mark that both features have an edge
-                        feature_has_edge[interaction_obj['feature']] = True
-                        feature_has_edge[interacting_feature] = True
-                        
-                        # Check SHAP interaction strength
-                        if f1_idx != f2_idx and not np.isnan(interaction_matrix[f1_idx, f2_idx]):
-                            interaction_strength = abs(interaction_matrix[f1_idx, f2_idx])
-                            if interaction_strength > min_interaction_threshold:
-                                valid_interactions.append(interacting_feature)
-                
-                filtered_interactions.append({
-                    'feature': interaction_obj['feature'],
-                    'interactions': valid_interactions
-                })
-        n_interactions = len(filtered_interactions)
-        # Remove features without edges
-        selected_features_with_edges = [f for f in selected_features if feature_has_edge[f]]
+                for target in valid_targets:
+                    j = selected_features.index(target)
+                    if i != j and not np.isnan(interaction_matrix[i, j]):
+                        interaction_strength = abs(interaction_matrix[i, j])
+                        if interaction_strength > min_interaction_threshold:
+                            valid_edges.append((feature, target))
+                            features_with_edges.add(feature)
+                            features_with_edges.add(target)
         
-        # Build constraints from filtered interactions
-        final_constraints = build_constraints_from_interactions(filtered_interactions, selected_features_with_edges)
-
+        # Fast constraint building - group features that interact
+        constraint_groups = []
         
-        # Skip if no features with edges remain
-        if not selected_features_with_edges:
-            return 0.0
+        for feature in features_with_edges:
+            # Find all features connected to this one
+            group = {feature}
+            stack = [feature]
+            
+            while stack:
+                current = stack.pop()
+                for edge_feature, edge_target in valid_edges:
+                    if edge_feature == current and edge_target not in group:
+                        group.add(edge_target)
+                        stack.append(edge_target)
+                    elif edge_target == current and edge_feature not in group:
+                        group.add(edge_feature)
+                        stack.append(edge_feature)
+            
+            # Convert to indices
+            group_indices = [feature_name_to_idx[f] for f in group if f in feature_name_to_idx]
+            constraint_groups.append(sorted(group_indices))
         
-        # Get indices for features with edges
-        selected_indices_with_edges = [feature_names.index(f) for f in selected_features_with_edges]
+        # Get final feature list and indices
+        final_features = list(features_with_edges)
+        final_indices = np.array([feature_name_to_idx[f] for f in final_features])
         
         # Train model with selected features and constraints
-        X_train_filtered = X_train.iloc[:, selected_indices_with_edges]
-        X_val_filtered = X_val.iloc[:, selected_indices_with_edges]
+        X_train_filtered = X_train.iloc[:, final_indices]
+        X_val_filtered = X_val.iloc[:, final_indices]
         
         model = clone(ml_model)
-        model = set_interaction_constraints(model, final_constraints, selected_features_with_edges)
-        model = fit_model(model, X_train_filtered, y_train, X_val_filtered, y_val, early_stopping_callback)
+        
+        # Fast constraint setting
+        xgb_constraints = [[final_features[final_indices.tolist().index(idx)] for idx in group if idx in final_indices] for group in constraint_groups]
+        model.set_params(interaction_constraints=xgb_constraints, early_stopping_rounds=early_stopping_rounds)
+        model.fit(X_train_filtered, y_train, eval_set=[(X_val_filtered, y_val)], verbose=False)       
         
         # Evaluate
         if metric == 'accuracy':
@@ -214,11 +214,12 @@ def optimize_thresholds(X_train, X_val, y_train, y_val, shap_values, feature_int
             val_score = roc_auc_score(y_val, y_pred_proba)
         
         # Multi-objective: maximize val_score, minimize features and edges
-        n_features = len(selected_features_with_edges)
-        return val_score - FEATURE_PENALTY_COEFF * n_features - EDGE_PENALTY_COEFF * n_interactions
+        n_features = len(final_features)
+        n_edges = len(valid_edges)
+        return val_score - FEATURE_PENALTY_COEFF * n_features - EDGE_PENALTY_COEFF * n_edges
     
     optuna.logging.set_verbosity(optuna.logging.WARNING)
     study = optuna.create_study(direction='maximize', pruner=optuna.pruners.MedianPruner())
     study.optimize(objective, n_trials=N_TRIALS, n_jobs=-1, show_progress_bar=True)
     
-    return study.best_params 
+    return study.best_params, study.best_value

@@ -5,26 +5,26 @@
     "session_data": {
         "session_state": {
             "keywords_mimic": [
-                "Critical care mortality",
-                "ICU patient outcomes",
-                "Sepsis pathophysiology",
-                "Organ dysfunction mechanisms",
-                "Vital signs and prognosis",
-                "Blood gas analysis in critical illness",
-                "Laboratory biomarkers in ICU",
-                "Hemodynamic instability",
-                "Respiratory failure biomarkers",
-                "Critical illness risk factors"
+                "ICU mortality prediction",
+                "critical illness risk factors",
+                "organ dysfunction",
+                "sepsis pathophysiology",
+                "vital signs and mortality",
+                "biomarkers of critical care outcomes",
+                "Glasgow Coma Scale and prognosis",
+                "acute kidney injury in ICU",
+                "ventilator parameters and outcomes",
+                "comorbidities and ICU mortality"
             ]
         }
     },
     "extra_data": null,
     "created_at": null,
-    "updated_at": 1748862964,
-    "workflow_id": "9da6e940-7ba7-43eb-8fb2-be9cfebed4bf",
+    "updated_at": 1748948830,
+    "workflow_id": "8992e0c3-6d77-4e41-ba4f-eaa6fae687a4",
     "workflow_data": {
         "name": "KeywordGenerationWorkflow",
-        "workflow_id": "9da6e940-7ba7-43eb-8fb2-be9cfebed4bf",
+        "workflow_id": "8992e0c3-6d77-4e41-ba4f-eaa6fae687a4",
         "description": "Generates relevant keywords for literature search based on dataset and prediction task."
     }
 }

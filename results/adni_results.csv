@@ -1,2 +1,0 @@
-test_score,features_used,edges_used,original_edges,best_shap_threshold,best_interaction_threshold
-0.943089430894309,6,4,877,0.0782655142171744,1.3234173129710172e-10
