@@ -185,8 +185,12 @@ Return assignments of features to each disease mechanism."""
         unassigned = set(feature_names) - assigned_features
         
         # If there are unassigned features, make a second call to assign them
-        if unassigned:
-            print(f'Found {len(unassigned)} unassigned features. Assigning them now...')
+        max_retries = 3
+        retry_count = 0
+        
+        while unassigned and retry_count < max_retries:
+            retry_count += 1
+            print(f'Found {len(unassigned)} unassigned features. Retry {retry_count}/{max_retries}...')
             
             retry_prompt = f"""The following features were not assigned to any disease mechanism. Please assign each of these features to the most appropriate mechanism(s) from the list below.
 
@@ -221,6 +225,22 @@ Return assignments for the unassigned features."""
                     assignments.append(retry_assignment)
             
             assignments = list(assignment_dict.values())
+            
+            # Check if we've resolved all unassigned features
+            new_assigned_features = set()
+            for assignment in assignments:
+                new_assigned_features.update(assignment.features)
+            
+            unassigned = set(feature_names) - new_assigned_features
+            
+            if not unassigned:
+                break
+        
+        # If we still have unassigned features after max retries, assign them to all mechanisms as a fallback
+        if unassigned:
+            print(f'WARNING: After {max_retries} retries, {len(unassigned)} features remain unassigned. Assigning them to all mechanisms as fallback.')
+            for assignment in assignments:
+                assignment.features.extend(list(unassigned))
         
         # Final verification
         final_assigned_features = set()
@@ -230,7 +250,8 @@ Return assignments for the unassigned features."""
         
         final_unassigned = set(feature_names) - final_assigned_features
         if final_unassigned:
-            print(f'WARNING: {len(final_unassigned)} features still unassigned: {list(final_unassigned)}')
+            print(f'ERROR: {len(final_unassigned)} features still unassigned: {list(final_unassigned)}')
+            raise ValueError(f"Failed to assign all features: {final_unassigned}")
         else:
             print(f'SUCCESS: All {len(feature_names)} features assigned to mechanisms')
         

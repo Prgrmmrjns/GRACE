@@ -63,7 +63,14 @@ def shap_based_selection(shap_values, feature_interactions, feature_names, min_s
     # Calculate SHAP interaction matrix for selected features
     selected_indices = [feature_names.index(f) for f in selected_features]
     selected_shap_values = shap_values[:, selected_indices]
-    interaction_matrix = np.corrcoef(selected_shap_values.T)
+    
+    # Handle potential NaN values in correlation matrix
+    with np.errstate(invalid='ignore'):  # Suppress warning about NaN values
+        interaction_matrix = np.corrcoef(selected_shap_values.T)
+        
+    # Replace NaN values with zeros
+    interaction_matrix = np.nan_to_num(interaction_matrix, nan=0.0)
+    
     G_filtered = nx.Graph()
     for feature in selected_features:
         G_filtered.add_node(feature, entity_type='INPUT_NODE')
@@ -79,17 +86,16 @@ def shap_based_selection(shap_values, feature_interactions, feature_names, min_s
             for interacting_feature in interaction_obj['interactions']:
                 if (interacting_feature in selected_features and 
                     interaction_obj['feature'] != interacting_feature):
-                    feature_has_edge[interaction_obj['feature']] = True
-                    feature_has_edge[interacting_feature] = True
                     f1_idx = selected_features.index(interaction_obj['feature'])
                     f2_idx = selected_features.index(interacting_feature)
                     
-                    # Check SHAP interaction strength
-                    if f1_idx != f2_idx and not np.isnan(interaction_matrix[f1_idx, f2_idx]):
-                        interaction_strength = abs(interaction_matrix[f1_idx, f2_idx])
-                        if interaction_strength > min_interaction_threshold:
-                            G_filtered.add_edge(interaction_obj['feature'], interacting_feature, relationship='interaction')
-                            valid_interactions.append(interacting_feature)
+                    # Check SHAP interaction strength - no need to check for NaN as we replaced them
+                    interaction_strength = abs(interaction_matrix[f1_idx, f2_idx])
+                    if interaction_strength > min_interaction_threshold:
+                        G_filtered.add_edge(interaction_obj['feature'], interacting_feature, relationship='interaction')
+                        valid_interactions.append(interacting_feature)
+                        feature_has_edge[interaction_obj['feature']] = True
+                        feature_has_edge[interacting_feature] = True
             
             # If this feature has valid interactions, count it as a constraint
             if valid_interactions:
@@ -113,9 +119,25 @@ def shap_based_selection(shap_values, feature_interactions, feature_names, min_s
     features_with_edges = [f for f in selected_features if feature_has_edge[f]]
     isolated_features = [f for f in selected_features if not feature_has_edge[f]]
     
-    if isolated_features:
+    # If all features are isolated (no edges), keep the top ones by SHAP value
+    if not features_with_edges and isolated_features:
+        # Get SHAP values for isolated features
+        isolated_indices = [feature_names.index(f) for f in isolated_features]
+        isolated_shap_values = [mean_abs_shap[i] for i in isolated_indices]
+        
+        # Sort by SHAP values and keep top 5
+        top_features = [f for _, f in sorted(zip(isolated_shap_values, isolated_features), reverse=True)][:5]
+        features_with_edges = top_features
+        
+        # Keep these nodes in the graph
         for f in isolated_features:
-            G_filtered.remove_node(f)
+            if f not in top_features:
+                G_filtered.remove_node(f)
+    else:
+        # Remove isolated features from graph
+        if isolated_features:
+            for f in isolated_features:
+                G_filtered.remove_node(f)
     
     nx.write_graphml(G_filtered, f"kg/{dataset_name}_filtered.graphml")
     return features_with_edges, G_filtered, filtered_edge_count
@@ -134,9 +156,17 @@ def optimize_thresholds(X_train, X_val, y_train, y_val, shap_values, feature_int
     # Pre-compute feature name to index mapping
     feature_name_to_idx = {name: idx for idx, name in enumerate(feature_names)}
     
+    # Cache for trial parameters to avoid recalculating the same thresholds
+    results_cache = {}
+    
     def objective(trial):
         min_shap_threshold = trial.suggest_float('min_shap_threshold', *MIN_SHAP_THRESHOLD_RANGE)
         min_interaction_threshold = trial.suggest_float('min_interaction_threshold', *MIN_INTERACTION_THRESHOLD_RANGE)
+        
+        # Check if we already computed this combination
+        cache_key = (min_shap_threshold, min_interaction_threshold)
+        if cache_key in results_cache:
+            return results_cache[cache_key]
         
         # Fast feature selection using numpy masking
         selected_mask = mean_abs_shap > min_shap_threshold
@@ -145,6 +175,12 @@ def optimize_thresholds(X_train, X_val, y_train, y_val, shap_values, feature_int
         # Use numpy indexing for feature names and SHAP values
         selected_features = [feature_names[i] for i in selected_indices]
         selected_features_set = set(selected_features)
+        
+        # Skip computation if no features selected
+        if len(selected_features) == 0:
+            results_cache[cache_key] = -1.0  # Penalty for invalid selections
+            return -1.0
+            
         selected_shap_values = shap_values[:, selected_indices]
         
         # Fast correlation matrix computation
@@ -168,6 +204,11 @@ def optimize_thresholds(X_train, X_val, y_train, y_val, shap_values, feature_int
                             features_with_edges.add(feature)
                             features_with_edges.add(target)
         
+        # Skip further computation if no valid edges
+        if len(features_with_edges) == 0:
+            results_cache[cache_key] = -1.0  # Penalty for invalid selections
+            return -1.0
+        
         # Fast constraint building - group features that interact
         constraint_groups = []
         
@@ -188,7 +229,8 @@ def optimize_thresholds(X_train, X_val, y_train, y_val, shap_values, feature_int
             
             # Convert to indices
             group_indices = [feature_name_to_idx[f] for f in group if f in feature_name_to_idx]
-            constraint_groups.append(sorted(group_indices))
+            if group_indices:  # Only add non-empty groups
+                constraint_groups.append(sorted(group_indices))
         
         # Get final feature list and indices
         final_features = list(features_with_edges)
@@ -216,10 +258,16 @@ def optimize_thresholds(X_train, X_val, y_train, y_val, shap_values, feature_int
         # Multi-objective: maximize val_score, minimize features and edges
         n_features = len(final_features)
         n_edges = len(valid_edges)
-        return val_score - FEATURE_PENALTY_COEFF * n_features - EDGE_PENALTY_COEFF * n_edges
+        result = val_score - FEATURE_PENALTY_COEFF * n_features - EDGE_PENALTY_COEFF * n_edges
+        
+        # Cache the result
+        results_cache[cache_key] = result
+        return result
     
     optuna.logging.set_verbosity(optuna.logging.WARNING)
-    study = optuna.create_study(direction='maximize', pruner=optuna.pruners.MedianPruner())
+    study = optuna.create_study(direction='maximize', 
+                               pruner=optuna.pruners.MedianPruner(), 
+                               sampler=optuna.samplers.TPESampler(seed=42))
     study.optimize(objective, n_trials=N_TRIALS, n_jobs=-1, show_progress_bar=True)
     
     return study.best_params, study.best_value
