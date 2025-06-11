@@ -1,0 +1,11 @@
+{
+    "params": {
+        "weight_Inflammation": 3.58199299378034e-05,
+        "weight_Neurodegeneration": 0.00013224655608553402,
+        "weight_Cognitive_Dysfunction": 0.00805254539703049,
+        "weight_Vascular_Dysfunction": 0.008392936600602073,
+        "contribution_threshold": 0.019271669148809827
+    },
+    "score": 0.9391304347826087,
+    "edges": 56.0
+}

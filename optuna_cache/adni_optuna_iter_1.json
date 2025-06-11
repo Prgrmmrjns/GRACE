@@ -1,0 +1,9 @@
+{
+    "params": {
+        "interaction_threshold": 0.006446311787925727,
+        "contribution_threshold": 0.00024890556212642777
+    },
+    "score": 0.9415872413138408,
+    "edges": 572.0,
+    "coherence": 1.0
+}

@@ -1,123 +1,41 @@
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, roc_auc_score
-from sklearn.base import clone
-from sklearn.preprocessing import LabelEncoder
 import pandas as pd
-import os
+import optuna
+import warnings
+from params import (DATASET_PATH, DATASET_NAME, TARGET_COL, TEST_SIZE, VAL_SIZE)
+from visualizations import visualize_knowledge_graph
 import networkx as nx
-from params import (
-    DATASET_PATH, DATASET_NAME, TARGET_COL, TEST_SIZE, VAL_SIZE,
-    VISUALIZE_KG, LOAD_KG, ML_MODEL, METRIC, EARLY_STOPPING_ROUNDS
-)
-from create_kg import run_kg_workflows
-from graph_utils import nx_to_feature_interactions
-from db import setup_lancedb_knowledge_base
-from visualizations import visualize_feature_interaction_graph
-from grace_shap import build_constraints_from_interactions, calculate_shap_values, shap_based_selection, optimize_thresholds, set_interaction_constraints
+from grace import run_grace
 
-def main():
-    print(f"Running GRACE pipeline for {DATASET_NAME}")
-    
-    # Load and split data
+# Suppress warnings
+warnings.filterwarnings('ignore')
+optuna.logging.set_verbosity(optuna.logging.WARNING)
+
+# --- Main Application Logic ---
+
+def load_and_split_data():
     df = pd.read_csv(DATASET_PATH, encoding='utf-8')
     y = df[TARGET_COL]
     X = df.drop(columns=[TARGET_COL])
-    
-    # Handle class labels for XGBoost (needs 0-based labels)
-    if len(y.unique()) > 2:
-        label_encoder = LabelEncoder()
-        y = label_encoder.fit_transform(y)
-        print(f"Encoded labels for XGBoost: {label_encoder.classes_} -> {list(range(len(label_encoder.classes_)))}")
-    
-    X_temp, X_test, y_temp, y_test = train_test_split(X, y, test_size=TEST_SIZE, random_state=42)
-    X_train, X_val, y_train, y_val = train_test_split(X_temp, y_temp, test_size=VAL_SIZE, random_state=42)
-    
-    print(f"Dataset: {len(X)} samples, {len(X.columns)} features")
-    
-    # Load or create knowledge graph
-    if LOAD_KG and os.path.exists(f"kg/{DATASET_NAME}.graphml"):
-        graph_nx = nx.read_graphml(f"kg/{DATASET_NAME}.graphml")
-        feature_interactions = nx_to_feature_interactions(graph_nx)
-    else:
-        arxiv_kb_instance = setup_lancedb_knowledge_base(queries=[], dataset_name=DATASET_NAME, recreate_db=True) 
-        graph_nx = run_kg_workflows(arxiv_kb=arxiv_kb_instance, recreate_search=True)
-        feature_interactions = nx_to_feature_interactions(graph_nx)
+    n_classes = y.nunique()
+    print(f"Dataset: {len(X)} samples, {len(X.columns)} features, {n_classes} classes")
+    X_train_val, X_test, y_train_val, y_test = train_test_split(X, y, test_size=TEST_SIZE, random_state=42)
+    X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=VAL_SIZE, random_state=42)
+    return X_train, X_val, X_test, y_train, y_val, y_test
 
-    original_edge_pairs = set()
-    for interaction in feature_interactions:
-        for target in interaction['interactions']:
-            # Store edge in canonical form (sorted) to avoid duplicates
-            edge = tuple(sorted([interaction['feature'], target]))
-            original_edge_pairs.add(edge)
-    original_edges = len(original_edge_pairs)
-    print(f"Original unique edges: {original_edges}")
-
-    # Initialize variables for the best iteration
-    best_score = 0
-    final_model = None
-    final_selected_features = None
-    final_filtered_edges = 0
-    
-    while True:
-        constraints = build_constraints_from_interactions(feature_interactions, X_train.columns.tolist())
-        model = clone(ML_MODEL)
-        model = set_interaction_constraints(model, constraints, X_train.columns.tolist())
-        model.set_params(early_stopping_rounds=EARLY_STOPPING_ROUNDS)
-        model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
-        
-        shap_values = calculate_shap_values(model, X_train, X_val)
-        # Optimize thresholds
-        params, score = optimize_thresholds(
-            X_train, X_val, y_train, y_val, shap_values, feature_interactions,
-            X_train.columns.tolist(), ML_MODEL, METRIC, EARLY_STOPPING_ROUNDS
-        )
-        
-        if score > best_score:
-            best_score = score
-            
-            # Use optimized thresholds for final selection
-            selected_features, filtered_graph, filtered_edges = shap_based_selection(
-                shap_values, feature_interactions, X_train.columns.tolist(), 
-                params['min_shap_threshold'], params['min_interaction_threshold'], DATASET_NAME
-            )
-            
-            # Train final model with selected features
-            X_train_filtered = X_train[selected_features]
-            X_val_filtered = X_val[selected_features]
-            
-            final_constraints = build_constraints_from_interactions(nx_to_feature_interactions(filtered_graph), selected_features)
-            final_model = clone(ML_MODEL)
-            final_model = set_interaction_constraints(final_model, final_constraints, selected_features)
-            final_model.set_params(early_stopping_rounds=EARLY_STOPPING_ROUNDS)
-            final_model.fit(X_train_filtered, y_train, eval_set=[(X_val_filtered, y_val)], verbose=False)
-            
-            # Store the best results
-            final_model = final_model
-            final_selected_features = selected_features
-            final_filtered_edges = filtered_edges
-        else:
-            break
-
-    # Use the best model and features for final evaluation
-    X_test_filtered = X_test[final_selected_features]
-    
-    # Evaluate
-    if METRIC == 'accuracy':
-        y_pred = final_model.predict(X_test_filtered)
-        test_score = accuracy_score(y_test, y_pred)
-    else:
-        y_pred_proba = final_model.predict_proba(X_test_filtered)[:, 1]
-        test_score = roc_auc_score(y_test, y_pred_proba)
-    
-    print(f"Test Score ({METRIC.upper()}): {test_score:.4f}")
-    print(f"Features reduced from {len(X.columns)} to {len(final_selected_features)}")
-    print(f"Edges reduced from {original_edges} to {final_filtered_edges}")
-    
-    if VISUALIZE_KG:
-        #visualize_feature_interaction_graph(graph_nx, DATASET_NAME)
-        # Use the filtered graph from the best iteration
-        best_filtered_graph = nx.read_graphml(f"kg/{DATASET_NAME}_filtered.graphml")
-        visualize_feature_interaction_graph(best_filtered_graph, DATASET_NAME + "_filtered")
+def main():
+    X_train, X_val, X_test, y_train, y_val, y_test = load_and_split_data()
+    results, kg = run_grace(X_train, X_val, X_test, y_train, y_val, y_test)
+    print(f"Final Optimized Model Results:")
+    print(f"Test Score: {results['test_score']:.4f}")
+    print(f"Number of Features: {results['n_features']}")
+    print(f"Number of Edges: {results['n_edges']}")
+    print("\nVisualizing Final Knowledge Graph...")
+    visualize_knowledge_graph(kg, DATASET_NAME)
+    nx.write_graphml(kg, f"kg/{DATASET_NAME}_kg_final.graphml")
+    print(f"Feature interaction graph saved to 'images/{DATASET_NAME}_feature_interaction_graph.png'")
+    print(f"Final knowledge graph data saved to 'kg/{DATASET_NAME}_kg_final.graphml'")
+    return results
 
 if __name__ == "__main__":
-    main() 
+    results = main() 

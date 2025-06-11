@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="edge" attr.name="relationship" attr.type="string"/>
+<key id="d0" for="node" attr.name="node_type" attr.type="string"/>
+<graph edgedefault="undirected"><node id="anchor_age">
+  <data key="d0">feature</data>
+</node>
+<node id="FoleymL_sum">
+  <data key="d0">feature</data>
+</node>
+<node id="GCS">
+  <data key="d0">feature</data>
+</node>
+<node id="MotorResponse">
+  <data key="d0">feature</data>
+</node>
+<node id="Aniongap">
+  <data key="d0">feature</data>
+</node>
+<node id="EyeOpening">
+  <data key="d0">feature</data>
+</node>
+<node id="Hematocritserum">
+  <data key="d0">feature</data>
+</node>
+<node id="WBC">
+  <data key="d0">feature</data>
+</node>
+<node id="LacticAcid">
+  <data key="d0">feature</data>
+</node>
+<node id="TotalPEEPLevelcmH2O">
+  <data key="d0">feature</data>
+</node>
+<node id="BUNCreatinine">
+  <data key="d0">feature</data>
+</node>
+<node id="INR">
+  <data key="d0">feature</data>
+</node>
+<node id="PlateletCount">
+  <data key="d0">feature</data>
+</node>
+<node id="PTT">
+  <data key="d0">feature</data>
+</node>
+<node id="NBPsmmHg">
+  <data key="d0">feature</data>
+</node>
+<node id="Chlorideserum">
+  <data key="d0">feature</data>
+</node>
+<node id="Sodiumserum">
+  <data key="d0">feature</data>
+</node>
+<node id="HRbpm">
+  <data key="d0">feature</data>
+</node>
+<node id="Glucoseserum">
+  <data key="d0">feature</data>
+</node>
+<node id="Potassiumserum">
+  <data key="d0">feature</data>
+</node>
+<node id="PCO2ArterialmmHg">
+  <data key="d0">feature</data>
+</node>
+<node id="RRinspmin">
+  <data key="d0">feature</data>
+</node>
+<node id="PHArterial">
+  <data key="d0">feature</data>
+</node>
+<node id="Albumin">
+  <data key="d0">feature</data>
+</node>
+<node id="BMI">
+  <data key="d0">feature</data>
+</node>
+<node id="ArterialBaseExcess"/>
+<node id="Calciumnon-ionized"/>
+<node id="PaO2_FiO2"/>
+<node id="IonizedCalcium"/>
+<node id="eGFR"/>
+<edge source="anchor_age" target="Hematocritserum">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="anchor_age" target="GCS">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="anchor_age" target="MotorResponse">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="anchor_age" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="anchor_age" target="NBPsmmHg">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="anchor_age" target="PTT">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="anchor_age" target="Chlorideserum">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="anchor_age" target="PlateletCount">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="anchor_age" target="HRbpm">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="anchor_age" target="Albumin">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="anchor_age" target="BMI">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="FoleymL_sum" target="Sodiumserum">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="FoleymL_sum" target="GCS">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="FoleymL_sum" target="EyeOpening">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="FoleymL_sum" target="PHArterial">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="FoleymL_sum" target="MotorResponse">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="FoleymL_sum" target="BUNCreatinine">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="FoleymL_sum" target="Aniongap">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="FoleymL_sum" target="PTT">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="FoleymL_sum" target="Albumin">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="GCS" target="Aniongap">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="GCS" target="INR">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="GCS" target="LacticAcid">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="GCS" target="Glucoseserum">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="GCS" target="eGFR">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="MotorResponse" target="LacticAcid">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="MotorResponse" target="Aniongap">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="MotorResponse" target="PCO2ArterialmmHg">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="MotorResponse" target="INR">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="MotorResponse" target="Chlorideserum">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="Aniongap" target="LacticAcid">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="Aniongap" target="Chlorideserum">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="Aniongap" target="PTT">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="EyeOpening" target="TotalPEEPLevelcmH2O">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="Hematocritserum" target="PaO2_FiO2">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="Hematocritserum" target="IonizedCalcium">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="WBC" target="Calciumnon-ionized">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="LacticAcid" target="ArterialBaseExcess">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="LacticAcid" target="HRbpm">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="TotalPEEPLevelcmH2O" target="PCO2ArterialmmHg">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="BUNCreatinine" target="RRinspmin">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="BUNCreatinine" target="Chlorideserum">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="BUNCreatinine" target="Albumin">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="PTT" target="Chlorideserum">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="PTT" target="PCO2ArterialmmHg">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="NBPsmmHg" target="HRbpm">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="NBPsmmHg" target="BMI">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="HRbpm" target="BMI">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="Glucoseserum" target="Calciumnon-ionized">
+  <data key="d1">interacts_with</data>
+</edge>
+<edge source="Potassiumserum" target="PHArterial">
+  <data key="d1">interacts_with</data>
+</edge>
+</graph></graphml>

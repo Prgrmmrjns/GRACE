@@ -1,0 +1,540 @@
+{
+    "nodes": [
+        {
+            "id": "Inflammation",
+            "node_type": "disease_mechanism",
+            "attributes": null
+        },
+        {
+            "id": "Neurodegeneration",
+            "node_type": "disease_mechanism",
+            "attributes": null
+        },
+        {
+            "id": "Metabolic Dysfunction",
+            "node_type": "disease_mechanism",
+            "attributes": null
+        },
+        {
+            "id": "Cognitive Decline",
+            "node_type": "disease_mechanism",
+            "attributes": null
+        },
+        {
+            "id": "CDGLOBAL",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "CDRSB.1",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "CDRSB",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "LDELTOTAL",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "VSBPSYS",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "ADAS13",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "mPACCtrailsB",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "MOCA",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "CATANIMSC",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "Hippocampus",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "TRAASCOR",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "AVDELTOT",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "ADASQ4",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "AVTOT6",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "CATVEGESC",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "FDG",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "NPISCORE",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "mPACCdigit",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "Ventricles",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "ABETA42",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "RAVLT_learning",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "AV45",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "ADAS11",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "VSPULSE",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "EcogPtTotal",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "PTEDUCAT",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "DSPANFLTH",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "AGE",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "EcogPtVisspat",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "VSRESP",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "MINTTOTAL",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "AVTOT2",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "PTAU",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "RAVLT_immediate",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "AVTOT1",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "AVDEL30MIN",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "CATANPERS",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "EcogSPDivatt",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "BNTTOTAL",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "ICV",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "EcogSPMem",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "EcogPtMem",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "AVTOT4",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "FAQ",
+            "node_type": "feature",
+            "attributes": null
+        },
+        {
+            "id": "DIAGNOSIS",
+            "node_type": "target",
+            "attributes": null
+        }
+    ],
+    "edges": [
+        {
+            "source": "Inflammation",
+            "target": "DIAGNOSIS",
+            "relationship": "contributes_to",
+            "attributes": null
+        },
+        {
+            "source": "Neurodegeneration",
+            "target": "DIAGNOSIS",
+            "relationship": "contributes_to",
+            "attributes": null
+        },
+        {
+            "source": "Metabolic Dysfunction",
+            "target": "DIAGNOSIS",
+            "relationship": "contributes_to",
+            "attributes": null
+        },
+        {
+            "source": "Cognitive Decline",
+            "target": "DIAGNOSIS",
+            "relationship": "manifestation_of",
+            "attributes": null
+        },
+        {
+            "source": "CDGLOBAL",
+            "target": "Inflammation",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "CDRSB.1",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "CDRSB",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "LDELTOTAL",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "VSBPSYS",
+            "target": "Metabolic Dysfunction",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "ADAS13",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "mPACCtrailsB",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "MOCA",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "CATANIMSC",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "Hippocampus",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "TRAASCOR",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "AVDELTOT",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "ADASQ4",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "AVTOT6",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "CATVEGESC",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "FDG",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "NPISCORE",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "mPACCdigit",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "Ventricles",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "ABETA42",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "RAVLT_learning",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "AV45",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "ADAS11",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "VSPULSE",
+            "target": "Metabolic Dysfunction",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "EcogPtTotal",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "PTEDUCAT",
+            "target": "Metabolic Dysfunction",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "DSPANFLTH",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "AGE",
+            "target": "Neurodegeneration",
+            "relationship": "contributes_to",
+            "attributes": null
+        },
+        {
+            "source": "EcogPtVisspat",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "VSRESP",
+            "target": "Metabolic Dysfunction",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "MINTTOTAL",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "AVTOT2",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "PTAU",
+            "target": "Neurodegeneration",
+            "relationship": "contributes_to",
+            "attributes": null
+        },
+        {
+            "source": "RAVLT_immediate",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "AVTOT1",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "AVDEL30MIN",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "CATANPERS",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "EcogSPDivatt",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "BNTTOTAL",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "ICV",
+            "target": "Neurodegeneration",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "EcogSPMem",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "EcogPtMem",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "AVTOT4",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        },
+        {
+            "source": "FAQ",
+            "target": "Cognitive Decline",
+            "relationship": "part_of_mechanism",
+            "attributes": null
+        }
+    ],
+    "rationale": "The mechanisms of 'Neurodegeneration', 'Inflammation', 'Metabolic Dysfunction', and 'Cognitive Decline' were chosen based on their established roles in neurodegenerative diseases like Alzheimer's. Features such as hippocampal volume, amyloid-beta levels, and FDG-PET are linked to neurodegeneration; inflammatory markers and metabolic measures relate to inflammation and metabolic dysfunction; cognitive test scores directly reflect cognitive decline, which is the clinical manifestation leading to diagnosis."
+}

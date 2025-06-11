@@ -1,0 +1,379 @@
+{
+    "nodes": [
+        {
+            "id": "CDGLOBAL",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "CDRSB",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "FAQ",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "MMSCORE",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "mPACCtrailsB",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "mPACCdigit",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "LDELTOTAL",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "AVTOTB",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "AVTOT6",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "MidTemp",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "AVDELTOT",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "MMSE",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "ICV",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "TRAASCOR",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "VSBPSYS",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "VSRESP",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "VSWEIGHT",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "ADASQ4",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "FDG",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "WholeBrain",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "DIGITSCOR",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "Fusiform",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "Hippocampus",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "Entorhinal",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "VSBPDIA",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "PTEDUCAT",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "VSPULSE",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "VSHEIGHT",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "AVTOT4",
+            "node_type": "feature",
+            "attributes": {}
+        },
+        {
+            "id": "AGE",
+            "node_type": "feature",
+            "attributes": {}
+        }
+    ],
+    "edges": [
+        {
+            "source": "CDGLOBAL",
+            "target": "CDRSB",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "CDRSB",
+            "target": "MMSE",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "CDRSB",
+            "target": "mPACCtrailsB",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "MMSCORE",
+            "target": "CDRSB",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "CDGLOBAL",
+            "target": "mPACCtrailsB",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "CDGLOBAL",
+            "target": "mPACCdigit",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "CDGLOBAL",
+            "target": "FAQ",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "VSBPSYS",
+            "target": "CDGLOBAL",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "MMSCORE",
+            "target": "FAQ",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "FAQ",
+            "target": "mPACCdigit",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "MMSCORE",
+            "target": "CDGLOBAL",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "CDRSB",
+            "target": "FAQ",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "VSPULSE",
+            "target": "mPACCdigit",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "DIGITSCOR",
+            "target": "CDRSB",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "CDRSB",
+            "target": "MidTemp",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "VSPULSE",
+            "target": "MMSCORE",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "VSBPSYS",
+            "target": "CDRSB",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "CDRSB",
+            "target": "mPACCdigit",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "Entorhinal",
+            "target": "MidTemp",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "AGE",
+            "target": "VSBPSYS",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "MMSE",
+            "target": "FAQ",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "VSWEIGHT",
+            "target": "CDGLOBAL",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "TRAASCOR",
+            "target": "CDGLOBAL",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "VSRESP",
+            "target": "CDRSB",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "TRAASCOR",
+            "target": "LDELTOTAL",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "FAQ",
+            "target": "Fusiform",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "AVTOTB",
+            "target": "LDELTOTAL",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "CDRSB",
+            "target": "ICV",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "CDRSB",
+            "target": "Entorhinal",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "mPACCdigit",
+            "target": "Fusiform",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "VSHEIGHT",
+            "target": "CDRSB",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "CDGLOBAL",
+            "target": "LDELTOTAL",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "AVTOT6",
+            "target": "TRAASCOR",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "AVTOTB",
+            "target": "MidTemp",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "VSBPSYS",
+            "target": "mPACCtrailsB",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "AGE",
+            "target": "mPACCtrailsB",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        },
+        {
+            "source": "PTEDUCAT",
+            "target": "CDRSB",
+            "relationship": "high_SHAP_interaction",
+            "attributes": {}
+        }
+    ],
+    "rationale": "The knowledge graph connects features based on strong SHAP interaction values indicating joint influence on diagnosis prediction, as well as known clinical and biological relationships documented in literature. For example, CDGLOBAL and CDRSB are strongly connected due to their high SHAP interaction and both being global cognitive assessments. CDRSB connects to MMSE and mPACCtrailsB, reflecting their shared cognitive domain assessment roles. FAQ, a functional assessment, links to cognitive scores like MMSCORE and mPACCdigit, consistent with literature showing functional decline correlates with cognitive impairment. VSBPSYS (systolic blood pressure) connects to CDGLOBAL and CDRSB, reflecting vascular contributions to cognitive decline. Brain imaging features like Fusiform and Entorhinal are connected to cognitive and functional scores, consistent with their roles in neurodegeneration. Age connects to vascular and cognitive features, reflecting its role as a risk factor. Each edge rationale is supported by SHAP interaction strengths and known biomedical relationships, ensuring a comprehensive and interpretable graph of feature interrelations relevant to diagnosis."
+}
