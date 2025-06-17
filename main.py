@@ -1,41 +1,82 @@
-from sklearn.model_selection import train_test_split
 import pandas as pd
-import optuna
+from sklearn.model_selection import train_test_split
 import warnings
-from params import (DATASET_PATH, DATASET_NAME, TARGET_COL, TEST_SIZE, VAL_SIZE)
-from visualizations import visualize_knowledge_graph
+import os
+from sklearn.metrics import roc_auc_score, accuracy_score
+from create_kg import create_kg
+from params import (DATASET_NAME, TARGET_COL, TEST_SIZE, VAL_SIZE,
+                    ML_MODEL, METRIC, CALLBACKS, TARGET_COL,
+                    LOAD_AGENT_KG, AGENT_KG_PATH)
 import networkx as nx
-from grace import run_grace
+import joblib
+from graph_reduction import optimize_graph
+from utils import (create_interaction_constraints, get_mechanism_to_features,
+                   networkx_to_model)
+from visualizations import visualize_kg_structure
 
-# Suppress warnings
 warnings.filterwarnings('ignore')
-optuna.logging.set_verbosity(optuna.logging.WARNING)
-
-# --- Main Application Logic ---
-
-def load_and_split_data():
-    df = pd.read_csv(DATASET_PATH, encoding='utf-8')
-    y = df[TARGET_COL]
-    X = df.drop(columns=[TARGET_COL])
-    n_classes = y.nunique()
-    print(f"Dataset: {len(X)} samples, {len(X.columns)} features, {n_classes} classes")
-    X_train_val, X_test, y_train_val, y_test = train_test_split(X, y, test_size=TEST_SIZE, random_state=42)
-    X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=VAL_SIZE, random_state=42)
-    return X_train, X_val, X_test, y_train, y_val, y_test
 
 def main():
-    X_train, X_val, X_test, y_train, y_val, y_test = load_and_split_data()
-    results, kg = run_grace(X_train, X_val, X_test, y_train, y_val, y_test)
-    print(f"Final Optimized Model Results:")
-    print(f"Test Score: {results['test_score']:.4f}")
-    print(f"Number of Features: {results['n_features']}")
-    print(f"Number of Edges: {results['n_edges']}")
-    print("\nVisualizing Final Knowledge Graph...")
-    visualize_knowledge_graph(kg, DATASET_NAME)
-    nx.write_graphml(kg, f"kg/{DATASET_NAME}_kg_final.graphml")
-    print(f"Feature interaction graph saved to 'images/{DATASET_NAME}_feature_interaction_graph.png'")
-    print(f"Final knowledge graph data saved to 'kg/{DATASET_NAME}_kg_final.graphml'")
-    return results
+    """Train basic LightGBM with KG-derived interaction constraints"""
+    df = pd.read_csv(f'datasets/{DATASET_NAME}.csv')
+    X = df.drop(TARGET_COL, axis=1)
+    y = df[TARGET_COL]
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=TEST_SIZE, random_state=42)
+    X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=VAL_SIZE, random_state=42)
+    if LOAD_AGENT_KG and os.path.exists(AGENT_KG_PATH):
+        # Load from GraphML
+        G = nx.read_graphml(AGENT_KG_PATH)
+        kg = networkx_to_model(G)
+    else:
+        kg = create_kg(df)
+        visualize_kg_structure(DATASET_NAME)
+    
+    # Create interaction constraints based on shared disease mechanisms
+    feature_names = list(X.columns)
+    mechanism_to_features = get_mechanism_to_features(kg, feature_names)
+    constraint_indices = create_interaction_constraints(mechanism_to_features, feature_names)
+    print(f"Created {len(constraint_indices)} interaction constraints (one per disease mechanism)")
+    print(f"Constraint sizes: {[len(c) for c in constraint_indices]}")
+    
+    final_mechanism_to_features = optimize_graph(X_train, y_train, X_val, y_val, mechanism_to_features)
+    
+    # --- Final Evaluation ---
+    print("\n--- Training final model on optimized graph ---")
+    
+    # Get final nodes from the optimized mechanism groups
+    final_nodes = set()
+    for features in final_mechanism_to_features.values():
+        final_nodes.update(features)
+    final_nodes_list = list(final_nodes)
+    
+    X_train_reduced = X_train[final_nodes_list]
+    X_val_reduced = X_val[final_nodes_list]
+    X_test_reduced = X_test[final_nodes_list]
+
+    # Create constraints using the same logic as initial model
+    final_constraints = create_interaction_constraints(final_mechanism_to_features, final_nodes_list)
+    
+    print(f"Final number of nodes: {len(final_nodes_list)}")
+    print(f"Final number of interaction constraints: {len(final_constraints)}")
+    print(f"Final constraint sizes: {[len(c) for c in final_constraints]}")
+
+    model = ML_MODEL
+    model.set_params(interaction_constraints=final_constraints)
+    model.fit(X_train_reduced, y_train, eval_set=[(X_val_reduced, y_val)], callbacks=CALLBACKS)
+    
+    # Evaluate
+    val_pred = model.predict(X_val_reduced) if METRIC == 'accuracy' else model.predict_proba(X_val_reduced)[:, 1]
+    val_score = accuracy_score(y_val, val_pred) if METRIC == 'accuracy' else roc_auc_score(y_val, val_pred)
+    print(f"Validation {METRIC} after optimization: {val_score:.4f}")
+    
+    test_pred = model.predict(X_test_reduced) if METRIC == 'accuracy' else model.predict_proba(X_test_reduced)[:, 1]
+    test_score = accuracy_score(y_test, test_pred) if METRIC == 'accuracy' else roc_auc_score(y_test, test_pred)
+    print(f"Test {METRIC}: {test_score:.4f}") 
+    
+    # Save model
+    joblib.dump(model, f'models/{DATASET_NAME}_kg_constrained_model.joblib')
+    
+    return model, test_score
 
 if __name__ == "__main__":
-    results = main() 
+    main()

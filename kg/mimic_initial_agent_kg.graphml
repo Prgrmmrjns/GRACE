@@ -1,0 +1,779 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d2" for="edge" attr.name="relationship" attr.type="string"/>
+<key id="d1" for="node" attr.name="description" attr.type="string"/>
+<key id="d0" for="node" attr.name="node_type" attr.type="string"/>
+<graph edgedefault="undirected"><node id="Multi-Organ Dysfunction">
+  <data key="d0">intermediate</data>
+  <data key="d1">A state in which two or more organ systems fail, often due to severe illness or injury. In the ICU, multi-organ dysfunction is a major driver of mortality, as it reflects the body's inability to maintain homeostasis. It can result from sepsis, shock, or prolonged hypoperfusion.</data>
+</node>
+<node id="Sepsis and Systemic Inflammatory Response">
+  <data key="d0">intermediate</data>
+  <data key="d1">A dysregulated host response to infection leading to life-threatening organ dysfunction. Sepsis is a leading cause of ICU mortality, characterized by widespread inflammation, endothelial dysfunction, and microvascular injury, which can progress to septic shock and death.</data>
+</node>
+<node id="Acute Respiratory Failure">
+  <data key="d0">intermediate</data>
+  <data key="d1">A condition where the respiratory system fails in oxygenation and/or carbon dioxide elimination. In the ICU, this can result from pneumonia, ARDS, or exacerbations of chronic lung disease, and is a common direct cause of death.</data>
+</node>
+<node id="Cardiovascular Instability and Shock">
+  <data key="d0">intermediate</data>
+  <data key="d1">A state of inadequate tissue perfusion due to failure of the circulatory system, which may be caused by hypovolemia, cardiogenic shock, or distributive shock. This leads to cellular hypoxia, organ dysfunction, and, if uncorrected, death.</data>
+</node>
+<node id="Severe Neurological Impairment">
+  <data key="d0">intermediate</data>
+  <data key="d1">Significant impairment of brain function, such as coma or severe encephalopathy, which can result from traumatic brain injury, stroke, or hypoxic-ischemic injury. Profound neurological dysfunction is associated with poor prognosis and increased mortality in the ICU.</data>
+</node>
+<node id="Metabolic and Electrolyte Derangements">
+  <data key="d0">intermediate</data>
+  <data key="d1">Critical imbalances in metabolic processes or electrolytes (e.g., severe acidosis, hyperkalemia, hypoglycemia) that can precipitate arrhythmias, cardiac arrest, or multi-organ failure, contributing to mortality in critically ill patients.</data>
+</node>
+<node id="Underlying Chronic Disease Burden">
+  <data key="d0">intermediate</data>
+  <data key="d1">The presence of significant comorbidities such as heart failure, diabetes, chronic kidney disease, or liver cirrhosis. These conditions reduce physiological reserve and increase vulnerability to acute insults, raising the risk of ICU mortality.</data>
+</node>
+<node id="HRbpm">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="ABPmmmHg">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="CVPmmHg">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="NBPsmmHg">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="NBPdmmHg">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="RRinspmin">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="PO2ArterialmmHg">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Hemoglobingdl">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="PCO2ArterialmmHg">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="SpO2">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Hematocritserum">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="WBC">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="AST">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Chlorideserum">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Creatinineserum">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Glucoseserum">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="LDH">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Sodiumserum">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="EyeOpening">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="TemperatureFF">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="PHArterial">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="FiO2">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="VerbalResponse">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="MotorResponse">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="TotalPEEPLevelcmH2O">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="ArterialBaseExcess">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="BUN">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Calciumnon-ionized">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="CKCPK">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="IonizedCalcium">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="LacticAcid">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="TotalBilirubin">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="PCO2VenousmmHg">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Aniongap">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Potassiumserum">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="HCO3serum">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="CReactiveProteinCRP">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="BrainNatiureticPeptideBNP">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Albumin">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="PlateletCount">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="PTT">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="INR">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="CompliancecmH2OLseconds">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="anchor_age">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="gender">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Epinephrinemg_avg">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Dobutaminemg_avg">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Norepinephrinemg_avg">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="FoleymL_sum">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="diabetes">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="hypertension">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="obesity">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="heart_failure">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="BMI">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="NMED">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="NSURG">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="TSURG">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="CMED">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="VSURG">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="TRAUM">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="BUNAlbumin">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="BUNCreatinine">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="GCS">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="PaO2_FiO2">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="organ_dysfunction">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Sepsis3">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="eGFR">
+  <data key="d0">input</data>
+  <data key="d1">Dataset feature.</data>
+</node>
+<node id="Organ_dysfunction"/>
+<edge source="Multi-Organ Dysfunction" target="organ_dysfunction">
+  <data key="d2">Organ dysfunction is the defining feature of multi-organ failure.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="Sepsis3">
+  <data key="d2">Sepsis is a common cause and context for multi-organ dysfunction; the Sepsis-3 definition is closely linked to the development of multi-organ failure.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="eGFR">
+  <data key="d2">eGFR is a measure of renal function and organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="Creatinineserum">
+  <data key="d2">Elevated creatinine indicates renal dysfunction, a key organ failure.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="BUN">
+  <data key="d2">Elevated BUN indicates renal dysfunction, a component of organ failure.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="TotalBilirubin">
+  <data key="d2">Elevated bilirubin indicates hepatic dysfunction, a component of organ failure.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="AST">
+  <data key="d2">Elevated AST indicates hepatic injury, a component of organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="LDH">
+  <data key="d2">Elevated LDH reflects tissue injury and multi-organ involvement.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="LacticAcid">
+  <data key="d2">Elevated lactate is a marker of tissue hypoperfusion and organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="PlateletCount">
+  <data key="d2">Low platelet count can indicate bone marrow or liver dysfunction, or DIC, all of which can occur in multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="INR">
+  <data key="d2">Elevated INR indicates hepatic dysfunction and coagulopathy.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="PTT">
+  <data key="d2">Prolonged PTT indicates coagulopathy, a component of organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="Albumin">
+  <data key="d2">Low albumin reflects poor synthetic function and is associated with organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="Hemoglobingdl">
+  <data key="d2">Low hemoglobin impairs oxygen delivery, contributing to organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="Hematocritserum">
+  <data key="d2">Abnormal hematocrit can impair oxygen delivery and reflect organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="WBC">
+  <data key="d2">Abnormal WBC counts (high or low) are seen in sepsis and multi-organ dysfunction due to immune dysregulation.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="CReactiveProteinCRP">
+  <data key="d2">Elevated CRP indicates systemic inflammation, which is a driver and marker of multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="BrainNatiureticPeptideBNP">
+  <data key="d2">Elevated BNP indicates cardiac dysfunction, which can be a component of multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="PaO2_FiO2">
+  <data key="d2">Low PaO2/FiO2 ratio indicates respiratory dysfunction, a key component of multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="SpO2">
+  <data key="d2">Low SpO2 indicates hypoxemia, a sign of respiratory dysfunction in multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="PO2ArterialmmHg">
+  <data key="d2">Low arterial PO2 indicates respiratory dysfunction, a component of multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="PHArterial">
+  <data key="d2">Abnormal arterial pH reflects acid-base disturbances, often present in multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="HCO3serum">
+  <data key="d2">Low serum bicarbonate indicates metabolic acidosis, common in multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="ArterialBaseExcess">
+  <data key="d2">Abnormal base excess reflects metabolic derangements in multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="Aniongap">
+  <data key="d2">Elevated anion gap indicates metabolic acidosis, often seen in multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="GCS">
+  <data key="d2">Low GCS score indicates neurological dysfunction, a component of multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="EyeOpening">
+  <data key="d2">Eye opening score is part of GCS and reflects neurological function, which can be impaired in multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="VerbalResponse">
+  <data key="d2">Verbal response score is part of GCS and reflects neurological function, which can be impaired in multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="MotorResponse">
+  <data key="d2">Motor response score is part of GCS and reflects neurological function, which can be impaired in multi-organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="CKCPK">
+  <data key="d2">Elevated CK indicates muscle injury, which can contribute to organ dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="FoleymL_sum">
+  <data key="d2">Urine output is a marker of renal function and organ perfusion.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="BUNAlbumin">
+  <data key="d2">The BUN/albumin ratio reflects combined renal and hepatic dysfunction.</data>
+</edge>
+<edge source="Multi-Organ Dysfunction" target="BUNCreatinine">
+  <data key="d2">The BUN/creatinine ratio is used to assess renal dysfunction.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="HRbpm">
+  <data key="d2">Tachycardia (elevated heart rate) is a common response to systemic inflammation and infection in sepsis.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="RRinspmin">
+  <data key="d2">Increased respiratory rate is a typical sign of systemic inflammatory response and sepsis.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="TemperatureFF">
+  <data key="d2">Fever or hypothermia are criteria for systemic inflammatory response.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="WBC">
+  <data key="d2">Leukocytosis or leukopenia are criteria for systemic inflammatory response and sepsis.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="CReactiveProteinCRP">
+  <data key="d2">CRP is an acute phase reactant elevated in systemic inflammation and sepsis.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="LacticAcid">
+  <data key="d2">Elevated lactic acid indicates tissue hypoperfusion and cellular stress, common in sepsis.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="PlateletCount">
+  <data key="d2">Thrombocytopenia is a marker of sepsis and systemic inflammation.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="INR">
+  <data key="d2">INR can be elevated in sepsis-induced coagulopathy.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="PTT">
+  <data key="d2">PTT can be prolonged in sepsis-induced coagulopathy.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="Hematocritserum">
+  <data key="d2">Hematocrit may change in sepsis due to fluid shifts, capillary leak, or bleeding.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="Hemoglobingdl">
+  <data key="d2">Hemoglobin levels can be affected by hemolysis, bleeding, or fluid shifts in sepsis.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="Organ_dysfunction">
+  <data key="d2">Organ dysfunction is a defining feature of severe sepsis, resulting from systemic inflammation.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="Sepsis3">
+  <data key="d2">Sepsis-3 criteria define sepsis and systemic inflammation.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="eGFR">
+  <data key="d2">eGFR decreases in sepsis due to acute kidney injury from hypoperfusion and inflammation.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="TotalBilirubin">
+  <data key="d2">Total bilirubin can rise in sepsis due to liver dysfunction or hemolysis.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="Creatinineserum">
+  <data key="d2">Serum creatinine increases in sepsis as a result of acute kidney injury.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="BUN">
+  <data key="d2">BUN rises in sepsis due to renal dysfunction and catabolic state.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="AST">
+  <data key="d2">AST may be elevated in sepsis due to liver injury or muscle breakdown.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="LDH">
+  <data key="d2">LDH is elevated in sepsis as a marker of tissue breakdown and cellular injury.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="Albumin">
+  <data key="d2">Serum albumin decreases in sepsis due to capillary leak and inflammation.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="Aniongap">
+  <data key="d2">Anion gap increases in sepsis due to metabolic acidosis from lactic acid accumulation.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="HCO3serum">
+  <data key="d2">Serum bicarbonate decreases in sepsis-related metabolic acidosis.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="PHArterial">
+  <data key="d2">Arterial pH can be decreased in sepsis due to metabolic and respiratory acidosis.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="PaO2_FiO2">
+  <data key="d2">PaO2/FiO2 ratio is used to assess respiratory dysfunction, which can occur in sepsis (e.g., ARDS).</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="SpO2">
+  <data key="d2">SpO2 may decrease in sepsis due to hypoxemia from respiratory dysfunction.</data>
+</edge>
+<edge source="Sepsis and Systemic Inflammatory Response" target="GCS">
+  <data key="d2">GCS can decrease in sepsis due to encephalopathy or multi-organ dysfunction.</data>
+</edge>
+<edge source="Acute Respiratory Failure" target="RRinspmin">
+  <data key="d2">Respiratory rate increases in response to hypoxia, hypercapnia, or respiratory distress.</data>
+</edge>
+<edge source="Acute Respiratory Failure" target="PO2ArterialmmHg">
+  <data key="d2">Low arterial oxygen tension is a hallmark of respiratory failure.</data>
+</edge>
+<edge source="Acute Respiratory Failure" target="PCO2ArterialmmHg">
+  <data key="d2">Elevated or decreased arterial CO2 indicates ventilatory failure or compensation.</data>
+</edge>
+<edge source="Acute Respiratory Failure" target="SpO2">
+  <data key="d2">Peripheral oxygen saturation is a non-invasive marker of hypoxemia.</data>
+</edge>
+<edge source="Acute Respiratory Failure" target="PHArterial">
+  <data key="d2">Respiratory failure can cause respiratory acidosis or alkalosis, reflected in arterial pH changes.</data>
+</edge>
+<edge source="Acute Respiratory Failure" target="FiO2">
+  <data key="d2">Fraction of inspired oxygen is used to assess and manage respiratory failure.</data>
+</edge>
+<edge source="Acute Respiratory Failure" target="TotalPEEPLevelcmH2O">
+  <data key="d2">PEEP is a ventilatory parameter used in respiratory failure management.</data>
+</edge>
+<edge source="Acute Respiratory Failure" target="ArterialBaseExcess">
+  <data key="d2">Base excess can be altered in respiratory failure due to changes in CO2 and compensatory metabolic responses.</data>
+</edge>
+<edge source="Acute Respiratory Failure" target="PaO2_FiO2">
+  <data key="d2">The PaO2/FiO2 ratio is a key marker of hypoxemia and ARDS.</data>
+</edge>
+<edge source="Acute Respiratory Failure" target="CompliancecmH2OLseconds">
+  <data key="d2">Decreased lung compliance is a feature of respiratory failure.</data>
+</edge>
+<edge source="Acute Respiratory Failure" target="LacticAcid">
+  <data key="d2">Elevated lactic acid may result from tissue hypoxia secondary to severe respiratory failure.</data>
+</edge>
+<edge source="Acute Respiratory Failure" target="PCO2VenousmmHg">
+  <data key="d2">Venous CO2 can reflect ventilatory status and respiratory failure.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="HRbpm">
+  <data key="d2">Tachycardia or bradycardia reflects hemodynamic instability and compensatory responses to shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="ABPmmmHg">
+  <data key="d2">Mean arterial pressure is a direct indicator of perfusion and shock states.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="CVPmmHg">
+  <data key="d2">Central venous pressure reflects intravascular volume status and cardiac function.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="NBPsmmHg">
+  <data key="d2">Systolic blood pressure is a key marker of cardiovascular stability.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="NBPdmmHg">
+  <data key="d2">Diastolic blood pressure is important for assessing vascular tone and perfusion.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="LacticAcid">
+  <data key="d2">Lactic acidosis is a result of tissue hypoperfusion in shock states.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="BUNCreatinine">
+  <data key="d2">An increased ratio suggests renal hypoperfusion, a consequence of shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="eGFR">
+  <data key="d2">Decreased eGFR reflects impaired renal perfusion in shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="Hemoglobingdl">
+  <data key="d2">Hemoglobin is essential for oxygen delivery; low levels worsen tissue hypoxia in shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="Hematocritserum">
+  <data key="d2">Hematocrit reflects blood volume and oxygen-carrying capacity, both relevant in shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="SpO2">
+  <data key="d2">Peripheral oxygen saturation may decrease in shock due to poor perfusion.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="PO2ArterialmmHg">
+  <data key="d2">Arterial oxygen tension may be reduced in shock due to impaired oxygen delivery.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="PCO2ArterialmmHg">
+  <data key="d2">Arterial CO2 may be altered in shock due to hypoperfusion and compensatory hyperventilation.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="PHArterial">
+  <data key="d2">Acidosis (low pH) is common in shock due to lactic acid accumulation.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="ArterialBaseExcess">
+  <data key="d2">Base excess is negative in metabolic acidosis, which occurs in shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="HCO3serum">
+  <data key="d2">Bicarbonate decreases in metabolic acidosis associated with shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="Potassiumserum">
+  <data key="d2">Potassium may increase in shock due to acidosis and renal dysfunction.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="Sodiumserum">
+  <data key="d2">Sodium may be altered due to fluid shifts in shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="BUN">
+  <data key="d2">BUN increases with renal hypoperfusion in shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="Creatinineserum">
+  <data key="d2">Creatinine increases with renal hypoperfusion in shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="TotalBilirubin">
+  <data key="d2">Bilirubin may increase due to hepatic hypoperfusion in shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="Albumin">
+  <data key="d2">Low albumin can worsen oncotic pressure and contribute to hypovolemia in shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="PlateletCount">
+  <data key="d2">Platelet count may decrease in shock due to consumption or DIC.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="PTT">
+  <data key="d2">PTT may be prolonged in shock due to coagulopathy.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="INR">
+  <data key="d2">INR may be prolonged in shock due to coagulopathy.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="CReactiveProteinCRP">
+  <data key="d2">CRP is elevated in inflammatory states such as septic shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="BrainNatiureticPeptideBNP">
+  <data key="d2">BNP is a marker of heart failure and cardiovascular stress.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="FoleymL_sum">
+  <data key="d2">Urine output decreases in shock due to renal hypoperfusion.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="EyeOpening">
+  <data key="d2">Eye opening response may decrease in shock due to impaired cerebral perfusion.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="VerbalResponse">
+  <data key="d2">Verbal response may decrease in shock due to impaired cerebral perfusion.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="MotorResponse">
+  <data key="d2">Motor response may decrease in shock due to impaired cerebral perfusion.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="GCS">
+  <data key="d2">GCS score may decrease in shock due to impaired cerebral perfusion.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="TemperatureFF">
+  <data key="d2">Temperature may be abnormal in shock (hypothermia or hyperthermia), depending on etiology.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="TotalPEEPLevelcmH2O">
+  <data key="d2">High PEEP can reduce venous return and worsen shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="CompliancecmH2OLseconds">
+  <data key="d2">Lung compliance may decrease in shock due to pulmonary edema or ARDS.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="PaO2_FiO2">
+  <data key="d2">PaO2/FiO2 ratio decreases in shock due to impaired oxygenation.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="organ_dysfunction">
+  <data key="d2">Organ dysfunction is a direct consequence of shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="Sepsis3">
+  <data key="d2">Sepsis-3 criteria identify septic shock, a major subtype of shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="Epinephrinemg_avg">
+  <data key="d2">Epinephrine is used to treat shock and cardiovascular instability.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="Dobutaminemg_avg">
+  <data key="d2">Dobutamine is used to support cardiac output in shock.</data>
+</edge>
+<edge source="Cardiovascular Instability and Shock" target="Norepinephrinemg_avg">
+  <data key="d2">Norepinephrine is a first-line vasopressor in shock.</data>
+</edge>
+<edge source="Severe Neurological Impairment" target="GCS">
+  <data key="d2">The Glasgow Coma Scale is a global measure of neurological function.</data>
+</edge>
+<edge source="Severe Neurological Impairment" target="EyeOpening">
+  <data key="d2">Eye opening response is a component of neurological assessment.</data>
+</edge>
+<edge source="Severe Neurological Impairment" target="VerbalResponse">
+  <data key="d2">Verbal response is a component of neurological assessment.</data>
+</edge>
+<edge source="Severe Neurological Impairment" target="MotorResponse">
+  <data key="d2">Motor response is a component of neurological assessment.</data>
+</edge>
+<edge source="Severe Neurological Impairment" target="organ_dysfunction">
+  <data key="d2">Organ dysfunction may include neurological dysfunction as a component, thus serving as an indirect indicator of severe neurological impairment.</data>
+</edge>
+<edge source="Severe Neurological Impairment" target="Sepsis3">
+  <data key="d2">Sepsis3 criteria include neurological dysfunction as part of organ dysfunction, so this feature may reflect the presence of severe neurological impairment in the context of sepsis.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="Chlorideserum">
+  <data key="d2">Abnormal chloride levels reflect acid-base and electrolyte disturbances.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="Creatinineserum">
+  <data key="d2">Creatinine is a marker of metabolic derangement due to renal impairment.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="Glucoseserum">
+  <data key="d2">Hyper- or hypoglycemia are metabolic disturbances.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="Sodiumserum">
+  <data key="d2">Abnormal sodium levels are key electrolyte derangements.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="PHArterial">
+  <data key="d2">Arterial pH reflects acid-base status and metabolic derangements.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="ArterialBaseExcess">
+  <data key="d2">Base excess quantifies metabolic acidosis or alkalosis.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="BUN">
+  <data key="d2">BUN is a marker of metabolic derangement due to renal impairment.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="Calciumnon-ionized">
+  <data key="d2">Non-ionized calcium abnormalities reflect electrolyte disturbances.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="IonizedCalcium">
+  <data key="d2">Ionized calcium is a key electrolyte, and its derangement affects multiple systems.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="LacticAcid">
+  <data key="d2">Elevated lactic acid indicates anaerobic metabolism and metabolic acidosis, a key metabolic derangement.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="Aniongap">
+  <data key="d2">Anion gap is used to assess metabolic acidosis.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="Potassiumserum">
+  <data key="d2">Abnormal potassium levels are critical electrolyte derangements.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="HCO3serum">
+  <data key="d2">Bicarbonate is a key buffer in acid-base balance.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="eGFR">
+  <data key="d2">eGFR estimates kidney function, which is essential for maintaining metabolic and electrolyte balance.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="BUNCreatinine">
+  <data key="d2">The BUN/Creatinine ratio helps differentiate types of metabolic derangements, especially in renal dysfunction.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="BUNAlbumin">
+  <data key="d2">The BUN/Albumin ratio can reflect combined metabolic and nutritional derangements.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="Albumin">
+  <data key="d2">Albumin is involved in oncotic pressure and metabolic balance.</data>
+</edge>
+<edge source="Metabolic and Electrolyte Derangements" target="Hemoglobingdl">
+  <data key="d2">Hemoglobin abnormalities can reflect underlying metabolic derangements.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="diabetes">
+  <data key="d2">Diabetes is a chronic disease that increases risk of acute complications.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="hypertension">
+  <data key="d2">Hypertension is a chronic disease that impacts acute illness outcomes.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="obesity">
+  <data key="d2">Obesity is a chronic disease that increases risk of organ dysfunction.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="heart_failure">
+  <data key="d2">Heart failure is a chronic disease that predisposes to acute decompensation.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="BMI">
+  <data key="d2">BMI is a measure of obesity and chronic disease risk.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="eGFR">
+  <data key="d2">eGFR is a measure of kidney function, often reduced in chronic kidney disease, reflecting chronic disease burden.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="BUN">
+  <data key="d2">BUN is a marker of kidney function and may be chronically elevated in chronic kidney disease, contributing to disease burden.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="Creatinineserum">
+  <data key="d2">Serum creatinine is a marker of kidney function, often elevated in chronic kidney disease, reflecting chronic disease burden.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="Albumin">
+  <data key="d2">Low serum albumin can indicate chronic liver or kidney disease, reflecting chronic disease burden.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="WBC">
+  <data key="d2">Chronic diseases such as chronic inflammation or hematologic disorders can cause persistent alterations in WBC count.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="TotalBilirubin">
+  <data key="d2">Chronic liver disease can cause persistent elevation of total bilirubin, contributing to chronic disease burden.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="AST">
+  <data key="d2">Chronic liver disease can cause persistent elevation of AST, reflecting chronic disease burden.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="LDH">
+  <data key="d2">LDH can be chronically elevated in various chronic diseases, including liver, cardiac, and hematologic conditions.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="BUNCreatinine">
+  <data key="d2">The BUN/Creatinine ratio helps assess chronic kidney disease, a component of chronic disease burden.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="organ_dysfunction">
+  <data key="d2">Chronic disease burden often leads to persistent organ dysfunction, which is captured by this feature.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="anchor_age">
+  <data key="d2">Older age is associated with increased chronic disease burden.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="gender">
+  <data key="d2">Gender can influence chronic disease risk and outcomes.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="NMED">
+  <data key="d2">Non-medical admissions may reflect underlying chronic conditions.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="NSURG">
+  <data key="d2">Neurosurgical admissions may be related to chronic neurological disease.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="TSURG">
+  <data key="d2">Trauma surgical admissions may be influenced by chronic disease.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="CMED">
+  <data key="d2">Cardiac medical admissions are often due to chronic cardiac disease.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="VSURG">
+  <data key="d2">Vascular surgical admissions are often due to chronic vascular disease.</data>
+</edge>
+<edge source="Underlying Chronic Disease Burden" target="TRAUM">
+  <data key="d2">Trauma admissions may be complicated by chronic disease.</data>
+</edge>
+</graph></graphml>
