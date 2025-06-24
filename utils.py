@@ -13,7 +13,7 @@ from params import ML_MODEL
 class Node(BaseModel):
     name: str = Field(..., description="Unique name of the node (can be a feature or an intermediate mechanism).")
     node_type: str = Field(..., description="Type of the node, e.g., 'input' or 'intermediate'.")
-    description: Optional[str] = Field(None, description="Detailed description of what the node represents.")
+    description: str | None = Field(None, description="Detailed description of what the node represents.")
 
 class Edge(BaseModel):
     source: str = Field(..., description="Name of the source node.")
@@ -83,18 +83,32 @@ def graph_to_ml_model(graph, X_train):
     return interaction_constraints, feature_indices, valid_nodes, valid_edges
 
 def get_mechanism_to_features(kg_model, feature_names):
-    intermediate_nodes = [node for node in kg_model.nodes if node.node_type == 'intermediate']
-    mechanism_to_features = {}
-    for intermediate in intermediate_nodes:
-        connected_features = []
-        for edge in kg_model.edges:
-            if edge.source == intermediate.name and edge.target in feature_names:
-                connected_features.append(edge.target)
-            elif edge.target == intermediate.name and edge.source in feature_names:
-                connected_features.append(edge.source)
-        if connected_features:
-            mechanism_to_features[intermediate.name] = connected_features
+    """Extracts mechanism-to-feature mappings from the knowledge graph."""
+    intermediate_nodes = {node.name for node in kg_model.nodes if node.node_type == 'intermediate'}
+    mechanism_to_features = defaultdict(list)
+    for edge in kg_model.edges:
+        if edge.source in intermediate_nodes and edge.target in feature_names:
+            mechanism_to_features[edge.source].append(edge.target)
+        elif edge.target in intermediate_nodes and edge.source in feature_names:
+            mechanism_to_features[edge.target].append(edge.source)
     return mechanism_to_features
+
+def get_direct_feature_interactions(kg_model, feature_names):
+    """Extract direct feature-to-feature interactions from the knowledge graph"""
+    direct_interactions = []
+    
+    for edge in kg_model.edges:
+        # Check if both source and target are input features (not intermediate nodes)
+        source_is_feature = edge.source in feature_names
+        target_is_feature = edge.target in feature_names
+        
+        if source_is_feature and target_is_feature:
+            # This is a direct feature-feature interaction
+            interaction_pair = sorted([edge.source, edge.target])
+            if interaction_pair not in direct_interactions:
+                direct_interactions.append(interaction_pair)
+    
+    return direct_interactions
 
 def networkx_to_model(G: nx.Graph) -> KnowledgeGraphModel:
     """Converts a NetworkX graph to a KnowledgeGraphModel."""
@@ -181,15 +195,74 @@ def load_knowledge_graph(filename: str) -> KnowledgeGraphModel:
     edges = [Edge(source=u, target=v, relationship="interacts") for u, v in G.edges()]
     return KnowledgeGraphModel(nodes=nodes, edges=edges)
 
-def create_interaction_constraints(mechanism_to_features, feature_names):
-    constraint_indices = []
-    for mechanism, features in mechanism_to_features.items():
-        if len(features) > 1:
-            # Convert feature names to indices
-            feature_indices = []
-            for feat in features:
-                if feat in feature_names:
-                    feature_indices.append(feature_names.index(feat))
-            if len(feature_indices) > 1:
-                constraint_indices.append(feature_indices)
-    return constraint_indices
+def load_agent_outputs(dataset_name):
+    """Load and return agent outputs from JSON file"""
+    import json
+    with open(f'kg/{dataset_name}_agent_outputs.json', 'r') as f:
+        return json.load(f)
+
+def print_agent_summary(dataset_name):
+    """Print a summary of agent outputs"""
+    data = load_agent_outputs(dataset_name)
+    
+    print(f"=== Agent Outputs Summary for {data['dataset_name'].upper()} ===")
+    print(f"Target Column: {data['target_column']}")
+    print(f"Total Features: {data['total_features']}")
+    print(f"Total Agent Interactions: {len(data['prompts_and_responses'])}")
+    
+    print("\n=== Steps Completed ===")
+    step_counts = {}
+    for item in data['prompts_and_responses']:
+        step = item.get('step', 'unknown')
+        step_counts[step] = step_counts.get(step, 0) + 1
+    
+    for step, count in step_counts.items():
+        print(f"  {step}: {count} interactions")
+    
+    print("\n=== Final Knowledge Graph Statistics ===")
+    stats = data['final_statistics']
+    for key, value in stats.items():
+        print(f"  {key.replace('_', ' ').title()}: {value}")
+    
+    print("\n=== Intermediate Mechanisms Identified ===")
+    step1 = next((item for item in data['prompts_and_responses'] if item['step'] == '1_derive_mechanisms'), None)
+    if step1:
+        for i, node in enumerate(step1['response']['intermediate_nodes'], 1):
+            print(f"  {i}. {node['name']}")
+
+def create_constraints_from_edges(edges: set[tuple[str, str]]) -> list[list[str]]:
+    """Creates merged interaction constraint groups from a set of edges using a union-find algorithm."""
+    if not edges:
+        return []
+
+    # Get all unique nodes involved in the edges
+    nodes = sorted(list(set(u for u, v in edges) | set(v for u, v in edges)))
+    node_to_idx = {node: i for i, node in enumerate(nodes)}
+    
+    # Standard union-find implementation
+    parent = list(range(len(nodes)))
+    def find(i):
+        if parent[i] == i:
+            return i
+        parent[i] = find(parent[i])
+        return parent[i]
+
+    def union(i, j):
+        root_i = find(i)
+        root_j = find(j)
+        if root_i != root_j:
+            parent[root_j] = root_i
+
+    # Merge sets for all connected edges
+    for u, v in edges:
+        if u in node_to_idx and v in node_to_idx:
+            union(node_to_idx[u], node_to_idx[v])
+
+    # Group nodes by their root parent
+    groups = defaultdict(list)
+    for i, node in enumerate(nodes):
+        root = find(i)
+        groups[root].append(node)
+
+    # Return sorted groups of features that can interact
+    return [sorted(group) for group in groups.values() if len(group) > 1]

@@ -1,0 +1,845 @@
+{
+  "dataset_name": "adni",
+  "target_column": "DIAGNOSIS",
+  "total_features": 99,
+  "prompts_and_responses": [
+    {
+      "step": "2_generate_full_graph",
+      "prompt": "\n    **Task:** Create a complete knowledge graph by identifying mechanisms and connecting features.\n\n    **Clinical Context:** The model will predict 'DIAGNOSIS'.\n    The Alzheimer\u2019s Disease Neuroimaging Initiative (ADNI) is a multiphase, longitudinal, and multisite study aimed at identifying and validating biomarkers for early detection, tracking progression, and evaluating potential therapeutic interventions for Alzheimer\u2019s disease (AD). Since its inception in 2004, ADNI has been a collaborative effort involving academic institutions, industry partners, and government agencies, with funding from the National Institute on Aging (NIA), the National Institutes of Health (NIH), and private pharmaceutical companies.\nThe study recruits participants across the Alzheimer\u2019s disease (AD) spectrum, including:\n\u2022\tCognitively Normal (CN): Individuals without significant memory or cognitive impairment.\n\u2022\tMild Cognitive Impairment (MCI): A transitional stage between normal aging and AD, characterized by memory decline but preserved daily function.\n\u2022\tAlzheimer\u2019s Disease (AD): Patients with clinically diagnosed AD dementia, exhibiting progressive cognitive decline and functional impairment.\n\nADNI has progressed through multiple phases to expand its scope and data collection. ADNI-1 (2004\u20132011) established standardized protocols for imaging, biomarkers, and clinical assessments. ADNI-GO (2010\u20132011) introduced an early mild cognitive impairment (EMCI) cohort to detect Alzheimer\u2019s disease at an earlier stage. ADNI-2 (2011\u20132016) further enhanced data collection by incorporating advanced neuroimaging techniques and fluid biomarkers. ADNI-3 (2016\u2013Present) continues to refine imaging methods, including 7T MRI and PET, while integrating digital cognitive testing and novel biomarker discovery.\nThe ADNI dataset integrates multimodal biomarkers to study structural and functional brain changes, genetic predisposition, and fluid-based markers of neurodegeneration.  and contribute to a growing body of knowledge on AD. The dataset is continuously evolving, supporting new methodologies in artificial intelligence (AI), machine learning (ML), and biomarker discovery to advance early diagnosis and potential treatment strategies for AD.\nFor this study, only baseline measures were used, providing a cross-sectional snapshot of demographic, clinical, cognitive, neuropsychiatric, biomarker, and neuroimaging data at the participant\u2019s first evaluation. The selected baseline ADNI measures provide a multimodal dataset for studying Alzheimer\u2019s disease diagnosis, cognitive decline, and neurodegeneration. These variables offer insights into demographic risk factors, neurocognitive function, psychiatric symptoms, biofluid markers, and structural/functional brain changes. The combination of clinical, biomarker, and neuroimaging features ensures a comprehensive evaluation of AD progression at baseline. The selected measures (variables) categorized by domain are provided in Supplementary Data 1, offering a structured overview of the variables used in this study. Additionally, descriptive statistics for each measure, including mean, standard deviation, and range, are presented in Supplementary Table 1, summarizing the distribution and characteristics of the dataset.\nSelected Measures by Domain\n1. Subject Information & Demographics\n\u2022\tPHASE, ID, SITEID, PTID, RID, VISCODE: Study phase, unique participant identifiers, site ID, and visit code.\n\u2022\tDIAGNOSIS, DIAGNOSIS_Str, DX: Baseline diagnosis categorizing participants as CN, MCI, or AD.\n\u2022\tAGE, PTEDUCAT, PTETHCAT, PTGENDER, PTMARRY, PTRACCAT: Key demographic variables including age, education, ethnicity, gender, marital status, and race, which help assess population diversity and risk factors.\n2. Physical Characteristics\n\u2022\tVSWEIGHT, VSHEIGHT: Participant\u2019s weight (kg) and height (cm), used to assess general health status.\n\u2022\tVSBPSYS, VSBPDIA: Systolic and diastolic blood pressure (mmHg), relevant to vascular health and AD risk.\n\u2022\tVSPULSE, VSRESP: Pulse rate (bpm) and respiration rate, indicating cardiovascular and respiratory function.\n3. Cognitive Assessments\n\u2022\tMMSCORE, MOCA: Global cognition tests; MMSE and MoCA detect cognitive impairment.\n\u2022\tCLOCKSCOR, COPYSCOR: Clock Drawing and Copy Tests, evaluating visuospatial and executive function.\n\u2022\tAVLT (AVTOT1\u2013AVTOT6, AVTOTB, AVDEL30MIN, AVDELTOT): Auditory Verbal Learning Test (AVLT) measuring memory recall and learning.\n\u2022\tDigit Span (DSPANFOR, DSPANFLTH, DSPANBAC, DSPANBLTH): Assesses working memory and attention.\n\u2022\tCategory Fluency (CATANIMSC, CATVEGESC, CATANPERS, CATANINTR, CATVGPERS, CATVGINTR): Measures verbal fluency and executive control.\n\u2022\tTRAASCOR, TRABSCOR: Trail Making Test (Parts A & B) assessing processing speed and cognitive flexibility.\n\u2022\tBNTTOTAL, MINTTOTAL, ANART: Language and naming tests evaluating word retrieval and verbal fluency.\n\u2022\tDIGITSCOR: Digit Symbol Substitution Test (DSST), assessing processing speed and attention.\n\u2022\tRAVLT_immediate, RAVLT_learning, RAVLT_forgetting, RAVLT_perc_forgetting, LDELTOTAL: Verbal memory tests tracking learning and retention.\n\u2022\tADAS11, ADAS13, ADASQ4: Alzheimer\u2019s Disease Assessment Scale-Cognitive Subscale (ADAS-Cog), a disease severity measure.\n\u2022\tFAQ: Functional Activities Questionnaire, assessing daily living function.\n\u2022\tmPACCdigit, mPACCtrailsB: Composite cognitive measures integrating processing speed and executive function.\n4. Neuropsychiatric Evaluations\n\u2022\tNPIASEV\u2013NPILSEV, NPISCORE: Neuropsychiatric Inventory Questionnaire (NPI-Q) assessing behavioral symptoms like depression, agitation, hallucinations, and sleep disturbances.\n\u2022\tCDGLOBAL, CDRSB: Clinical Dementia Rating (CDR) scale, evaluating dementia severity.\n\u2022\tGDTOTAL: Geriatric Depression Scale (GDS) screening for depressive symptoms.\n5. Biofluid Biomarkers\n\u2022\tABETA40, ABETA42: CSF amyloid-beta 40 & 42 levels, indicating amyloid plaque deposition (lower A\u03b242 is linked to AD).\n\u2022\tTAU, PTAU: Total tau and phosphorylated tau (p-tau) levels, reflecting neurodegeneration and tau pathology in AD.\n6. MRI and PET Features\n\u2022\tMRI Measures (Ventricles, Hippocampus, WholeBrain, Entorhinal, Fusiform, MidTemp, ICV):\no\tVentricular expansion reflects brain atrophy.\no\tHippocampal and entorhinal atrophy are early AD biomarkers.\no\tWhole brain, fusiform, and middle temporal lobe atrophy track neurodegeneration.\no\tIntracranial volume (ICV) is used for normalization.\n\u2022\tPET Measures (FDG, PIB, AV45, FBB):\no\tFDG-PET measures glucose metabolism, with reduced uptake in AD.\no\tPIB-PET, AV45-PET, FBB-PET detect amyloid plaque deposition, aiding in early AD diagnosis.\n\u2022\tEveryday Cognition (EcogPtMem\u2013EcogPtTotal, EcogSPMem\u2013EcogSPTotal):\no\tSelf-reported and study partner-reported assessments of cognitive decline in memory, language, visuospatial ability, planning, and attention.\n\n\n    **Dataset Features:**\n    - AGE\n- PTEDUCAT\n- PTETHCAT\n- PTGENDER\n- PTMARRY\n- PTRACCAT\n- VSWEIGHT\n- VSHEIGHT\n- VSBPSYS\n- VSBPDIA\n- VSPULSE\n- VSRESP\n- MMSCORE\n- CLOCKSCOR\n- COPYSCOR\n- AVTOT1\n- AVTOT2\n- AVTOT3\n- AVTOT4\n- AVTOT5\n- AVTOT6\n- AVTOTB\n- DSPANFOR\n- DSPANFLTH\n- DSPANBAC\n- DSPANBLTH\n- CATANIMSC\n- CATANPERS\n- CATANINTR\n- CATVEGESC\n- CATVGPERS\n- CATVGINTR\n- TRAASCOR\n- TRABSCOR\n- DIGITSCOR\n- BNTTOTAL\n- AVDEL30MIN\n- AVDELTOT\n- ANART\n- MINTTOTAL\n- NPIASEV\n- NPIBSEV\n- NPICSEV\n- NPIDSEV\n- NPIESEV\n- NPIFSEV\n- NPIGSEV\n- NPIHSEV\n- NPIISEV\n- NPIJSEV\n- NPIKSEV\n- NPILSEV\n- NPISCORE\n- CDGLOBAL\n- CDRSB\n- GDTOTAL\n- ABETA40\n- ABETA42\n- TAU\n- PTAU\n- CDRSB.1\n- ADAS11\n- ADAS13\n- ADASQ4\n- MMSE\n- RAVLT_immediate\n- RAVLT_learning\n- RAVLT_forgetting\n- RAVLT_perc_forgetting\n- LDELTOTAL\n- FAQ\n- mPACCdigit\n- mPACCtrailsB\n- Ventricles\n- Hippocampus\n- WholeBrain\n- Entorhinal\n- Fusiform\n- MidTemp\n- ICV\n- MOCA\n- EcogPtMem\n- EcogPtLang\n- EcogPtVisspat\n- EcogPtPlan\n- EcogPtOrgan\n- EcogPtDivatt\n- EcogPtTotal\n- EcogSPMem\n- EcogSPLang\n- EcogSPVisspat\n- EcogSPPlan\n- EcogSPOrgan\n- EcogSPDivatt\n- EcogSPTotal\n- FDG\n- PIB\n- AV45\n- FBB\n    \n    **Instructions:**\n    1.  **Identify Mechanisms:** First, identify 5-7 key causative biological/clinical mechanisms for the condition. Create an 'intermediate' node for each.\n    2.  **Connect Features:** For each feature in the dataset, connect it to the most relevant mechanism(s) by creating an edge. A feature can connect to multiple mechanisms if justified.\n    3.  **Return Full Graph:** Your response MUST be a single, complete `KnowledgeGraphModel` containing:\n        - All intermediate nodes (mechanisms).\n        - All input nodes (features from the dataset).\n        - All edges connecting features to mechanisms.\n    4.  Do NOT create direct feature-to-feature edges.\n    ",
+      "response": {
+        "nodes": [
+          {
+            "name": "Amyloid Plaque Deposition",
+            "type": "intermediate"
+          },
+          {
+            "name": "Tau Pathology and Neurodegeneration",
+            "type": "intermediate"
+          },
+          {
+            "name": "Cognitive Decline and Memory Impairment",
+            "type": "intermediate"
+          },
+          {
+            "name": "Neuropsychiatric Symptoms",
+            "type": "intermediate"
+          },
+          {
+            "name": "Brain Atrophy and Structural Changes",
+            "type": "intermediate"
+          },
+          {
+            "name": "Glucose Hypometabolism and Functional Brain Changes",
+            "type": "intermediate"
+          },
+          {
+            "name": "Demographic and Vascular Risk Factors",
+            "type": "intermediate"
+          },
+          {
+            "name": "AGE",
+            "type": "input"
+          },
+          {
+            "name": "PTEDUCAT",
+            "type": "input"
+          },
+          {
+            "name": "PTETHCAT",
+            "type": "input"
+          },
+          {
+            "name": "PTGENDER",
+            "type": "input"
+          },
+          {
+            "name": "PTMARRY",
+            "type": "input"
+          },
+          {
+            "name": "PTRACCAT",
+            "type": "input"
+          },
+          {
+            "name": "VSWEIGHT",
+            "type": "input"
+          },
+          {
+            "name": "VSHEIGHT",
+            "type": "input"
+          },
+          {
+            "name": "VSBPSYS",
+            "type": "input"
+          },
+          {
+            "name": "VSBPDIA",
+            "type": "input"
+          },
+          {
+            "name": "VSPULSE",
+            "type": "input"
+          },
+          {
+            "name": "VSRESP",
+            "type": "input"
+          },
+          {
+            "name": "MMSCORE",
+            "type": "input"
+          },
+          {
+            "name": "MOCA",
+            "type": "input"
+          },
+          {
+            "name": "CLOCKSCOR",
+            "type": "input"
+          },
+          {
+            "name": "COPYSCOR",
+            "type": "input"
+          },
+          {
+            "name": "AVTOT1",
+            "type": "input"
+          },
+          {
+            "name": "AVTOT2",
+            "type": "input"
+          },
+          {
+            "name": "AVTOT3",
+            "type": "input"
+          },
+          {
+            "name": "AVTOT4",
+            "type": "input"
+          },
+          {
+            "name": "AVTOT5",
+            "type": "input"
+          },
+          {
+            "name": "AVTOT6",
+            "type": "input"
+          },
+          {
+            "name": "AVTOTB",
+            "type": "input"
+          },
+          {
+            "name": "DSPANFOR",
+            "type": "input"
+          },
+          {
+            "name": "DSPANFLTH",
+            "type": "input"
+          },
+          {
+            "name": "DSPANBAC",
+            "type": "input"
+          },
+          {
+            "name": "DSPANBLTH",
+            "type": "input"
+          },
+          {
+            "name": "CATANIMSC",
+            "type": "input"
+          },
+          {
+            "name": "CATANPERS",
+            "type": "input"
+          },
+          {
+            "name": "CATANINTR",
+            "type": "input"
+          },
+          {
+            "name": "CATVEGESC",
+            "type": "input"
+          },
+          {
+            "name": "CATVGPERS",
+            "type": "input"
+          },
+          {
+            "name": "CATVGINTR",
+            "type": "input"
+          },
+          {
+            "name": "TRAASCOR",
+            "type": "input"
+          },
+          {
+            "name": "TRABSCOR",
+            "type": "input"
+          },
+          {
+            "name": "DIGITSCOR",
+            "type": "input"
+          },
+          {
+            "name": "BNTTOTAL",
+            "type": "input"
+          },
+          {
+            "name": "AVDEL30MIN",
+            "type": "input"
+          },
+          {
+            "name": "AVDELTOT",
+            "type": "input"
+          },
+          {
+            "name": "ANART",
+            "type": "input"
+          },
+          {
+            "name": "MINTTOTAL",
+            "type": "input"
+          },
+          {
+            "name": "NPIASEV",
+            "type": "input"
+          },
+          {
+            "name": "NPIBSEV",
+            "type": "input"
+          },
+          {
+            "name": "NPICSEV",
+            "type": "input"
+          },
+          {
+            "name": "NPIDSEV",
+            "type": "input"
+          },
+          {
+            "name": "NPIESEV",
+            "type": "input"
+          },
+          {
+            "name": "NPIFSEV",
+            "type": "input"
+          },
+          {
+            "name": "NPIGSEV",
+            "type": "input"
+          },
+          {
+            "name": "NPIHSEV",
+            "type": "input"
+          },
+          {
+            "name": "NPIISEV",
+            "type": "input"
+          },
+          {
+            "name": "NPIJSEV",
+            "type": "input"
+          },
+          {
+            "name": "NPIKSEV",
+            "type": "input"
+          },
+          {
+            "name": "NPILSEV",
+            "type": "input"
+          },
+          {
+            "name": "NPISCORE",
+            "type": "input"
+          },
+          {
+            "name": "CDGLOBAL",
+            "type": "input"
+          },
+          {
+            "name": "CDRSB",
+            "type": "input"
+          },
+          {
+            "name": "GDTOTAL",
+            "type": "input"
+          },
+          {
+            "name": "ABETA40",
+            "type": "input"
+          },
+          {
+            "name": "ABETA42",
+            "type": "input"
+          },
+          {
+            "name": "TAU",
+            "type": "input"
+          },
+          {
+            "name": "PTAU",
+            "type": "input"
+          },
+          {
+            "name": "CDRSB.1",
+            "type": "input"
+          },
+          {
+            "name": "ADAS11",
+            "type": "input"
+          },
+          {
+            "name": "ADAS13",
+            "type": "input"
+          },
+          {
+            "name": "ADASQ4",
+            "type": "input"
+          },
+          {
+            "name": "MMSE",
+            "type": "input"
+          },
+          {
+            "name": "RAVLT_immediate",
+            "type": "input"
+          },
+          {
+            "name": "RAVLT_learning",
+            "type": "input"
+          },
+          {
+            "name": "RAVLT_forgetting",
+            "type": "input"
+          },
+          {
+            "name": "RAVLT_perc_forgetting",
+            "type": "input"
+          },
+          {
+            "name": "LDELTOTAL",
+            "type": "input"
+          },
+          {
+            "name": "FAQ",
+            "type": "input"
+          },
+          {
+            "name": "mPACCdigit",
+            "type": "input"
+          },
+          {
+            "name": "mPACCtrailsB",
+            "type": "input"
+          },
+          {
+            "name": "Ventricles",
+            "type": "input"
+          },
+          {
+            "name": "Hippocampus",
+            "type": "input"
+          },
+          {
+            "name": "WholeBrain",
+            "type": "input"
+          },
+          {
+            "name": "Entorhinal",
+            "type": "input"
+          },
+          {
+            "name": "Fusiform",
+            "type": "input"
+          },
+          {
+            "name": "MidTemp",
+            "type": "input"
+          },
+          {
+            "name": "ICV",
+            "type": "input"
+          },
+          {
+            "name": "FDG",
+            "type": "input"
+          },
+          {
+            "name": "PIB",
+            "type": "input"
+          },
+          {
+            "name": "AV45",
+            "type": "input"
+          },
+          {
+            "name": "FBB",
+            "type": "input"
+          },
+          {
+            "name": "EcogPtMem",
+            "type": "input"
+          },
+          {
+            "name": "EcogPtLang",
+            "type": "input"
+          },
+          {
+            "name": "EcogPtVisspat",
+            "type": "input"
+          },
+          {
+            "name": "EcogPtPlan",
+            "type": "input"
+          },
+          {
+            "name": "EcogPtOrgan",
+            "type": "input"
+          },
+          {
+            "name": "EcogPtDivatt",
+            "type": "input"
+          },
+          {
+            "name": "EcogPtTotal",
+            "type": "input"
+          },
+          {
+            "name": "EcogSPMem",
+            "type": "input"
+          },
+          {
+            "name": "EcogSPLang",
+            "type": "input"
+          },
+          {
+            "name": "EcogSPVisspat",
+            "type": "input"
+          },
+          {
+            "name": "EcogSPPlan",
+            "type": "input"
+          },
+          {
+            "name": "EcogSPOrgan",
+            "type": "input"
+          },
+          {
+            "name": "EcogSPDivatt",
+            "type": "input"
+          },
+          {
+            "name": "EcogSPTotal",
+            "type": "input"
+          }
+        ],
+        "edges": [
+          {
+            "source": "AGE",
+            "target": "Demographic and Vascular Risk Factors"
+          },
+          {
+            "source": "PTEDUCAT",
+            "target": "Demographic and Vascular Risk Factors"
+          },
+          {
+            "source": "PTETHCAT",
+            "target": "Demographic and Vascular Risk Factors"
+          },
+          {
+            "source": "PTGENDER",
+            "target": "Demographic and Vascular Risk Factors"
+          },
+          {
+            "source": "PTMARRY",
+            "target": "Demographic and Vascular Risk Factors"
+          },
+          {
+            "source": "PTRACCAT",
+            "target": "Demographic and Vascular Risk Factors"
+          },
+          {
+            "source": "VSWEIGHT",
+            "target": "Demographic and Vascular Risk Factors"
+          },
+          {
+            "source": "VSHEIGHT",
+            "target": "Demographic and Vascular Risk Factors"
+          },
+          {
+            "source": "VSBPSYS",
+            "target": "Demographic and Vascular Risk Factors"
+          },
+          {
+            "source": "VSBPDIA",
+            "target": "Demographic and Vascular Risk Factors"
+          },
+          {
+            "source": "VSPULSE",
+            "target": "Demographic and Vascular Risk Factors"
+          },
+          {
+            "source": "VSRESP",
+            "target": "Demographic and Vascular Risk Factors"
+          },
+          {
+            "source": "ABETA40",
+            "target": "Amyloid Plaque Deposition"
+          },
+          {
+            "source": "ABETA42",
+            "target": "Amyloid Plaque Deposition"
+          },
+          {
+            "source": "PIB",
+            "target": "Amyloid Plaque Deposition"
+          },
+          {
+            "source": "AV45",
+            "target": "Amyloid Plaque Deposition"
+          },
+          {
+            "source": "FBB",
+            "target": "Amyloid Plaque Deposition"
+          },
+          {
+            "source": "TAU",
+            "target": "Tau Pathology and Neurodegeneration"
+          },
+          {
+            "source": "PTAU",
+            "target": "Tau Pathology and Neurodegeneration"
+          },
+          {
+            "source": "Ventricles",
+            "target": "Brain Atrophy and Structural Changes"
+          },
+          {
+            "source": "Hippocampus",
+            "target": "Brain Atrophy and Structural Changes"
+          },
+          {
+            "source": "WholeBrain",
+            "target": "Brain Atrophy and Structural Changes"
+          },
+          {
+            "source": "Entorhinal",
+            "target": "Brain Atrophy and Structural Changes"
+          },
+          {
+            "source": "Fusiform",
+            "target": "Brain Atrophy and Structural Changes"
+          },
+          {
+            "source": "MidTemp",
+            "target": "Brain Atrophy and Structural Changes"
+          },
+          {
+            "source": "ICV",
+            "target": "Brain Atrophy and Structural Changes"
+          },
+          {
+            "source": "FDG",
+            "target": "Glucose Hypometabolism and Functional Brain Changes"
+          },
+          {
+            "source": "MMSCORE",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "MOCA",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "CLOCKSCOR",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "COPYSCOR",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "AVTOT1",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "AVTOT2",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "AVTOT3",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "AVTOT4",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "AVTOT5",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "AVTOT6",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "AVTOTB",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "DSPANFOR",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "DSPANFLTH",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "DSPANBAC",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "DSPANBLTH",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "CATANIMSC",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "CATANPERS",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "CATANINTR",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "CATVEGESC",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "CATVGPERS",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "CATVGINTR",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "TRAASCOR",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "TRABSCOR",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "DIGITSCOR",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "BNTTOTAL",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "AVDEL30MIN",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "AVDELTOT",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "ANART",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "MINTTOTAL",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "RAVLT_immediate",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "RAVLT_learning",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "RAVLT_forgetting",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "RAVLT_perc_forgetting",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "LDELTOTAL",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "FAQ",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "mPACCdigit",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "mPACCtrailsB",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "ADAS11",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "ADAS13",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "ADASQ4",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "MMSE",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "NPIASEV",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "NPIBSEV",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "NPICSEV",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "NPIDSEV",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "NPIESEV",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "NPIFSEV",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "NPIGSEV",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "NPIHSEV",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "NPIISEV",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "NPIJSEV",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "NPIKSEV",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "NPILSEV",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "NPISCORE",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "CDGLOBAL",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "CDRSB",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "GDTOTAL",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "CDRSB.1",
+            "target": "Neuropsychiatric Symptoms"
+          },
+          {
+            "source": "EcogPtMem",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogPtLang",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogPtVisspat",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogPtPlan",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogPtOrgan",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogPtDivatt",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogPtTotal",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogSPMem",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogSPLang",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogSPVisspat",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogSPPlan",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogSPOrgan",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogSPDivatt",
+            "target": "Cognitive Decline and Memory Impairment"
+          },
+          {
+            "source": "EcogSPTotal",
+            "target": "Cognitive Decline and Memory Impairment"
+          }
+        ]
+      }
+    }
+  ],
+  "final_statistics": {
+    "total_nodes": 107,
+    "total_edges": 205,
+    "target_node_connections": 106,
+    "features_missing_from_graph": 0,
+    "intermediate_nodes_final": 7,
+    "input_nodes_final": 99
+  }
+}

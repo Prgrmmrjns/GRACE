@@ -1,0 +1,565 @@
+{
+  "dataset_name": "mimic",
+  "target_column": "mortality_flag",
+  "total_features": 67,
+  "prompts_and_responses": [
+    {
+      "step": "2_generate_full_graph",
+      "prompt": "\n    **Task:** Create a complete knowledge graph by identifying mechanisms and connecting features.\n\n    **Clinical Context:** The model will predict 'mortality_flag'.\n    This dataset is derived from MIMIC-IV, a large, freely-available database comprising deidentified health-related data from patients who were admitted to the critical care units of the Beth Israel Deaconess Medical Center between 2008 and 2019.\n\nThe objective of this dataset is to predict patient mortality based on various clinical measurements and vital signs collected during ICU stays. Most measurements represent median values aggregated over the patient's ICU stay, including:\n\n- Vital Signs: Heart rate (HRbpm), arterial blood pressure (ABPmmmHg), central venous pressure (CVPmmHg), respiratory rate (RRinspmin), temperature, and oxygen saturation (SpO2)\n- Blood Gas Values: Arterial PO2, PCO2, pH, base excess, and the PaO2/FiO2 ratio\n- Laboratory Results: Complete blood count (hemoglobin, hematocrit, WBC, platelets), comprehensive metabolic panel (sodium, potassium, chloride, BUN, creatinine), liver function tests (AST, bilirubin), and cardiac markers (CK-CPK, BNP)\n- Neurological Status: Glasgow Coma Scale (GCS) components (eye opening, verbal response, motor response)\n- Ventilator Parameters: FiO2, PEEP levels, and respiratory compliance\n\nThe dataset also includes important patient characteristics and comorbidities such as age, gender, BMI, diabetes, hypertension, obesity, and heart failure. Service-related features (NMED, NSURG, TSURG, etc.) indicate the type of care unit. Key outcome variables include organ dysfunction, Sepsis-3 criteria met, and mortality flag.\n\nEach row represents a unique patient stay in the ICU, with features carefully selected to represent key clinical indicators relevant to critical care outcomes. The target variable 'mortality_flag' indicates whether the patient survived their ICU stay.\n\n    **Dataset Features:**\n    - HRbpm\n- ABPmmmHg\n- CVPmmHg\n- NBPsmmHg\n- NBPdmmHg\n- RRinspmin\n- PO2ArterialmmHg\n- Hemoglobingdl\n- PCO2ArterialmmHg\n- SpO2\n- Hematocritserum\n- WBC\n- AST\n- Chlorideserum\n- Creatinineserum\n- Glucoseserum\n- LDH\n- Sodiumserum\n- EyeOpening\n- TemperatureFF\n- PHArterial\n- FiO2\n- VerbalResponse\n- MotorResponse\n- TotalPEEPLevelcmH2O\n- ArterialBaseExcess\n- BUN\n- Calciumnon-ionized\n- CKCPK\n- IonizedCalcium\n- LacticAcid\n- TotalBilirubin\n- PCO2VenousmmHg\n- Aniongap\n- Potassiumserum\n- HCO3serum\n- CReactiveProteinCRP\n- BrainNatiureticPeptideBNP\n- Albumin\n- PlateletCount\n- PTT\n- INR\n- CompliancecmH2OLseconds\n- anchor_age\n- gender\n- Epinephrinemg_avg\n- Dobutaminemg_avg\n- Norepinephrinemg_avg\n- FoleymL_sum\n- diabetes\n- hypertension\n- obesity\n- heart_failure\n- BMI\n- NMED\n- NSURG\n- TSURG\n- CMED\n- VSURG\n- TRAUM\n- BUNAlbumin\n- BUNCreatinine\n- GCS\n- PaO2_FiO2\n- organ_dysfunction\n- Sepsis3\n- eGFR\n    \n    **Instructions:**\n    1.  **Identify Mechanisms:** First, identify 5-7 key causative biological/clinical mechanisms for the condition. Create an 'intermediate' node for each.\n    2.  **Connect Features:** For each feature in the dataset, connect it to the most relevant mechanism(s) by creating an edge. A feature can connect to multiple mechanisms if justified.\n    3.  **Return Full Graph:** Your response MUST be a single, complete `KnowledgeGraphModel` containing:\n        - All intermediate nodes (mechanisms).\n        - All input nodes (features from the dataset).\n        - All edges connecting features to mechanisms.\n    4.  Do NOT create direct feature-to-feature edges.\n    ",
+      "response": {
+        "nodes": [
+          {
+            "name": "Hemodynamic Instability",
+            "type": "intermediate"
+          },
+          {
+            "name": "Respiratory Dysfunction",
+            "type": "intermediate"
+          },
+          {
+            "name": "Metabolic and Electrolyte Imbalance",
+            "type": "intermediate"
+          },
+          {
+            "name": "Inflammation and Immune Response",
+            "type": "intermediate"
+          },
+          {
+            "name": "Neurological Impairment",
+            "type": "intermediate"
+          },
+          {
+            "name": "Organ Dysfunction and Failure",
+            "type": "intermediate"
+          },
+          {
+            "name": "Mechanical Ventilation and Respiratory Support",
+            "type": "intermediate"
+          },
+          {
+            "name": "HRbpm",
+            "type": "input"
+          },
+          {
+            "name": "ABPmmmHg",
+            "type": "input"
+          },
+          {
+            "name": "CVPmmHg",
+            "type": "input"
+          },
+          {
+            "name": "NBPsmmHg",
+            "type": "input"
+          },
+          {
+            "name": "NBPdmmHg",
+            "type": "input"
+          },
+          {
+            "name": "RRinspmin",
+            "type": "input"
+          },
+          {
+            "name": "PO2ArterialmmHg",
+            "type": "input"
+          },
+          {
+            "name": "Hemoglobingdl",
+            "type": "input"
+          },
+          {
+            "name": "PCO2ArterialmmHg",
+            "type": "input"
+          },
+          {
+            "name": "SpO2",
+            "type": "input"
+          },
+          {
+            "name": "Hematocritserum",
+            "type": "input"
+          },
+          {
+            "name": "WBC",
+            "type": "input"
+          },
+          {
+            "name": "AST",
+            "type": "input"
+          },
+          {
+            "name": "Chlorideserum",
+            "type": "input"
+          },
+          {
+            "name": "Creatinineserum",
+            "type": "input"
+          },
+          {
+            "name": "Glucoseserum",
+            "type": "input"
+          },
+          {
+            "name": "LDH",
+            "type": "input"
+          },
+          {
+            "name": "Sodiumserum",
+            "type": "input"
+          },
+          {
+            "name": "EyeOpening",
+            "type": "input"
+          },
+          {
+            "name": "TemperatureFF",
+            "type": "input"
+          },
+          {
+            "name": "PHArterial",
+            "type": "input"
+          },
+          {
+            "name": "FiO2",
+            "type": "input"
+          },
+          {
+            "name": "VerbalResponse",
+            "type": "input"
+          },
+          {
+            "name": "MotorResponse",
+            "type": "input"
+          },
+          {
+            "name": "TotalPEEPLevelcmH2O",
+            "type": "input"
+          },
+          {
+            "name": "ArterialBaseExcess",
+            "type": "input"
+          },
+          {
+            "name": "BUN",
+            "type": "input"
+          },
+          {
+            "name": "Calciumnon-ionized",
+            "type": "input"
+          },
+          {
+            "name": "CKCPK",
+            "type": "input"
+          },
+          {
+            "name": "IonizedCalcium",
+            "type": "input"
+          },
+          {
+            "name": "LacticAcid",
+            "type": "input"
+          },
+          {
+            "name": "TotalBilirubin",
+            "type": "input"
+          },
+          {
+            "name": "PCO2VenousmmHg",
+            "type": "input"
+          },
+          {
+            "name": "Aniongap",
+            "type": "input"
+          },
+          {
+            "name": "Potassiumserum",
+            "type": "input"
+          },
+          {
+            "name": "HCO3serum",
+            "type": "input"
+          },
+          {
+            "name": "CReactiveProteinCRP",
+            "type": "input"
+          },
+          {
+            "name": "BrainNatiureticPeptideBNP",
+            "type": "input"
+          },
+          {
+            "name": "Albumin",
+            "type": "input"
+          },
+          {
+            "name": "PlateletCount",
+            "type": "input"
+          },
+          {
+            "name": "PTT",
+            "type": "input"
+          },
+          {
+            "name": "INR",
+            "type": "input"
+          },
+          {
+            "name": "CompliancecmH2OLseconds",
+            "type": "input"
+          },
+          {
+            "name": "anchor_age",
+            "type": "input"
+          },
+          {
+            "name": "gender",
+            "type": "input"
+          },
+          {
+            "name": "Epinephrinemg_avg",
+            "type": "input"
+          },
+          {
+            "name": "Dobutaminemg_avg",
+            "type": "input"
+          },
+          {
+            "name": "Norepinephrinemg_avg",
+            "type": "input"
+          },
+          {
+            "name": "FoleymL_sum",
+            "type": "input"
+          },
+          {
+            "name": "diabetes",
+            "type": "input"
+          },
+          {
+            "name": "hypertension",
+            "type": "input"
+          },
+          {
+            "name": "obesity",
+            "type": "input"
+          },
+          {
+            "name": "heart_failure",
+            "type": "input"
+          },
+          {
+            "name": "BMI",
+            "type": "input"
+          },
+          {
+            "name": "NMED",
+            "type": "input"
+          },
+          {
+            "name": "NSURG",
+            "type": "input"
+          },
+          {
+            "name": "TSURG",
+            "type": "input"
+          },
+          {
+            "name": "CMED",
+            "type": "input"
+          },
+          {
+            "name": "VSURG",
+            "type": "input"
+          },
+          {
+            "name": "TRAUM",
+            "type": "input"
+          },
+          {
+            "name": "BUNAlbumin",
+            "type": "input"
+          },
+          {
+            "name": "BUNCreatinine",
+            "type": "input"
+          },
+          {
+            "name": "GCS",
+            "type": "input"
+          },
+          {
+            "name": "PaO2_FiO2",
+            "type": "input"
+          },
+          {
+            "name": "organ_dysfunction",
+            "type": "input"
+          },
+          {
+            "name": "Sepsis3",
+            "type": "input"
+          },
+          {
+            "name": "eGFR",
+            "type": "input"
+          }
+        ],
+        "edges": [
+          {
+            "source": "HRbpm",
+            "target": "Hemodynamic Instability"
+          },
+          {
+            "source": "ABPmmmHg",
+            "target": "Hemodynamic Instability"
+          },
+          {
+            "source": "CVPmmHg",
+            "target": "Hemodynamic Instability"
+          },
+          {
+            "source": "NBPsmmHg",
+            "target": "Hemodynamic Instability"
+          },
+          {
+            "source": "NBPdmmHg",
+            "target": "Hemodynamic Instability"
+          },
+          {
+            "source": "Epinephrinemg_avg",
+            "target": "Hemodynamic Instability"
+          },
+          {
+            "source": "Dobutaminemg_avg",
+            "target": "Hemodynamic Instability"
+          },
+          {
+            "source": "Norepinephrinemg_avg",
+            "target": "Hemodynamic Instability"
+          },
+          {
+            "source": "FoleymL_sum",
+            "target": "Hemodynamic Instability"
+          },
+          {
+            "source": "RRinspmin",
+            "target": "Respiratory Dysfunction"
+          },
+          {
+            "source": "PO2ArterialmmHg",
+            "target": "Respiratory Dysfunction"
+          },
+          {
+            "source": "PCO2ArterialmmHg",
+            "target": "Respiratory Dysfunction"
+          },
+          {
+            "source": "SpO2",
+            "target": "Respiratory Dysfunction"
+          },
+          {
+            "source": "FiO2",
+            "target": "Respiratory Dysfunction"
+          },
+          {
+            "source": "TotalPEEPLevelcmH2O",
+            "target": "Mechanical Ventilation and Respiratory Support"
+          },
+          {
+            "source": "CompliancecmH2OLseconds",
+            "target": "Mechanical Ventilation and Respiratory Support"
+          },
+          {
+            "source": "PCO2VenousmmHg",
+            "target": "Respiratory Dysfunction"
+          },
+          {
+            "source": "PaO2_FiO2",
+            "target": "Respiratory Dysfunction"
+          },
+          {
+            "source": "PHArterial",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "ArterialBaseExcess",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "BUN",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "Creatinineserum",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "Sodiumserum",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "Potassiumserum",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "Chlorideserum",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "HCO3serum",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "Calciumnon-ionized",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "IonizedCalcium",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "LacticAcid",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "Aniongap",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "BUNAlbumin",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "BUNCreatinine",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "Glucoseserum",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "AST",
+            "target": "Inflammation and Immune Response"
+          },
+          {
+            "source": "TotalBilirubin",
+            "target": "Inflammation and Immune Response"
+          },
+          {
+            "source": "CReactiveProteinCRP",
+            "target": "Inflammation and Immune Response"
+          },
+          {
+            "source": "WBC",
+            "target": "Inflammation and Immune Response"
+          },
+          {
+            "source": "Sepsis3",
+            "target": "Inflammation and Immune Response"
+          },
+          {
+            "source": "organ_dysfunction",
+            "target": "Organ Dysfunction and Failure"
+          },
+          {
+            "source": "GCS",
+            "target": "Neurological Impairment"
+          },
+          {
+            "source": "EyeOpening",
+            "target": "Neurological Impairment"
+          },
+          {
+            "source": "VerbalResponse",
+            "target": "Neurological Impairment"
+          },
+          {
+            "source": "MotorResponse",
+            "target": "Neurological Impairment"
+          },
+          {
+            "source": "BrainNatiureticPeptideBNP",
+            "target": "Hemodynamic Instability"
+          },
+          {
+            "source": "PlateletCount",
+            "target": "Inflammation and Immune Response"
+          },
+          {
+            "source": "PTT",
+            "target": "Inflammation and Immune Response"
+          },
+          {
+            "source": "INR",
+            "target": "Inflammation and Immune Response"
+          },
+          {
+            "source": "anchor_age",
+            "target": "Organ Dysfunction and Failure"
+          },
+          {
+            "source": "gender",
+            "target": "Organ Dysfunction and Failure"
+          },
+          {
+            "source": "diabetes",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "hypertension",
+            "target": "Hemodynamic Instability"
+          },
+          {
+            "source": "obesity",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "heart_failure",
+            "target": "Hemodynamic Instability"
+          },
+          {
+            "source": "BMI",
+            "target": "Metabolic and Electrolyte Imbalance"
+          },
+          {
+            "source": "NMED",
+            "target": "Organ Dysfunction and Failure"
+          },
+          {
+            "source": "NSURG",
+            "target": "Organ Dysfunction and Failure"
+          },
+          {
+            "source": "TSURG",
+            "target": "Organ Dysfunction and Failure"
+          },
+          {
+            "source": "CMED",
+            "target": "Organ Dysfunction and Failure"
+          },
+          {
+            "source": "VSURG",
+            "target": "Organ Dysfunction and Failure"
+          },
+          {
+            "source": "TRAUM",
+            "target": "Organ Dysfunction and Failure"
+          },
+          {
+            "source": "GCS",
+            "target": "Organ Dysfunction and Failure"
+          }
+        ]
+      }
+    }
+  ],
+  "final_statistics": {
+    "total_nodes": 75,
+    "total_edges": 135,
+    "target_node_connections": 74,
+    "features_missing_from_graph": 7,
+    "intermediate_nodes_final": 7,
+    "input_nodes_final": 67
+  }
+}

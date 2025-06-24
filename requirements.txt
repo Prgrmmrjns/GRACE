@@ -1,0 +1,12 @@
+pandas
+networkx
+numpy
+optuna
+shapiq[lightgbm,xgboost]
+scikit-learn
+xgboost
+python-dotenv
+matplotlib
+seaborn
+rich
+agno

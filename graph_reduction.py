@@ -1,175 +1,154 @@
-from visualizations import visualize_optimized_graph, visualize_pareto_front
 import copy
-from utils import (get_effective_edges, 
-                   get_constraints_from_graph, create_interaction_constraints)
-import shap
-from sklearn.metrics import roc_auc_score, accuracy_score
+import itertools
+import networkx as nx
 import numpy as np
 import optuna
-import networkx as nx
-from params import ML_MODEL, CALLBACKS, METRIC
+import shapiq
+from sklearn.metrics import accuracy_score, roc_auc_score
+from sklearn.model_selection import StratifiedKFold
+import pandas as pd
 
-def get_shap_contributions(X_train, y_train, X_val, y_val, edges_for_model):
-    """Calculates SHAP values for a model constrained by a specific set of edges."""
+from params import METRIC, ML_MODEL, N_TRIALS
+from visualizations import visualize_pareto_front, visualize_optimized_graph
+
+
+def get_shapiq_contributions(model, X_train):
+    """Calculates global feature and interaction contributions using SHAP-IQ."""
+    if len(X_train) > 10:
+        X_sample = X_train.sample(n=10, random_state=42)
+        print(f"Calculating SHAP-IQ values for {len(X_sample)} random samples to save time...")
+    else:
+        X_sample = X_train
+        print(f"Calculating SHAP-IQ values for all {len(X_sample)} training samples...")
+
+    explainer_params = {"model": model, "max_order": 2, "index": "k-SII"}
+    if METRIC == "accuracy": # multiclass
+        explainer_params["class_index"] = 1
+    explainer = shapiq.TreeExplainer(**explainer_params)
+
     feature_names = X_train.columns.tolist()
-    feature_to_idx = {name: i for i, name in enumerate(feature_names)}
+    node_contributions = {name: 0.0 for name in feature_names}
+    edge_contributions = {}
 
-    model = copy.deepcopy(ML_MODEL)
-    constraints, _, _ = get_constraints_from_graph(feature_names, list(edges_for_model), X_train)
-    model.set_params(interaction_constraints=constraints)
-    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], callbacks=CALLBACKS)
-    
-    explainer = shap.TreeExplainer(model)
-    shap_values = explainer.shap_values(X_val)
-    if isinstance(shap_values, list):
-        shap_values = shap_values[1]
-        
-    shap_interaction_values = explainer.shap_interaction_values(X_val)
-    if isinstance(shap_interaction_values, list):
-        shap_interaction_values = shap_interaction_values[1]
+    for i in range(len(X_sample)):
+        interaction_values = explainer.explain(X_sample.iloc[i])
+        for interaction_indices, value in interaction_values.dict_values.items():
+            value = abs(value)
+            if len(interaction_indices) == 1:
+                node_name = feature_names[interaction_indices[0]]
+                node_contributions[node_name] += value
+            elif len(interaction_indices) == 2:
+                node1, node2 = feature_names[interaction_indices[0]], feature_names[interaction_indices[1]]
+                edge = tuple(sorted((node1, node2)))
+                edge_contributions[edge] = edge_contributions.get(edge, 0.0) + value
 
-    feature_contributions = []
-    for i, f in enumerate(feature_names):
-        feature_contributions.append((f, np.abs(shap_values[:, i]).mean()))
-    feature_contributions.sort(key=lambda x: x[1])
+    n_samples = len(X_sample)
+    node_contributions = {n: v / n_samples for n, v in node_contributions.items()}
+    edge_contributions = {e: v / n_samples for e, v in edge_contributions.items()}
+    return node_contributions, edge_contributions
 
-    interaction_pairs = []
-    for feat1, feat2 in edges_for_model:
-        idx1 = feature_to_idx.get(feat1)
-        idx2 = feature_to_idx.get(feat2)
-        if idx1 is not None and idx2 is not None:
-            interaction_strength = np.abs(shap_interaction_values[:, idx1, idx2]).mean()
-            interaction_pairs.append((feat1, feat2, interaction_strength))
-    interaction_pairs.sort(key=lambda x: x[2])
-    return feature_contributions, interaction_pairs
 
-def optimize_graph(X_train, y_train, X_val, y_val, mechanism_to_features):
-    initial_edges = get_effective_edges(mechanism_to_features)
-    feature_contributions, interaction_strengths = get_shap_contributions(X_train, y_train, X_val, y_val, initial_edges)
-    min_node_imp = min(c[1] for c in feature_contributions) if feature_contributions else 0
-    max_node_imp = max(c[1] for c in feature_contributions) if feature_contributions else 0
-    min_edge_int = min(s[2] for s in interaction_strengths) if interaction_strengths else 0
-    max_edge_int = max(s[2] for s in interaction_strengths) if interaction_strengths else 0
+def optimize_graph(X_train_full, y_train_full, mechanism_to_features):
+    """Optimizes the feature graph using SHAP-IQ, topology, and CV."""
+    print("Pre-calculating SHAP-IQ values on model with NO constraints (using full training data)...")
+    base_model = copy.deepcopy(ML_MODEL)
+    base_model.set_params(early_stopping_rounds=None)
+    base_model.fit(X_train_full, y_train_full, verbose=False) # Fit on all data
+    node_contributions, edge_contributions = get_shapiq_contributions(base_model, X_train_full)
 
-    # --- Pre-calculate Graph Metrics ---
-    node_strengths = {}
-    for node in X_train.columns:
-        node_strengths[node] = 0.0
-    for f1, f2, strength in interaction_strengths:
-        node_strengths[f1] += strength
-        node_strengths[f2] += strength
-    min_node_strength = min(node_strengths.values()) if node_strengths else 0
-    max_node_strength = max(node_strengths.values()) if node_strengths else 0
-
-    community_edge_threshold = np.percentile([s[2] for s in interaction_strengths if s[2] > 0], 50) if any(s[2] > 0 for s in interaction_strengths) else 0
     G = nx.Graph()
-    for f1, f2, strength in interaction_strengths:
-        if strength >= community_edge_threshold:
-            G.add_edge(f1, f2, weight=strength)
-    isolated = list(nx.isolates(G))
-    G.remove_nodes_from(isolated)
+    G.add_nodes_from(X_train_full.columns)
+    mechanism_groups = list(mechanism_to_features.values())
+    for group in mechanism_groups:
+        G.add_edges_from(itertools.combinations(group, 2))
+    G.add_edges_from(edge_contributions.keys())
     
-    communities = nx.community.louvain_communities(G, seed=42) if len(G.nodes()) > 0 else []
-    communities = [c for c in communities if len(c) > 1]
-    node_to_community = {node: i for i, comm in enumerate(communities) for node in comm}
-    for node in isolated: node_to_community[node] = -1
-        
-    betweenness = nx.betweenness_centrality(G, weight='weight') if len(G.nodes()) > 0 else {}
-    for node in X_train.columns:
-        if node not in betweenness: betweenness[node] = 0.0
-    min_betweenness = min(betweenness.values())
-    max_betweenness = max(betweenness.values())
-    print(f"Detected {len(communities)} meaningful communities.")
+    betweenness_centrality = nx.betweenness_centrality(G)
+    clustering_coefficient = nx.clustering(G)
+    node_values = list(node_contributions.values())
+    edge_values = list(edge_contributions.values())
     
-    # --- Optuna Objective ---
     def objective(trial):
-        edge_thresh = trial.suggest_float("edge_interaction_threshold", min_edge_int, max_edge_int)
-        max_edges = trial.suggest_int("max_edges_per_node", 2, 15)
-        strength_thresh = trial.suggest_float("node_strength_threshold", min_node_strength, max_node_strength)
-        community_thresh = trial.suggest_float("community_threshold", 0.0, 1.0)
-        betweenness_thresh = trial.suggest_float("betweenness_threshold", min_betweenness, max_betweenness)
-        node_imp_thresh = trial.suggest_float("node_importance_threshold", min_node_imp, max_node_imp)
+        node_thresh = trial.suggest_float("node_contribution_threshold", 1e-10, max(node_values) if node_values else 1e-10, log=True)
+        edge_thresh = trial.suggest_float("edge_contribution_threshold", 1e-10, max(edge_values) if edge_values else 1e-10, log=True)
+        betweenness_thresh = trial.suggest_float("betweenness_centrality_thresh", 0, max(betweenness_centrality.values()) if betweenness_centrality else 0, log=False)
+        clustering_thresh = trial.suggest_float("clustering_coefficient_thresh", 0, max(clustering_coefficient.values()) if clustering_coefficient else 0, log=False)
 
-        active_nodes = {
-            feat for feat, imp in feature_contributions 
-            if imp >= node_imp_thresh
-            and node_strengths.get(feat, 0) >= strength_thresh 
-            and betweenness.get(feat, 0) >= betweenness_thresh
+        active_nodes_base = {
+            n for n, c in node_contributions.items() if c >= node_thresh and 
+            betweenness_centrality.get(n, 0) >= betweenness_thresh and 
+            clustering_coefficient.get(n, 0) >= clustering_thresh
         }
+        active_edges = {e for e, c in edge_contributions.items() if c >= edge_thresh}
+        features_in_edges = {f for edge in active_edges for f in edge}
+        final_active_features = active_nodes_base.union(features_in_edges)
         
-        updated_mech_to_features = {}
-        for mech, features in mechanism_to_features.items():
-            updated_features = [f for f in features if f in active_nodes]
-            if len(updated_features) > 1: updated_mech_to_features[mech] = updated_features
-        all_possible_edges = get_effective_edges(updated_mech_to_features)
-        
-        candidate_edges = []
-        for f1, f2, strength in interaction_strengths:
-            edge = tuple(sorted((f1, f2)))
-            if (strength >= edge_thresh and edge in all_possible_edges):
-                comm1 = node_to_community.get(f1, -1); comm2 = node_to_community.get(f2, -1)
-                same_community = (comm1 == comm2) and (comm1 != -1)
-                if same_community or np.random.random() < community_thresh:
-                    candidate_edges.append((f1, f2, strength))
-        
-        node_edge_count = {node: 0 for node in active_nodes}
-        strong_edges = set()
-        candidate_edges.sort(key=lambda x: x[2], reverse=True)
-        for f1, f2, strength in candidate_edges:
-            if f1 in node_edge_count and f2 in node_edge_count:
-                if node_edge_count[f1] < max_edges and node_edge_count[f2] < max_edges:
-                    strong_edges.add(tuple(sorted((f1, f2)))); node_edge_count[f1] += 1; node_edge_count[f2] += 1
-        
-        final_mech_features = {}
-        for mech, features in updated_mech_to_features.items():
-            features_with_edges = {f for edge in strong_edges for f in edge if f in features}
-            final_features = [f for f in features if f in features_with_edges]
-            if len(final_features) > 1: final_mech_features[mech] = final_features
-        
-        final_nodes = {f for features in final_mech_features.values() for f in features}
-        graph_size = len(final_nodes) + len(strong_edges)
+        interaction_graph = nx.Graph()
+        interaction_graph.add_nodes_from(final_active_features)
+        mechanism_edges = {
+            edge for group in mechanism_groups 
+            for edge in itertools.combinations(sorted([f for f in group if f in final_active_features]), 2)
+        }
+        interaction_graph.add_edges_from(mechanism_edges.union(active_edges))
+        interaction_graph.remove_nodes_from(list(nx.isolates(interaction_graph)))
 
-        if not final_mech_features or not final_nodes:
-            trial.set_user_attr("final_nodes", [])
-            trial.set_user_attr("strong_edges", set())
-            trial.set_user_attr("final_mech_features", {})
-            return 0.0, len(X_train.columns) + len(initial_edges)
+        if interaction_graph.number_of_nodes() > 0:
+            communities = nx.community.greedy_modularity_communities(interaction_graph)
+            filtered_constraints = [list(c) for c in communities if len(c) > 1]
+        else:
+            filtered_constraints = []
+
+        if not final_active_features:
+            return 0.0, 0
+
+        # --- Stratified K-Fold Cross-Validation ---
+        skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+        cv_scores = []
+        X_train_sub = X_train_full[sorted(list(final_active_features))]
         
-        constraints = create_interaction_constraints(final_mech_features, list(final_nodes))
-        
-        model = copy.deepcopy(ML_MODEL)
-        model.set_params(interaction_constraints=constraints)
-        X_train_sub = X_train[list(final_nodes)]; X_val_sub = X_val[list(final_nodes)]
-        model.fit(X_train_sub, y_train, eval_set=[(X_val_sub, y_val)], callbacks=CALLBACKS)
-        val_pred = model.predict_proba(X_val_sub)[:, 1] if METRIC != 'accuracy' else model.predict(X_val_sub)
-        val_score = roc_auc_score(y_val, val_pred) if METRIC != 'accuracy' else accuracy_score(y_val, val_pred)
-        trial.set_user_attr("final_nodes", list(final_nodes))
-        trial.set_user_attr("strong_edges", strong_edges)
-        trial.set_user_attr("final_mech_features", final_mech_features)
+        y_train_full_np = y_train_full.values if isinstance(y_train_full, pd.Series) else y_train_full
+
+        for train_idx, val_idx in skf.split(X_train_sub, y_train_full_np):
+            X_train_fold, X_val_fold = X_train_sub.iloc[train_idx], X_train_sub.iloc[val_idx]
+            y_train_fold, y_val_fold = y_train_full_np[train_idx], y_train_full_np[val_idx]
+            
+            model = copy.deepcopy(ML_MODEL)
+            model.set_params(interaction_constraints=filtered_constraints)
+            model.fit(X_train_fold, y_train_fold, eval_set=[(X_val_fold, y_val_fold)], verbose=False)
+            
+            if METRIC == "auc":
+                val_pred = model.predict_proba(X_val_fold)[:, 1]
+                score = roc_auc_score(y_val_fold, val_pred)
+            else: # accuracy
+                val_pred = model.predict(X_val_fold)
+                score = accuracy_score(y_val_fold, val_pred)
+            cv_scores.append(score)
+        val_score = np.mean(cv_scores)
+        # --- End CV ---
+
+        num_nodes = len(final_active_features)
+        num_edges = sum(len(group) * (len(group) - 1) // 2 for group in filtered_constraints)
+        graph_size = num_nodes + num_edges
+        trial.set_user_attr("active_nodes", list(final_active_features))
+        trial.set_user_attr("filtered_constraints", filtered_constraints)
         return val_score, graph_size
 
-    # --- Run Optuna Study ---
-    optuna.logging.set_verbosity(optuna.logging.CRITICAL)
-    study = optuna.create_study(directions=["maximize", "minimize"], sampler=optuna.samplers.GPSampler())
-    study.optimize(objective, n_trials=100, n_jobs=-1, show_progress_bar=True)
+    optuna.logging.set_verbosity(optuna.logging.WARNING)
+    study = optuna.create_study(directions=["maximize", "minimize"])
+    study.optimize(objective, n_trials=N_TRIALS, n_jobs=-1, show_progress_bar=True)
+    print(f"\nFound {len(study.best_trials)} best trials on the Pareto front:")
+    best_trial = max(study.best_trials, key=lambda t: t.values[0] - t.values[1] * 0.00002)
+    best_score, best_size = best_trial.values
+    print(f"Selected trial: {best_trial.number}, Score: {best_score:.4f}, Size: {best_size}")
 
-    # Visualize Pareto front
-    all_trials = [t for t in study.trials if t.values is not None]
-    pareto_trials = study.best_trials
-    visualize_pareto_front(
-        scores=[t.values[0] for t in all_trials],
-        graph_sizes=[t.values[1] for t in all_trials],
-        pareto_scores=[t.values[0] for t in pareto_trials],
-        pareto_graph_sizes=[t.values[1] for t in pareto_trials],
-    )
-        
-    best_trial = max(study.best_trials, key=lambda t: (t.values[0], -t.values[1]))
-    best_val_score, graph_size = best_trial.values
-    print(f"\nBest trial score: {best_val_score:.4f} with Graph Size {int(graph_size)}.")
+    scores = [t.values[0] for t in study.trials if t.values]
+    graph_sizes = [t.values[1] for t in study.trials if t.values]
+    pareto_scores = [t.values[0] for t in study.best_trials]
+    pareto_graph_sizes = [t.values[1] for t in study.best_trials]
+    visualize_pareto_front(scores, graph_sizes, pareto_scores, pareto_graph_sizes, best_score, best_size)
+
+    active_nodes = set(best_trial.user_attrs["active_nodes"])
+    final_constraints = best_trial.user_attrs["filtered_constraints"]
+    visualize_optimized_graph(active_nodes, final_constraints)
     
-    # --- Finalization ---
-    final_nodes = best_trial.user_attrs["final_nodes"]
-    final_edges = best_trial.user_attrs["strong_edges"]
-    final_mechanisms = best_trial.user_attrs["final_mech_features"]
-    visualize_optimized_graph(final_nodes, final_edges)
-    return final_mechanisms
+    return active_nodes, final_constraints
