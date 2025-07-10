@@ -441,14 +441,6 @@ def save_interpretation_report(interpretation, output_file):
     # Convert Pydantic model to dict, excluding non-serializable fields
     report_dict = interpretation.model_dump(exclude_unset=True)
     
-    # Add metadata
-    report_dict['metadata'] = {
-        'generated_date': pd.Timestamp.now().isoformat(),
-        'model': str(LLM_MODEL),  # Convert to string to ensure serializability
-        'dataset': DATASET_NAME,
-        'target': TARGET_COL
-    }
-    
     # Save to JSON with pretty formatting
     with open(output_file, 'w') as f:
         json.dump(report_dict, f, indent=2, default=str)

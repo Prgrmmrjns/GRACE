@@ -260,11 +260,5 @@
     "Monitor and actively correct lactic acid, kidney, liver, and sodium abnormalities.",
     "Enhance surveillance and prevention of infection, especially in elderly and immunocompromised.",
     "Integrate monitoring to anticipate and treat interacting risks (e.g., combined infection and hypoperfusion, or metabolic/organ failures)."
-  ],
-  "metadata": {
-    "generated_date": "2025-07-10T02:43:20.392770",
-    "model": "OpenAIChat(id='gpt-4.1', name='OpenAIChat', provider='OpenAI', supports_native_structured_outputs=True, supports_json_schema_outputs=False, _function_call_stack=None, _tool_choice=None, system_prompt=None, instructions=None, tool_message_role='tool', assistant_message_role='assistant', store=None, reasoning_effort=None, metadata=None, frequency_penalty=None, logit_bias=None, logprobs=None, top_logprobs=None, max_tokens=None, max_completion_tokens=None, modalities=None, audio=None, presence_penalty=None, seed=None, stop=None, temperature=None, user=None, top_p=None, extra_headers=None, extra_query=None, request_params=None, api_key='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', organization=None, base_url=None, timeout=None, max_retries=None, default_headers=None, default_query=None, http_client=None, client_params=None)",
-    "dataset": "mimic",
-    "target": "mortality_flag"
-  }
+  ]
 }
