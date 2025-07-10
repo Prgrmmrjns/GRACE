@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="node" attr.name="labels" attr.type="string"/>
+<graph edgedefault="undirected"><node id="CDRSB">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="FDG">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="PTAU">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="MMSCORE">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="CDGLOBAL">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="CLOCKSCOR">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="ADASQ4">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="CATVEGESC">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="CATVGPERS">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="TRABSCOR">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="BNTTOTAL">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="mPACCdigit">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="EcogPtPlan">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="NPICSEV">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="ADAS13">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="RAVLT_immediate">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="VSPULSE">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="ABETA40">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="Ventricles">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="PTGENDER">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="PTRACCAT">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<node id="VSWEIGHT">
+  <data key="d0">Amyloid, Cognitive, Functional/Subjective, Metabolic, Neurodegenerative, Neuropsychiatric, Risk Factors, Tau/Neurodegenerative, Vascular/Cardiometabolic</data>
+</node>
+<edge source="CDRSB" target="FDG"/>
+<edge source="CDRSB" target="PTAU"/>
+<edge source="CDRSB" target="MMSCORE"/>
+<edge source="CDRSB" target="CDGLOBAL"/>
+<edge source="CDRSB" target="CLOCKSCOR"/>
+<edge source="CDRSB" target="ADASQ4"/>
+<edge source="CDRSB" target="CATVEGESC"/>
+<edge source="CDRSB" target="CATVGPERS"/>
+<edge source="CDRSB" target="TRABSCOR"/>
+<edge source="CDRSB" target="BNTTOTAL"/>
+<edge source="CDRSB" target="mPACCdigit"/>
+<edge source="CDRSB" target="EcogPtPlan"/>
+<edge source="CDRSB" target="NPICSEV"/>
+<edge source="CDRSB" target="ADAS13"/>
+<edge source="CDRSB" target="RAVLT_immediate"/>
+<edge source="CDRSB" target="VSPULSE"/>
+<edge source="CDRSB" target="ABETA40"/>
+<edge source="CDRSB" target="Ventricles"/>
+<edge source="CDRSB" target="PTGENDER"/>
+<edge source="CDRSB" target="PTRACCAT"/>
+<edge source="CDRSB" target="VSWEIGHT"/>
+<edge source="FDG" target="PTAU"/>
+<edge source="FDG" target="MMSCORE"/>
+<edge source="FDG" target="CDGLOBAL"/>
+<edge source="FDG" target="CLOCKSCOR"/>
+<edge source="FDG" target="ADASQ4"/>
+<edge source="FDG" target="CATVEGESC"/>
+<edge source="FDG" target="CATVGPERS"/>
+<edge source="FDG" target="TRABSCOR"/>
+<edge source="FDG" target="BNTTOTAL"/>
+<edge source="FDG" target="mPACCdigit"/>
+<edge source="FDG" target="EcogPtPlan"/>
+<edge source="FDG" target="NPICSEV"/>
+<edge source="FDG" target="ADAS13"/>
+<edge source="FDG" target="RAVLT_immediate"/>
+<edge source="FDG" target="VSPULSE"/>
+<edge source="FDG" target="ABETA40"/>
+<edge source="FDG" target="Ventricles"/>
+<edge source="FDG" target="PTGENDER"/>
+<edge source="FDG" target="PTRACCAT"/>
+<edge source="FDG" target="VSWEIGHT"/>
+<edge source="PTAU" target="MMSCORE"/>
+<edge source="PTAU" target="CDGLOBAL"/>
+<edge source="PTAU" target="CLOCKSCOR"/>
+<edge source="PTAU" target="ADASQ4"/>
+<edge source="PTAU" target="CATVEGESC"/>
+<edge source="PTAU" target="CATVGPERS"/>
+<edge source="PTAU" target="TRABSCOR"/>
+<edge source="PTAU" target="BNTTOTAL"/>
+<edge source="PTAU" target="mPACCdigit"/>
+<edge source="PTAU" target="EcogPtPlan"/>
+<edge source="PTAU" target="NPICSEV"/>
+<edge source="PTAU" target="ADAS13"/>
+<edge source="PTAU" target="RAVLT_immediate"/>
+<edge source="PTAU" target="VSPULSE"/>
+<edge source="PTAU" target="ABETA40"/>
+<edge source="PTAU" target="Ventricles"/>
+<edge source="PTAU" target="PTGENDER"/>
+<edge source="PTAU" target="PTRACCAT"/>
+<edge source="PTAU" target="VSWEIGHT"/>
+<edge source="MMSCORE" target="CDGLOBAL"/>
+<edge source="MMSCORE" target="CLOCKSCOR"/>
+<edge source="MMSCORE" target="ADASQ4"/>
+<edge source="MMSCORE" target="CATVEGESC"/>
+<edge source="MMSCORE" target="CATVGPERS"/>
+<edge source="MMSCORE" target="TRABSCOR"/>
+<edge source="MMSCORE" target="BNTTOTAL"/>
+<edge source="MMSCORE" target="mPACCdigit"/>
+<edge source="MMSCORE" target="EcogPtPlan"/>
+<edge source="MMSCORE" target="NPICSEV"/>
+<edge source="MMSCORE" target="ADAS13"/>
+<edge source="MMSCORE" target="RAVLT_immediate"/>
+<edge source="MMSCORE" target="VSPULSE"/>
+<edge source="MMSCORE" target="ABETA40"/>
+<edge source="MMSCORE" target="Ventricles"/>
+<edge source="MMSCORE" target="PTGENDER"/>
+<edge source="MMSCORE" target="PTRACCAT"/>
+<edge source="MMSCORE" target="VSWEIGHT"/>
+<edge source="CDGLOBAL" target="CLOCKSCOR"/>
+<edge source="CDGLOBAL" target="ADASQ4"/>
+<edge source="CDGLOBAL" target="CATVEGESC"/>
+<edge source="CDGLOBAL" target="CATVGPERS"/>
+<edge source="CDGLOBAL" target="TRABSCOR"/>
+<edge source="CDGLOBAL" target="BNTTOTAL"/>
+<edge source="CDGLOBAL" target="mPACCdigit"/>
+<edge source="CDGLOBAL" target="EcogPtPlan"/>
+<edge source="CDGLOBAL" target="NPICSEV"/>
+<edge source="CDGLOBAL" target="ADAS13"/>
+<edge source="CDGLOBAL" target="RAVLT_immediate"/>
+<edge source="CDGLOBAL" target="VSPULSE"/>
+<edge source="CDGLOBAL" target="ABETA40"/>
+<edge source="CDGLOBAL" target="Ventricles"/>
+<edge source="CDGLOBAL" target="PTGENDER"/>
+<edge source="CDGLOBAL" target="PTRACCAT"/>
+<edge source="CDGLOBAL" target="VSWEIGHT"/>
+<edge source="CLOCKSCOR" target="ADASQ4"/>
+<edge source="CLOCKSCOR" target="CATVEGESC"/>
+<edge source="CLOCKSCOR" target="CATVGPERS"/>
+<edge source="CLOCKSCOR" target="TRABSCOR"/>
+<edge source="CLOCKSCOR" target="BNTTOTAL"/>
+<edge source="CLOCKSCOR" target="mPACCdigit"/>
+<edge source="CLOCKSCOR" target="EcogPtPlan"/>
+<edge source="CLOCKSCOR" target="NPICSEV"/>
+<edge source="CLOCKSCOR" target="ADAS13"/>
+<edge source="CLOCKSCOR" target="RAVLT_immediate"/>
+<edge source="CLOCKSCOR" target="VSPULSE"/>
+<edge source="CLOCKSCOR" target="ABETA40"/>
+<edge source="CLOCKSCOR" target="Ventricles"/>
+<edge source="CLOCKSCOR" target="PTGENDER"/>
+<edge source="CLOCKSCOR" target="PTRACCAT"/>
+<edge source="CLOCKSCOR" target="VSWEIGHT"/>
+<edge source="ADASQ4" target="CATVEGESC"/>
+<edge source="ADASQ4" target="CATVGPERS"/>
+<edge source="ADASQ4" target="TRABSCOR"/>
+<edge source="ADASQ4" target="BNTTOTAL"/>
+<edge source="ADASQ4" target="mPACCdigit"/>
+<edge source="ADASQ4" target="EcogPtPlan"/>
+<edge source="ADASQ4" target="NPICSEV"/>
+<edge source="ADASQ4" target="ADAS13"/>
+<edge source="ADASQ4" target="RAVLT_immediate"/>
+<edge source="ADASQ4" target="VSPULSE"/>
+<edge source="ADASQ4" target="ABETA40"/>
+<edge source="ADASQ4" target="Ventricles"/>
+<edge source="ADASQ4" target="PTGENDER"/>
+<edge source="ADASQ4" target="PTRACCAT"/>
+<edge source="ADASQ4" target="VSWEIGHT"/>
+<edge source="CATVEGESC" target="CATVGPERS"/>
+<edge source="CATVEGESC" target="TRABSCOR"/>
+<edge source="CATVEGESC" target="BNTTOTAL"/>
+<edge source="CATVEGESC" target="mPACCdigit"/>
+<edge source="CATVEGESC" target="EcogPtPlan"/>
+<edge source="CATVEGESC" target="NPICSEV"/>
+<edge source="CATVEGESC" target="ADAS13"/>
+<edge source="CATVEGESC" target="RAVLT_immediate"/>
+<edge source="CATVEGESC" target="VSPULSE"/>
+<edge source="CATVEGESC" target="ABETA40"/>
+<edge source="CATVEGESC" target="Ventricles"/>
+<edge source="CATVEGESC" target="PTGENDER"/>
+<edge source="CATVEGESC" target="PTRACCAT"/>
+<edge source="CATVEGESC" target="VSWEIGHT"/>
+<edge source="CATVGPERS" target="TRABSCOR"/>
+<edge source="CATVGPERS" target="BNTTOTAL"/>
+<edge source="CATVGPERS" target="mPACCdigit"/>
+<edge source="CATVGPERS" target="EcogPtPlan"/>
+<edge source="CATVGPERS" target="NPICSEV"/>
+<edge source="CATVGPERS" target="ADAS13"/>
+<edge source="CATVGPERS" target="RAVLT_immediate"/>
+<edge source="CATVGPERS" target="VSPULSE"/>
+<edge source="CATVGPERS" target="ABETA40"/>
+<edge source="CATVGPERS" target="Ventricles"/>
+<edge source="CATVGPERS" target="PTGENDER"/>
+<edge source="CATVGPERS" target="PTRACCAT"/>
+<edge source="CATVGPERS" target="VSWEIGHT"/>
+<edge source="TRABSCOR" target="BNTTOTAL"/>
+<edge source="TRABSCOR" target="mPACCdigit"/>
+<edge source="TRABSCOR" target="EcogPtPlan"/>
+<edge source="TRABSCOR" target="NPICSEV"/>
+<edge source="TRABSCOR" target="ADAS13"/>
+<edge source="TRABSCOR" target="RAVLT_immediate"/>
+<edge source="TRABSCOR" target="VSPULSE"/>
+<edge source="TRABSCOR" target="ABETA40"/>
+<edge source="TRABSCOR" target="Ventricles"/>
+<edge source="TRABSCOR" target="PTGENDER"/>
+<edge source="TRABSCOR" target="PTRACCAT"/>
+<edge source="TRABSCOR" target="VSWEIGHT"/>
+<edge source="BNTTOTAL" target="mPACCdigit"/>
+<edge source="BNTTOTAL" target="EcogPtPlan"/>
+<edge source="BNTTOTAL" target="NPICSEV"/>
+<edge source="BNTTOTAL" target="ADAS13"/>
+<edge source="BNTTOTAL" target="RAVLT_immediate"/>
+<edge source="BNTTOTAL" target="VSPULSE"/>
+<edge source="BNTTOTAL" target="ABETA40"/>
+<edge source="BNTTOTAL" target="Ventricles"/>
+<edge source="BNTTOTAL" target="PTGENDER"/>
+<edge source="BNTTOTAL" target="PTRACCAT"/>
+<edge source="BNTTOTAL" target="VSWEIGHT"/>
+<edge source="mPACCdigit" target="EcogPtPlan"/>
+<edge source="mPACCdigit" target="NPICSEV"/>
+<edge source="mPACCdigit" target="ADAS13"/>
+<edge source="mPACCdigit" target="RAVLT_immediate"/>
+<edge source="mPACCdigit" target="VSPULSE"/>
+<edge source="mPACCdigit" target="ABETA40"/>
+<edge source="mPACCdigit" target="Ventricles"/>
+<edge source="mPACCdigit" target="PTGENDER"/>
+<edge source="mPACCdigit" target="PTRACCAT"/>
+<edge source="mPACCdigit" target="VSWEIGHT"/>
+<edge source="EcogPtPlan" target="NPICSEV"/>
+<edge source="EcogPtPlan" target="ADAS13"/>
+<edge source="EcogPtPlan" target="RAVLT_immediate"/>
+<edge source="EcogPtPlan" target="VSPULSE"/>
+<edge source="EcogPtPlan" target="ABETA40"/>
+<edge source="EcogPtPlan" target="Ventricles"/>
+<edge source="EcogPtPlan" target="PTGENDER"/>
+<edge source="EcogPtPlan" target="PTRACCAT"/>
+<edge source="EcogPtPlan" target="VSWEIGHT"/>
+<edge source="NPICSEV" target="ADAS13"/>
+<edge source="NPICSEV" target="RAVLT_immediate"/>
+<edge source="NPICSEV" target="VSPULSE"/>
+<edge source="NPICSEV" target="ABETA40"/>
+<edge source="NPICSEV" target="Ventricles"/>
+<edge source="NPICSEV" target="PTGENDER"/>
+<edge source="NPICSEV" target="PTRACCAT"/>
+<edge source="NPICSEV" target="VSWEIGHT"/>
+<edge source="ADAS13" target="RAVLT_immediate"/>
+<edge source="ADAS13" target="VSPULSE"/>
+<edge source="ADAS13" target="ABETA40"/>
+<edge source="ADAS13" target="Ventricles"/>
+<edge source="ADAS13" target="PTGENDER"/>
+<edge source="ADAS13" target="PTRACCAT"/>
+<edge source="ADAS13" target="VSWEIGHT"/>
+<edge source="RAVLT_immediate" target="VSPULSE"/>
+<edge source="RAVLT_immediate" target="ABETA40"/>
+<edge source="RAVLT_immediate" target="Ventricles"/>
+<edge source="RAVLT_immediate" target="PTGENDER"/>
+<edge source="RAVLT_immediate" target="PTRACCAT"/>
+<edge source="RAVLT_immediate" target="VSWEIGHT"/>
+<edge source="VSPULSE" target="ABETA40"/>
+<edge source="VSPULSE" target="Ventricles"/>
+<edge source="VSPULSE" target="PTGENDER"/>
+<edge source="VSPULSE" target="PTRACCAT"/>
+<edge source="VSPULSE" target="VSWEIGHT"/>
+<edge source="ABETA40" target="Ventricles"/>
+<edge source="ABETA40" target="PTGENDER"/>
+<edge source="ABETA40" target="PTRACCAT"/>
+<edge source="ABETA40" target="VSWEIGHT"/>
+<edge source="Ventricles" target="PTGENDER"/>
+<edge source="Ventricles" target="PTRACCAT"/>
+<edge source="Ventricles" target="VSWEIGHT"/>
+<edge source="PTGENDER" target="PTRACCAT"/>
+<edge source="PTGENDER" target="VSWEIGHT"/>
+<edge source="PTRACCAT" target="VSWEIGHT"/>
+</graph></graphml>

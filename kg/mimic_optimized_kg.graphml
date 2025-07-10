@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="node" attr.name="labels" attr.type="string"/>
+<graph edgedefault="undirected"><node id="HRbpm">
+  <data key="d0">Multi-Organ Failure</data>
+</node>
+<node id="PO2ArterialmmHg">
+  <data key="d0">Multi-Organ Failure</data>
+</node>
+<node id="BUNCreatinine">
+  <data key="d0">Multi-Organ Failure</data>
+</node>
+<node id="Creatinineserum">
+  <data key="d0">Circulatory, Metabolic, Neurological</data>
+</node>
+<node id="PlateletCount">
+  <data key="d0">Circulatory, Metabolic, Neurological</data>
+</node>
+<node id="Norepinephrinemg_avg">
+  <data key="d0">Circulatory, Metabolic, Neurological</data>
+</node>
+<node id="NMED">
+  <data key="d0">Circulatory, Metabolic, Neurological</data>
+</node>
+<node id="eGFR">
+  <data key="d0">Circulatory, Metabolic, Neurological</data>
+</node>
+<node id="MotorResponse">
+  <data key="d0">Circulatory, Metabolic, Neurological</data>
+</node>
+<node id="GCS">
+  <data key="d0">Circulatory, Metabolic, Neurological</data>
+</node>
+<node id="Calciumnon-ionized">
+  <data key="d0">Circulatory, Metabolic, Neurological</data>
+</node>
+<node id="PCO2ArterialmmHg">
+  <data key="d0">Inflammatory, Respiratory</data>
+</node>
+<node id="BrainNatiureticPeptideBNP">
+  <data key="d0">Inflammatory, Respiratory</data>
+</node>
+<node id="CReactiveProteinCRP">
+  <data key="d0">Inflammatory, Respiratory</data>
+</node>
+<node id="CKCPK">
+  <data key="d0">Cardiac</data>
+</node>
+<node id="BMI">
+  <data key="d0">Cardiac</data>
+</node>
+<node id="NSURG">
+  <data key="d0">Cardiac</data>
+</node>
+<node id="Hematocritserum">
+  <data key="d0">Risk Factors</data>
+</node>
+<node id="LDH">
+  <data key="d0">Risk Factors</data>
+</node>
+<node id="anchor_age">
+  <data key="d0">Risk Factors</data>
+</node>
+<node id="diabetes">
+  <data key="d0">Risk Factors</data>
+</node>
+<node id="BUNAlbumin">
+  <data key="d0">Risk Factors</data>
+</node>
+<node id="Sodiumserum">
+  <data key="d0">Coagulopathy</data>
+</node>
+<node id="LacticAcid">
+  <data key="d0">Coagulopathy</data>
+</node>
+<node id="FoleymL_sum">
+  <data key="d0">Coagulopathy</data>
+</node>
+<node id="VSURG">
+  <data key="d0">Coagulopathy</data>
+</node>
+<edge source="HRbpm" target="PO2ArterialmmHg"/>
+<edge source="HRbpm" target="BUNCreatinine"/>
+<edge source="PO2ArterialmmHg" target="BUNCreatinine"/>
+<edge source="Creatinineserum" target="PlateletCount"/>
+<edge source="Creatinineserum" target="Norepinephrinemg_avg"/>
+<edge source="Creatinineserum" target="NMED"/>
+<edge source="Creatinineserum" target="eGFR"/>
+<edge source="Creatinineserum" target="MotorResponse"/>
+<edge source="Creatinineserum" target="GCS"/>
+<edge source="Creatinineserum" target="Calciumnon-ionized"/>
+<edge source="PlateletCount" target="Norepinephrinemg_avg"/>
+<edge source="PlateletCount" target="NMED"/>
+<edge source="PlateletCount" target="eGFR"/>
+<edge source="PlateletCount" target="MotorResponse"/>
+<edge source="PlateletCount" target="GCS"/>
+<edge source="PlateletCount" target="Calciumnon-ionized"/>
+<edge source="Norepinephrinemg_avg" target="NMED"/>
+<edge source="Norepinephrinemg_avg" target="eGFR"/>
+<edge source="Norepinephrinemg_avg" target="MotorResponse"/>
+<edge source="Norepinephrinemg_avg" target="GCS"/>
+<edge source="Norepinephrinemg_avg" target="Calciumnon-ionized"/>
+<edge source="NMED" target="eGFR"/>
+<edge source="NMED" target="MotorResponse"/>
+<edge source="NMED" target="GCS"/>
+<edge source="NMED" target="Calciumnon-ionized"/>
+<edge source="eGFR" target="MotorResponse"/>
+<edge source="eGFR" target="GCS"/>
+<edge source="eGFR" target="Calciumnon-ionized"/>
+<edge source="MotorResponse" target="GCS"/>
+<edge source="MotorResponse" target="Calciumnon-ionized"/>
+<edge source="GCS" target="Calciumnon-ionized"/>
+<edge source="PCO2ArterialmmHg" target="BrainNatiureticPeptideBNP"/>
+<edge source="PCO2ArterialmmHg" target="CReactiveProteinCRP"/>
+<edge source="BrainNatiureticPeptideBNP" target="CReactiveProteinCRP"/>
+<edge source="CKCPK" target="BMI"/>
+<edge source="CKCPK" target="NSURG"/>
+<edge source="BMI" target="NSURG"/>
+<edge source="Hematocritserum" target="LDH"/>
+<edge source="Hematocritserum" target="anchor_age"/>
+<edge source="Hematocritserum" target="diabetes"/>
+<edge source="Hematocritserum" target="BUNAlbumin"/>
+<edge source="LDH" target="anchor_age"/>
+<edge source="LDH" target="diabetes"/>
+<edge source="LDH" target="BUNAlbumin"/>
+<edge source="anchor_age" target="diabetes"/>
+<edge source="anchor_age" target="BUNAlbumin"/>
+<edge source="diabetes" target="BUNAlbumin"/>
+<edge source="Sodiumserum" target="LacticAcid"/>
+<edge source="Sodiumserum" target="FoleymL_sum"/>
+<edge source="Sodiumserum" target="VSURG"/>
+<edge source="LacticAcid" target="FoleymL_sum"/>
+<edge source="LacticAcid" target="VSURG"/>
+<edge source="FoleymL_sum" target="VSURG"/>
+</graph></graphml>

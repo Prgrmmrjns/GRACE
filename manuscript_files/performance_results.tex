@@ -1,0 +1,16 @@
+\begin{table}[h]
+\centering
+\begin{tabular}{l|cc|c|cc|c}
+\hline
+& \multicolumn{3}{c|}{ADNI (Accuracy)} & \multicolumn{3}{c}{MIMIC (AUC)} \\
+Method & Mean & Std & Avg. Features & Mean & Std & Avg. Features \\
+\hline
+No Processing & 0.9433 & 0.0098 & 99.0 & 0.8122 & 0.0070 & 67.0 \\
+PCA & 0.7932 & 0.0132 & 49.0 & 0.7683 & 0.0147 & 33.0 \\
+RFE & 0.9433 & 0.0081 & 20.0 & 0.8035 & 0.0094 & 20.0 \\
+GRACE & 0.9475 & 0.0147 & 10.0 & 0.7981 & 0.0118 & 18.4 \\
+\hline
+\end{tabular}
+\caption{Comparison of dimensionality reduction techniques - Performance metrics and feature counts}
+\label{tab:performance_comparison}
+\end{table}

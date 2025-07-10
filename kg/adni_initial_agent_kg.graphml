@@ -1,1048 +1,717 @@
 <?xml version='1.0' encoding='utf-8'?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d2" for="edge" attr.name="relationship" attr.type="string"/>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d2" for="node" attr.name="feature_count" attr.type="long"/>
 <key id="d1" for="node" attr.name="description" attr.type="string"/>
 <key id="d0" for="node" attr.name="node_type" attr.type="string"/>
-<graph edgedefault="undirected"><node id="Amyloid Plaque Deposition">
-  <data key="d0">intermediate</data>
-  <data key="d1">Accumulation of amyloid-beta peptides forming plaques in the brain, a hallmark of Alzheimer's disease pathology.</data>
+<graph edgedefault="directed"><node id="DIAGNOSIS">
+  <data key="d0">target</data>
 </node>
-<node id="Tau Pathology and Neurodegeneration">
-  <data key="d0">intermediate</data>
-  <data key="d1">Abnormal tau protein phosphorylation leading to neurofibrillary tangles and neuronal loss.</data>
-</node>
-<node id="Cognitive Decline and Memory Impairment">
-  <data key="d0">intermediate</data>
-  <data key="d1">Progressive impairment in memory, executive function, and other cognitive domains characteristic of Alzheimer's disease.</data>
-</node>
-<node id="Neuropsychiatric Symptoms">
-  <data key="d0">intermediate</data>
-  <data key="d1">Behavioral and psychiatric symptoms such as depression, agitation, and hallucinations associated with Alzheimer's disease.</data>
-</node>
-<node id="Brain Atrophy and Structural Changes">
-  <data key="d0">intermediate</data>
-  <data key="d1">Loss of brain volume and structural changes including hippocampal and ventricular atrophy detected by MRI.</data>
-</node>
-<node id="Glucose Hypometabolism and Functional Brain Changes">
-  <data key="d0">intermediate</data>
-  <data key="d1">Reduced brain glucose metabolism and functional impairments detected by FDG-PET imaging.</data>
-</node>
-<node id="Demographic and Vascular Risk Factors">
-  <data key="d0">intermediate</data>
-  <data key="d1">Age, education, ethnicity, gender, vascular health, and other demographic factors influencing Alzheimer's disease risk.</data>
+<node id="Amyloid Beta Accumulation and Plaque Formation">
+  <data key="d0">mechanism</data>
+  <data key="d1">Alzheimer’s disease is centrally characterized by the pathological accumulation of amyloid beta (Aβ) peptides, particularly Aβ42, in the brain. These peptides aggregate to form insoluble plaques, which disrupt neuronal communication and trigger a cascade of neurotoxic events, including oxidative stress, inflammation, and synaptic dysfunction. In ADNI data, this process is reflected by reduced CSF Aβ42 levels and increased amyloid tracer uptake on PET imaging.</data>
+  <data key="d2">30</data>
 </node>
 <node id="AGE">
-  <data key="d0">input</data>
-  <data key="d1">Participant's age, a key demographic risk factor for Alzheimer's disease.</data>
-</node>
-<node id="PTEDUCAT">
-  <data key="d0">input</data>
-  <data key="d1">Participant's education level, influencing cognitive reserve and Alzheimer's risk.</data>
-</node>
-<node id="PTETHCAT">
-  <data key="d0">input</data>
-  <data key="d1">Participant's ethnicity category, relevant for population diversity and risk assessment.</data>
-</node>
-<node id="PTGENDER">
-  <data key="d0">input</data>
-  <data key="d1">Participant's gender, a demographic variable influencing Alzheimer's disease risk.</data>
-</node>
-<node id="PTMARRY">
-  <data key="d0">input</data>
-  <data key="d1">Participant's marital status, a demographic variable.</data>
-</node>
-<node id="PTRACCAT">
-  <data key="d0">input</data>
-  <data key="d1">Participant's race category, relevant for risk and population diversity.</data>
-</node>
-<node id="VSWEIGHT">
-  <data key="d0">input</data>
-  <data key="d1">Participant's weight in kilograms, reflecting general health status.</data>
-</node>
-<node id="VSHEIGHT">
-  <data key="d0">input</data>
-  <data key="d1">Participant's height in centimeters, reflecting general health status.</data>
-</node>
-<node id="VSBPSYS">
-  <data key="d0">input</data>
-  <data key="d1">Systolic blood pressure in mmHg, a vascular health indicator.</data>
-</node>
-<node id="VSBPDIA">
-  <data key="d0">input</data>
-  <data key="d1">Diastolic blood pressure in mmHg, a vascular health indicator.</data>
-</node>
-<node id="VSPULSE">
-  <data key="d0">input</data>
-  <data key="d1">Pulse rate in beats per minute, indicating cardiovascular function.</data>
-</node>
-<node id="VSRESP">
-  <data key="d0">input</data>
-  <data key="d1">Respiration rate, indicating respiratory function.</data>
-</node>
-<node id="MMSCORE">
-  <data key="d0">input</data>
-  <data key="d1">Mini-Mental State Examination score, a global cognitive assessment.</data>
-</node>
-<node id="MOCA">
-  <data key="d0">input</data>
-  <data key="d1">Montreal Cognitive Assessment score, a global cognitive screening test.</data>
-</node>
-<node id="CLOCKSCOR">
-  <data key="d0">input</data>
-  <data key="d1">Clock Drawing Test score, assessing visuospatial and executive function.</data>
-</node>
-<node id="COPYSCOR">
-  <data key="d0">input</data>
-  <data key="d1">Copy Test score, evaluating visuospatial abilities.</data>
-</node>
-<node id="AVTOT1">
-  <data key="d0">input</data>
-  <data key="d1">Auditory Verbal Learning Test trial 1 score, measuring immediate memory recall.</data>
-</node>
-<node id="AVTOT2">
-  <data key="d0">input</data>
-  <data key="d1">Auditory Verbal Learning Test trial 2 score, measuring immediate memory recall.</data>
-</node>
-<node id="AVTOT3">
-  <data key="d0">input</data>
-  <data key="d1">Auditory Verbal Learning Test trial 3 score, measuring immediate memory recall.</data>
-</node>
-<node id="AVTOT4">
-  <data key="d0">input</data>
-  <data key="d1">Auditory Verbal Learning Test trial 4 score, measuring immediate memory recall.</data>
-</node>
-<node id="AVTOT5">
-  <data key="d0">input</data>
-  <data key="d1">Auditory Verbal Learning Test trial 5 score, measuring immediate memory recall.</data>
-</node>
-<node id="AVTOT6">
-  <data key="d0">input</data>
-  <data key="d1">Auditory Verbal Learning Test trial 6 score, measuring immediate memory recall.</data>
-</node>
-<node id="AVTOTB">
-  <data key="d0">input</data>
-  <data key="d1">Auditory Verbal Learning Test total score across trials.</data>
-</node>
-<node id="DSPANFOR">
-  <data key="d0">input</data>
-  <data key="d1">Digit Span Forward test score, assessing attention and working memory.</data>
-</node>
-<node id="DSPANFLTH">
-  <data key="d0">input</data>
-  <data key="d1">Digit Span Forward length, assessing attention and working memory.</data>
-</node>
-<node id="DSPANBAC">
-  <data key="d0">input</data>
-  <data key="d1">Digit Span Backward test score, assessing working memory and executive function.</data>
-</node>
-<node id="DSPANBLTH">
-  <data key="d0">input</data>
-  <data key="d1">Digit Span Backward length, assessing working memory and executive function.</data>
-</node>
-<node id="CATANIMSC">
-  <data key="d0">input</data>
-  <data key="d1">Category Fluency for animals, measuring verbal fluency and executive control.</data>
-</node>
-<node id="CATANPERS">
-  <data key="d0">input</data>
-  <data key="d1">Category Fluency for persons, measuring verbal fluency and executive control.</data>
-</node>
-<node id="CATANINTR">
-  <data key="d0">input</data>
-  <data key="d1">Category Fluency for intrusions, measuring verbal fluency and executive control.</data>
-</node>
-<node id="CATVEGESC">
-  <data key="d0">input</data>
-  <data key="d1">Category Fluency for vegetables, measuring verbal fluency and executive control.</data>
-</node>
-<node id="CATVGPERS">
-  <data key="d0">input</data>
-  <data key="d1">Category Fluency for verbal group persons, measuring verbal fluency and executive control.</data>
-</node>
-<node id="CATVGINTR">
-  <data key="d0">input</data>
-  <data key="d1">Category Fluency for verbal group intrusions, measuring verbal fluency and executive control.</data>
-</node>
-<node id="TRAASCOR">
-  <data key="d0">input</data>
-  <data key="d1">Trail Making Test Part A score, assessing processing speed.</data>
-</node>
-<node id="TRABSCOR">
-  <data key="d0">input</data>
-  <data key="d1">Trail Making Test Part B score, assessing cognitive flexibility and executive function.</data>
-</node>
-<node id="DIGITSCOR">
-  <data key="d0">input</data>
-  <data key="d1">Digit Symbol Substitution Test score, assessing processing speed and attention.</data>
-</node>
-<node id="BNTTOTAL">
-  <data key="d0">input</data>
-  <data key="d1">Boston Naming Test total score, evaluating language and naming ability.</data>
-</node>
-<node id="AVDEL30MIN">
-  <data key="d0">input</data>
-  <data key="d1">Auditory Verbal Learning Test delayed recall after 30 minutes, assessing memory retention.</data>
-</node>
-<node id="AVDELTOT">
-  <data key="d0">input</data>
-  <data key="d1">Auditory Verbal Learning Test total delayed recall score.</data>
-</node>
-<node id="ANART">
-  <data key="d0">input</data>
-  <data key="d1">American National Adult Reading Test score, assessing premorbid intelligence.</data>
-</node>
-<node id="MINTTOTAL">
-  <data key="d0">input</data>
-  <data key="d1">Multilingual Naming Test total score, evaluating language function.</data>
-</node>
-<node id="NPIASEV">
-  <data key="d0">input</data>
-  <data key="d1">Neuropsychiatric Inventory Agitation severity score.</data>
-</node>
-<node id="NPIBSEV">
-  <data key="d0">input</data>
-  <data key="d1">Neuropsychiatric Inventory Depression severity score.</data>
-</node>
-<node id="NPICSEV">
-  <data key="d0">input</data>
-  <data key="d1">Neuropsychiatric Inventory Apathy severity score.</data>
-</node>
-<node id="NPIDSEV">
-  <data key="d0">input</data>
-  <data key="d1">Neuropsychiatric Inventory Delusions severity score.</data>
-</node>
-<node id="NPIESEV">
-  <data key="d0">input</data>
-  <data key="d1">Neuropsychiatric Inventory Elation severity score.</data>
-</node>
-<node id="NPIFSEV">
-  <data key="d0">input</data>
-  <data key="d1">Neuropsychiatric Inventory Disinhibition severity score.</data>
-</node>
-<node id="NPIGSEV">
-  <data key="d0">input</data>
-  <data key="d1">Neuropsychiatric Inventory Irritability severity score.</data>
-</node>
-<node id="NPIHSEV">
-  <data key="d0">input</data>
-  <data key="d1">Neuropsychiatric Inventory Hallucinations severity score.</data>
-</node>
-<node id="NPIISEV">
-  <data key="d0">input</data>
-  <data key="d1">Neuropsychiatric Inventory Indifference severity score.</data>
-</node>
-<node id="NPIJSEV">
-  <data key="d0">input</data>
-  <data key="d1">Neuropsychiatric Inventory Judgment severity score.</data>
-</node>
-<node id="NPIKSEV">
-  <data key="d0">input</data>
-  <data key="d1">Neuropsychiatric Inventory Sleep severity score.</data>
-</node>
-<node id="NPILSEV">
-  <data key="d0">input</data>
-  <data key="d1">Neuropsychiatric Inventory Appetite severity score.</data>
-</node>
-<node id="NPISCORE">
-  <data key="d0">input</data>
-  <data key="d1">Total Neuropsychiatric Inventory score.</data>
-</node>
-<node id="CDGLOBAL">
-  <data key="d0">input</data>
-  <data key="d1">Clinical Dementia Rating global score, assessing dementia severity.</data>
-</node>
-<node id="CDRSB">
-  <data key="d0">input</data>
-  <data key="d1">Clinical Dementia Rating sum of boxes score, assessing dementia severity.</data>
-</node>
-<node id="GDTOTAL">
-  <data key="d0">input</data>
-  <data key="d1">Geriatric Depression Scale total score, screening for depressive symptoms.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="ABETA40">
-  <data key="d0">input</data>
-  <data key="d1">CSF amyloid-beta 40 level, a biofluid biomarker related to amyloid pathology.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="ABETA42">
-  <data key="d0">input</data>
-  <data key="d1">CSF amyloid-beta 42 level, decreased levels indicate amyloid plaque deposition.</data>
-</node>
-<node id="TAU">
-  <data key="d0">input</data>
-  <data key="d1">Total tau protein level in CSF, indicating neurodegeneration.</data>
-</node>
-<node id="PTAU">
-  <data key="d0">input</data>
-  <data key="d1">Phosphorylated tau protein level in CSF, reflecting tau pathology.</data>
-</node>
-<node id="CDRSB.1">
-  <data key="d0">input</data>
-  <data key="d1">Additional Clinical Dementia Rating sum of boxes score.</data>
-</node>
-<node id="ADAS11">
-  <data key="d0">input</data>
-  <data key="d1">Alzheimer's Disease Assessment Scale-Cognitive Subscale 11, measuring cognitive impairment severity.</data>
-</node>
-<node id="ADAS13">
-  <data key="d0">input</data>
-  <data key="d1">Alzheimer's Disease Assessment Scale-Cognitive Subscale 13, measuring cognitive impairment severity.</data>
-</node>
-<node id="ADASQ4">
-  <data key="d0">input</data>
-  <data key="d1">Alzheimer's Disease Assessment Scale Q4 subscore.</data>
-</node>
-<node id="MMSE">
-  <data key="d0">input</data>
-  <data key="d1">Mini-Mental State Examination score, global cognitive function.</data>
-</node>
-<node id="RAVLT_immediate">
-  <data key="d0">input</data>
-  <data key="d1">Rey Auditory Verbal Learning Test immediate recall score.</data>
-</node>
-<node id="RAVLT_learning">
-  <data key="d0">input</data>
-  <data key="d1">Rey Auditory Verbal Learning Test learning score.</data>
-</node>
-<node id="RAVLT_forgetting">
-  <data key="d0">input</data>
-  <data key="d1">Rey Auditory Verbal Learning Test forgetting score.</data>
-</node>
-<node id="RAVLT_perc_forgetting">
-  <data key="d0">input</data>
-  <data key="d1">Rey Auditory Verbal Learning Test percent forgetting score.</data>
-</node>
-<node id="LDELTOTAL">
-  <data key="d0">input</data>
-  <data key="d1">Logical Memory Delayed Recall total score.</data>
-</node>
-<node id="FAQ">
-  <data key="d0">input</data>
-  <data key="d1">Functional Activities Questionnaire score, assessing daily living function.</data>
-</node>
-<node id="mPACCdigit">
-  <data key="d0">input</data>
-  <data key="d1">Modified Preclinical Alzheimer Cognitive Composite digit score.</data>
-</node>
-<node id="mPACCtrailsB">
-  <data key="d0">input</data>
-  <data key="d1">Modified Preclinical Alzheimer Cognitive Composite Trails B score.</data>
-</node>
-<node id="Ventricles">
-  <data key="d0">input</data>
-  <data key="d1">MRI measure of ventricular volume, indicating brain atrophy.</data>
-</node>
-<node id="Hippocampus">
-  <data key="d0">input</data>
-  <data key="d1">MRI measure of hippocampal volume, an early biomarker of Alzheimer's disease.</data>
-</node>
-<node id="WholeBrain">
-  <data key="d0">input</data>
-  <data key="d1">MRI measure of whole brain volume, reflecting neurodegeneration.</data>
-</node>
-<node id="Entorhinal">
-  <data key="d0">input</data>
-  <data key="d1">MRI measure of entorhinal cortex volume, an early site of AD pathology.</data>
-</node>
-<node id="Fusiform">
-  <data key="d0">input</data>
-  <data key="d1">MRI measure of fusiform gyrus volume, related to neurodegeneration.</data>
-</node>
-<node id="MidTemp">
-  <data key="d0">input</data>
-  <data key="d1">MRI measure of middle temporal lobe volume, related to neurodegeneration.</data>
-</node>
-<node id="ICV">
-  <data key="d0">input</data>
-  <data key="d1">Intracranial volume, used for normalization of brain volumes.</data>
-</node>
-<node id="FDG">
-  <data key="d0">input</data>
-  <data key="d1">FDG-PET measure of brain glucose metabolism, reduced in Alzheimer's disease.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="PIB">
-  <data key="d0">input</data>
-  <data key="d1">PIB-PET measure of amyloid plaque deposition.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="AV45">
-  <data key="d0">input</data>
-  <data key="d1">AV45-PET measure of amyloid plaque deposition.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="FBB">
-  <data key="d0">input</data>
-  <data key="d1">Florbetaben (FBB) PET measure of amyloid plaque deposition.</data>
+  <data key="d0">feature</data>
+</node>
+<node id="FDG">
+  <data key="d0">feature</data>
+</node>
+<node id="TAU">
+  <data key="d0">feature</data>
+</node>
+<node id="PTAU">
+  <data key="d0">feature</data>
+</node>
+<node id="MMSE">
+  <data key="d0">feature</data>
+</node>
+<node id="MMSCORE">
+  <data key="d0">feature</data>
+</node>
+<node id="ADAS11">
+  <data key="d0">feature</data>
+</node>
+<node id="ADAS13">
+  <data key="d0">feature</data>
+</node>
+<node id="ADASQ4">
+  <data key="d0">feature</data>
+</node>
+<node id="LDELTOTAL">
+  <data key="d0">feature</data>
+</node>
+<node id="CDRSB">
+  <data key="d0">feature</data>
+</node>
+<node id="CDRSB.1">
+  <data key="d0">feature</data>
+</node>
+<node id="CDGLOBAL">
+  <data key="d0">feature</data>
+</node>
+<node id="FAQ">
+  <data key="d0">feature</data>
+</node>
+<node id="RAVLT_immediate">
+  <data key="d0">feature</data>
+</node>
+<node id="RAVLT_learning">
+  <data key="d0">feature</data>
+</node>
+<node id="RAVLT_forgetting">
+  <data key="d0">feature</data>
+</node>
+<node id="RAVLT_perc_forgetting">
+  <data key="d0">feature</data>
+</node>
+<node id="Ventricles">
+  <data key="d0">feature</data>
+</node>
+<node id="Hippocampus">
+  <data key="d0">feature</data>
+</node>
+<node id="WholeBrain">
+  <data key="d0">feature</data>
+</node>
+<node id="Entorhinal">
+  <data key="d0">feature</data>
+</node>
+<node id="Fusiform">
+  <data key="d0">feature</data>
+</node>
+<node id="MidTemp">
+  <data key="d0">feature</data>
+</node>
+<node id="ICV">
+  <data key="d0">feature</data>
+</node>
+<node id="Tau Pathology and Neurofibrillary Tangle Formation">
+  <data key="d0">mechanism</data>
+  <data key="d1">Hyperphosphorylation of tau proteins leads to the formation of neurofibrillary tangles inside neurons. These tangles destabilize microtubules, impair axonal transport, and ultimately result in cell death. Elevated levels of total tau (TAU) and phosphorylated tau (PTAU) in CSF are hallmark biomarkers in AD, indicating ongoing neurodegeneration and correlating with cognitive impairment.</data>
+  <data key="d2">51</data>
+</node>
+<node id="MOCA">
+  <data key="d0">feature</data>
+</node>
+<node id="AVDEL30MIN">
+  <data key="d0">feature</data>
+</node>
+<node id="AVDELTOT">
+  <data key="d0">feature</data>
 </node>
 <node id="EcogPtMem">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition participant-reported memory decline.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogPtLang">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition participant-reported language decline.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogPtVisspat">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition participant-reported visuospatial decline.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogPtPlan">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition participant-reported planning decline.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogPtOrgan">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition participant-reported organization decline.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogPtDivatt">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition participant-reported divided attention decline.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogPtTotal">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition participant total score.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogSPMem">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition study partner-reported memory decline.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogSPLang">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition study partner-reported language decline.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogSPVisspat">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition study partner-reported visuospatial decline.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogSPPlan">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition study partner-reported planning decline.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogSPOrgan">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition study partner-reported organization decline.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogSPDivatt">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition study partner-reported divided attention decline.</data>
+  <data key="d0">feature</data>
 </node>
 <node id="EcogSPTotal">
-  <data key="d0">input</data>
-  <data key="d1">Everyday Cognition study partner total score.</data>
+  <data key="d0">feature</data>
 </node>
-<node id="DIAGNOSIS">
-  <data key="d0">target</data>
-  <data key="d1">The prediction target variable.</data>
+<node id="NPIASEV">
+  <data key="d0">feature</data>
 </node>
-<edge source="Amyloid Plaque Deposition" target="ABETA40">
-  <data key="d2">CSF amyloid-beta 40 levels relate to amyloid plaque formation in Alzheimer's disease.</data>
-</edge>
-<edge source="Amyloid Plaque Deposition" target="ABETA42">
-  <data key="d2">Lower CSF amyloid-beta 42 levels indicate amyloid plaque deposition, a hallmark of Alzheimer's disease.</data>
-</edge>
-<edge source="Amyloid Plaque Deposition" target="PIB">
-  <data key="d2">PIB-PET imaging detects amyloid plaque deposition in the brain.</data>
-</edge>
-<edge source="Amyloid Plaque Deposition" target="AV45">
-  <data key="d2">AV45-PET imaging detects amyloid plaque deposition in the brain.</data>
-</edge>
-<edge source="Amyloid Plaque Deposition" target="FBB">
-  <data key="d2">Florbetaben PET imaging detects amyloid plaque deposition in the brain.</data>
-</edge>
-<edge source="Amyloid Plaque Deposition" target="DIAGNOSIS">
-  <data key="d2">influences</data>
-</edge>
-<edge source="Tau Pathology and Neurodegeneration" target="TAU">
-  <data key="d2">Total tau protein levels in CSF reflect neurodegeneration and tau pathology in Alzheimer's disease.</data>
-</edge>
-<edge source="Tau Pathology and Neurodegeneration" target="PTAU">
-  <data key="d2">Phosphorylated tau protein levels in CSF indicate tau pathology in Alzheimer's disease.</data>
-</edge>
-<edge source="Tau Pathology and Neurodegeneration" target="DIAGNOSIS">
-  <data key="d2">influences</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="MMSCORE">
-  <data key="d2">MMSE score assesses global cognitive function and decline in Alzheimer's disease.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="MOCA">
-  <data key="d2">MoCA score screens for cognitive impairment in Alzheimer's disease.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="CLOCKSCOR">
-  <data key="d2">Clock Drawing Test score evaluates visuospatial and executive function decline.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="COPYSCOR">
-  <data key="d2">Copy Test score assesses visuospatial abilities affected in Alzheimer's disease.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="AVTOT1">
-  <data key="d2">Auditory Verbal Learning Test trial 1 score measures immediate memory recall.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="AVTOT2">
-  <data key="d2">Auditory Verbal Learning Test trial 2 score measures immediate memory recall.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="AVTOT3">
-  <data key="d2">Auditory Verbal Learning Test trial 3 score measures immediate memory recall.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="AVTOT4">
-  <data key="d2">Auditory Verbal Learning Test trial 4 score measures immediate memory recall.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="AVTOT5">
-  <data key="d2">Auditory Verbal Learning Test trial 5 score measures immediate memory recall.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="AVTOT6">
-  <data key="d2">Auditory Verbal Learning Test trial 6 score measures immediate memory recall.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="AVTOTB">
-  <data key="d2">Auditory Verbal Learning Test total score measures overall immediate memory.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="DSPANFOR">
-  <data key="d2">Digit Span Forward assesses attention and working memory.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="DSPANFLTH">
-  <data key="d2">Digit Span Forward length assesses attention and working memory.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="DSPANBAC">
-  <data key="d2">Digit Span Backward assesses working memory and executive function.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="DSPANBLTH">
-  <data key="d2">Digit Span Backward length assesses working memory and executive function.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="CATANIMSC">
-  <data key="d2">Category Fluency for animals measures verbal fluency and executive control.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="CATANPERS">
-  <data key="d2">Category Fluency for persons measures verbal fluency and executive control.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="CATANINTR">
-  <data key="d2">Category Fluency for intrusions measures verbal fluency and executive control.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="CATVEGESC">
-  <data key="d2">Category Fluency for vegetables measures verbal fluency and executive control.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="CATVGPERS">
-  <data key="d2">Category Fluency for verbal group persons measures verbal fluency and executive control.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="CATVGINTR">
-  <data key="d2">Category Fluency for verbal group intrusions measures verbal fluency and executive control.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="TRAASCOR">
-  <data key="d2">Trail Making Test Part A assesses processing speed.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="TRABSCOR">
-  <data key="d2">Trail Making Test Part B assesses cognitive flexibility and executive function.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="DIGITSCOR">
-  <data key="d2">Digit Symbol Substitution Test assesses processing speed and attention.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="BNTTOTAL">
-  <data key="d2">Boston Naming Test evaluates language and naming ability.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="AVDEL30MIN">
-  <data key="d2">Auditory Verbal Learning Test delayed recall assesses memory retention.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="AVDELTOT">
-  <data key="d2">Auditory Verbal Learning Test total delayed recall score.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="ANART">
-  <data key="d2">American National Adult Reading Test assesses premorbid intelligence.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="MINTTOTAL">
-  <data key="d2">Multilingual Naming Test evaluates language function.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="RAVLT_immediate">
-  <data key="d2">Rey Auditory Verbal Learning Test immediate recall measures memory.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="RAVLT_learning">
-  <data key="d2">Rey Auditory Verbal Learning Test learning score measures memory acquisition.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="RAVLT_forgetting">
-  <data key="d2">Rey Auditory Verbal Learning Test forgetting score measures memory loss.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="RAVLT_perc_forgetting">
-  <data key="d2">Rey Auditory Verbal Learning Test percent forgetting measures memory retention.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="LDELTOTAL">
-  <data key="d2">Logical Memory Delayed Recall measures episodic memory.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="FAQ">
-  <data key="d2">Functional Activities Questionnaire assesses daily living function affected by cognitive decline.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="mPACCdigit">
-  <data key="d2">Modified Preclinical Alzheimer Cognitive Composite digit score measures processing speed.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="mPACCtrailsB">
-  <data key="d2">Modified Preclinical Alzheimer Cognitive Composite Trails B score measures executive function.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="ADAS11">
-  <data key="d2">Alzheimer's Disease Assessment Scale-Cognitive Subscale 11 measures cognitive impairment severity.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="ADAS13">
-  <data key="d2">Alzheimer's Disease Assessment Scale-Cognitive Subscale 13 measures cognitive impairment severity.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="ADASQ4">
-  <data key="d2">Alzheimer's Disease Assessment Scale Q4 subscore measures cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="MMSE">
-  <data key="d2">Mini-Mental State Examination score assesses global cognitive function.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogPtMem">
-  <data key="d2">Participant-reported everyday memory decline reflects cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogPtLang">
-  <data key="d2">Participant-reported everyday language decline reflects cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogPtVisspat">
-  <data key="d2">Participant-reported everyday visuospatial decline reflects cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogPtPlan">
-  <data key="d2">Participant-reported everyday planning decline reflects cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogPtOrgan">
-  <data key="d2">Participant-reported everyday organization decline reflects cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogPtDivatt">
-  <data key="d2">Participant-reported everyday divided attention decline reflects cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogPtTotal">
-  <data key="d2">Participant-reported total everyday cognition score reflects overall cognitive decline.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogSPMem">
-  <data key="d2">Study partner-reported everyday memory decline reflects cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogSPLang">
-  <data key="d2">Study partner-reported everyday language decline reflects cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogSPVisspat">
-  <data key="d2">Study partner-reported everyday visuospatial decline reflects cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogSPPlan">
-  <data key="d2">Study partner-reported everyday planning decline reflects cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogSPOrgan">
-  <data key="d2">Study partner-reported everyday organization decline reflects cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogSPDivatt">
-  <data key="d2">Study partner-reported everyday divided attention decline reflects cognitive impairment.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="EcogSPTotal">
-  <data key="d2">Study partner-reported total everyday cognition score reflects overall cognitive decline.</data>
-</edge>
-<edge source="Cognitive Decline and Memory Impairment" target="DIAGNOSIS">
-  <data key="d2">influences</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPIASEV">
-  <data key="d2">Neuropsychiatric Inventory Agitation severity score indicates behavioral symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPIBSEV">
-  <data key="d2">Neuropsychiatric Inventory Depression severity score indicates depressive symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPICSEV">
-  <data key="d2">Neuropsychiatric Inventory Apathy severity score indicates behavioral symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPIDSEV">
-  <data key="d2">Neuropsychiatric Inventory Delusions severity score indicates psychotic symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPIESEV">
-  <data key="d2">Neuropsychiatric Inventory Elation severity score indicates mood symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPIFSEV">
-  <data key="d2">Neuropsychiatric Inventory Disinhibition severity score indicates behavioral symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPIGSEV">
-  <data key="d2">Neuropsychiatric Inventory Irritability severity score indicates behavioral symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPIHSEV">
-  <data key="d2">Neuropsychiatric Inventory Hallucinations severity score indicates psychotic symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPIISEV">
-  <data key="d2">Neuropsychiatric Inventory Indifference severity score indicates behavioral symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPIJSEV">
-  <data key="d2">Neuropsychiatric Inventory Judgment severity score indicates cognitive symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPIKSEV">
-  <data key="d2">Neuropsychiatric Inventory Sleep severity score indicates sleep disturbances.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPILSEV">
-  <data key="d2">Neuropsychiatric Inventory Appetite severity score indicates behavioral symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="NPISCORE">
-  <data key="d2">Total Neuropsychiatric Inventory score summarizes behavioral symptom severity.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="CDGLOBAL">
-  <data key="d2">Clinical Dementia Rating global score reflects dementia severity including behavioral symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="CDRSB">
-  <data key="d2">Clinical Dementia Rating sum of boxes score reflects dementia severity including behavioral symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="GDTOTAL">
-  <data key="d2">Geriatric Depression Scale total score screens for depressive symptoms.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="CDRSB.1">
-  <data key="d2">Additional Clinical Dementia Rating sum of boxes score reflects dementia severity.</data>
-</edge>
-<edge source="Neuropsychiatric Symptoms" target="DIAGNOSIS">
-  <data key="d2">influences</data>
-</edge>
-<edge source="Brain Atrophy and Structural Changes" target="Ventricles">
-  <data key="d2">Ventricular enlargement on MRI reflects brain atrophy in Alzheimer's disease.</data>
-</edge>
-<edge source="Brain Atrophy and Structural Changes" target="Hippocampus">
-  <data key="d2">Hippocampal atrophy on MRI is an early biomarker of Alzheimer's disease.</data>
-</edge>
-<edge source="Brain Atrophy and Structural Changes" target="WholeBrain">
-  <data key="d2">Whole brain volume reduction on MRI indicates neurodegeneration in Alzheimer's disease.</data>
-</edge>
-<edge source="Brain Atrophy and Structural Changes" target="Entorhinal">
-  <data key="d2">Entorhinal cortex atrophy on MRI is an early sign of Alzheimer's disease pathology.</data>
-</edge>
-<edge source="Brain Atrophy and Structural Changes" target="Fusiform">
-  <data key="d2">Fusiform gyrus atrophy on MRI reflects neurodegeneration in Alzheimer's disease.</data>
-</edge>
-<edge source="Brain Atrophy and Structural Changes" target="MidTemp">
-  <data key="d2">Middle temporal lobe atrophy on MRI reflects neurodegeneration in Alzheimer's disease.</data>
-</edge>
-<edge source="Brain Atrophy and Structural Changes" target="ICV">
-  <data key="d2">Intracranial volume is used for normalization of brain volume measures.</data>
-</edge>
-<edge source="Brain Atrophy and Structural Changes" target="DIAGNOSIS">
-  <data key="d2">influences</data>
-</edge>
-<edge source="Glucose Hypometabolism and Functional Brain Changes" target="FDG">
-  <data key="d2">FDG-PET measures reduced glucose metabolism in Alzheimer's disease.</data>
-</edge>
-<edge source="Glucose Hypometabolism and Functional Brain Changes" target="DIAGNOSIS">
-  <data key="d2">influences</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="AGE">
-  <data key="d2">Age is a major demographic risk factor influencing Alzheimer's disease risk.</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="PTEDUCAT">
-  <data key="d2">Education level contributes to cognitive reserve affecting Alzheimer's disease risk.</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="PTETHCAT">
-  <data key="d2">Ethnicity influences population diversity and Alzheimer's disease risk.</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="PTGENDER">
-  <data key="d2">Gender is a demographic factor influencing Alzheimer's disease risk.</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="PTMARRY">
-  <data key="d2">Marital status is a demographic variable relevant to Alzheimer's disease risk.</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="PTRACCAT">
-  <data key="d2">Race category is a demographic factor influencing Alzheimer's disease risk.</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="VSWEIGHT">
-  <data key="d2">Weight reflects general health status impacting vascular risk factors for Alzheimer's disease.</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="VSHEIGHT">
-  <data key="d2">Height reflects general health status impacting vascular risk factors for Alzheimer's disease.</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="VSBPSYS">
-  <data key="d2">Systolic blood pressure is a vascular health indicator influencing Alzheimer's disease risk.</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="VSBPDIA">
-  <data key="d2">Diastolic blood pressure is a vascular health indicator influencing Alzheimer's disease risk.</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="VSPULSE">
-  <data key="d2">Pulse rate indicates cardiovascular function relevant to vascular risk in Alzheimer's disease.</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="VSRESP">
-  <data key="d2">Respiration rate indicates respiratory function relevant to overall health in Alzheimer's disease.</data>
-</edge>
-<edge source="Demographic and Vascular Risk Factors" target="DIAGNOSIS">
-  <data key="d2">influences</data>
-</edge>
-<edge source="AGE" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="PTEDUCAT" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="PTETHCAT" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="PTGENDER" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="PTMARRY" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="PTRACCAT" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="VSWEIGHT" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="VSHEIGHT" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="VSBPSYS" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="VSBPDIA" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="VSPULSE" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="VSRESP" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="MMSCORE" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="MOCA" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="CLOCKSCOR" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="COPYSCOR" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="AVTOT1" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="AVTOT2" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="AVTOT3" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="AVTOT4" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="AVTOT5" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="AVTOT6" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="AVTOTB" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="DSPANFOR" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="DSPANFLTH" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="DSPANBAC" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="DSPANBLTH" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="CATANIMSC" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="CATANPERS" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="CATANINTR" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="CATVEGESC" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="CATVGPERS" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="CATVGINTR" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="TRAASCOR" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="TRABSCOR" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="DIGITSCOR" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="BNTTOTAL" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="AVDEL30MIN" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="AVDELTOT" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="ANART" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="MINTTOTAL" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPIASEV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPIBSEV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPICSEV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPIDSEV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPIESEV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPIFSEV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPIGSEV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPIHSEV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPIISEV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPIJSEV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPIKSEV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPILSEV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="NPISCORE" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="CDGLOBAL" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="CDRSB" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="GDTOTAL" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="ABETA40" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="ABETA42" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="TAU" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="PTAU" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="CDRSB.1" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="ADAS11" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="ADAS13" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="ADASQ4" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="MMSE" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="RAVLT_immediate" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="RAVLT_learning" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="RAVLT_forgetting" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="RAVLT_perc_forgetting" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="LDELTOTAL" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="FAQ" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="mPACCdigit" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="mPACCtrailsB" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="Ventricles" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="Hippocampus" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="WholeBrain" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="Entorhinal" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="Fusiform" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="MidTemp" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="ICV" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="FDG" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="PIB" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="AV45" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="FBB" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogPtMem" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogPtLang" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogPtVisspat" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogPtPlan" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogPtOrgan" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogPtDivatt" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogPtTotal" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogSPMem" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogSPLang" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogSPVisspat" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogSPPlan" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogSPOrgan" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogSPDivatt" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
-<edge source="EcogSPTotal" target="DIAGNOSIS">
-  <data key="d2">predicts</data>
-</edge>
+<node id="NPIBSEV">
+  <data key="d0">feature</data>
+</node>
+<node id="NPICSEV">
+  <data key="d0">feature</data>
+</node>
+<node id="NPIDSEV">
+  <data key="d0">feature</data>
+</node>
+<node id="NPIESEV">
+  <data key="d0">feature</data>
+</node>
+<node id="NPIFSEV">
+  <data key="d0">feature</data>
+</node>
+<node id="NPIGSEV">
+  <data key="d0">feature</data>
+</node>
+<node id="NPIHSEV">
+  <data key="d0">feature</data>
+</node>
+<node id="NPIISEV">
+  <data key="d0">feature</data>
+</node>
+<node id="NPIJSEV">
+  <data key="d0">feature</data>
+</node>
+<node id="NPIKSEV">
+  <data key="d0">feature</data>
+</node>
+<node id="NPILSEV">
+  <data key="d0">feature</data>
+</node>
+<node id="NPISCORE">
+  <data key="d0">feature</data>
+</node>
+<node id="Neurodegeneration and Brain Atrophy">
+  <data key="d0">mechanism</data>
+  <data key="d1">Progressive loss of neurons and synapses results in atrophy of specific brain regions implicated in AD. This includes early atrophy in the hippocampus and entorhinal cortex, as well as widespread atrophy in the temporal, parietal, and whole brain regions as disease advances. These structural changes, which are detectable by MRI measures like ventricular enlargement and decreased regional brain volumes, underpin clinical symptoms of memory loss and cognitive decline.</data>
+  <data key="d2">51</data>
+</node>
+<node id="mPACCtrailsB">
+  <data key="d0">feature</data>
+</node>
+<node id="mPACCdigit">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOT1">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOT2">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOT3">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOT4">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOT5">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOT6">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOTB">
+  <data key="d0">feature</data>
+</node>
+<node id="Glucose Hypometabolism and Synaptic Dysfunction">
+  <data key="d0">mechanism</data>
+  <data key="d1">Reduced neuronal and synaptic activity in the AD brain is observed as hypometabolism, particularly in temporoparietal and posterior cingulate cortices. This metabolic impairment is captured by FDG-PET imaging showing reduced glucose uptake and is closely associated with ongoing cognitive and functional decline in AD patients.</data>
+  <data key="d2">34</data>
+</node>
+<node id="DSPANFOR">
+  <data key="d0">feature</data>
+</node>
+<node id="DSPANBAC">
+  <data key="d0">feature</data>
+</node>
+<node id="DIGITSCOR">
+  <data key="d0">feature</data>
+</node>
+<node id="CATANIMSC">
+  <data key="d0">feature</data>
+</node>
+<node id="CATVEGESC">
+  <data key="d0">feature</data>
+</node>
+<node id="BNTTOTAL">
+  <data key="d0">feature</data>
+</node>
+<node id="Cognitive Decline and Executive Dysfunction">
+  <data key="d0">mechanism</data>
+  <data key="d1">Clinical progression of AD is manifested by a continuum of global cognitive impairment, episodic memory loss, language difficulties, visuospatial deficits, and executive dysfunction. Clinical and neuropsychological tests (e.g., MMSE, MoCA, AVLT, Digit Span, category fluency, Trail Making, ADAS-Cog) assess the severity and domain-specific aspects of cognitive decline reflected in baseline diagnosis.</data>
+  <data key="d2">65</data>
+</node>
+<node id="DSPANFLTH">
+  <data key="d0">feature</data>
+</node>
+<node id="DSPANBLTH">
+  <data key="d0">feature</data>
+</node>
+<node id="CATANPERS">
+  <data key="d0">feature</data>
+</node>
+<node id="CATANINTR">
+  <data key="d0">feature</data>
+</node>
+<node id="CATVGPERS">
+  <data key="d0">feature</data>
+</node>
+<node id="CATVGINTR">
+  <data key="d0">feature</data>
+</node>
+<node id="TRAASCOR">
+  <data key="d0">feature</data>
+</node>
+<node id="TRABSCOR">
+  <data key="d0">feature</data>
+</node>
+<node id="ANART">
+  <data key="d0">feature</data>
+</node>
+<node id="MINTTOTAL">
+  <data key="d0">feature</data>
+</node>
+<node id="GDTOTAL">
+  <data key="d0">feature</data>
+</node>
+<node id="CLOCKSCOR">
+  <data key="d0">feature</data>
+</node>
+<node id="COPYSCOR">
+  <data key="d0">feature</data>
+</node>
+<node id="Neuropsychiatric and Behavioral Changes">
+  <data key="d0">mechanism</data>
+  <data key="d1">AD is often accompanied by neuropsychiatric symptoms such as depression, agitation, irritability, apathy, hallucinations, and sleep disturbances. These behavioral changes, assessed by NPI-Q, GDS, and CDR, significantly impact quality of life and may precede or accompany cognitive impairment. Their presence often reflects the involvement of frontal and limbic structures in the disease.</data>
+  <data key="d2">35</data>
+</node>
+<node id="Functional Decline in Daily Living">
+  <data key="d0">mechanism</data>
+  <data key="d1">Functional impairment in activities of daily living is a key clinical hallmark as AD progresses from MCI to dementia. This includes difficulties in memory, language, planning, organization, and attention. Both self-reported and informant-based Everyday Cognition (Ecog) scores, as well as the Functional Activities Questionnaire (FAQ), capture these real-world deficits and are crucial for staging disease severity.</data>
+  <data key="d2">32</data>
+</node>
+<node id="Vascular and Cardiometabolic Risk Factors">
+  <data key="d0">mechanism</data>
+  <data key="d1">Vascular pathology, including hypertension and metabolic syndrome, increases risk for AD, possibly via reduced cerebral perfusion, microvascular injury, and facilitation of amyloid and tau pathology. Continuous variables such as blood pressure, weight, and height contribute to the assessment of vascular health and help distinguish vascular dementia comorbidity.</data>
+  <data key="d2">32</data>
+</node>
+<node id="VSWEIGHT">
+  <data key="d0">feature</data>
+</node>
+<node id="VSHEIGHT">
+  <data key="d0">feature</data>
+</node>
+<node id="VSBPSYS">
+  <data key="d0">feature</data>
+</node>
+<node id="VSBPDIA">
+  <data key="d0">feature</data>
+</node>
+<node id="VSPULSE">
+  <data key="d0">feature</data>
+</node>
+<node id="VSRESP">
+  <data key="d0">feature</data>
+</node>
+<node id="Demographic and Genetic Susceptibility">
+  <data key="d0">mechanism</data>
+  <data key="d1">Age remains the strongest risk factor for AD. Other socio-demographic variables (education, gender, ethnicity, marital status, race) modulate risk and disease manifestation, both through genetic predisposition and environmental/lifestyle factors. Lower education may decrease cognitive reserve, increasing vulnerability to symptomatic AD. Diverse demographic data help identify at-risk groups, inform stratification, and address population differences in AD susceptibility.</data>
+  <data key="d2">28</data>
+</node>
+<node id="PTEDUCAT">
+  <data key="d0">feature</data>
+</node>
+<node id="PTETHCAT">
+  <data key="d0">feature</data>
+</node>
+<node id="PTGENDER">
+  <data key="d0">feature</data>
+</node>
+<node id="PTMARRY">
+  <data key="d0">feature</data>
+</node>
+<node id="PTRACCAT">
+  <data key="d0">feature</data>
+</node>
+<edge source="DIAGNOSIS" target="Amyloid Beta Accumulation and Plaque Formation"/>
+<edge source="DIAGNOSIS" target="Tau Pathology and Neurofibrillary Tangle Formation"/>
+<edge source="DIAGNOSIS" target="Neurodegeneration and Brain Atrophy"/>
+<edge source="DIAGNOSIS" target="Glucose Hypometabolism and Synaptic Dysfunction"/>
+<edge source="DIAGNOSIS" target="Cognitive Decline and Executive Dysfunction"/>
+<edge source="DIAGNOSIS" target="Neuropsychiatric and Behavioral Changes"/>
+<edge source="DIAGNOSIS" target="Functional Decline in Daily Living"/>
+<edge source="DIAGNOSIS" target="Vascular and Cardiometabolic Risk Factors"/>
+<edge source="DIAGNOSIS" target="Demographic and Genetic Susceptibility"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="AGE"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="ABETA40"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="ABETA42"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="PIB"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="AV45"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="FBB"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="FDG"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="TAU"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="PTAU"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="MMSE"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="MMSCORE"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="ADAS11"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="ADAS13"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="ADASQ4"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="LDELTOTAL"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="CDRSB"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="CDRSB.1"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="CDGLOBAL"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="FAQ"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="RAVLT_immediate"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="RAVLT_learning"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="RAVLT_forgetting"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="RAVLT_perc_forgetting"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="Ventricles"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="Hippocampus"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="WholeBrain"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="Entorhinal"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="Fusiform"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="MidTemp"/>
+<edge source="Amyloid Beta Accumulation and Plaque Formation" target="ICV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="TAU"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="PTAU"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="MMSE"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="MMSCORE"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="CDRSB"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="CDRSB.1"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="ADAS11"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="ADAS13"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="ADASQ4"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="RAVLT_immediate"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="RAVLT_learning"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="RAVLT_forgetting"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="RAVLT_perc_forgetting"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="LDELTOTAL"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="FAQ"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="MOCA"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="AVDEL30MIN"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="AVDELTOT"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtMem"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtLang"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtVisspat"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtPlan"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtOrgan"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtDivatt"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtTotal"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPMem"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPLang"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPVisspat"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPPlan"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPOrgan"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPDivatt"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPTotal"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIASEV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIBSEV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPICSEV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIDSEV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIESEV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIFSEV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIGSEV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIHSEV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIISEV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIJSEV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIKSEV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPILSEV"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPISCORE"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="Hippocampus"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="Entorhinal"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="WholeBrain"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="Ventricles"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="MidTemp"/>
+<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="Fusiform"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="Ventricles"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="Hippocampus"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="Entorhinal"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="Fusiform"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="MidTemp"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="WholeBrain"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="ICV"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="ADAS11"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="ADAS13"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="ADASQ4"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="MMSE"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="MOCA"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="LDELTOTAL"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="RAVLT_immediate"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="RAVLT_learning"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="RAVLT_forgetting"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="RAVLT_perc_forgetting"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="CDGLOBAL"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="CDRSB"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="CDRSB.1"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="FAQ"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="mPACCtrailsB"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="mPACCdigit"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="MMSCORE"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="AVDEL30MIN"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="AVDELTOT"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="AVTOT1"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="AVTOT2"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="AVTOT3"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="AVTOT4"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="AVTOT5"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="AVTOT6"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="AVTOTB"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtMem"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtLang"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtVisspat"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtPlan"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtOrgan"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtDivatt"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtTotal"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPMem"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPLang"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPVisspat"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPPlan"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPOrgan"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPDivatt"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPTotal"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="FDG"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="PTAU"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="TAU"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="ABETA42"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="FDG"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="MMSCORE"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="MMSE"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="ADAS11"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="ADAS13"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="ADASQ4"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="RAVLT_immediate"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="RAVLT_learning"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="RAVLT_forgetting"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="RAVLT_perc_forgetting"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="LDELTOTAL"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="AVDEL30MIN"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="AVDELTOT"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="DSPANFOR"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="DSPANBAC"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="DIGITSCOR"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="CATANIMSC"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="CATVEGESC"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="BNTTOTAL"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="MOCA"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="FAQ"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtMem"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtLang"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtVisspat"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtPlan"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtOrgan"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtDivatt"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtTotal"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="CDGLOBAL"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="CDRSB"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="Hippocampus"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="WholeBrain"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="MidTemp"/>
+<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="Entorhinal"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="MMSCORE"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="MMSE"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="MOCA"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="ADAS11"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="ADAS13"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="ADASQ4"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="CDGLOBAL"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="CDRSB"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="CDRSB.1"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOT1"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOT2"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOT3"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOT4"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOT5"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOT6"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOTB"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="RAVLT_immediate"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="RAVLT_learning"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="RAVLT_forgetting"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="RAVLT_perc_forgetting"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="LDELTOTAL"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="DSPANFOR"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="DSPANBAC"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="DSPANFLTH"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="DSPANBLTH"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="CATANIMSC"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="CATANPERS"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="CATANINTR"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="CATVEGESC"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="CATVGPERS"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="CATVGINTR"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="TRAASCOR"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="TRABSCOR"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="DIGITSCOR"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="BNTTOTAL"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="AVDEL30MIN"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="AVDELTOT"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="ANART"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="MINTTOTAL"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="FAQ"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="GDTOTAL"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="mPACCdigit"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="mPACCtrailsB"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtMem"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtLang"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtVisspat"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtPlan"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtOrgan"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtDivatt"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtTotal"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPMem"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPLang"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPVisspat"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPPlan"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPOrgan"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPDivatt"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPTotal"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="Hippocampus"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="WholeBrain"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="Entorhinal"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="Fusiform"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="MidTemp"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="FDG"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="CLOCKSCOR"/>
+<edge source="Cognitive Decline and Executive Dysfunction" target="COPYSCOR"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPIASEV"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPIBSEV"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPICSEV"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPIDSEV"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPIESEV"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPIFSEV"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPIGSEV"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPIHSEV"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPIISEV"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPIJSEV"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPIKSEV"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPILSEV"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="NPISCORE"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="GDTOTAL"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="CDGLOBAL"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="CDRSB"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="CDRSB.1"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="FAQ"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtMem"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtLang"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtVisspat"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtPlan"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtOrgan"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtDivatt"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtTotal"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPMem"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPLang"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPVisspat"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPPlan"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPOrgan"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPDivatt"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPTotal"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="Hippocampus"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="Entorhinal"/>
+<edge source="Neuropsychiatric and Behavioral Changes" target="Fusiform"/>
+<edge source="Functional Decline in Daily Living" target="FAQ"/>
+<edge source="Functional Decline in Daily Living" target="EcogPtMem"/>
+<edge source="Functional Decline in Daily Living" target="EcogPtLang"/>
+<edge source="Functional Decline in Daily Living" target="EcogPtVisspat"/>
+<edge source="Functional Decline in Daily Living" target="EcogPtPlan"/>
+<edge source="Functional Decline in Daily Living" target="EcogPtOrgan"/>
+<edge source="Functional Decline in Daily Living" target="EcogPtDivatt"/>
+<edge source="Functional Decline in Daily Living" target="EcogPtTotal"/>
+<edge source="Functional Decline in Daily Living" target="EcogSPMem"/>
+<edge source="Functional Decline in Daily Living" target="EcogSPLang"/>
+<edge source="Functional Decline in Daily Living" target="EcogSPVisspat"/>
+<edge source="Functional Decline in Daily Living" target="EcogSPPlan"/>
+<edge source="Functional Decline in Daily Living" target="EcogSPOrgan"/>
+<edge source="Functional Decline in Daily Living" target="EcogSPDivatt"/>
+<edge source="Functional Decline in Daily Living" target="EcogSPTotal"/>
+<edge source="Functional Decline in Daily Living" target="CDRSB"/>
+<edge source="Functional Decline in Daily Living" target="CDGLOBAL"/>
+<edge source="Functional Decline in Daily Living" target="MMSCORE"/>
+<edge source="Functional Decline in Daily Living" target="MMSE"/>
+<edge source="Functional Decline in Daily Living" target="MOCA"/>
+<edge source="Functional Decline in Daily Living" target="ADAS11"/>
+<edge source="Functional Decline in Daily Living" target="ADAS13"/>
+<edge source="Functional Decline in Daily Living" target="ADASQ4"/>
+<edge source="Functional Decline in Daily Living" target="GDTOTAL"/>
+<edge source="Functional Decline in Daily Living" target="RAVLT_immediate"/>
+<edge source="Functional Decline in Daily Living" target="LDELTOTAL"/>
+<edge source="Functional Decline in Daily Living" target="DSPANFOR"/>
+<edge source="Functional Decline in Daily Living" target="DSPANBAC"/>
+<edge source="Functional Decline in Daily Living" target="BNTTOTAL"/>
+<edge source="Functional Decline in Daily Living" target="AVDEL30MIN"/>
+<edge source="Functional Decline in Daily Living" target="Hippocampus"/>
+<edge source="Functional Decline in Daily Living" target="Entorhinal"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="AGE"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="VSWEIGHT"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="VSHEIGHT"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="VSBPSYS"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="VSBPDIA"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="VSPULSE"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="VSRESP"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="ABETA40"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="ABETA42"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="TAU"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="PTAU"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="Hippocampus"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="WholeBrain"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="Entorhinal"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="Fusiform"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="MidTemp"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="Ventricles"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="ICV"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="FDG"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="MOCA"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="MMSE"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="ADAS11"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="ADAS13"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="LDELTOTAL"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="RAVLT_immediate"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="FAQ"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="GDTOTAL"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="CDGLOBAL"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="CDRSB"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="PIB"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="AV45"/>
+<edge source="Vascular and Cardiometabolic Risk Factors" target="FBB"/>
+<edge source="Demographic and Genetic Susceptibility" target="AGE"/>
+<edge source="Demographic and Genetic Susceptibility" target="PTEDUCAT"/>
+<edge source="Demographic and Genetic Susceptibility" target="PTETHCAT"/>
+<edge source="Demographic and Genetic Susceptibility" target="PTGENDER"/>
+<edge source="Demographic and Genetic Susceptibility" target="PTMARRY"/>
+<edge source="Demographic and Genetic Susceptibility" target="PTRACCAT"/>
+<edge source="Demographic and Genetic Susceptibility" target="MMSCORE"/>
+<edge source="Demographic and Genetic Susceptibility" target="MOCA"/>
+<edge source="Demographic and Genetic Susceptibility" target="CDGLOBAL"/>
+<edge source="Demographic and Genetic Susceptibility" target="CDRSB"/>
+<edge source="Demographic and Genetic Susceptibility" target="CDRSB.1"/>
+<edge source="Demographic and Genetic Susceptibility" target="MMSE"/>
+<edge source="Demographic and Genetic Susceptibility" target="ADAS11"/>
+<edge source="Demographic and Genetic Susceptibility" target="ADAS13"/>
+<edge source="Demographic and Genetic Susceptibility" target="ADASQ4"/>
+<edge source="Demographic and Genetic Susceptibility" target="FAQ"/>
+<edge source="Demographic and Genetic Susceptibility" target="LDELTOTAL"/>
+<edge source="Demographic and Genetic Susceptibility" target="GDTOTAL"/>
+<edge source="Demographic and Genetic Susceptibility" target="mPACCdigit"/>
+<edge source="Demographic and Genetic Susceptibility" target="mPACCtrailsB"/>
+<edge source="Demographic and Genetic Susceptibility" target="EcogPtTotal"/>
+<edge source="Demographic and Genetic Susceptibility" target="EcogSPTotal"/>
+<edge source="Demographic and Genetic Susceptibility" target="Hippocampus"/>
+<edge source="Demographic and Genetic Susceptibility" target="WholeBrain"/>
+<edge source="Demographic and Genetic Susceptibility" target="Ventricles"/>
+<edge source="Demographic and Genetic Susceptibility" target="Entorhinal"/>
+<edge source="Demographic and Genetic Susceptibility" target="MidTemp"/>
+<edge source="Demographic and Genetic Susceptibility" target="Fusiform"/>
 </graph></graphml>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="4" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <style>
+    .title-text { font-family: 'Helvetica', sans-serif; font-size: 22px; font-weight: bold; fill: white; }
+    .subtitle-text { font-family: 'Helvetica', sans-serif; font-size: 16px; fill: white; }
+    .detail-text { font-family: 'Helvetica', sans-serif; font-size: 14px; fill: #333; }
+    .icon-text { font-family: 'Helvetica', sans-serif; font-size: 13px; fill: #666; font-style: italic; }
+    .main-title { font-family: 'Helvetica', sans-serif; font-size: 36px; font-weight: bold; fill: #2c3e50; }
+    .main-subtitle { font-family: 'Helvetica', sans-serif; font-size: 18px; fill: #7f8c8d; }
+  </style>
+
+  <!-- Background with subtle pattern -->
+  <rect width="1600" height="900" fill="#f8f9fa"/>
+  <defs>
+    <pattern id="dots" patternUnits="userSpaceOnUse" width="20" height="20">
+      <circle cx="10" cy="10" r="1" fill="#e9ecef" opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+  
+  <!-- Title -->
+  <text x="800" y="60" text-anchor="middle" class="main-title">GRACE Workflow</text>
+  <text x="800" y="90" text-anchor="middle" class="main-subtitle">Graph-based Reduction and Context-Enhanced Explainability</text>
+  
+  <!-- Step 1: Input & KG Creation -->
+  <g transform="translate(80, 150)">
+    <rect x="0" y="0" width="350" height="280" rx="20" fill="url(#grad1)" filter="url(#shadow)"/>
+    
+    <!-- Multiple icon placeholders -->
+    <g transform="translate(20, 20)">
+      <!-- Brain icon -->
+      <rect x="0" y="0" width="60" height="60" rx="15" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="30" cy="30" r="20" fill="none" stroke="white" stroke-width="2"/>
+      <path d="M 15 25 Q 30 15 45 25" stroke="white" stroke-width="2" fill="none"/>
+      <path d="M 15 35 Q 30 25 45 35" stroke="white" stroke-width="2" fill="none"/>
+      <text x="30" y="75" text-anchor="middle" class="icon-text">Brain Network</text>
+      
+      <!-- Document icon -->
+      <rect x="80" y="0" width="60" height="60" rx="15" fill="rgba(255,255,255,0.3)"/>
+      <rect x="95" y="15" width="30" height="35" rx="3" fill="none" stroke="white" stroke-width="2"/>
+      <line x1="100" y1="25" x2="120" y2="25" stroke="white" stroke-width="2"/>
+      <line x1="100" y1="30" x2="120" y2="30" stroke="white" stroke-width="2"/>
+      <line x1="100" y1="35" x2="115" y2="35" stroke="white" stroke-width="2"/>
+      <text x="110" y="75" text-anchor="middle" class="icon-text">ArXiv Papers</text>
+      
+      <!-- Database icon -->
+      <rect x="160" y="0" width="60" height="60" rx="15" fill="rgba(255,255,255,0.3)"/>
+      <ellipse cx="190" cy="25" rx="15" ry="5" fill="none" stroke="white" stroke-width="2"/>
+      <ellipse cx="190" cy="35" rx="15" ry="5" fill="none" stroke="white" stroke-width="2"/>
+      <ellipse cx="190" cy="45" rx="15" ry="5" fill="none" stroke="white" stroke-width="2"/>
+      <text x="190" y="75" text-anchor="middle" class="icon-text">Vector DB</text>
+      
+      <!-- LLM icon -->
+      <rect x="240" y="0" width="60" height="60" rx="15" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="270" cy="30" r="18" fill="none" stroke="white" stroke-width="2"/>
+      <text x="270" y="35" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; font-weight: bold; fill: white;">LLM</text>
+      <text x="270" y="75" text-anchor="middle" class="icon-text">Agno Agent</text>
+    </g>
+    
+    <text x="175" y="120" text-anchor="middle" class="title-text">Knowledge Graph Creation</text>
+    <text x="175" y="145" text-anchor="middle" class="subtitle-text">LLM + RAG Pipeline</text>
+    
+    <!-- Details -->
+    <rect x="20" y="165" width="310" height="95" rx="8" fill="rgba(255,255,255,0.95)"/>
+    <text x="30" y="185" class="detail-text">• Retrieve relevant ArXiv papers via keyword search</text>
+    <text x="30" y="205" class="detail-text">• Generate 5-10 disease mechanisms using LLM</text>
+    <text x="30" y="225" class="detail-text">• Map dataset features to biological mechanisms</text>
+    <text x="30" y="245" class="detail-text">• Create interaction constraints JSON + GraphML</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <g>
+    <path d="M 430 290 Q 480 290 480 320 T 530 320" stroke="#495057" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="480" y="310" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 14px; font-weight: bold; fill: #495057;">Initial KG</text>
+    <text x="480" y="325" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; fill: #6c757d;">+ Constraints</text>
+  </g>
+  
+  <!-- Step 2: Optimization -->
+  <g transform="translate(530, 150)">
+    <rect x="0" y="0" width="350" height="280" rx="20" fill="url(#grad2)" filter="url(#shadow)"/>
+    
+    <!-- Multiple icon placeholders -->
+    <g transform="translate(20, 20)">
+      <!-- DNA/Evolution icon -->
+      <rect x="0" y="0" width="60" height="60" rx="15" fill="rgba(255,255,255,0.3)"/>
+      <path d="M 20 20 Q 30 15 40 20 Q 30 25 20 20" stroke="white" stroke-width="2" fill="none"/>
+      <path d="M 20 40 Q 30 35 40 40 Q 30 45 20 40" stroke="white" stroke-width="2" fill="none"/>
+      <line x1="20" y1="20" x2="20" y2="40" stroke="white" stroke-width="2"/>
+      <line x1="40" y1="20" x2="40" y2="40" stroke="white" stroke-width="2"/>
+      <text x="30" y="75" text-anchor="middle" class="icon-text">Genetic Algo</text>
+      
+      <!-- Optimization icon -->
+      <rect x="80" y="0" width="60" height="60" rx="15" fill="rgba(255,255,255,0.3)"/>
+      <path d="M 95 45 Q 110 25 125 45" stroke="white" stroke-width="2" fill="none"/>
+      <circle cx="100" cy="40" r="3" fill="white"/>
+      <circle cx="110" cy="30" r="3" fill="white"/>
+      <circle cx="120" cy="40" r="3" fill="white"/>
+      <text x="110" y="75" text-anchor="middle" class="icon-text">Multi-Objective</text>
+      
+      <!-- Performance icon -->
+      <rect x="160" y="0" width="60" height="60" rx="15" fill="rgba(255,255,255,0.3)"/>
+      <path d="M 175 45 L 185 35 L 195 40 L 205 25" stroke="white" stroke-width="2" fill="none"/>
+      <circle cx="185" cy="35" r="2" fill="white"/>
+      <circle cx="195" cy="40" r="2" fill="white"/>
+      <circle cx="205" cy="25" r="2" fill="white"/>
+      <text x="190" y="75" text-anchor="middle" class="icon-text">Performance</text>
+      
+      <!-- Pareto front icon -->
+      <rect x="240" y="0" width="60" height="60" rx="15" fill="rgba(255,255,255,0.3)"/>
+      <path d="M 255 45 L 265 35 L 275 30 L 285 25" stroke="white" stroke-width="3" fill="none"/>
+      <text x="270" y="50" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 10px; font-weight: bold; fill: white;">PARETO</text>
+      <text x="270" y="75" text-anchor="middle" class="icon-text">Optuna NSGA-II</text>
+    </g>
+    
+    <text x="175" y="120" text-anchor="middle" class="title-text">Multi-Objective Optimization</text>
+    <text x="175" y="145" text-anchor="middle" class="subtitle-text">NSGA-II Genetic Algorithm</text>
+    
+    <!-- Details -->
+    <rect x="20" y="165" width="310" height="95" rx="8" fill="rgba(255,255,255,0.95)"/>
+    <text x="30" y="185" class="detail-text">• Binary chromosome: each bit = edge inclusion</text>
+    <text x="30" y="205" class="detail-text">• Objective 1: Maximize validation AUC/accuracy</text>
+    <text x="30" y="225" class="detail-text">• Objective 2: Minimize number of interactions</text>
+    <text x="30" y="245" class="detail-text">• XGBoost with interaction constraints + pruning</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <g>
+    <path d="M 880 290 Q 930 290 930 320 T 980 320" stroke="#495057" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="930" y="310" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 14px; font-weight: bold; fill: #495057;">Optimized KG</text>
+    <text x="930" y="325" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; fill: #6c757d;">Pareto-Optimal</text>
+  </g>
+  
+  <!-- Step 3: Model Training -->
+  <g transform="translate(980, 150)">
+    <rect x="0" y="0" width="350" height="280" rx="20" fill="url(#grad3)" filter="url(#shadow)"/>
+    
+    <!-- Multiple icon placeholders -->
+    <g transform="translate(20, 20)">
+      <!-- ML Model icon -->
+      <rect x="0" y="0" width="60" height="60" rx="15" fill="rgba(255,255,255,0.3)"/>
+      <rect x="15" y="20" width="30" height="20" rx="3" fill="none" stroke="white" stroke-width="2"/>
+      <circle cx="20" cy="25" r="2" fill="white"/>
+      <circle cx="25" cy="30" r="2" fill="white"/>
+      <circle cx="30" cy="25" r="2" fill="white"/>
+      <circle cx="35" cy="30" r="2" fill="white"/>
+      <circle cx="40" cy="25" r="2" fill="white"/>
+      <text x="30" y="75" text-anchor="middle" class="icon-text">XGBoost</text>
+      
+      <!-- SHAP icon -->
+      <rect x="80" y="0" width="60" height="60" rx="15" fill="rgba(255,255,255,0.3)"/>
+      <path d="M 95 35 L 105 25 L 115 30 L 125 20" stroke="white" stroke-width="2" fill="none"/>
+      <text x="110" y="45" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 10px; font-weight: bold; fill: white;">SHAP</text>
+      <text x="110" y="75" text-anchor="middle" class="icon-text">Explainability</text>
+      
+      <!-- Visualization icon -->
+      <rect x="160" y="0" width="60" height="60" rx="15" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="190" cy="30" r="15" fill="none" stroke="white" stroke-width="2"/>
+      <line x1="180" y1="30" x2="200" y2="30" stroke="white" stroke-width="2"/>
+      <line x1="190" y1="20" x2="190" y2="40" stroke="white" stroke-width="2"/>
+      <text x="190" y="75" text-anchor="middle" class="icon-text">Graph Viz</text>
+      
+      <!-- Report icon -->
+      <rect x="240" y="0" width="60" height="60" rx="15" fill="rgba(255,255,255,0.3)"/>
+      <rect x="255" y="20" width="30" height="25" rx="3" fill="none" stroke="white" stroke-width="2"/>
+      <line x1="260" y1="28" x2="280" y2="28" stroke="white" stroke-width="1"/>
+      <line x1="260" y1="32" x2="280" y2="32" stroke="white" stroke-width="1"/>
+      <line x1="260" y1="36" x2="275" y2="36" stroke="white" stroke-width="1"/>
+      <text x="270" y="75" text-anchor="middle" class="icon-text">Clinical Report</text>
+    </g>
+    
+    <text x="175" y="120" text-anchor="middle" class="title-text">Model Training & Explainability</text>
+    <text x="175" y="145" text-anchor="middle" class="subtitle-text">SHAP + RAG Analysis</text>
+    
+    <!-- Details -->
+    <rect x="20" y="165" width="310" height="95" rx="8" fill="rgba(255,255,255,0.95)"/>
+    <text x="30" y="185" class="detail-text">• Train final XGBoost with optimized constraints</text>
+    <text x="30" y="205" class="detail-text">• Compute SHAP values for feature importance</text>
+    <text x="30" y="225" class="detail-text">• Visualize knowledge graph with SHAP weights</text>
+    <text x="30" y="245" class="detail-text">• Generate literature-backed clinical explanations</text>
+  </g>
+  
+  <!-- Bottom flow with datasets -->
+  <g transform="translate(100, 500)">
+    <!-- Dataset input -->
+    <rect x="0" y="0" width="280" height="120" rx="15" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+    <g transform="translate(20, 20)">
+      <!-- MIMIC icon -->
+      <rect x="0" y="0" width="50" height="50" rx="10" fill="rgba(25,118,210,0.2)"/>
+      <path d="M 15 15 Q 25 10 35 15" stroke="#1976d2" stroke-width="2" fill="none"/>
+      <path d="M 15 25 Q 25 20 35 25" stroke="#1976d2" stroke-width="2" fill="none"/>
+      <path d="M 15 35 Q 25 30 35 35" stroke="#1976d2" stroke-width="2" fill="none"/>
+      <text x="25" y="65" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 10px; fill: #1976d2;">MIMIC-IV</text>
+      
+      <!-- ADNI icon -->
+      <rect x="70" y="0" width="50" height="50" rx="10" fill="rgba(25,118,210,0.2)"/>
+      <circle cx="95" cy="25" r="12" fill="none" stroke="#1976d2" stroke-width="2"/>
+      <circle cx="95" cy="25" r="6" fill="none" stroke="#1976d2" stroke-width="2"/>
+      <text x="95" y="65" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 10px; fill: #1976d2;">ADNI</text>
+      
+      <!-- Features -->
+      <rect x="140" y="0" width="120" height="50" rx="10" fill="rgba(25,118,210,0.1)"/>
+      <text x="200" y="20" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; font-weight: bold; fill: #1976d2;">Input Datasets</text>
+      <text x="200" y="35" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 10px; fill: #1976d2;">67 & 99 features</text>
+      <text x="200" y="45" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 10px; fill: #1976d2;">High-dimensional</text>
+    </g>
+    
+    <!-- Arrow up -->
+    <path d="M 140 0 L 140 -70" stroke="#1976d2" stroke-width="3" fill="none" marker-end="url(#arrowhead2)"/>
+  </g>
+  
+  <!-- Performance metrics in center -->
+  <g transform="translate(500, 500)">
+    <rect x="0" y="0" width="400" height="120" rx="15" fill="#fff3e0" stroke="#f57c00" stroke-width="3"/>
+    <text x="200" y="35" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 18px; font-weight: bold; fill: #e65100;">Key Performance Metrics</text>
+    
+    <g transform="translate(20, 50)">
+      <!-- Dimensionality reduction -->
+      <rect x="0" y="0" width="110" height="50" rx="8" fill="rgba(245,124,0,0.1)"/>
+      <text x="55" y="20" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 14px; font-weight: bold; fill: #e65100;">8-10x</text>
+      <text x="55" y="35" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 11px; fill: #e65100;">Fewer Features</text>
+      
+      <!-- Performance -->
+      <rect x="130" y="0" width="110" height="50" rx="8" fill="rgba(245,124,0,0.1)"/>
+      <text x="185" y="20" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 14px; font-weight: bold; fill: #e65100;">≈ Same</text>
+      <text x="185" y="35" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 11px; fill: #e65100;">Performance</text>
+      
+      <!-- Interpretability -->
+      <rect x="260" y="0" width="110" height="50" rx="8" fill="rgba(245,124,0,0.1)"/>
+      <text x="315" y="20" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 14px; font-weight: bold; fill: #e65100;">++</text>
+      <text x="315" y="35" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 11px; fill: #e65100;">Interpretability</text>
+    </g>
+  </g>
+  
+  <!-- Final output -->
+  <g transform="translate(1200, 500)">
+    <rect x="0" y="0" width="280" height="120" rx="15" fill="#e8f5e8" stroke="#2e7d32" stroke-width="3"/>
+    <g transform="translate(20, 20)">
+      <!-- Model icon -->
+      <rect x="0" y="0" width="50" height="50" rx="10" fill="rgba(46,125,50,0.2)"/>
+      <circle cx="25" cy="25" r="15" fill="none" stroke="#2e7d32" stroke-width="2"/>
+      <text x="25" y="30" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 8px; font-weight: bold; fill: #2e7d32;">MODEL</text>
+      <text x="25" y="65" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 10px; fill: #2e7d32;">Optimized</text>
+      
+      <!-- Insights icon -->
+      <rect x="70" y="0" width="50" height="50" rx="10" fill="rgba(46,125,50,0.2)"/>
+      <circle cx="95" cy="25" r="12" fill="none" stroke="#2e7d32" stroke-width="2"/>
+      <text x="95" y="30" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; fill: #2e7d32;">💡</text>
+      <text x="95" y="65" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 10px; fill: #2e7d32;">Insights</text>
+      
+      <!-- Output summary -->
+      <rect x="140" y="0" width="120" height="50" rx="10" fill="rgba(46,125,50,0.1)"/>
+      <text x="200" y="20" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; font-weight: bold; fill: #2e7d32;">Clinical Output</text>
+      <text x="200" y="35" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 10px; fill: #2e7d32;">Interpretable Model</text>
+      <text x="200" y="45" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 10px; fill: #2e7d32;">+ Explanations</text>
+    </g>
+    
+    <!-- Arrow down -->
+    <path d="M 140 -70 L 140 0" stroke="#2e7d32" stroke-width="3" fill="none" marker-end="url(#arrowhead3)"/>
+  </g>
+  
+  <!-- Results section -->
+  <g transform="translate(200, 700)">
+    <rect x="0" y="0" width="1200" height="150" rx="20" fill="url(#grad4)" filter="url(#shadow)"/>
+    <text x="600" y="40" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 24px; font-weight: bold; fill: white;">GRACE Results Summary</text>
+    
+    <!-- Result boxes -->
+    <g transform="translate(50, 60)">
+      <!-- ADNI results -->
+      <rect x="0" y="0" width="250" height="70" rx="10" fill="rgba(255,255,255,0.9)"/>
+      <text x="125" y="20" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 16px; font-weight: bold; fill: #2c3e50;">ADNI Dataset</text>
+      <text x="125" y="35" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; fill: #34495e;">94.75% accuracy (vs 94.33% baseline)</text>
+      <text x="125" y="50" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; fill: #34495e;">10 features (vs 99 original)</text>
+      <text x="125" y="62" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 11px; font-weight: bold; fill: #27ae60;">✓ Best Performance</text>
+      
+      <!-- MIMIC results -->
+      <rect x="300" y="0" width="250" height="70" rx="10" fill="rgba(255,255,255,0.9)"/>
+      <text x="425" y="20" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 16px; font-weight: bold; fill: #2c3e50;">MIMIC-IV Dataset</text>
+      <text x="425" y="35" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; fill: #34495e;">79.81% AUC (vs 81.22% baseline)</text>
+      <text x="425" y="50" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; fill: #34495e;">18.4 features (vs 67 original)</text>
+      <text x="425" y="62" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 11px; font-weight: bold; fill: #f39c12;">✓ High Interpretability</text>
+      
+      <!-- Comparison methods -->
+      <rect x="600" y="0" width="250" height="70" rx="10" fill="rgba(255,255,255,0.9)"/>
+      <text x="725" y="20" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 16px; font-weight: bold; fill: #2c3e50;">vs. Baselines</text>
+      <text x="725" y="35" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; fill: #34495e;">Outperforms PCA, RFE</text>
+      <text x="725" y="50" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; fill: #34495e;">Matches No Processing</text>
+      <text x="725" y="62" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 11px; font-weight: bold; fill: #8e44ad;">✓ Domain-Informed</text>
+      
+      <!-- Innovation -->
+      <rect x="900" y="0" width="250" height="70" rx="10" fill="rgba(255,255,255,0.9)"/>
+      <text x="1025" y="20" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 16px; font-weight: bold; fill: #2c3e50;">Innovation</text>
+      <text x="1025" y="35" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; fill: #34495e;">First LLM+RAG approach</text>
+      <text x="1025" y="50" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 12px; fill: #34495e;">for biomedical dim. reduction</text>
+      <text x="1025" y="62" text-anchor="middle" style="font-family: 'Helvetica', sans-serif; font-size: 11px; font-weight: bold; fill: #e74c3c;">✓ Novel Methodology</text>
+    </g>
+  </g>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="12" refY="6" orient="auto">
+      <polygon points="0 0, 12 6, 0 12" fill="#495057"/>
+    </marker>
+    <marker id="arrowhead2" markerWidth="12" markerHeight="12" refX="6" refY="12" orient="auto">
+      <polygon points="0 0, 6 12, 12 0" fill="#1976d2"/>
+    </marker>
+    <marker id="arrowhead3" markerWidth="12" markerHeight="12" refX="6" refY="12" orient="auto">
+      <polygon points="0 0, 6 12, 12 0" fill="#2e7d32"/>
+    </marker>
+  </defs>
+</svg> 

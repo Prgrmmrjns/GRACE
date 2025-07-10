@@ -1,0 +1,270 @@
+{
+  "dataset": "MIMIC",
+  "target_condition": "mortality_flag",
+  "feature_interpretations": [
+    {
+      "feature_name": "GCS",
+      "shap_value": 0.4639,
+      "mechanism": "Reduced cerebral function impairs systemic regulation",
+      "short_interpretation": "Impaired brain function increases organ failure risk",
+      "detailed_interpretation": "A low Glasgow Coma Scale (GCS) indicates severe neurological impairment, reducing the brain's ability to regulate vital autonomic and metabolic responses. This increases vulnerability to respiratory, cardiac, and metabolic derangements, directly raising risk for multi-organ failure and death. It also can impair airway protection, increase risk of aspiration, and signal severe underlying pathologies like sepsis or brain injury.",
+      "clinical_significance": "Strong predictor of mortality via global physiological dysregulation.",
+      "biological_pathway": "Central nervous system dysfunction disrupts cardiorespiratory and metabolic homeostasis."
+    },
+    {
+      "feature_name": "FoleymL_sum",
+      "shap_value": 0.3114,
+      "mechanism": "Prolonged catheterization increases infection and sepsis risk",
+      "short_interpretation": "Urinary catheter increases infection and organ dysfunction",
+      "detailed_interpretation": "Higher Foley catheter output suggests both severity of illness and prolonged catheterization, predisposing patients to catheter-associated urinary tract infections (CAUTI), which can trigger systemic infection and sepsis. Sepsis escalates inflammation and organ dysfunction, directly increasing mortality risk.",
+      "clinical_significance": "Higher volume/output linked to infection and systemic complications.",
+      "biological_pathway": "Catheterization enables bacterial entry; infection triggers inflammatory cascade and organ injury."
+    },
+    {
+      "feature_name": "LacticAcid",
+      "shap_value": 0.2246,
+      "mechanism": "Impaired perfusion causes anaerobic metabolism and acidosis",
+      "short_interpretation": "Elevated lactate signals tissue hypoxia and severity",
+      "detailed_interpretation": "Elevated lactic acid reflects impaired oxygen delivery/utilization, indicating tissue hypoperfusion or shock states (e.g., sepsis, heart failure). Accumulation of lactate leads to metabolic acidosis, disrupting cellular functions and increasing cell death, thus contributing to multi-organ dysfunction and raising risk of death.",
+      "clinical_significance": "Sensitive marker of severe shock and tissue damage; predicts poor outcomes.",
+      "biological_pathway": "Anaerobic glycolysis from hypoxia increases lactate; metabolic acidosis disrupts organ function."
+    },
+    {
+      "feature_name": "anchor_age",
+      "shap_value": 0.1964,
+      "mechanism": "Aging reduces physiological reserve and immunity",
+      "short_interpretation": "Older age impairs recovery and resilience",
+      "detailed_interpretation": "Advanced age reduces organ reserve and impairs immune and repair mechanisms, increasing susceptibility to acute illness, infection, and organ failure. Comorbidities accumulate with age, further compromising the ability to recover from critical illness, hence raising mortality risk.",
+      "clinical_significance": "Older patients have higher risk of death and complications.",
+      "biological_pathway": "Aging drives immunosenescence, decreased organ function, and impaired stress response."
+    },
+    {
+      "feature_name": "WBC",
+      "shap_value": 0.1311,
+      "mechanism": "Leukocytosis or leukopenia indicate systemic inflammation",
+      "short_interpretation": "Abnormal WBC reflects infection or immune dysfunction",
+      "detailed_interpretation": "Abnormally high (leukocytosis) or low (leukopenia) white blood cell counts indicate systemic inflammation or immune compromise. Infections, sepsis, or marrow failure can cause derangements, leading to impaired host defense, uncontrolled inflammation, and organ dysfunction\u2014all linked with higher mortality.",
+      "clinical_significance": "Marker of infection, inflammation, and immune dysfunction in critical illness.",
+      "biological_pathway": "Immune dysregulation causes cell damage and predisposes to severe infection."
+    },
+    {
+      "feature_name": "eGFR",
+      "shap_value": 0.1096,
+      "mechanism": "Reduced filtration indicates acute or chronic renal failure",
+      "short_interpretation": "Impaired kidney function causes toxin buildup, complications",
+      "detailed_interpretation": "Lower estimated glomerular filtration rate (eGFR) reflects reduced kidney function, resulting in accumulation of metabolic waste and fluids, electrolyte imbalances, and disruption of acid-base homeostasis. Renal dysfunction promotes systemic toxicity, fluid overload, and increased cardiovascular and multi-organ risk, all raising mortality.",
+      "clinical_significance": "Renal dysfunction contributes to multi-organ failure and higher mortality.",
+      "biological_pathway": "Reduced GFR leads to increased waste retention, metabolic and fluid imbalance."
+    },
+    {
+      "feature_name": "NMED",
+      "shap_value": 0.0993,
+      "mechanism": "Medical ICU admission signals severe medical illnesses",
+      "short_interpretation": "Medical ICU status reflects critical underlying diseases",
+      "detailed_interpretation": "Admission to a non-surgical medical ICU (NMED) typically signifies acute severe medical pathologies (e.g., sepsis, heart failure, respiratory failure) that carry higher baseline mortality than surgical or elective cases, reflecting greater disease severity and need for intensive support.",
+      "clinical_significance": "ICU context indicates serious, complex underlying illness.",
+      "biological_pathway": "Severe medical conditions (e.g., shock, metabolic crises) drive organ failure."
+    },
+    {
+      "feature_name": "Sodiumserum",
+      "shap_value": 0.0898,
+      "mechanism": "Electrolyte imbalance disrupts cellular and neural function",
+      "short_interpretation": "Sodium abnormalities impair neuronal and systemic stability",
+      "detailed_interpretation": "Derangements in serum sodium (hypo- or hypernatremia) disrupt osmotic gradients, causing neuronal dysfunction, brain edema, or dehydration. Rapid shifts exacerbate cerebral and cardiovascular instability, increasing risk for seizures, arrhythmias, and death.",
+      "clinical_significance": "Both high and low sodium predict poor outcomes.",
+      "biological_pathway": "Na+ imbalance affects neuronal signals, cell swelling/shrinkage, and organ function."
+    },
+    {
+      "feature_name": "TotalBilirubin",
+      "shap_value": 0.0841,
+      "mechanism": "Liver dysfunction causes toxin accumulation and injury",
+      "short_interpretation": "High bilirubin signals liver and multi-organ failure",
+      "detailed_interpretation": "Elevated bilirubin indicates impaired hepatic clearance due to acute or chronic liver disease, or bile duct obstruction. Toxic accumulations (bilirubin, bile acids) cause cellular injury and inflammation, worsen coagulation, and predispose to encephalopathy, sepsis, and multiorgan failure.",
+      "clinical_significance": "Marker of hepatic dysfunction and systemic complications linked to mortality.",
+      "biological_pathway": "Bilirubin retention triggers cytotoxicity, inflammation, and multi-organ effects."
+    },
+    {
+      "feature_name": "PlateletCount",
+      "shap_value": 0.077,
+      "mechanism": "Low platelets increase bleeding, impede tissue repair",
+      "short_interpretation": "Thrombocytopenia or dysfunction elevates hemorrhagic risk",
+      "detailed_interpretation": "Low platelet count (thrombocytopenia) impairs clot formation, increasing risks of bleeding, organ hematomas, and poor tissue healing. It often corresponds to severe sepsis, disseminated intravascular coagulation (DIC), or marrow failure\u2014each associated with increased mortality.",
+      "clinical_significance": "Indicator of coagulopathy and risk for fatal bleeding/events.",
+      "biological_pathway": "Platelet depletion or dysfunction disrupts hemostasis and repair mechanisms."
+    }
+  ],
+  "interaction_interpretations": [
+    {
+      "feature1": "LacticAcid",
+      "feature2": "FoleymL_sum",
+      "interaction_strength": 0.0326,
+      "mechanism_link": "Infection plus poor perfusion accelerates organ failure",
+      "short_interpretation": "Sepsis and hypoperfusion synergistically worsen outcomes",
+      "detailed_biological_rationale": "High lactic acid suggests hypoperfusion; increased Foley output reflects infection risk. Infection triggers systemic inflammation, worsening tissue oxygen delivery and raising lactate. This synergy intensifies cellular damage and rapidly leads to multi-organ dysfunction and death.",
+      "clinical_relevance": "Co-occurrence portends severe sepsis and elevated mortality.",
+      "pathway_interaction": "Inflammatory and hypoxic cascades combine, amplifying cell injury."
+    },
+    {
+      "feature1": "FoleymL_sum",
+      "feature2": "GCS",
+      "interaction_strength": 0.0253,
+      "mechanism_link": "Impaired mentation increases infection risk with catheter",
+      "short_interpretation": "Low cognition and catheters multiply infection risk",
+      "detailed_biological_rationale": "A low GCS impedes self-protection and hygiene, increasing risk for urinary infections with Foley catheter in place. Resultant urosepsis further worsens neurological function, creating a dangerous feedback loop and heightening short-term mortality.",
+      "clinical_relevance": "Comatose/intubated patients on catheters require vigilance for sepsis.",
+      "pathway_interaction": "Neurological and infectious injury promote systemic decompensation."
+    },
+    {
+      "feature1": "LacticAcid",
+      "feature2": "GCS",
+      "interaction_strength": 0.0226,
+      "mechanism_link": "Shock and encephalopathy drive multi-organ demise",
+      "short_interpretation": "Brain dysfunction with shock hastens organ death",
+      "detailed_biological_rationale": "Elevated lactate reflects severe shock/tissue hypoxia; a low GCS signals impaired CNS function. Conjointly, they indicate dire systemic failure\u2014impaired perfusion disrupts brain function, and cerebral failure decreases adaptability, exacerbating the spiral to death.",
+      "clinical_relevance": "Dual derangement predicts rapid deterioration and death.",
+      "pathway_interaction": "Perfusion and neural failure intertwine in multi-organ collapse."
+    },
+    {
+      "feature1": "Sodiumserum",
+      "feature2": "FoleymL_sum",
+      "interaction_strength": 0.0173,
+      "mechanism_link": "Fluid shifts with catheters alter sodium rapidly",
+      "short_interpretation": "Catheterization affects electrolyte, fluid balance acutely",
+      "detailed_biological_rationale": "Urinary catheterization can prompt rapid electrolyte shifts (including sodium) via diuresis or fluid overload. Abrupt changes in sodium due to altered fluid handling can cause cerebral and cardiovascular instability, raising risk of fatal complications.",
+      "clinical_relevance": "Close sodium monitoring is imperative with urinary catheters.",
+      "pathway_interaction": "Altered fluid management disturbs osmoregulation and neurophysiology."
+    },
+    {
+      "feature1": "NSURG",
+      "feature2": "GCS",
+      "interaction_strength": 0.0163,
+      "mechanism_link": "Surgical patients with low GCS risk poor recovery",
+      "short_interpretation": "Neurosurgical/critical patients fare worse with coma",
+      "detailed_biological_rationale": "Non-surgical patients with low GCS may have severe medical encephalopathy, whereas surgical patients with low GCS (e.g., post-neurosurgery) portend refractory brain injury or poor recovery prospects; both contexts indicate high mortality risk.",
+      "clinical_relevance": "ICU context modifies prognostic value of GCS.",
+      "pathway_interaction": "Underlying pathology/context amplifies effects of brain dysfunction."
+    },
+    {
+      "feature1": "Hemoglobingdl",
+      "feature2": "FoleymL_sum",
+      "interaction_strength": 0.015,
+      "mechanism_link": "Blood loss with catheter signals hemorrhagic shock",
+      "short_interpretation": "Hematuria and anemia worsen hypoxic outcomes",
+      "detailed_biological_rationale": "Low hemoglobin indicates anemia (bleeding or chronic disease); elevated urinary output can signal hemorrhagic loss with catheter. This combination reduces oxygen delivery, exacerbates hypoperfusion, and amplifies risk for multi-organ failure and mortality.",
+      "clinical_relevance": "Monitor for bleeding in catheterized anemic patients.",
+      "pathway_interaction": "Reduced oxygen-carrying capacity accelerates injury from perfusion issues."
+    },
+    {
+      "feature1": "WBC",
+      "feature2": "Sodiumserum",
+      "interaction_strength": 0.0147,
+      "mechanism_link": "Inflammation alters sodium through ADH/cytokines",
+      "short_interpretation": "Inflammation disturbs sodium via hormonal changes",
+      "detailed_biological_rationale": "Infection-driven inflammation (via cytokine/adrenal axis) causes ADH-mediated sodium retention or wasting, leading to hyponatremia/hypernatremia. These derangements impair brain and organ function, raising mortality.",
+      "clinical_relevance": "Infection can unpredictably destabilize electrolytes and homeostasis.",
+      "pathway_interaction": "Cytokine-mediated disruption of water/salt balance affects organs."
+    },
+    {
+      "feature1": "PlateletCount",
+      "feature2": "FoleymL_sum",
+      "interaction_strength": 0.0141,
+      "mechanism_link": "Bleeding risk rises with thrombocytopenia and catheters",
+      "short_interpretation": "Catheter + low platelets raise bleeding, infection",
+      "detailed_biological_rationale": "Low platelets weaken hemostasis, and catheterization increases risk for bleeding or infection. Infections further reduce platelets (via sepsis/DIC), potentiating lethal bleeding and multi-organ complications.",
+      "clinical_relevance": "Monitor for hematuria/sepsis in thrombocytopenic patients with Foley.",
+      "pathway_interaction": "Infection-induced coagulopathy amplifies catheter-related hemorrhagic risk."
+    },
+    {
+      "feature1": "TotalBilirubin",
+      "feature2": "anchor_age",
+      "interaction_strength": 0.0139,
+      "mechanism_link": "Aged livers clear toxins less efficiently",
+      "short_interpretation": "Elderly with liver dysfunction have increased mortality",
+      "detailed_biological_rationale": "With aging, hepatic reserve and regenerative capacity decline. Combined with elevated bilirubin, this reflects advanced liver dysfunction in the elderly, with compounded risk for encephalopathy, hemorrhage, or multi-organ failure.",
+      "clinical_relevance": "Age magnifies risk of death from liver failure.",
+      "pathway_interaction": "Senescent organs less able to compensate for hepatic insults."
+    },
+    {
+      "feature1": "NBPdmmHg",
+      "feature2": "TemperatureFF",
+      "interaction_strength": 0.0137,
+      "mechanism_link": "Hypotension with fever signals distributive shock",
+      "short_interpretation": "Shock with fever suggests severe sepsis or inflammation",
+      "detailed_biological_rationale": "Low diastolic BP with fever signals systemic vasodilation from severe infection or inflammatory response (sepsis), impairing organ perfusion and initiating fatal cascade unless reversed rapidly.",
+      "clinical_relevance": "Vigilance for shock states in febrile hypotensive patients.",
+      "pathway_interaction": "Fever/inflammation induces vasodilation, lowers BP, impairs perfusion."
+    },
+    {
+      "feature1": "Hemoglobingdl",
+      "feature2": "TotalBilirubin",
+      "interaction_strength": 0.0129,
+      "mechanism_link": "Hemolysis or liver injury elevates both biomarkers",
+      "short_interpretation": "Concurrent anemia and jaundice signal underlying systemic disease",
+      "detailed_biological_rationale": "Both low hemoglobin and high bilirubin suggest hemolysis, severe liver disease, or bleeding with impaired bilirubin clearance, all of which increase risk of shock, metabolic instability, and death.",
+      "clinical_relevance": "Combined markers flag need for workup of causes (e.g., DIC, hepatic failure).",
+      "pathway_interaction": "Hemolysis or hepatic dysfunction amplifies toxic/metabolic stress."
+    },
+    {
+      "feature1": "LacticAcid",
+      "feature2": "eGFR",
+      "interaction_strength": 0.0112,
+      "mechanism_link": "Renal failure impairs lactate clearance, amplifies acidosis",
+      "short_interpretation": "Lactate accumulates with declining kidney function",
+      "detailed_biological_rationale": "Poor kidney function (low eGFR) reduces lactate clearance, worsening metabolic acidosis and compounding tissue injury, increasing risk of multi-organ dysfunction and fatality.",
+      "clinical_relevance": "Monitor acidosis in renal failure for deterioration.",
+      "pathway_interaction": "Reduced renal clearance heightens metabolic toxin burden."
+    },
+    {
+      "feature1": "PCO2ArterialmmHg",
+      "feature2": "PlateletCount",
+      "interaction_strength": 0.0107,
+      "mechanism_link": "Respiratory failure disrupts coagulation",
+      "short_interpretation": "Hypoventilation and thrombocytopenia worsen organ perfusion",
+      "detailed_biological_rationale": "Elevated arterial CO2 (respiratory failure) increases acidosis, which impairs platelet function. Thrombocytopenia further increases bleeding risk, with combined respiratory and hematologic compromise escalating multi-organ injury.",
+      "clinical_relevance": "Monitor coagulation and ventilation in deteriorating patients.",
+      "pathway_interaction": "Acidosis inhibits platelets; hypoxia impairs repair."
+    },
+    {
+      "feature1": "anchor_age",
+      "feature2": "FoleymL_sum",
+      "interaction_strength": 0.0103,
+      "mechanism_link": "Aging increases infection risk with catheters",
+      "short_interpretation": "Elderly more vulnerable to catheter-driven infection",
+      "detailed_biological_rationale": "Older adults have weakened immune defense and reduced tissue repair, increasing the likelihood of complications (infections, sepsis) from invasive devices (catheters), exacerbating risk of mortality.",
+      "clinical_relevance": "Enhance infection control for elderly with indwelling catheters.",
+      "pathway_interaction": "Host defenses wane, biomaterial colonization risk rises."
+    },
+    {
+      "feature1": "anchor_age",
+      "feature2": "GCS",
+      "interaction_strength": 0.0102,
+      "mechanism_link": "Old age and coma drive poor prognosis",
+      "short_interpretation": "Age and low GCS combine to worsen outcome",
+      "detailed_biological_rationale": "Advanced age and low GCS both signify diminished physiologic reserve and increased severity of acute illness, together compounding risk for poor recovery, complications, and mortality.",
+      "clinical_relevance": "Combined consideration guides aggressive supportive care and prognosis.",
+      "pathway_interaction": "Reduced recovery capacity with compounded neurologic deficit."
+    }
+  ],
+  "overall_assessment": "Mortality in ICU patients is primarily driven by markers of neurological impairment (GCS), perfusion/shock (lactic acid), age-related vulnerability, infection risk (Foley, WBC), renal/hepatic dysfunction (eGFR, bilirubin, platelets), and deranged metabolic and fluid-electrolyte status (sodium). Feature interactions reveal synergy between these axes\u2014shock, infection, and impaired homeostasis rapidly amplify risk when present together.",
+  "clinical_implications": "Prompt vigilance and intervention on neurological changes, infection sources (especially with indwelling catheters), metabolic derangements, and end-organ function are crucial. Rigorous infection control, rapid management of electrolyte/fluid imbalances, and support for elderly or comatose patients can decrease mortality risk. Multimodal monitoring is vital for anticipating multi-organ failure.",
+  "key_findings": [
+    "Low GCS is the strongest direct predictor of mortality, signaling profound neurological and systemic compromise.",
+    "High lactic acid and Foley catheterization act synergistically, reflecting and propelling shock and infection risk.",
+    "Aging remains a core risk factor, compounding all other adverse effects.",
+    "Electrolyte disturbances (especially sodium) and organ dysfunction (renal, hepatic, hematological) are vital predictors.",
+    "Key feature interactions amplify risk: especially when multiple axes (neurological, infectious, metabolic) are compromised together."
+  ],
+  "recommendations": [
+    "Prioritize rapid neurological assessment and intervention for declining GCS.",
+    "Minimize duration and rigorously manage Foley catheters to lower infection risk.",
+    "Monitor and actively correct lactic acid, kidney, liver, and sodium abnormalities.",
+    "Enhance surveillance and prevention of infection, especially in elderly and immunocompromised.",
+    "Integrate monitoring to anticipate and treat interacting risks (e.g., combined infection and hypoperfusion, or metabolic/organ failures)."
+  ],
+  "metadata": {
+    "generated_date": "2025-07-10T02:43:20.392770",
+    "model": "OpenAIChat(id='gpt-4.1', name='OpenAIChat', provider='OpenAI', supports_native_structured_outputs=True, supports_json_schema_outputs=False, _function_call_stack=None, _tool_choice=None, system_prompt=None, instructions=None, tool_message_role='tool', assistant_message_role='assistant', store=None, reasoning_effort=None, metadata=None, frequency_penalty=None, logit_bias=None, logprobs=None, top_logprobs=None, max_tokens=None, max_completion_tokens=None, modalities=None, audio=None, presence_penalty=None, seed=None, stop=None, temperature=None, user=None, top_p=None, extra_headers=None, extra_query=None, request_params=None, api_key='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', organization=None, base_url=None, timeout=None, max_retries=None, default_headers=None, default_query=None, http_client=None, client_params=None)",
+    "dataset": "mimic",
+    "target": "mortality_flag"
+  }
+}
