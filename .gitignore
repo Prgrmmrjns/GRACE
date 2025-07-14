@@ -1,5 +1,5 @@
 .env
 __pycache__
 .cursor
-catboost_info
-/manuscript_files
+manuscript_files
+checkpoints
