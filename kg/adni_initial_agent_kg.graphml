@@ -5,13 +5,10 @@
 <graph edgedefault="directed"><node id="DIAGNOSIS">
   <data key="d0">target</data>
 </node>
-<node id="Amyloid Beta Accumulation and Plaque Formation">
+<node id="Amyloid Pathology and Deposition">
   <data key="d0">mechanism</data>
-  <data key="d1">Alzheimer’s disease is centrally characterized by the pathological accumulation of amyloid beta (Aβ) peptides, particularly Aβ42, in the brain. These peptides aggregate to form insoluble plaques, which disrupt neuronal communication and trigger a cascade of neurotoxic events, including oxidative stress, inflammation, and synaptic dysfunction. In ADNI data, this process is reflected by reduced CSF Aβ42 levels and increased amyloid tracer uptake on PET imaging.</data>
-  <data key="d2">30</data>
-</node>
-<node id="AGE">
-  <data key="d0">feature</data>
+  <data key="d1">This mechanism involves the abnormal accumulation of amyloid-beta (Aβ) peptides, particularly Aβ42, in the brain. Deposition of amyloid plaques is a hallmark of Alzheimer's disease (AD) pathology and an early indicator that can predate symptoms. Amyloid pathophysiology is detected via CSF testing and PET imaging, and is associated with downstream neurotoxicity, inflammation, and neurodegeneration.</data>
+  <data key="d2">5</data>
 </node>
 <node id="ABETA40">
   <data key="d0">feature</data>
@@ -28,8 +25,10 @@
 <node id="FBB">
   <data key="d0">feature</data>
 </node>
-<node id="FDG">
-  <data key="d0">feature</data>
+<node id="Tau Pathology and Neurofibrillary Tangle Formation">
+  <data key="d0">mechanism</data>
+  <data key="d1">This mechanism focuses on the hyperphosphorylation of tau proteins, leading to intracellular neurofibrillary tangle formation, which disrupts neuronal transport and function. Elevated total tau (TAU) and phosphorylated tau (PTAU) in CSF reflect active neurodegeneration and are closely linked to cognitive impairment in AD.</data>
+  <data key="d2">2</data>
 </node>
 <node id="TAU">
   <data key="d0">feature</data>
@@ -37,47 +36,10 @@
 <node id="PTAU">
   <data key="d0">feature</data>
 </node>
-<node id="MMSE">
-  <data key="d0">feature</data>
-</node>
-<node id="MMSCORE">
-  <data key="d0">feature</data>
-</node>
-<node id="ADAS11">
-  <data key="d0">feature</data>
-</node>
-<node id="ADAS13">
-  <data key="d0">feature</data>
-</node>
-<node id="ADASQ4">
-  <data key="d0">feature</data>
-</node>
-<node id="LDELTOTAL">
-  <data key="d0">feature</data>
-</node>
-<node id="CDRSB">
-  <data key="d0">feature</data>
-</node>
-<node id="CDRSB.1">
-  <data key="d0">feature</data>
-</node>
-<node id="CDGLOBAL">
-  <data key="d0">feature</data>
-</node>
-<node id="FAQ">
-  <data key="d0">feature</data>
-</node>
-<node id="RAVLT_immediate">
-  <data key="d0">feature</data>
-</node>
-<node id="RAVLT_learning">
-  <data key="d0">feature</data>
-</node>
-<node id="RAVLT_forgetting">
-  <data key="d0">feature</data>
-</node>
-<node id="RAVLT_perc_forgetting">
-  <data key="d0">feature</data>
+<node id="Neurodegeneration and Brain Atrophy">
+  <data key="d0">mechanism</data>
+  <data key="d1">Progressive loss and shrinkage of neurons and synapses, particularly in regions like the hippocampus, entorhinal cortex, and temporal lobes. Structural MRI markers and FDG-PET metabolism changes evidence this mechanism, manifesting as cognitive and functional decline as neurons die and lose connectivity.</data>
+  <data key="d2">8</data>
 </node>
 <node id="Ventricles">
   <data key="d0">feature</data>
@@ -100,18 +62,135 @@
 <node id="ICV">
   <data key="d0">feature</data>
 </node>
-<node id="Tau Pathology and Neurofibrillary Tangle Formation">
+<node id="FDG">
+  <data key="d0">feature</data>
+</node>
+<node id="Cognitive Impairment and Clinical Dementia Expression">
   <data key="d0">mechanism</data>
-  <data key="d1">Hyperphosphorylation of tau proteins leads to the formation of neurofibrillary tangles inside neurons. These tangles destabilize microtubules, impair axonal transport, and ultimately result in cell death. Elevated levels of total tau (TAU) and phosphorylated tau (PTAU) in CSF are hallmark biomarkers in AD, indicating ongoing neurodegeneration and correlating with cognitive impairment.</data>
-  <data key="d2">51</data>
+  <data key="d1">This mechanism captures the disruption of cognitive domains including memory, executive function, language, and processing speed, translating to deficits measurable by neuropsychological tests and functional questionnaires. It directly accounts for the clinical expression and severity assessment of dementia and MCI.</data>
+  <data key="d2">55</data>
+</node>
+<node id="MMSCORE">
+  <data key="d0">feature</data>
 </node>
 <node id="MOCA">
+  <data key="d0">feature</data>
+</node>
+<node id="CLOCKSCOR">
+  <data key="d0">feature</data>
+</node>
+<node id="COPYSCOR">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOT1">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOT2">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOT3">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOT4">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOT5">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOT6">
+  <data key="d0">feature</data>
+</node>
+<node id="AVTOTB">
+  <data key="d0">feature</data>
+</node>
+<node id="DSPANFOR">
+  <data key="d0">feature</data>
+</node>
+<node id="DSPANFLTH">
+  <data key="d0">feature</data>
+</node>
+<node id="DSPANBAC">
+  <data key="d0">feature</data>
+</node>
+<node id="DSPANBLTH">
+  <data key="d0">feature</data>
+</node>
+<node id="CATANIMSC">
+  <data key="d0">feature</data>
+</node>
+<node id="CATANPERS">
+  <data key="d0">feature</data>
+</node>
+<node id="CATANINTR">
+  <data key="d0">feature</data>
+</node>
+<node id="CATVEGESC">
+  <data key="d0">feature</data>
+</node>
+<node id="CATVGPERS">
+  <data key="d0">feature</data>
+</node>
+<node id="CATVGINTR">
+  <data key="d0">feature</data>
+</node>
+<node id="TRAASCOR">
+  <data key="d0">feature</data>
+</node>
+<node id="TRABSCOR">
+  <data key="d0">feature</data>
+</node>
+<node id="DIGITSCOR">
+  <data key="d0">feature</data>
+</node>
+<node id="BNTTOTAL">
   <data key="d0">feature</data>
 </node>
 <node id="AVDEL30MIN">
   <data key="d0">feature</data>
 </node>
 <node id="AVDELTOT">
+  <data key="d0">feature</data>
+</node>
+<node id="ANART">
+  <data key="d0">feature</data>
+</node>
+<node id="MINTTOTAL">
+  <data key="d0">feature</data>
+</node>
+<node id="MMSE">
+  <data key="d0">feature</data>
+</node>
+<node id="RAVLT_immediate">
+  <data key="d0">feature</data>
+</node>
+<node id="RAVLT_learning">
+  <data key="d0">feature</data>
+</node>
+<node id="RAVLT_forgetting">
+  <data key="d0">feature</data>
+</node>
+<node id="RAVLT_perc_forgetting">
+  <data key="d0">feature</data>
+</node>
+<node id="LDELTOTAL">
+  <data key="d0">feature</data>
+</node>
+<node id="ADAS11">
+  <data key="d0">feature</data>
+</node>
+<node id="ADAS13">
+  <data key="d0">feature</data>
+</node>
+<node id="ADASQ4">
+  <data key="d0">feature</data>
+</node>
+<node id="FAQ">
+  <data key="d0">feature</data>
+</node>
+<node id="mPACCdigit">
+  <data key="d0">feature</data>
+</node>
+<node id="mPACCtrailsB">
   <data key="d0">feature</data>
 </node>
 <node id="EcogPtMem">
@@ -156,6 +235,11 @@
 <node id="EcogSPTotal">
   <data key="d0">feature</data>
 </node>
+<node id="Neuropsychiatric and Behavioral Dysfunction">
+  <data key="d0">mechanism</data>
+  <data key="d1">Neurodegenerative changes in key brain circuits lead to non-cognitive symptoms such as depression, agitation, apathy, psychosis, sleep disturbances, and altered behavior. These features are prevalent in AD and MCI and can be measured through structured assessments.</data>
+  <data key="d2">14</data>
+</node>
 <node id="NPIASEV">
   <data key="d0">feature</data>
 </node>
@@ -195,119 +279,27 @@
 <node id="NPISCORE">
   <data key="d0">feature</data>
 </node>
-<node id="Neurodegeneration and Brain Atrophy">
-  <data key="d0">mechanism</data>
-  <data key="d1">Progressive loss of neurons and synapses results in atrophy of specific brain regions implicated in AD. This includes early atrophy in the hippocampus and entorhinal cortex, as well as widespread atrophy in the temporal, parietal, and whole brain regions as disease advances. These structural changes, which are detectable by MRI measures like ventricular enlargement and decreased regional brain volumes, underpin clinical symptoms of memory loss and cognitive decline.</data>
-  <data key="d2">51</data>
-</node>
-<node id="mPACCtrailsB">
-  <data key="d0">feature</data>
-</node>
-<node id="mPACCdigit">
-  <data key="d0">feature</data>
-</node>
-<node id="AVTOT1">
-  <data key="d0">feature</data>
-</node>
-<node id="AVTOT2">
-  <data key="d0">feature</data>
-</node>
-<node id="AVTOT3">
-  <data key="d0">feature</data>
-</node>
-<node id="AVTOT4">
-  <data key="d0">feature</data>
-</node>
-<node id="AVTOT5">
-  <data key="d0">feature</data>
-</node>
-<node id="AVTOT6">
-  <data key="d0">feature</data>
-</node>
-<node id="AVTOTB">
-  <data key="d0">feature</data>
-</node>
-<node id="Glucose Hypometabolism and Synaptic Dysfunction">
-  <data key="d0">mechanism</data>
-  <data key="d1">Reduced neuronal and synaptic activity in the AD brain is observed as hypometabolism, particularly in temporoparietal and posterior cingulate cortices. This metabolic impairment is captured by FDG-PET imaging showing reduced glucose uptake and is closely associated with ongoing cognitive and functional decline in AD patients.</data>
-  <data key="d2">34</data>
-</node>
-<node id="DSPANFOR">
-  <data key="d0">feature</data>
-</node>
-<node id="DSPANBAC">
-  <data key="d0">feature</data>
-</node>
-<node id="DIGITSCOR">
-  <data key="d0">feature</data>
-</node>
-<node id="CATANIMSC">
-  <data key="d0">feature</data>
-</node>
-<node id="CATVEGESC">
-  <data key="d0">feature</data>
-</node>
-<node id="BNTTOTAL">
-  <data key="d0">feature</data>
-</node>
-<node id="Cognitive Decline and Executive Dysfunction">
-  <data key="d0">mechanism</data>
-  <data key="d1">Clinical progression of AD is manifested by a continuum of global cognitive impairment, episodic memory loss, language difficulties, visuospatial deficits, and executive dysfunction. Clinical and neuropsychological tests (e.g., MMSE, MoCA, AVLT, Digit Span, category fluency, Trail Making, ADAS-Cog) assess the severity and domain-specific aspects of cognitive decline reflected in baseline diagnosis.</data>
-  <data key="d2">65</data>
-</node>
-<node id="DSPANFLTH">
-  <data key="d0">feature</data>
-</node>
-<node id="DSPANBLTH">
-  <data key="d0">feature</data>
-</node>
-<node id="CATANPERS">
-  <data key="d0">feature</data>
-</node>
-<node id="CATANINTR">
-  <data key="d0">feature</data>
-</node>
-<node id="CATVGPERS">
-  <data key="d0">feature</data>
-</node>
-<node id="CATVGINTR">
-  <data key="d0">feature</data>
-</node>
-<node id="TRAASCOR">
-  <data key="d0">feature</data>
-</node>
-<node id="TRABSCOR">
-  <data key="d0">feature</data>
-</node>
-<node id="ANART">
-  <data key="d0">feature</data>
-</node>
-<node id="MINTTOTAL">
-  <data key="d0">feature</data>
-</node>
 <node id="GDTOTAL">
   <data key="d0">feature</data>
 </node>
-<node id="CLOCKSCOR">
+<node id="Global Clinical Severity and Functional Impact">
+  <data key="d0">mechanism</data>
+  <data key="d1">Reflects the overall severity of dementia as it affects daily function, independence, and levels of care required. Combines clinical staging and functional performance in daily activities, as captured by staging scales and caregiver-rated questionnaires.</data>
+  <data key="d2">7</data>
+</node>
+<node id="CDGLOBAL">
   <data key="d0">feature</data>
 </node>
-<node id="COPYSCOR">
+<node id="CDRSB">
   <data key="d0">feature</data>
 </node>
-<node id="Neuropsychiatric and Behavioral Changes">
-  <data key="d0">mechanism</data>
-  <data key="d1">AD is often accompanied by neuropsychiatric symptoms such as depression, agitation, irritability, apathy, hallucinations, and sleep disturbances. These behavioral changes, assessed by NPI-Q, GDS, and CDR, significantly impact quality of life and may precede or accompany cognitive impairment. Their presence often reflects the involvement of frontal and limbic structures in the disease.</data>
-  <data key="d2">35</data>
+<node id="CDRSB.1">
+  <data key="d0">feature</data>
 </node>
-<node id="Functional Decline in Daily Living">
+<node id="Vascular and Metabolic Contributions">
   <data key="d0">mechanism</data>
-  <data key="d1">Functional impairment in activities of daily living is a key clinical hallmark as AD progresses from MCI to dementia. This includes difficulties in memory, language, planning, organization, and attention. Both self-reported and informant-based Everyday Cognition (Ecog) scores, as well as the Functional Activities Questionnaire (FAQ), capture these real-world deficits and are crucial for staging disease severity.</data>
-  <data key="d2">32</data>
-</node>
-<node id="Vascular and Cardiometabolic Risk Factors">
-  <data key="d0">mechanism</data>
-  <data key="d1">Vascular pathology, including hypertension and metabolic syndrome, increases risk for AD, possibly via reduced cerebral perfusion, microvascular injury, and facilitation of amyloid and tau pathology. Continuous variables such as blood pressure, weight, and height contribute to the assessment of vascular health and help distinguish vascular dementia comorbidity.</data>
-  <data key="d2">32</data>
+  <data key="d1">Vascular health influences cognition through mechanisms such as ischemia, white matter disease, and neurovascular dysfunction, which can coexist or potentiate AD pathology. Blood pressure, BMI, and metabolic state influence risk and progression.</data>
+  <data key="d2">6</data>
 </node>
 <node id="VSWEIGHT">
   <data key="d0">feature</data>
@@ -327,10 +319,13 @@
 <node id="VSRESP">
   <data key="d0">feature</data>
 </node>
-<node id="Demographic and Genetic Susceptibility">
+<node id="Demographic and Genetic Risk Modifiers">
   <data key="d0">mechanism</data>
-  <data key="d1">Age remains the strongest risk factor for AD. Other socio-demographic variables (education, gender, ethnicity, marital status, race) modulate risk and disease manifestation, both through genetic predisposition and environmental/lifestyle factors. Lower education may decrease cognitive reserve, increasing vulnerability to symptomatic AD. Diverse demographic data help identify at-risk groups, inform stratification, and address population differences in AD susceptibility.</data>
-  <data key="d2">28</data>
+  <data key="d1">Population-based risk factors such as age, education, sex, ethnicity, race, and marital status modulate both risk and progression of AD, potentially through baseline cognitive reserve, socioeconomic factors, and genetic influences.</data>
+  <data key="d2">6</data>
+</node>
+<node id="AGE">
+  <data key="d0">feature</data>
 </node>
 <node id="PTEDUCAT">
   <data key="d0">feature</data>
@@ -347,371 +342,115 @@
 <node id="PTRACCAT">
   <data key="d0">feature</data>
 </node>
-<edge source="DIAGNOSIS" target="Amyloid Beta Accumulation and Plaque Formation"/>
+<edge source="DIAGNOSIS" target="Amyloid Pathology and Deposition"/>
 <edge source="DIAGNOSIS" target="Tau Pathology and Neurofibrillary Tangle Formation"/>
 <edge source="DIAGNOSIS" target="Neurodegeneration and Brain Atrophy"/>
-<edge source="DIAGNOSIS" target="Glucose Hypometabolism and Synaptic Dysfunction"/>
-<edge source="DIAGNOSIS" target="Cognitive Decline and Executive Dysfunction"/>
-<edge source="DIAGNOSIS" target="Neuropsychiatric and Behavioral Changes"/>
-<edge source="DIAGNOSIS" target="Functional Decline in Daily Living"/>
-<edge source="DIAGNOSIS" target="Vascular and Cardiometabolic Risk Factors"/>
-<edge source="DIAGNOSIS" target="Demographic and Genetic Susceptibility"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="AGE"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="ABETA40"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="ABETA42"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="PIB"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="AV45"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="FBB"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="FDG"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="TAU"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="PTAU"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="MMSE"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="MMSCORE"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="ADAS11"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="ADAS13"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="ADASQ4"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="LDELTOTAL"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="CDRSB"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="CDRSB.1"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="CDGLOBAL"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="FAQ"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="RAVLT_immediate"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="RAVLT_learning"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="RAVLT_forgetting"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="RAVLT_perc_forgetting"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="Ventricles"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="Hippocampus"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="WholeBrain"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="Entorhinal"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="Fusiform"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="MidTemp"/>
-<edge source="Amyloid Beta Accumulation and Plaque Formation" target="ICV"/>
+<edge source="DIAGNOSIS" target="Cognitive Impairment and Clinical Dementia Expression"/>
+<edge source="DIAGNOSIS" target="Neuropsychiatric and Behavioral Dysfunction"/>
+<edge source="DIAGNOSIS" target="Global Clinical Severity and Functional Impact"/>
+<edge source="DIAGNOSIS" target="Vascular and Metabolic Contributions"/>
+<edge source="DIAGNOSIS" target="Demographic and Genetic Risk Modifiers"/>
+<edge source="Amyloid Pathology and Deposition" target="ABETA40"/>
+<edge source="Amyloid Pathology and Deposition" target="ABETA42"/>
+<edge source="Amyloid Pathology and Deposition" target="PIB"/>
+<edge source="Amyloid Pathology and Deposition" target="AV45"/>
+<edge source="Amyloid Pathology and Deposition" target="FBB"/>
 <edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="TAU"/>
 <edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="PTAU"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="MMSE"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="MMSCORE"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="CDRSB"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="CDRSB.1"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="ADAS11"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="ADAS13"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="ADASQ4"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="RAVLT_immediate"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="RAVLT_learning"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="RAVLT_forgetting"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="RAVLT_perc_forgetting"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="LDELTOTAL"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="FAQ"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="MOCA"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="AVDEL30MIN"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="AVDELTOT"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtMem"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtLang"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtVisspat"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtPlan"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtOrgan"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtDivatt"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogPtTotal"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPMem"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPLang"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPVisspat"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPPlan"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPOrgan"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPDivatt"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="EcogSPTotal"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIASEV"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIBSEV"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPICSEV"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIDSEV"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIESEV"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIFSEV"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIGSEV"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIHSEV"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIISEV"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIJSEV"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPIKSEV"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPILSEV"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="NPISCORE"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="Hippocampus"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="Entorhinal"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="WholeBrain"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="Ventricles"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="MidTemp"/>
-<edge source="Tau Pathology and Neurofibrillary Tangle Formation" target="Fusiform"/>
 <edge source="Neurodegeneration and Brain Atrophy" target="Ventricles"/>
 <edge source="Neurodegeneration and Brain Atrophy" target="Hippocampus"/>
+<edge source="Neurodegeneration and Brain Atrophy" target="WholeBrain"/>
 <edge source="Neurodegeneration and Brain Atrophy" target="Entorhinal"/>
 <edge source="Neurodegeneration and Brain Atrophy" target="Fusiform"/>
 <edge source="Neurodegeneration and Brain Atrophy" target="MidTemp"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="WholeBrain"/>
 <edge source="Neurodegeneration and Brain Atrophy" target="ICV"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="ADAS11"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="ADAS13"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="ADASQ4"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="MMSE"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="MOCA"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="LDELTOTAL"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="RAVLT_immediate"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="RAVLT_learning"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="RAVLT_forgetting"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="RAVLT_perc_forgetting"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="CDGLOBAL"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="CDRSB"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="CDRSB.1"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="FAQ"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="mPACCtrailsB"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="mPACCdigit"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="MMSCORE"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="AVDEL30MIN"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="AVDELTOT"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="AVTOT1"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="AVTOT2"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="AVTOT3"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="AVTOT4"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="AVTOT5"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="AVTOT6"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="AVTOTB"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtMem"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtLang"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtVisspat"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtPlan"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtOrgan"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtDivatt"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogPtTotal"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPMem"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPLang"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPVisspat"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPPlan"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPOrgan"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPDivatt"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="EcogSPTotal"/>
 <edge source="Neurodegeneration and Brain Atrophy" target="FDG"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="PTAU"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="TAU"/>
-<edge source="Neurodegeneration and Brain Atrophy" target="ABETA42"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="FDG"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="MMSCORE"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="MMSE"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="ADAS11"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="ADAS13"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="ADASQ4"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="RAVLT_immediate"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="RAVLT_learning"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="RAVLT_forgetting"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="RAVLT_perc_forgetting"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="LDELTOTAL"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="AVDEL30MIN"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="AVDELTOT"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="DSPANFOR"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="DSPANBAC"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="DIGITSCOR"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="CATANIMSC"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="CATVEGESC"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="BNTTOTAL"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="MOCA"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="FAQ"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtMem"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtLang"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtVisspat"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtPlan"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtOrgan"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtDivatt"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="EcogPtTotal"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="CDGLOBAL"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="CDRSB"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="Hippocampus"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="WholeBrain"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="MidTemp"/>
-<edge source="Glucose Hypometabolism and Synaptic Dysfunction" target="Entorhinal"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="MMSCORE"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="MMSE"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="MOCA"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="ADAS11"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="ADAS13"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="ADASQ4"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="CDGLOBAL"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="CDRSB"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="CDRSB.1"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOT1"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOT2"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOT3"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOT4"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOT5"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOT6"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="AVTOTB"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="RAVLT_immediate"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="RAVLT_learning"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="RAVLT_forgetting"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="RAVLT_perc_forgetting"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="LDELTOTAL"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="DSPANFOR"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="DSPANBAC"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="DSPANFLTH"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="DSPANBLTH"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="CATANIMSC"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="CATANPERS"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="CATANINTR"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="CATVEGESC"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="CATVGPERS"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="CATVGINTR"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="TRAASCOR"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="TRABSCOR"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="DIGITSCOR"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="BNTTOTAL"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="AVDEL30MIN"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="AVDELTOT"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="ANART"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="MINTTOTAL"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="FAQ"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="GDTOTAL"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="mPACCdigit"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="mPACCtrailsB"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtMem"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtLang"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtVisspat"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtPlan"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtOrgan"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtDivatt"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogPtTotal"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPMem"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPLang"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPVisspat"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPPlan"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPOrgan"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPDivatt"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="EcogSPTotal"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="Hippocampus"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="WholeBrain"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="Entorhinal"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="Fusiform"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="MidTemp"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="FDG"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="CLOCKSCOR"/>
-<edge source="Cognitive Decline and Executive Dysfunction" target="COPYSCOR"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPIASEV"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPIBSEV"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPICSEV"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPIDSEV"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPIESEV"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPIFSEV"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPIGSEV"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPIHSEV"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPIISEV"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPIJSEV"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPIKSEV"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPILSEV"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="NPISCORE"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="GDTOTAL"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="CDGLOBAL"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="CDRSB"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="CDRSB.1"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="FAQ"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtMem"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtLang"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtVisspat"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtPlan"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtOrgan"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtDivatt"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogPtTotal"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPMem"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPLang"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPVisspat"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPPlan"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPOrgan"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPDivatt"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="EcogSPTotal"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="Hippocampus"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="Entorhinal"/>
-<edge source="Neuropsychiatric and Behavioral Changes" target="Fusiform"/>
-<edge source="Functional Decline in Daily Living" target="FAQ"/>
-<edge source="Functional Decline in Daily Living" target="EcogPtMem"/>
-<edge source="Functional Decline in Daily Living" target="EcogPtLang"/>
-<edge source="Functional Decline in Daily Living" target="EcogPtVisspat"/>
-<edge source="Functional Decline in Daily Living" target="EcogPtPlan"/>
-<edge source="Functional Decline in Daily Living" target="EcogPtOrgan"/>
-<edge source="Functional Decline in Daily Living" target="EcogPtDivatt"/>
-<edge source="Functional Decline in Daily Living" target="EcogPtTotal"/>
-<edge source="Functional Decline in Daily Living" target="EcogSPMem"/>
-<edge source="Functional Decline in Daily Living" target="EcogSPLang"/>
-<edge source="Functional Decline in Daily Living" target="EcogSPVisspat"/>
-<edge source="Functional Decline in Daily Living" target="EcogSPPlan"/>
-<edge source="Functional Decline in Daily Living" target="EcogSPOrgan"/>
-<edge source="Functional Decline in Daily Living" target="EcogSPDivatt"/>
-<edge source="Functional Decline in Daily Living" target="EcogSPTotal"/>
-<edge source="Functional Decline in Daily Living" target="CDRSB"/>
-<edge source="Functional Decline in Daily Living" target="CDGLOBAL"/>
-<edge source="Functional Decline in Daily Living" target="MMSCORE"/>
-<edge source="Functional Decline in Daily Living" target="MMSE"/>
-<edge source="Functional Decline in Daily Living" target="MOCA"/>
-<edge source="Functional Decline in Daily Living" target="ADAS11"/>
-<edge source="Functional Decline in Daily Living" target="ADAS13"/>
-<edge source="Functional Decline in Daily Living" target="ADASQ4"/>
-<edge source="Functional Decline in Daily Living" target="GDTOTAL"/>
-<edge source="Functional Decline in Daily Living" target="RAVLT_immediate"/>
-<edge source="Functional Decline in Daily Living" target="LDELTOTAL"/>
-<edge source="Functional Decline in Daily Living" target="DSPANFOR"/>
-<edge source="Functional Decline in Daily Living" target="DSPANBAC"/>
-<edge source="Functional Decline in Daily Living" target="BNTTOTAL"/>
-<edge source="Functional Decline in Daily Living" target="AVDEL30MIN"/>
-<edge source="Functional Decline in Daily Living" target="Hippocampus"/>
-<edge source="Functional Decline in Daily Living" target="Entorhinal"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="AGE"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="VSWEIGHT"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="VSHEIGHT"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="VSBPSYS"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="VSBPDIA"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="VSPULSE"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="VSRESP"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="ABETA40"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="ABETA42"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="TAU"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="PTAU"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="Hippocampus"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="WholeBrain"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="Entorhinal"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="Fusiform"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="MidTemp"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="Ventricles"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="ICV"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="FDG"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="MOCA"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="MMSE"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="ADAS11"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="ADAS13"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="LDELTOTAL"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="RAVLT_immediate"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="FAQ"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="GDTOTAL"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="CDGLOBAL"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="CDRSB"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="PIB"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="AV45"/>
-<edge source="Vascular and Cardiometabolic Risk Factors" target="FBB"/>
-<edge source="Demographic and Genetic Susceptibility" target="AGE"/>
-<edge source="Demographic and Genetic Susceptibility" target="PTEDUCAT"/>
-<edge source="Demographic and Genetic Susceptibility" target="PTETHCAT"/>
-<edge source="Demographic and Genetic Susceptibility" target="PTGENDER"/>
-<edge source="Demographic and Genetic Susceptibility" target="PTMARRY"/>
-<edge source="Demographic and Genetic Susceptibility" target="PTRACCAT"/>
-<edge source="Demographic and Genetic Susceptibility" target="MMSCORE"/>
-<edge source="Demographic and Genetic Susceptibility" target="MOCA"/>
-<edge source="Demographic and Genetic Susceptibility" target="CDGLOBAL"/>
-<edge source="Demographic and Genetic Susceptibility" target="CDRSB"/>
-<edge source="Demographic and Genetic Susceptibility" target="CDRSB.1"/>
-<edge source="Demographic and Genetic Susceptibility" target="MMSE"/>
-<edge source="Demographic and Genetic Susceptibility" target="ADAS11"/>
-<edge source="Demographic and Genetic Susceptibility" target="ADAS13"/>
-<edge source="Demographic and Genetic Susceptibility" target="ADASQ4"/>
-<edge source="Demographic and Genetic Susceptibility" target="FAQ"/>
-<edge source="Demographic and Genetic Susceptibility" target="LDELTOTAL"/>
-<edge source="Demographic and Genetic Susceptibility" target="GDTOTAL"/>
-<edge source="Demographic and Genetic Susceptibility" target="mPACCdigit"/>
-<edge source="Demographic and Genetic Susceptibility" target="mPACCtrailsB"/>
-<edge source="Demographic and Genetic Susceptibility" target="EcogPtTotal"/>
-<edge source="Demographic and Genetic Susceptibility" target="EcogSPTotal"/>
-<edge source="Demographic and Genetic Susceptibility" target="Hippocampus"/>
-<edge source="Demographic and Genetic Susceptibility" target="WholeBrain"/>
-<edge source="Demographic and Genetic Susceptibility" target="Ventricles"/>
-<edge source="Demographic and Genetic Susceptibility" target="Entorhinal"/>
-<edge source="Demographic and Genetic Susceptibility" target="MidTemp"/>
-<edge source="Demographic and Genetic Susceptibility" target="Fusiform"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="MMSCORE"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="MOCA"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="CLOCKSCOR"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="COPYSCOR"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="AVTOT1"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="AVTOT2"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="AVTOT3"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="AVTOT4"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="AVTOT5"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="AVTOT6"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="AVTOTB"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="DSPANFOR"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="DSPANFLTH"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="DSPANBAC"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="DSPANBLTH"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="CATANIMSC"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="CATANPERS"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="CATANINTR"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="CATVEGESC"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="CATVGPERS"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="CATVGINTR"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="TRAASCOR"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="TRABSCOR"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="DIGITSCOR"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="BNTTOTAL"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="AVDEL30MIN"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="AVDELTOT"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="ANART"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="MINTTOTAL"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="MMSE"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="RAVLT_immediate"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="RAVLT_learning"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="RAVLT_forgetting"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="RAVLT_perc_forgetting"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="LDELTOTAL"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="ADAS11"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="ADAS13"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="ADASQ4"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="FAQ"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="mPACCdigit"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="mPACCtrailsB"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogPtMem"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogPtLang"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogPtVisspat"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogPtPlan"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogPtOrgan"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogPtDivatt"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogPtTotal"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogSPMem"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogSPLang"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogSPVisspat"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogSPPlan"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogSPOrgan"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogSPDivatt"/>
+<edge source="Cognitive Impairment and Clinical Dementia Expression" target="EcogSPTotal"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPIASEV"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPIBSEV"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPICSEV"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPIDSEV"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPIESEV"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPIFSEV"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPIGSEV"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPIHSEV"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPIISEV"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPIJSEV"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPIKSEV"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPILSEV"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="NPISCORE"/>
+<edge source="Neuropsychiatric and Behavioral Dysfunction" target="GDTOTAL"/>
+<edge source="Global Clinical Severity and Functional Impact" target="CDGLOBAL"/>
+<edge source="Global Clinical Severity and Functional Impact" target="CDRSB"/>
+<edge source="Global Clinical Severity and Functional Impact" target="CDRSB.1"/>
+<edge source="Global Clinical Severity and Functional Impact" target="FAQ"/>
+<edge source="Global Clinical Severity and Functional Impact" target="ADAS11"/>
+<edge source="Global Clinical Severity and Functional Impact" target="ADAS13"/>
+<edge source="Global Clinical Severity and Functional Impact" target="ADASQ4"/>
+<edge source="Vascular and Metabolic Contributions" target="VSWEIGHT"/>
+<edge source="Vascular and Metabolic Contributions" target="VSHEIGHT"/>
+<edge source="Vascular and Metabolic Contributions" target="VSBPSYS"/>
+<edge source="Vascular and Metabolic Contributions" target="VSBPDIA"/>
+<edge source="Vascular and Metabolic Contributions" target="VSPULSE"/>
+<edge source="Vascular and Metabolic Contributions" target="VSRESP"/>
+<edge source="Demographic and Genetic Risk Modifiers" target="AGE"/>
+<edge source="Demographic and Genetic Risk Modifiers" target="PTEDUCAT"/>
+<edge source="Demographic and Genetic Risk Modifiers" target="PTETHCAT"/>
+<edge source="Demographic and Genetic Risk Modifiers" target="PTGENDER"/>
+<edge source="Demographic and Genetic Risk Modifiers" target="PTMARRY"/>
+<edge source="Demographic and Genetic Risk Modifiers" target="PTRACCAT"/>
 </graph></graphml>

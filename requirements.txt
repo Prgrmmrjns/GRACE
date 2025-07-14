@@ -12,3 +12,6 @@ lancedb
 arxiv
 agno
 scikit-opt
+streamlit
+plotly
+shap

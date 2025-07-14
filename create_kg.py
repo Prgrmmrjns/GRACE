@@ -8,13 +8,12 @@ from typing import List
 from agno.knowledge.arxiv import ArxivKnowledgeBase
 from agno.vectordb.chroma import ChromaDb
 from visualizations import visualize_knowledge_graph
-from params import (TARGET_COL, EMBEDDING_MODEL, KEYWORDS, LLM_MODEL, DATASET_NAME, DATASET_PATH, PLOT_IMAGES, VERBOSE)
+from params import (TARGET_COL, KEYWORDS, LLM_MODEL, DATASET_NAME, PLOT_IMAGES, VERBOSE, USE_KNOWLEDGE_BASE)
 
 class Mechanism(BaseModel):
     name: str
     description: str
     assigned_features: List[str]
-    label: str
 
 class MechanismList(BaseModel):
     mechanisms: List[Mechanism]
@@ -46,48 +45,39 @@ def create_kg(df):
     }
 
     # --- Agent Setup ---
-    vector_db = ChromaDb(
-        collection=f"{DATASET_NAME}_mechanisms_collection",
-        embedder=EMBEDDING_MODEL,
-    )
-    knowledge_base = ArxivKnowledgeBase(
-        queries=KEYWORDS,
-        vector_db=vector_db,
-    )
+    if USE_KNOWLEDGE_BASE:
+        vector_db = ChromaDb(
+            collection=f"{DATASET_NAME}_mechanisms_collection",
+        )
+        knowledge_base = ArxivKnowledgeBase(
+            queries=KEYWORDS,
+            vector_db=vector_db,
+        )
     
-    if VERBOSE:
-        print(f"Keywords for knowledge base: {KEYWORDS}")
+        if VERBOSE:
+            print(f"Keywords for knowledge base: {KEYWORDS}")
     
-    print(f"\n=== Creating Knowledge Graph for {DATASET_NAME} ===")
+    print(f"Creating Knowledge Graph for {DATASET_NAME}")
     print(f"Target: {TARGET_COL}")
     print(f"Total features: {len(feature_names)}")
     
-    # --- Step 1: Create Initial Disease Mechanisms ---
-    print("\n--- Step 1: Creating Disease Mechanisms ---")
+    # --- Step 1: Create Disease Mechanisms and Assign All Features ---
     
     mechanism_agent = Agent(
         model=LLM_MODEL, 
         response_model=MechanismList,
-        knowledge=knowledge_base,
+        knowledge=knowledge_base if USE_KNOWLEDGE_BASE else None,
         search_knowledge=True,
-        instructions="""You are a medical expert creating disease mechanisms. Your task is to identify 6-10 key biological/pathological mechanisms that contribute to the target condition.
-        Create comprehensive mechanisms that cover different aspects:
-        - Molecular/cellular processes
-        - Physiological systems  
-        - Clinical manifestations
-        - Risk factors
-        - Diagnostic markers
-        
-        For each mechanism, provide:
-        - name: A descriptive name for the mechanism
-        - description: Detailed explanation of the mechanism
-        - assigned_features: Relevant features based on domain knowledge (be generous)
-        - label: A short 1-3 word overarching term that captures the essence of this mechanism (e.g., "Cardiovascular", "Metabolic", "Inflammatory", "Respiratory")"""
+        instructions="""You are a medical expert creating a comprehensive knowledge graph of disease mechanisms from clinical features. Your goal is to define 5-10 core mechanisms and exhaustively assign all relevant features to them.
+
+For each mechanism, provide:
+- name: A descriptive name for the biological pathway (e.g., "Inflammatory Cascade").
+- description: A detailed explanation of the process.
+- assigned_features: A comprehensive list of ALL features from the dataset related to this mechanism. A feature can be a cause, effect, biomarker, or part of the same biological pathway. Features can be assigned to multiple mechanisms."""
     )
     
-    if VERBOSE:
-        print("Loading knowledge base...")
-    mechanism_agent.knowledge.load(recreate=False)
+    if USE_KNOWLEDGE_BASE:
+        mechanism_agent.knowledge.load(recreate=False)
     
     mechanism_prompt = f"""
     **Target Condition:** {TARGET_COL}
@@ -96,83 +86,28 @@ def create_kg(df):
     **Available Features:**
     {feature_names}
     
-    Create 6-10 disease mechanisms that comprehensively explain how different features contribute to {TARGET_COL}.
-    Assign features generously to mechanisms based on potential biological relevance.
-    """
+    **Task:**
+    1. Define 6-10 key disease mechanisms explaining how features contribute to {TARGET_COL}.
+    2. For each mechanism, assign ALL potentially related features from the list. Be exhaustive.
     
-    if VERBOSE:
-        print("Generating initial mechanisms...")
+    Your goal is to create a complete map between features and mechanisms in a single step.
+    """
     
     mechanisms = mechanism_agent.run(mechanism_prompt).content.mechanisms
     
     if VERBOSE:
-        print(f"Generated {len(mechanisms)} initial mechanisms:")
+        print(f"Generated {len(mechanisms)} mechanisms in a single step:")
         for i, mech in enumerate(mechanisms):
-            print(f"  {i+1}. {mech.name} ({mech.label}): {len(mech.assigned_features)} features")
-            print(f"     Description: {mech.description[:100]}...")
+            print(f"  {i+1}. {mech.name}: {len(mech.assigned_features)} features")
+
+    final_mechanisms = mechanisms
     
-    # --- Step 2: Enrich Connections by Asking Each Mechanism to Claim More Features ---
-    print("\n--- Step 2: Enriching Feature-Mechanism Connections ---")
-    
-    enrichment_agent = Agent(
-        model=LLM_MODEL, 
-        knowledge=knowledge_base,
-        search_knowledge=True,
-        response_model=MechanismList,
-        instructions="""You are reviewing each disease mechanism and identifying features that could potentially be related to it.
-        
-        Suggest up to 30 features that could be related to the mechanism."""
-    )
-    enrichment_agent.knowledge.load(recreate=False)
-    
-    # For each mechanism, ask agent to identify ALL potentially relevant features
-    enriched_mechanisms = []
-    all_assigned_features = set()
-    
-    for i, mechanism in enumerate(mechanisms):
-        if VERBOSE:
-            print(f"Enriching mechanism {i+1}/{len(mechanisms)}: {mechanism.name}")
-        
-        enrichment_prompt = f"""
-        **Focus Mechanism:** {mechanism.name}
-        **Description:** {mechanism.description}
-        
-        **All Available Features:**
-        {feature_names}
-        
-        **Task:** Identify features that could be related to this mechanism. 
-        
-        Consider features that could be:
-        - Direct effects of this mechanism
-        - Causes or triggers of this mechanism  
-        - Biomarkers or indicators of this mechanism
-        - Associated with this mechanism through biological pathways
-        
-        Return the mechanism with an expanded list of assigned features.
-        """
-        
-        enriched_response = enrichment_agent.run(enrichment_prompt)
-        enriched_mechanism = enriched_response.content.mechanisms[0]  # Should return single mechanism
-        
-        # Keep original mechanism info but update features
-        enriched_mechanism.name = mechanism.name
-        enriched_mechanism.description = mechanism.description
-        enriched_mechanism.label = mechanism.label
-        
-        enriched_mechanisms.append(enriched_mechanism)
-        all_assigned_features.update(enriched_mechanism.assigned_features)
-        
-        if VERBOSE:
-            print(f"  Assigned {len(enriched_mechanism.assigned_features)} features (was {len(mechanism.assigned_features)})")
-        else:
-            print(f"Assigned {len(enriched_mechanism.assigned_features)} features to {mechanism.name}")
-    
-    final_mechanisms = enriched_mechanisms
-    
-    # --- Step 3: Ensure All Features Are Assigned ---
-    print("\n--- Step 3: Ensuring Complete Feature Coverage ---")
+    # --- Step 2: Ensure All Features Are Assigned ---
     
     # Find unassigned features
+    all_assigned_features = set()
+    for m in final_mechanisms:
+        all_assigned_features.update(m.assigned_features)
     unassigned_features = set(feature_names) - all_assigned_features
     
     if VERBOSE:
@@ -187,13 +122,15 @@ def create_kg(df):
         # Create an agent to assign remaining features
         assignment_agent = Agent(
             model=LLM_MODEL,
-            knowledge=knowledge_base,
+            knowledge=knowledge_base if USE_KNOWLEDGE_BASE else None,
             search_knowledge=True,
             response_model=MechanismList,
             instructions="""You are assigning unassigned features to the most relevant disease mechanisms.
             Each feature should be assigned to at least one mechanism based on potential relevance."""
         )
-        assignment_agent.knowledge.load(recreate=False)
+        
+        if USE_KNOWLEDGE_BASE:
+            assignment_agent.knowledge.load(recreate=False)
         
         # Create a prompt with all mechanisms and unassigned features
         assignment_prompt = f"""
@@ -208,9 +145,6 @@ def create_kg(df):
         **Task:** For each unassigned feature, assign it to one or more of the existing mechanisms based on potential relevance.
         Return the mechanisms with the unassigned features added to their assigned_features lists.
         """
-        
-        if VERBOSE:
-            print("Running assignment agent for unassigned features...")
         
         updated_mechanisms = assignment_agent.run(assignment_prompt).content.mechanisms
         
@@ -254,8 +188,6 @@ def create_kg(df):
         print(f"Removed {len(invalid_features_found)} invalid features: {list(invalid_features_found)[:5]}{'...' if len(invalid_features_found) > 5 else ''}")
     
     # --- Step 4: Create NetworkX Graph ---
-    if VERBOSE:
-        print("\n--- Step 4: Creating NetworkX Graph ---")
     
     G = nx.DiGraph()
     
@@ -280,7 +212,6 @@ def create_kg(df):
     
     if VERBOSE:
         print(f"Graph created with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges")
-        print(f"Target nodes: 1")
         print(f"Mechanism nodes: {len(mechanism_nodes)}")
         print(f"Feature nodes: {len([n for n in G.nodes() if G.nodes[n].get('node_type') == 'feature'])}")
     
@@ -299,7 +230,7 @@ def create_kg(df):
     for mechanism in final_mechanisms:
         if len(mechanism.assigned_features) > 1:
             mechanism_groups.append(mechanism.assigned_features)
-            group_labels.append(mechanism.label)
+            group_labels.append(mechanism.name)
     
     if VERBOSE:
         print(f"Created {len(mechanism_groups)} mechanism groups for interaction constraints")
@@ -307,48 +238,21 @@ def create_kg(df):
         print(f"Features in multiple groups: {multi_group_features}")
     
     # --- Step 6: Save Everything ---
-    if VERBOSE:
-        print("\n--- Step 6: Saving Results ---")
     
     os.makedirs('kg', exist_ok=True)
     
     # Save as GraphML
     nx.write_graphml(G, f'kg/{DATASET_NAME}_initial_agent_kg.graphml')
-    if VERBOSE:
-        print(f"Saved GraphML to kg/{DATASET_NAME}_initial_agent_kg.graphml")
     
-    # Save mechanism data for model stacking
-    mechanism_data = {
-        "dataset_name": DATASET_NAME,
-        "target_column": TARGET_COL,
-        "mechanism_groups": mechanism_groups,
-        "group_labels": group_labels,
-        "feature_to_groups": feature_to_groups,
-        "mechanisms": [
-            {
-                "name": m.name,
-                "description": m.description,
-                "assigned_features": m.assigned_features,
-                "label": m.label
-            } for m in final_mechanisms
-        ],
-        "statistics": {
-            "num_mechanisms": len(final_mechanisms),
-            "num_groups": len(mechanism_groups),
-            "total_features": len(feature_names),
-            "total_edges": G.number_of_edges(),
-            "avg_features_per_mechanism": sum(len(m.assigned_features) for m in final_mechanisms) / len(final_mechanisms),
-            "features_covered": len(all_assigned_features)
-        },
+    # Save constraints data in the format expected by other scripts
+    constraints_data = {
         "interaction_constraints": mechanism_groups,
+        "constraint_labels": group_labels
     }
     
-    with open(f'kg/{DATASET_NAME}_mechanism_data.json', 'w') as f:
-        json.dump(mechanism_data, f, indent=2)
-    
-    if VERBOSE:
-        print(f"Saved mechanism data to kg/{DATASET_NAME}_mechanism_data.json")
-    
+    with open(f'kg/{DATASET_NAME}_interaction_constraints.json', 'w') as f:
+        json.dump(constraints_data, f, indent=2)
+
     # Save detailed agent outputs
     agent_outputs["mechanisms"] = [
         {
@@ -356,7 +260,6 @@ def create_kg(df):
             "description": m.description,
             "assigned_features": m.assigned_features,
             "feature_count": len(m.assigned_features),
-            "label": m.label
         } for m in final_mechanisms
     ]
     
@@ -376,23 +279,21 @@ def create_kg(df):
     if PLOT_IMAGES:
         feature_to_labels_map = {}
         for i, group in enumerate(mechanism_groups):
-            label_for_group = labels[i]
+            label_for_group = group_labels[i]
             for feature in group:
                 if feature not in feature_to_labels_map:
                     feature_to_labels_map[feature] = []
                 feature_to_labels_map[feature].append(label_for_group)
 
-        print("Generating initial knowledge graph visualization...")
         visualize_knowledge_graph(
             constraints=mechanism_groups,
-            labels=labels,
-            title=f'Initial {DATASET_NAME.upper()} Knowledge Graph',
+            labels=group_labels,
             filename=f'{DATASET_NAME}_initial_kg.png',
             feature_to_labels_map=feature_to_labels_map
         )
-
-    return G, mechanisms, mechanism_groups, labels
+  
+    return mechanism_groups, group_labels
 
 if __name__ == "__main__":
     df = pd.read_csv(f'datasets/{DATASET_NAME}.csv')
-    G, mechanisms, mechanism_groups, labels = create_kg(df)
+    G, mechanisms, mechanism_groups, group_labels = create_kg(df)

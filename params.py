@@ -1,17 +1,12 @@
 from agno.models.openai import OpenAIChat
 from agno.models.ollama import Ollama
 from agno.models.azure import AzureOpenAI
-from agno.embedder.openai import OpenAIEmbedder
-from agno.embedder.ollama import OllamaEmbedder
+from agno.models.lmstudio import LMStudio
 import os
 import lightgbm as lgb
 from dotenv import load_dotenv
 
 ## Dataset configuration
-# DATASET_NAME = "adni"
-# DATASET_NAME = "adni"
-# DATASET_NAME = 'mimic'
-# DATASET_NAME = 'adni'
 DATASET_NAME = 'adni'
 DATASET_PATH = f"datasets/{DATASET_NAME}.csv"
 TARGET_COL = "DIAGNOSIS" if DATASET_NAME == "adni" else "mortality_flag"
@@ -19,9 +14,9 @@ TARGET_COL_DICT = {1: "Normal Cognitive Function", 2: "Mild Cognitive Impairment
 DATASET_INFO = f'dataset_info/{DATASET_NAME}_info.txt'
 
 ## KG creation configuration
-LLM_PROVIDER = 'openai'  # Set to 'ollama', 'openai', or 'azureopenai'
+LLM_PROVIDER = 'lmstudio'  # Set to 'ollama', 'openai', or 'azureopenai'
 
-## ML configuration
+## LLM configuration
 if LLM_PROVIDER == "azureopenai":
     load_dotenv()
     os.environ["AZURE_OPENAI_API_KEY"] = os.getenv("AZURE_OPENAI_API_KEY")
@@ -29,30 +24,38 @@ if LLM_PROVIDER == "azureopenai":
     #os.environ["OPENAI_API_VERSION"] = os.getenv("OPENAI_API_VERSION")
     os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
     LLM_MODEL = AzureOpenAI(id="gpt-4.1")
-    EMBEDDING_MODEL = OpenAIEmbedder()
 elif LLM_PROVIDER == "openai":
     load_dotenv()
     os.environ['OPENAI_API_VERSION']
     os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-    LLM_MODEL = OpenAIChat(id="gpt-4.1")
-    EMBEDDING_MODEL = OpenAIEmbedder(id="text-embedding-3-small")
+    LLM_MODEL = OpenAIChat(id="o4-mini")
+elif LLM_PROVIDER == "lmstudio":
+    LLM_MODEL = LMStudio(id="medgemma-27b-it")
 else:
-    LLM_MODEL = Ollama(id="mistral-small3.2")
-    EMBEDDING_MODEL = OllamaEmbedder(id="nomic-embed-text")
+    LLM_MODEL = Ollama(id="devstral")
 
 ## Data split configuration
-TEST_SIZE = 0.3  # Proportion of data for test set
-VAL_SIZE = 0.2   # Proportion of remaining data for validation set (after test split)
+TEST_SIZE = 0.3  
+VAL_SIZE = 0.5   
 
 # LightGBM parameters
+HPARAMS = {
+    "max_depth": (2, 10),
+    "reg_alpha": (0, 30),
+    "reg_lambda": (0, 30),
+    #"subsample": (0.5, 1),
+    #"colsample_bytree": (0.5, 1),
+    #"min_split_gain": (0, 1),
+    #"min_child_weight": (1, 20),
+    #"num_leaves": (5, 40),
+    #"learning_rate": (0.01, 0.1),
+}
 PARAMS = {
+    "max_depth": 3,
+    "subsample": 0.7,
     'n_estimators': 1000,
-    'learning_rate': 0.1,
-    'max_depth': 2,
     'n_jobs': 1,
     'random_state': 42,
-    'data_sample_strategy': 'goss',
-    'use_quantized_grad': True,
     'force_col_wise': True,
     'early_stopping_rounds': 20,
     'verbosity': -1,
@@ -72,15 +75,16 @@ else:
 
 ML_MODEL = lgb.LGBMClassifier(**PARAMS)
 
-N_TRIALS = 100
+# Optimization configuration
+N_TRIALS = 1000
 EDGE_PENALTY = 0.00002
 
-# Feature inclusion probability coefficients
-INCLUSION_BASE_PROB = 0.1
-INCLUSION_IMPORTANCE_SCALE = 0.8
-
-# KG loading configuration
-LOAD_AGENT_KG = True
-PLOT_IMAGES = False
+# Loading configuration
+USE_KNOWLEDGE_BASE = False
+LOAD_AGENT_KG = False
+PLOT_IMAGES = True
 VERBOSE = True
-AGENT_KG_PATH = f"kg/{DATASET_NAME}_initial_agent_kg.graphml"
+EXPLAIN_RESULTS = False
+
+# Explanation configuration
+USER_AIM = """I am a biomedical researcher trying to understand the feature interactions leading to mortality during ICU stay. Please explain me which feature interactions are most important for mortality prediction."""

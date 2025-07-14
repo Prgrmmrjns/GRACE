@@ -75,6 +75,15 @@ The first step of our workflow is the generation of a knowledge graph specific t
 As a prerequisite for the knowledge graph the user has to input a detailed description of the dataset and task at hand. Here the user should ideally outline what each dataset feature represents and how the features were processed. In addition the user has to specify the target column and provide keywords for the later RAG search.
 Based on these user-customized information we leverage the \emph{agno} agent framework \href{https://docs.agno.com/introduction}{https://docs.agno.com/introduction} to build a task-specific knowledge graph through a Retrieval-Augmented Generation (RAG) loop. Scientific articles from ArXiv matching user-defined keywords are embedded and stored in a vector database (Lance DB). An agent then suggests 5-10 central disease mechanisms for the associated dataset and prediction task. In the corresponding prompt we input the user-provided dataset description, all dataset features including the target column. The LLM also has access to the provided knowledge bases provided by an ArXiv search from the user provided keywords. In the following step we then ask the LLM to subsequently assign dataset features to each of the earlier suggested disease mechanisms and again provide a dataset description and access to the knowledge base. After asking the LLM to assign features to any of the disease mechanisms we then check for any yet unassigned features and ask the LLM to assign them to any of the suggested groups. The KG creation is complete when all features are assigned to at least one of the disease mechanisms (see Figure \ref{fig:workflow}A for a created KG for the MIMIC dataset).
 
+An important aspect of this graph-based approach is the handling of features that participate in multiple disease mechanisms. When a feature is assigned to more than one group, it acts as a bridge, allowing it to interact with features from each of its assigned groups. For instance, if Feature B is in a group with Feature A and also in a group with Feature C, the resulting interaction constraints will be `[['A', 'B'], ['B', 'C']]`. This allows the model to learn interactions between A and B, and between B and C, but critically, it prevents a direct interaction between A and C. This mirrors the structure of the knowledge graph, where interactions are limited to connected nodes, preventing the model from exploring biologically implausible or distant relationships. This targeted approach is illustrated in Figure \ref{fig:multi_constraint_effect}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/multi_constraint_effect.png}
+    \caption{Illustration of how a feature present in multiple interaction constraints is handled. Feature B, being part of two groups, can interact with both A and C, but A and C cannot interact directly.}
+    \label{fig:multi_constraint_effect}
+\end{figure}
+
 \subsubsection{Graph-based dimensionality reduction, prediction, and optimization}
 
 \subsection{Evaluation setup}

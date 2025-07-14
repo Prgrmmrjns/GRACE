@@ -5,48 +5,24 @@
 <graph edgedefault="directed"><node id="mortality_flag">
   <data key="d0">target</data>
 </node>
-<node id="Multi-Organ Dysfunction and Failure">
+<node id="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis">
   <data key="d0">mechanism</data>
-  <data key="d1">Critical illness often leads to dysfunction across multiple organ systems (renal, hepatic, cardiac, respiratory, neurological). Biomarkers such as creatinine (renal), bilirubin and AST (hepatic), and eGFR provide direct quantification of organ damage. Organ dysfunction worsens prognosis by disrupting homeostasis, reducing resilience to stressors, and limiting recovery potential.</data>
-  <data key="d2">46</data>
+  <data key="d1">A dysregulated host response to infection or injury, characterized by widespread inflammation leading to endothelial dysfunction, vasodilation, capillary leak, and potentially organ failure. In severe cases, it progresses to septic shock.</data>
+  <data key="d2">25</data>
 </node>
-<node id="Creatinineserum">
+<node id="HRbpm">
   <data key="d0">feature</data>
 </node>
-<node id="TotalBilirubin">
+<node id="ABPmmmHg">
   <data key="d0">feature</data>
 </node>
-<node id="AST">
+<node id="RRinspmin">
   <data key="d0">feature</data>
 </node>
-<node id="eGFR">
+<node id="TemperatureFF">
   <data key="d0">feature</data>
 </node>
-<node id="BUN">
-  <data key="d0">feature</data>
-</node>
-<node id="BUNCreatinine">
-  <data key="d0">feature</data>
-</node>
-<node id="BUNAlbumin">
-  <data key="d0">feature</data>
-</node>
-<node id="Albumin">
-  <data key="d0">feature</data>
-</node>
-<node id="LDH">
-  <data key="d0">feature</data>
-</node>
-<node id="Potassiumserum">
-  <data key="d0">feature</data>
-</node>
-<node id="Sodiumserum">
-  <data key="d0">feature</data>
-</node>
-<node id="Chlorideserum">
-  <data key="d0">feature</data>
-</node>
-<node id="Glucoseserum">
+<node id="WBC">
   <data key="d0">feature</data>
 </node>
 <node id="LacticAcid">
@@ -55,7 +31,160 @@
 <node id="CReactiveProteinCRP">
   <data key="d0">feature</data>
 </node>
-<node id="WBC">
+<node id="PaO2_FiO2">
+  <data key="d0">feature</data>
+</node>
+<node id="Sepsis3">
+  <data key="d0">feature</data>
+</node>
+<node id="organ_dysfunction">
+  <data key="d0">feature</data>
+</node>
+<node id="PO2ArterialmmHg">
+  <data key="d0">feature</data>
+</node>
+<node id="PCO2ArterialmmHg">
+  <data key="d0">feature</data>
+</node>
+<node id="SpO2">
+  <data key="d0">feature</data>
+</node>
+<node id="FiO2">
+  <data key="d0">feature</data>
+</node>
+<node id="CompliancecmH2OLseconds">
+  <data key="d0">feature</data>
+</node>
+<node id="Epinephrinemg_avg">
+  <data key="d0">feature</data>
+</node>
+<node id="Norepinephrinemg_avg">
+  <data key="d0">feature</data>
+</node>
+<node id="Calciumnon-ionized">
+  <data key="d0">feature</data>
+</node>
+<node id="IonizedCalcium">
+  <data key="d0">feature</data>
+</node>
+<node id="ArterialBaseExcess">
+  <data key="d0">feature</data>
+</node>
+<node id="LDH">
+  <data key="d0">feature</data>
+</node>
+<node id="NBPdmmHg">
+  <data key="d0">feature</data>
+</node>
+<node id="NBPsmmHg">
+  <data key="d0">feature</data>
+</node>
+<node id="BrainNatiureticPeptideBNP">
+  <data key="d0">feature</data>
+</node>
+<node id="FoleymL_sum">
+  <data key="d0">feature</data>
+</node>
+<node id="Cardiovascular Dysfunction / Shock">
+  <data key="d0">mechanism</data>
+  <data key="d1">Impairment of cardiac function or systemic circulation, leading to inadequate tissue perfusion and oxygen delivery. This can result from various causes including sepsis, hemorrhage, myocardial infarction, or cardiomyopathy.</data>
+  <data key="d2">15</data>
+</node>
+<node id="CVPmmHg">
+  <data key="d0">feature</data>
+</node>
+<node id="CKCPK">
+  <data key="d0">feature</data>
+</node>
+<node id="Dobutaminemg_avg">
+  <data key="d0">feature</data>
+</node>
+<node id="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)">
+  <data key="d0">mechanism</data>
+  <data key="d1">Inability of the lungs to adequately oxygenate blood or eliminate carbon dioxide. ARDS is a severe form characterized by diffuse alveolar damage, pulmonary edema, and refractory hypoxemia.</data>
+  <data key="d2">11</data>
+</node>
+<node id="TotalPEEPLevelcmH2O">
+  <data key="d0">feature</data>
+</node>
+<node id="PCO2VenousmmHg">
+  <data key="d0">feature</data>
+</node>
+<node id="Renal Dysfunction / Acute Kidney Injury (AKI)">
+  <data key="d0">mechanism</data>
+  <data key="d1">Sudden decrease in kidney function, leading to the accumulation of waste products and fluid imbalance. Often caused by ischemia, toxins, or inflammatory processes.</data>
+  <data key="d2">11</data>
+</node>
+<node id="Creatinineserum">
+  <data key="d0">feature</data>
+</node>
+<node id="BUN">
+  <data key="d0">feature</data>
+</node>
+<node id="eGFR">
+  <data key="d0">feature</data>
+</node>
+<node id="HCO3serum">
+  <data key="d0">feature</data>
+</node>
+<node id="Aniongap">
+  <data key="d0">feature</data>
+</node>
+<node id="BUNCreatinine">
+  <data key="d0">feature</data>
+</node>
+<node id="Metabolic Derangement">
+  <data key="d0">mechanism</data>
+  <data key="d1">Disruptions in metabolic processes, including glucose metabolism, acid-base balance, and electrolyte abnormalities, often secondary to critical illness or organ dysfunction.</data>
+  <data key="d2">15</data>
+</node>
+<node id="Glucoseserum">
+  <data key="d0">feature</data>
+</node>
+<node id="PHArterial">
+  <data key="d0">feature</data>
+</node>
+<node id="Sodiumserum">
+  <data key="d0">feature</data>
+</node>
+<node id="Potassiumserum">
+  <data key="d0">feature</data>
+</node>
+<node id="Chlorideserum">
+  <data key="d0">feature</data>
+</node>
+<node id="BUNAlbumin">
+  <data key="d0">feature</data>
+</node>
+<node id="Albumin">
+  <data key="d0">feature</data>
+</node>
+<node id="Neurological Impairment">
+  <data key="d0">mechanism</data>
+  <data key="d1">Compromise of brain function, ranging from altered mental status to coma. Can be caused by hypoxia, ischemia, infection, or metabolic disturbances.</data>
+  <data key="d2">9</data>
+</node>
+<node id="EyeOpening">
+  <data key="d0">feature</data>
+</node>
+<node id="VerbalResponse">
+  <data key="d0">feature</data>
+</node>
+<node id="MotorResponse">
+  <data key="d0">feature</data>
+</node>
+<node id="GCS">
+  <data key="d0">feature</data>
+</node>
+<node id="Hematological Abnormalities">
+  <data key="d0">mechanism</data>
+  <data key="d1">Disorders affecting blood cells and coagulation, contributing to oxygen carrying capacity, infection risk, and bleeding/thrombosis.</data>
+  <data key="d2">7</data>
+</node>
+<node id="Hemoglobingdl">
+  <data key="d0">feature</data>
+</node>
+<node id="Hematocritserum">
   <data key="d0">feature</data>
 </node>
 <node id="PlateletCount">
@@ -67,177 +196,53 @@
 <node id="INR">
   <data key="d0">feature</data>
 </node>
-<node id="CKCPK">
+<node id="Liver Dysfunction">
+  <data key="d0">mechanism</data>
+  <data key="d1">Impairment of liver function, affecting metabolism, detoxification, and synthetic processes.</data>
+  <data key="d2">7</data>
+</node>
+<node id="AST">
   <data key="d0">feature</data>
 </node>
-<node id="BrainNatiureticPeptideBNP">
+<node id="TotalBilirubin">
   <data key="d0">feature</data>
 </node>
-<node id="PaO2_FiO2">
-  <data key="d0">feature</data>
+<node id="Coagulation Dysfunction / DIC">
+  <data key="d0">mechanism</data>
+  <data key="d1">Systemic activation of coagulation leading to microvascular thrombosis and consumption of clotting factors, often associated with sepsis or trauma.</data>
+  <data key="d2">9</data>
 </node>
-<node id="PO2ArterialmmHg">
-  <data key="d0">feature</data>
-</node>
-<node id="SpO2">
-  <data key="d0">feature</data>
-</node>
-<node id="PCO2ArterialmmHg">
-  <data key="d0">feature</data>
-</node>
-<node id="PHArterial">
-  <data key="d0">feature</data>
-</node>
-<node id="ArterialBaseExcess">
-  <data key="d0">feature</data>
-</node>
-<node id="TotalPEEPLevelcmH2O">
-  <data key="d0">feature</data>
-</node>
-<node id="CompliancecmH2OLseconds">
-  <data key="d0">feature</data>
-</node>
-<node id="GCS">
-  <data key="d0">feature</data>
-</node>
-<node id="EyeOpening">
-  <data key="d0">feature</data>
-</node>
-<node id="VerbalResponse">
-  <data key="d0">feature</data>
-</node>
-<node id="MotorResponse">
-  <data key="d0">feature</data>
-</node>
-<node id="TemperatureFF">
-  <data key="d0">feature</data>
-</node>
-<node id="HRbpm">
-  <data key="d0">feature</data>
-</node>
-<node id="ABPmmmHg">
-  <data key="d0">feature</data>
-</node>
-<node id="RRinspmin">
-  <data key="d0">feature</data>
-</node>
-<node id="FoleymL_sum">
-  <data key="d0">feature</data>
-</node>
-<node id="hypertension">
-  <data key="d0">feature</data>
-</node>
-<node id="heart_failure">
-  <data key="d0">feature</data>
-</node>
-<node id="organ_dysfunction">
-  <data key="d0">feature</data>
-</node>
-<node id="Sepsis3">
-  <data key="d0">feature</data>
+<node id="Underlying Comorbidities and Risk Factors">
+  <data key="d0">mechanism</data>
+  <data key="d1">Pre-existing conditions or patient characteristics that increase the risk of critical illness and mortality.</data>
+  <data key="d2">16</data>
 </node>
 <node id="anchor_age">
   <data key="d0">feature</data>
 </node>
-<node id="diabetes">
-  <data key="d0">feature</data>
-</node>
-<node id="obesity">
+<node id="gender">
   <data key="d0">feature</data>
 </node>
 <node id="BMI">
   <data key="d0">feature</data>
 </node>
-<node id="Sepsis and Systemic Inflammatory Response">
-  <data key="d0">mechanism</data>
-  <data key="d1">Sepsis triggers widespread inflammation, capillary leak, coagulation disturbances, and organ injury. Surviving sepsis is a major determinant of ICU outcomes. Markers such as CRP, WBC, lactic acid, and the 'Sepsis3' variable indicate systemic inflammation and bacterial burden.</data>
-  <data key="d2">36</data>
-</node>
-<node id="NBPsmmHg">
+<node id="diabetes">
   <data key="d0">feature</data>
 </node>
-<node id="NBPdmmHg">
+<node id="hypertension">
   <data key="d0">feature</data>
 </node>
-<node id="CVPmmHg">
+<node id="obesity">
   <data key="d0">feature</data>
 </node>
-<node id="HCO3serum">
-  <data key="d0">feature</data>
-</node>
-<node id="FiO2">
-  <data key="d0">feature</data>
-</node>
-<node id="Aniongap">
-  <data key="d0">feature</data>
-</node>
-<node id="Hemoglobingdl">
-  <data key="d0">feature</data>
-</node>
-<node id="Acute Respiratory Distress and Hypoxemia">
-  <data key="d0">mechanism</data>
-  <data key="d1">Dysfunction in gas exchange (e.g., ARDS, severe pneumonia) causes hypoxemia, hypercapnia, and impaired ventilatory mechanics. Variables like PaO2, FiO2, PaO2/FiO2, SpO2, respiratory rate, PEEP, and compliance represent the severity and effectiveness of respiratory support.</data>
-  <data key="d2">29</data>
-</node>
-<node id="Hematocritserum">
-  <data key="d0">feature</data>
-</node>
-<node id="Cardiovascular Instability and Shock">
-  <data key="d0">mechanism</data>
-  <data key="d1">Shock—whether septic, cardiogenic, or hypovolemic—results in tissue hypoperfusion and is reflected by features such as hypotension (ABP, NBPs, NBPd), central venous pressure, heart rate, requirement for vasoactive medications (epinephrine, norepinephrine, dobutamine), and blood lactate. These illustrate attempts to maintain adequate organ perfusion in the face of circulatory collapse.</data>
-  <data key="d2">32</data>
-</node>
-<node id="Epinephrinemg_avg">
-  <data key="d0">feature</data>
-</node>
-<node id="Dobutaminemg_avg">
-  <data key="d0">feature</data>
-</node>
-<node id="Norepinephrinemg_avg">
-  <data key="d0">feature</data>
-</node>
-<node id="Neurological Impairment and Coma">
-  <data key="d0">mechanism</data>
-  <data key="d1">Altered consciousness due to brain injury, metabolic derangement, or excessive sedation is a predictor of adverse outcomes. The Glasgow Coma Scale (GCS), including its eye, verbal, and motor components, captures the extent of neurological impairment.</data>
-  <data key="d2">30</data>
-</node>
-<node id="Calciumnon-ionized">
-  <data key="d0">feature</data>
-</node>
-<node id="IonizedCalcium">
-  <data key="d0">feature</data>
-</node>
-<node id="Metabolic Dysregulation and Electrolyte Imbalances">
-  <data key="d0">mechanism</data>
-  <data key="d1">Critical illness is often accompanied by disturbances in glucose handling, acid-base status, and electrolytes. Features such as glucose, sodium, potassium, calcium, bicarbonate (HCO3), anion gap, pH, and base excess are essential for detecting life-threatening derangements.</data>
-  <data key="d2">32</data>
-</node>
-<node id="PCO2VenousmmHg">
-  <data key="d0">feature</data>
-</node>
-<node id="Comorbidities and Patient Characteristics">
-  <data key="d0">mechanism</data>
-  <data key="d1">Baseline vulnerabilities such as advanced age, gender, pre-existing diabetes, hypertension, heart failure, and obesity markedly heighten the risk of ICU mortality by reducing physiological reserves and increasing susceptibility to complications.</data>
-  <data key="d2">30</data>
-</node>
-<node id="gender">
-  <data key="d0">feature</data>
-</node>
-<node id="NSURG">
+<node id="heart_failure">
   <data key="d0">feature</data>
 </node>
 <node id="NMED">
   <data key="d0">feature</data>
 </node>
-<node id="Coagulopathy and Hematologic Abnormalities">
-  <data key="d0">mechanism</data>
-  <data key="d1">Severe illness may induce coagulopathy (impaired clotting or excessive bleeding), anemia, or thrombocytopenia, increasing the risk of poor tissue oxygenation, bleeding, or thrombotic complications. These are reflected in values such as platelet count, hemoglobin, hematocrit, PTT, and INR.</data>
-  <data key="d2">29</data>
-</node>
-<node id="Service Type and Clinical Pathways">
-  <data key="d0">mechanism</data>
-  <data key="d1">Different ICU service types (medical, surgical, trauma, etc.) reflect both the underlying illness burden and the nature of interventions. These categories may proxy for unmeasured severity or risks intrinsic to the admitting diagnosis and relate to different mortality risks.</data>
-  <data key="d2">30</data>
+<node id="NSURG">
+  <data key="d0">feature</data>
 </node>
 <node id="TSURG">
   <data key="d0">feature</data>
@@ -251,307 +256,139 @@
 <node id="TRAUM">
   <data key="d0">feature</data>
 </node>
-<edge source="mortality_flag" target="Multi-Organ Dysfunction and Failure"/>
-<edge source="mortality_flag" target="Sepsis and Systemic Inflammatory Response"/>
-<edge source="mortality_flag" target="Acute Respiratory Distress and Hypoxemia"/>
-<edge source="mortality_flag" target="Cardiovascular Instability and Shock"/>
-<edge source="mortality_flag" target="Neurological Impairment and Coma"/>
-<edge source="mortality_flag" target="Metabolic Dysregulation and Electrolyte Imbalances"/>
-<edge source="mortality_flag" target="Comorbidities and Patient Characteristics"/>
-<edge source="mortality_flag" target="Coagulopathy and Hematologic Abnormalities"/>
-<edge source="mortality_flag" target="Service Type and Clinical Pathways"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="Creatinineserum"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="TotalBilirubin"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="AST"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="eGFR"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="BUN"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="BUNCreatinine"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="BUNAlbumin"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="Albumin"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="LDH"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="Potassiumserum"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="Sodiumserum"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="Chlorideserum"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="Glucoseserum"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="LacticAcid"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="CReactiveProteinCRP"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="WBC"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="PlateletCount"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="PTT"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="INR"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="CKCPK"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="BrainNatiureticPeptideBNP"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="PaO2_FiO2"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="PO2ArterialmmHg"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="SpO2"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="PCO2ArterialmmHg"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="PHArterial"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="ArterialBaseExcess"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="TotalPEEPLevelcmH2O"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="CompliancecmH2OLseconds"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="GCS"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="EyeOpening"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="VerbalResponse"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="MotorResponse"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="TemperatureFF"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="HRbpm"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="ABPmmmHg"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="RRinspmin"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="FoleymL_sum"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="hypertension"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="heart_failure"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="organ_dysfunction"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="Sepsis3"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="anchor_age"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="diabetes"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="obesity"/>
-<edge source="Multi-Organ Dysfunction and Failure" target="BMI"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="WBC"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="CReactiveProteinCRP"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="LacticAcid"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="Sepsis3"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="TemperatureFF"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="HRbpm"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="RRinspmin"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="ABPmmmHg"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="NBPsmmHg"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="NBPdmmHg"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="CVPmmHg"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="PlateletCount"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="PTT"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="INR"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="TotalBilirubin"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="Creatinineserum"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="eGFR"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="BUN"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="Sodiumserum"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="Potassiumserum"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="HCO3serum"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="PHArterial"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="SpO2"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="PO2ArterialmmHg"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="FiO2"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="PaO2_FiO2"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="Albumin"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="Aniongap"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="AST"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="LDH"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="ArterialBaseExcess"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="Hemoglobingdl"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="Glucoseserum"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="MotorResponse"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="VerbalResponse"/>
-<edge source="Sepsis and Systemic Inflammatory Response" target="GCS"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="RRinspmin"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="PO2ArterialmmHg"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="PCO2ArterialmmHg"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="SpO2"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="PHArterial"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="FiO2"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="TotalPEEPLevelcmH2O"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="CompliancecmH2OLseconds"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="PaO2_FiO2"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="Hemoglobingdl"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="Hematocritserum"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="WBC"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="LDH"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="CReactiveProteinCRP"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="TemperatureFF"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="LacticAcid"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="ArterialBaseExcess"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="Albumin"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="PlateletCount"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="BUN"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="Creatinineserum"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="eGFR"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="Aniongap"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="HCO3serum"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="Sodiumserum"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="Potassiumserum"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="Chlorideserum"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="Sepsis3"/>
-<edge source="Acute Respiratory Distress and Hypoxemia" target="organ_dysfunction"/>
-<edge source="Cardiovascular Instability and Shock" target="HRbpm"/>
-<edge source="Cardiovascular Instability and Shock" target="ABPmmmHg"/>
-<edge source="Cardiovascular Instability and Shock" target="CVPmmHg"/>
-<edge source="Cardiovascular Instability and Shock" target="NBPsmmHg"/>
-<edge source="Cardiovascular Instability and Shock" target="NBPdmmHg"/>
-<edge source="Cardiovascular Instability and Shock" target="Epinephrinemg_avg"/>
-<edge source="Cardiovascular Instability and Shock" target="Dobutaminemg_avg"/>
-<edge source="Cardiovascular Instability and Shock" target="Norepinephrinemg_avg"/>
-<edge source="Cardiovascular Instability and Shock" target="LacticAcid"/>
-<edge source="Cardiovascular Instability and Shock" target="FoleymL_sum"/>
-<edge source="Cardiovascular Instability and Shock" target="organ_dysfunction"/>
-<edge source="Cardiovascular Instability and Shock" target="Sepsis3"/>
-<edge source="Cardiovascular Instability and Shock" target="BUN"/>
-<edge source="Cardiovascular Instability and Shock" target="Creatinineserum"/>
-<edge source="Cardiovascular Instability and Shock" target="eGFR"/>
-<edge source="Cardiovascular Instability and Shock" target="WBC"/>
-<edge source="Cardiovascular Instability and Shock" target="Hemoglobingdl"/>
-<edge source="Cardiovascular Instability and Shock" target="Hematocritserum"/>
-<edge source="Cardiovascular Instability and Shock" target="PlateletCount"/>
-<edge source="Cardiovascular Instability and Shock" target="TotalBilirubin"/>
-<edge source="Cardiovascular Instability and Shock" target="Sodiumserum"/>
-<edge source="Cardiovascular Instability and Shock" target="Potassiumserum"/>
-<edge source="Cardiovascular Instability and Shock" target="Chlorideserum"/>
-<edge source="Cardiovascular Instability and Shock" target="PHArterial"/>
-<edge source="Cardiovascular Instability and Shock" target="TemperatureFF"/>
-<edge source="Cardiovascular Instability and Shock" target="BrainNatiureticPeptideBNP"/>
-<edge source="Cardiovascular Instability and Shock" target="obesity"/>
-<edge source="Cardiovascular Instability and Shock" target="heart_failure"/>
-<edge source="Cardiovascular Instability and Shock" target="diabetes"/>
-<edge source="Cardiovascular Instability and Shock" target="hypertension"/>
-<edge source="Cardiovascular Instability and Shock" target="PaO2_FiO2"/>
-<edge source="Cardiovascular Instability and Shock" target="Aniongap"/>
-<edge source="Neurological Impairment and Coma" target="GCS"/>
-<edge source="Neurological Impairment and Coma" target="EyeOpening"/>
-<edge source="Neurological Impairment and Coma" target="VerbalResponse"/>
-<edge source="Neurological Impairment and Coma" target="MotorResponse"/>
-<edge source="Neurological Impairment and Coma" target="Glucoseserum"/>
-<edge source="Neurological Impairment and Coma" target="Sodiumserum"/>
-<edge source="Neurological Impairment and Coma" target="Potassiumserum"/>
-<edge source="Neurological Impairment and Coma" target="Calciumnon-ionized"/>
-<edge source="Neurological Impairment and Coma" target="IonizedCalcium"/>
-<edge source="Neurological Impairment and Coma" target="PHArterial"/>
-<edge source="Neurological Impairment and Coma" target="PCO2ArterialmmHg"/>
-<edge source="Neurological Impairment and Coma" target="PO2ArterialmmHg"/>
-<edge source="Neurological Impairment and Coma" target="SpO2"/>
-<edge source="Neurological Impairment and Coma" target="TemperatureFF"/>
-<edge source="Neurological Impairment and Coma" target="Hemoglobingdl"/>
-<edge source="Neurological Impairment and Coma" target="BUN"/>
-<edge source="Neurological Impairment and Coma" target="Creatinineserum"/>
-<edge source="Neurological Impairment and Coma" target="LacticAcid"/>
-<edge source="Neurological Impairment and Coma" target="ArterialBaseExcess"/>
-<edge source="Neurological Impairment and Coma" target="HCO3serum"/>
-<edge source="Neurological Impairment and Coma" target="Aniongap"/>
-<edge source="Neurological Impairment and Coma" target="eGFR"/>
-<edge source="Neurological Impairment and Coma" target="TotalBilirubin"/>
-<edge source="Neurological Impairment and Coma" target="WBC"/>
-<edge source="Neurological Impairment and Coma" target="AST"/>
-<edge source="Neurological Impairment and Coma" target="LDH"/>
-<edge source="Neurological Impairment and Coma" target="CompliancecmH2OLseconds"/>
-<edge source="Neurological Impairment and Coma" target="anchor_age"/>
-<edge source="Neurological Impairment and Coma" target="organ_dysfunction"/>
-<edge source="Neurological Impairment and Coma" target="Sepsis3"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="Glucoseserum"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="Sodiumserum"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="Potassiumserum"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="Calciumnon-ionized"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="IonizedCalcium"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="HCO3serum"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="Aniongap"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="PHArterial"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="ArterialBaseExcess"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="Chlorideserum"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="LacticAcid"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="PCO2ArterialmmHg"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="PCO2VenousmmHg"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="Creatinineserum"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="BUN"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="Albumin"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="TotalBilirubin"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="Hemoglobingdl"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="Hematocritserum"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="WBC"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="LDH"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="AST"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="CReactiveProteinCRP"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="BUNCreatinine"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="BUNAlbumin"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="eGFR"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="TemperatureFF"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="BMI"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="diabetes"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="obesity"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="Sepsis3"/>
-<edge source="Metabolic Dysregulation and Electrolyte Imbalances" target="organ_dysfunction"/>
-<edge source="Comorbidities and Patient Characteristics" target="anchor_age"/>
-<edge source="Comorbidities and Patient Characteristics" target="gender"/>
-<edge source="Comorbidities and Patient Characteristics" target="diabetes"/>
-<edge source="Comorbidities and Patient Characteristics" target="hypertension"/>
-<edge source="Comorbidities and Patient Characteristics" target="heart_failure"/>
-<edge source="Comorbidities and Patient Characteristics" target="obesity"/>
-<edge source="Comorbidities and Patient Characteristics" target="BMI"/>
-<edge source="Comorbidities and Patient Characteristics" target="eGFR"/>
-<edge source="Comorbidities and Patient Characteristics" target="Glucoseserum"/>
-<edge source="Comorbidities and Patient Characteristics" target="Creatinineserum"/>
-<edge source="Comorbidities and Patient Characteristics" target="BUN"/>
-<edge source="Comorbidities and Patient Characteristics" target="BUNCreatinine"/>
-<edge source="Comorbidities and Patient Characteristics" target="BUNAlbumin"/>
-<edge source="Comorbidities and Patient Characteristics" target="Albumin"/>
-<edge source="Comorbidities and Patient Characteristics" target="organ_dysfunction"/>
-<edge source="Comorbidities and Patient Characteristics" target="Hemoglobingdl"/>
-<edge source="Comorbidities and Patient Characteristics" target="Hematocritserum"/>
-<edge source="Comorbidities and Patient Characteristics" target="WBC"/>
-<edge source="Comorbidities and Patient Characteristics" target="LDH"/>
-<edge source="Comorbidities and Patient Characteristics" target="CReactiveProteinCRP"/>
-<edge source="Comorbidities and Patient Characteristics" target="BrainNatiureticPeptideBNP"/>
-<edge source="Comorbidities and Patient Characteristics" target="TotalBilirubin"/>
-<edge source="Comorbidities and Patient Characteristics" target="Sodiumserum"/>
-<edge source="Comorbidities and Patient Characteristics" target="Potassiumserum"/>
-<edge source="Comorbidities and Patient Characteristics" target="Calciumnon-ionized"/>
-<edge source="Comorbidities and Patient Characteristics" target="IonizedCalcium"/>
-<edge source="Comorbidities and Patient Characteristics" target="Sepsis3"/>
-<edge source="Comorbidities and Patient Characteristics" target="GCS"/>
-<edge source="Comorbidities and Patient Characteristics" target="NSURG"/>
-<edge source="Comorbidities and Patient Characteristics" target="NMED"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="PlateletCount"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="Hemoglobingdl"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="Hematocritserum"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="PTT"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="INR"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="WBC"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="LDH"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="AST"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="TotalBilirubin"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="Albumin"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="BUN"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="Creatinineserum"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="eGFR"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="FoleymL_sum"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="Calciumnon-ionized"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="IonizedCalcium"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="TotalPEEPLevelcmH2O"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="BUNAlbumin"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="BUNCreatinine"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="Aniongap"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="CReactiveProteinCRP"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="Sepsis3"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="organ_dysfunction"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="LacticAcid"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="BrainNatiureticPeptideBNP"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="Glucoseserum"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="hypertension"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="diabetes"/>
-<edge source="Coagulopathy and Hematologic Abnormalities" target="gender"/>
-<edge source="Service Type and Clinical Pathways" target="NMED"/>
-<edge source="Service Type and Clinical Pathways" target="NSURG"/>
-<edge source="Service Type and Clinical Pathways" target="TSURG"/>
-<edge source="Service Type and Clinical Pathways" target="CMED"/>
-<edge source="Service Type and Clinical Pathways" target="VSURG"/>
-<edge source="Service Type and Clinical Pathways" target="TRAUM"/>
-<edge source="Service Type and Clinical Pathways" target="anchor_age"/>
-<edge source="Service Type and Clinical Pathways" target="gender"/>
-<edge source="Service Type and Clinical Pathways" target="diabetes"/>
-<edge source="Service Type and Clinical Pathways" target="hypertension"/>
-<edge source="Service Type and Clinical Pathways" target="obesity"/>
-<edge source="Service Type and Clinical Pathways" target="heart_failure"/>
-<edge source="Service Type and Clinical Pathways" target="BMI"/>
-<edge source="Service Type and Clinical Pathways" target="organ_dysfunction"/>
-<edge source="Service Type and Clinical Pathways" target="Sepsis3"/>
-<edge source="Service Type and Clinical Pathways" target="GCS"/>
-<edge source="Service Type and Clinical Pathways" target="PaO2_FiO2"/>
-<edge source="Service Type and Clinical Pathways" target="eGFR"/>
-<edge source="Service Type and Clinical Pathways" target="BUNCreatinine"/>
-<edge source="Service Type and Clinical Pathways" target="BUNAlbumin"/>
-<edge source="Service Type and Clinical Pathways" target="FoleymL_sum"/>
-<edge source="Service Type and Clinical Pathways" target="Epinephrinemg_avg"/>
-<edge source="Service Type and Clinical Pathways" target="Dobutaminemg_avg"/>
-<edge source="Service Type and Clinical Pathways" target="Norepinephrinemg_avg"/>
-<edge source="Service Type and Clinical Pathways" target="WBC"/>
-<edge source="Service Type and Clinical Pathways" target="CReactiveProteinCRP"/>
-<edge source="Service Type and Clinical Pathways" target="LDH"/>
-<edge source="Service Type and Clinical Pathways" target="TotalBilirubin"/>
-<edge source="Service Type and Clinical Pathways" target="Albumin"/>
-<edge source="Service Type and Clinical Pathways" target="PlateletCount"/>
+<edge source="mortality_flag" target="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis"/>
+<edge source="mortality_flag" target="Cardiovascular Dysfunction / Shock"/>
+<edge source="mortality_flag" target="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)"/>
+<edge source="mortality_flag" target="Renal Dysfunction / Acute Kidney Injury (AKI)"/>
+<edge source="mortality_flag" target="Metabolic Derangement"/>
+<edge source="mortality_flag" target="Neurological Impairment"/>
+<edge source="mortality_flag" target="Hematological Abnormalities"/>
+<edge source="mortality_flag" target="Liver Dysfunction"/>
+<edge source="mortality_flag" target="Coagulation Dysfunction / DIC"/>
+<edge source="mortality_flag" target="Underlying Comorbidities and Risk Factors"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="HRbpm"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="ABPmmmHg"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="RRinspmin"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="TemperatureFF"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="WBC"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="LacticAcid"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="CReactiveProteinCRP"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="PaO2_FiO2"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="Sepsis3"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="organ_dysfunction"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="PO2ArterialmmHg"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="PCO2ArterialmmHg"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="SpO2"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="FiO2"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="CompliancecmH2OLseconds"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="Epinephrinemg_avg"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="Norepinephrinemg_avg"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="Calciumnon-ionized"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="IonizedCalcium"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="ArterialBaseExcess"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="LDH"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="NBPdmmHg"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="NBPsmmHg"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="BrainNatiureticPeptideBNP"/>
+<edge source="Systemic Inflammatory Response Syndrome (SIRS) / Sepsis" target="FoleymL_sum"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="HRbpm"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="ABPmmmHg"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="CVPmmHg"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="PO2ArterialmmHg"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="SpO2"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="FiO2"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="CKCPK"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="Epinephrinemg_avg"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="Norepinephrinemg_avg"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="CompliancecmH2OLseconds"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="PaO2_FiO2"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="NBPsmmHg"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="BrainNatiureticPeptideBNP"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="Dobutaminemg_avg"/>
+<edge source="Cardiovascular Dysfunction / Shock" target="NBPdmmHg"/>
+<edge source="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)" target="RRinspmin"/>
+<edge source="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)" target="PO2ArterialmmHg"/>
+<edge source="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)" target="PCO2ArterialmmHg"/>
+<edge source="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)" target="SpO2"/>
+<edge source="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)" target="FiO2"/>
+<edge source="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)" target="PaO2_FiO2"/>
+<edge source="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)" target="CompliancecmH2OLseconds"/>
+<edge source="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)" target="TotalPEEPLevelcmH2O"/>
+<edge source="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)" target="CVPmmHg"/>
+<edge source="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)" target="PCO2VenousmmHg"/>
+<edge source="Respiratory Failure / Acute Respiratory Distress Syndrome (ARDS)" target="ArterialBaseExcess"/>
+<edge source="Renal Dysfunction / Acute Kidney Injury (AKI)" target="Creatinineserum"/>
+<edge source="Renal Dysfunction / Acute Kidney Injury (AKI)" target="BUN"/>
+<edge source="Renal Dysfunction / Acute Kidney Injury (AKI)" target="eGFR"/>
+<edge source="Renal Dysfunction / Acute Kidney Injury (AKI)" target="Calciumnon-ionized"/>
+<edge source="Renal Dysfunction / Acute Kidney Injury (AKI)" target="IonizedCalcium"/>
+<edge source="Renal Dysfunction / Acute Kidney Injury (AKI)" target="HCO3serum"/>
+<edge source="Renal Dysfunction / Acute Kidney Injury (AKI)" target="Aniongap"/>
+<edge source="Renal Dysfunction / Acute Kidney Injury (AKI)" target="LacticAcid"/>
+<edge source="Renal Dysfunction / Acute Kidney Injury (AKI)" target="LDH"/>
+<edge source="Renal Dysfunction / Acute Kidney Injury (AKI)" target="BUNCreatinine"/>
+<edge source="Renal Dysfunction / Acute Kidney Injury (AKI)" target="ArterialBaseExcess"/>
+<edge source="Metabolic Derangement" target="Glucoseserum"/>
+<edge source="Metabolic Derangement" target="HCO3serum"/>
+<edge source="Metabolic Derangement" target="Aniongap"/>
+<edge source="Metabolic Derangement" target="LacticAcid"/>
+<edge source="Metabolic Derangement" target="PHArterial"/>
+<edge source="Metabolic Derangement" target="Sodiumserum"/>
+<edge source="Metabolic Derangement" target="Potassiumserum"/>
+<edge source="Metabolic Derangement" target="Chlorideserum"/>
+<edge source="Metabolic Derangement" target="Calciumnon-ionized"/>
+<edge source="Metabolic Derangement" target="IonizedCalcium"/>
+<edge source="Metabolic Derangement" target="BUNAlbumin"/>
+<edge source="Metabolic Derangement" target="Albumin"/>
+<edge source="Metabolic Derangement" target="LDH"/>
+<edge source="Metabolic Derangement" target="BUNCreatinine"/>
+<edge source="Metabolic Derangement" target="ArterialBaseExcess"/>
+<edge source="Neurological Impairment" target="EyeOpening"/>
+<edge source="Neurological Impairment" target="VerbalResponse"/>
+<edge source="Neurological Impairment" target="MotorResponse"/>
+<edge source="Neurological Impairment" target="GCS"/>
+<edge source="Neurological Impairment" target="PO2ArterialmmHg"/>
+<edge source="Neurological Impairment" target="PCO2ArterialmmHg"/>
+<edge source="Neurological Impairment" target="PHArterial"/>
+<edge source="Neurological Impairment" target="TemperatureFF"/>
+<edge source="Neurological Impairment" target="LacticAcid"/>
+<edge source="Hematological Abnormalities" target="Hemoglobingdl"/>
+<edge source="Hematological Abnormalities" target="Hematocritserum"/>
+<edge source="Hematological Abnormalities" target="WBC"/>
+<edge source="Hematological Abnormalities" target="PlateletCount"/>
+<edge source="Hematological Abnormalities" target="PTT"/>
+<edge source="Hematological Abnormalities" target="INR"/>
+<edge source="Hematological Abnormalities" target="LDH"/>
+<edge source="Liver Dysfunction" target="AST"/>
+<edge source="Liver Dysfunction" target="TotalBilirubin"/>
+<edge source="Liver Dysfunction" target="Albumin"/>
+<edge source="Liver Dysfunction" target="PTT"/>
+<edge source="Liver Dysfunction" target="INR"/>
+<edge source="Liver Dysfunction" target="LacticAcid"/>
+<edge source="Liver Dysfunction" target="LDH"/>
+<edge source="Coagulation Dysfunction / DIC" target="PlateletCount"/>
+<edge source="Coagulation Dysfunction / DIC" target="PTT"/>
+<edge source="Coagulation Dysfunction / DIC" target="INR"/>
+<edge source="Coagulation Dysfunction / DIC" target="WBC"/>
+<edge source="Coagulation Dysfunction / DIC" target="LacticAcid"/>
+<edge source="Coagulation Dysfunction / DIC" target="AST"/>
+<edge source="Coagulation Dysfunction / DIC" target="TotalBilirubin"/>
+<edge source="Coagulation Dysfunction / DIC" target="Albumin"/>
+<edge source="Coagulation Dysfunction / DIC" target="Sepsis3"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="anchor_age"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="gender"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="BMI"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="diabetes"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="hypertension"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="obesity"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="heart_failure"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="NMED"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="NSURG"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="TSURG"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="CMED"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="VSURG"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="TRAUM"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="HRbpm"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="ABPmmmHg"/>
+<edge source="Underlying Comorbidities and Risk Factors" target="RRinspmin"/>
 </graph></graphml>

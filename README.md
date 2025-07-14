@@ -63,6 +63,24 @@ python main.py
 
 The script will load the data, run the graph optimization process, train the final model, and save the results and visualizations in the `images/` and `models/` directories.
 
+### 5. Interactive Knowledge Graph Pruning (NEW! 🆕)
+
+For advanced users and domain experts, we provide an interactive web interface for manual graph editing:
+
+```bash
+python run_interactive_kg.py
+```
+
+This launches a Streamlit app where you can:
+- 🎯 **Visualize** optimized knowledge graphs interactively
+- ✏️ **Edit** graphs by adding/removing nodes and edges
+- 🔒 **Lock** critical edges to preserve domain knowledge
+- 🔄 **Re-optimize** graphs with your constraints
+- 📊 **Monitor** performance metrics in real-time
+- 💾 **Export** modified graphs for further analysis
+
+Perfect for clinicians and researchers who want to inject domain expertise into the automated optimization process. See `INTERACTIVE_KG_README.md` for detailed instructions.
+
 ## 📁 Project Structure
 
 ```

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  10 JUL 2025 02:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  14 JUL 2025 15:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -463,7 +463,8 @@ LaTeX Info: Redefining \addtolength on input line 81.
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count316
 \l__pdf_internal_box=\box64
-) (./main.aux)
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -484,7 +485,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
- (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count317
 \scratchdimen=\dimen272
@@ -504,16 +505,69 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 12.
- (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-<images/windows.png, id=147, 810.1467pt x 185.9748pt>
+
+LaTeX Warning: Citation `bro2014principal' on page 1 undefined on input line 18.
+
+
+LaTeX Warning: Citation `mcinnes2018umap' on page 1 undefined on input line 18.
+
+
+LaTeX Warning: Citation `lievin2024can' on page 1 undefined on input line 21.
+
+
+LaTeX Warning: Citation `rios2024evaluation' on page 1 undefined on input line 21.
+
+
+LaTeX Warning: Citation `zakka2024almanac' on page 1 undefined on input line 21.
+
+
+LaTeX Warning: Citation `wang2024llm' on page 1 undefined on input line 21.
+
+
+LaTeX Warning: Citation `wu2024guiding' on page 1 undefined on input line 21.
+
+
+LaTeX Warning: Citation `zhang2025revolutionizing' on page 1 undefined on input line 21.
+
+
+LaTeX Warning: Citation `bora2024systematic' on page 1 undefined on input line 24.
+
+[1
+
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `zeng2022toward' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `gao2025leveraging' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `rajabi2022knowledge' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `chaddad2023survey' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Citation `chen2024applying' on page 2 undefined on input line 30.
+
+[2]
+
+LaTeX Warning: Citation `johnson2021mimic' on page 3 undefined on input line 41.
+
+
+LaTeX Warning: Citation `goldberger2000physiobank' on page 3 undefined on input line 41.
+
+
+LaTeX Warning: Reference `fig:windows' on page 3 undefined on input line 43.
+
+[3]
+<images/windows.png, id=29, 810.1467pt x 185.9748pt>
 File: images/windows.png Graphic file (type png)
 <use images/windows.png>
 Package pdftex.def Info: images/windows.png  used on input line 50.
@@ -528,109 +582,171 @@ Overfull \hbox (0.29578pt too wide) in paragraph at lines 57--58
 \OT1/cmr/m/n/10 Alzheimer's dis-ease (AD) through var-i-ous biomark-ers. The dataset was launched
  []
 
+
+LaTeX Warning: Reference `fig:workflow' on page 4 undefined on input line 64.
+
 [4 <./images/windows.png>]
-<images/general_workflow.png, id=158, 1204.5pt x 602.25pt>
+<images/general_workflow.png, id=41, 1204.5pt x 602.25pt>
 File: images/general_workflow.png Graphic file (type png)
 <use images/general_workflow.png>
 Package pdftex.def Info: images/general_workflow.png  used on input line 68.
 (pdftex.def)             Requested size: 345.0pt x 172.49765pt.
- [5] [6 <./images/general_workflow.png>] (./performance_results.tex
-Overfull \hbox (35.83412pt too wide) in paragraph at lines 3--14
- [][] 
- []
+
+
+LaTeX Warning: Reference `fig:workflow' on page 5 undefined on input line 76.
+
+
+LaTeX Warning: Reference `fig:multi_constraint_effect' on page 5 undefined on input line 78.
+
+
+LaTeX Warning: File `images/multi_constraint_effect.png' not found on input line 82.
+
+
+/Users/jwolber/Documents/GRACE/manuscript_files/main.tex:82: Package pdftex.def Error: File `images/multi_constraint_effect.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82 ...width]{images/multi_constraint_effect.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[5] [6 <./images/general_workflow.png>] [7]
+
+LaTeX Warning: Reference `tab:performance_comparison' on page 8 undefined on input line 110.
+
+(./performance_results.tex
+Overfull \hbox (35.83412pt too wide) in paragraph at lines 3--14
+ [][] 
+ []
+
 )
-Overfull \hbox (12.73448pt too wide) in paragraph at lines 105--106
+Overfull \hbox (12.73448pt too wide) in paragraph at lines 114--115
 []\OT1/cmr/m/n/10 For the ADNI dataset, our knowl-edge graph-based ap-proach (GRACE) achieved
  []
 
-[7] [8]
-Overfull \hbox (33.47295pt too wide) in paragraph at lines 128--129
+[8]
+
+LaTeX Warning: Reference `fig:adni_graphs' on page 9 undefined on input line 123.
+
+[9]
+Overfull \hbox (33.47295pt too wide) in paragraph at lines 137--138
 \OT1/cmr/m/n/10 Metabolic, Neu-rode-gen-er-a-tive, Neu-ropsy-chi-atric, Risk Fac-tors, Tau/Neurodegenerative,
  []
 
-<images/adni_initial_kg.png, id=184, 1553.805pt x 811.5921pt>
+<images/adni_initial_kg.png, id=79, 1325.4318pt x 1505.8659pt>
 File: images/adni_initial_kg.png Graphic file (type png)
 <use images/adni_initial_kg.png>
-Package pdftex.def Info: images/adni_initial_kg.png  used on input line 134.
-(pdftex.def)             Requested size: 345.0pt x 180.19786pt.
-<images/adni_optimized_kg.png, id=185, 1243.044pt x 1149.3339pt>
+Package pdftex.def Info: images/adni_initial_kg.png  used on input line 143.
+(pdftex.def)             Requested size: 345.0pt x 391.95248pt.
+<images/adni_optimized_kg.png, id=80, 1501.2888pt x 1536.4602pt>
 File: images/adni_optimized_kg.png Graphic file (type png)
 <use images/adni_optimized_kg.png>
-Package pdftex.def Info: images/adni_optimized_kg.png  used on input line 143.
-(pdftex.def)             Requested size: 345.0pt x 318.98778pt.
+Package pdftex.def Info: images/adni_optimized_kg.png  used on input line 152.
+(pdftex.def)             Requested size: 345.0pt x 353.07364pt.
 
-LaTeX Warning: Float too large for page by 103.63838pt on input line 149.
+LaTeX Warning: Float too large for page by 349.47887pt on input line 158.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9]
-<images/adni_shap_interpreted_graph.png, id=194, 1399.8699pt x 1149.3339pt>
-File: images/adni_shap_interpreted_graph.png Graphic file (type png)
-<use images/adni_shap_interpreted_graph.png>
-Package pdftex.def Info: images/adni_shap_interpreted_graph.png  used on input line 162.
-(pdftex.def)             Requested size: 345.0pt x 283.24655pt.
 
-Underfull \hbox (badness 1552) in paragraph at lines 163--163
-[]\OT1/cmr/m/n/10 Figure 4: |SHAP-weighted knowl-edge graph for ADNI dataset show-ing
+LaTeX Warning: Reference `fig:shap_analysis_adni' on page 10 undefined on input line 167.
+
+[10]
+
+LaTeX Warning: File `images/adni_shap_interpreted_graph.png' not found on input line 171.
+
+
+/Users/jwolber/Documents/GRACE/manuscript_files/main.tex:171: Package pdftex.def Error: File `images/adni_shap_interpreted_graph.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.171 ...]{images/adni_shap_interpreted_graph.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 172--172
+[]\OT1/cmr/m/n/10 Figure 5: |SHAP-weighted knowl-edge graph for ADNI dataset show-ing
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/mimic_shap_interpreted_graph.png, id=196, 1459.1313pt x 1149.3339pt>
+
+LaTeX Warning: Reference `fig:shap_analysis_mimic' on page 11 undefined on input line 178.
+
+<images/mimic_shap_interpreted_graph.png, id=89, 1553.5641pt x 1566.0909pt>
 File: images/mimic_shap_interpreted_graph.png Graphic file (type png)
 <use images/mimic_shap_interpreted_graph.png>
-Package pdftex.def Info: images/mimic_shap_interpreted_graph.png  used on input line 173.
-(pdftex.def)             Requested size: 345.0pt x 271.74202pt.
+Package pdftex.def Info: images/mimic_shap_interpreted_graph.png  used on input line 182.
+(pdftex.def)             Requested size: 345.0pt x 347.7671pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (1.5412pt too wide) in paragraph at lines 178--178
+Overfull \hbox (1.5412pt too wide) in paragraph at lines 187--187
 []\OT1/cmr/bx/n/10 Clinical De-ci-sion Sup-port Through AI-Enhanced In-ter-pretabil-
  []
 
 
-Overfull \hbox (2.83395pt too wide) in paragraph at lines 185--186
+Overfull \hbox (2.83395pt too wide) in paragraph at lines 194--195
 \OT1/cmr/m/n/10 serves clin-i-cally mean-ing-ful re-la-tion-ships be-tween fea-tures, or-ga-niz-ing them
  []
 
 
-Overfull \hbox (2.86185pt too wide) in paragraph at lines 187--188
+Overfull \hbox (2.86185pt too wide) in paragraph at lines 196--197
 []\OT1/cmr/bx/n/10 Literature-Grounded In-ter-pre-ta-tions\OT1/cmr/m/n/10 : Through Retrieval-Augmented
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 194--194
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
 [][][]\OT1/cmr/m/n/8 Complete SHAP in-ter-pre-ta-tion re-ports with de-tailed clin-i-cal ex-pla-na-tions:
  []
 
-(./main.bbl [11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [12]) [13] [14 <./images/adni_initial_kg.png> <./images/adni_optimized_kg.png>] [15 <./images/adni_shap_interpreted_graph.png>] [16 <./images/mimic_shap_interpreted_graph.png>] (./main.aux)
+(./main.bbl) [12{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [13 <./images/adni_initial_kg.png> <./images/adni_optimized_kg.png>] [14] [15 <./images/mimic_shap_interpreted_graph.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0A816AFD50A42FBE5F17D4F1F3999136;4235.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  0A816AFD50A42FBE5F17D4F1F3999136;4235.
  ) 
 Here is how much of TeX's memory you used:
- 21690 strings out of 474116
- 408692 string characters out of 5743682
- 1938187 words of memory out of 5000000
- 43639 multiletter control sequences out of 15000+600000
- 564600 words of font info for 59 fonts, out of 8000000 for 9000
+ 21677 strings out of 474116
+ 409965 string characters out of 5743682
+ 1939187 words of memory out of 5000000
+ 43648 multiletter control sequences out of 15000+600000
+ 564768 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,9n,101p,1534b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (16 pages, 12700368 bytes).
+ 99i,9n,101p,1542b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (15 pages, 10545526 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 259 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
- 219 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

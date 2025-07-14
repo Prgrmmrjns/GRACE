@@ -1,134 +1,249 @@
 <?xml version='1.0' encoding='utf-8'?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="node" attr.name="labels" attr.type="string"/>
-<graph edgedefault="undirected"><node id="HRbpm">
-  <data key="d0">Multi-Organ Failure</data>
-</node>
-<node id="PO2ArterialmmHg">
-  <data key="d0">Multi-Organ Failure</data>
-</node>
-<node id="BUNCreatinine">
-  <data key="d0">Multi-Organ Failure</data>
-</node>
-<node id="Creatinineserum">
-  <data key="d0">Circulatory, Metabolic, Neurological</data>
-</node>
-<node id="PlateletCount">
-  <data key="d0">Circulatory, Metabolic, Neurological</data>
-</node>
-<node id="Norepinephrinemg_avg">
-  <data key="d0">Circulatory, Metabolic, Neurological</data>
-</node>
-<node id="NMED">
-  <data key="d0">Circulatory, Metabolic, Neurological</data>
-</node>
-<node id="eGFR">
-  <data key="d0">Circulatory, Metabolic, Neurological</data>
-</node>
-<node id="MotorResponse">
-  <data key="d0">Circulatory, Metabolic, Neurological</data>
-</node>
-<node id="GCS">
-  <data key="d0">Circulatory, Metabolic, Neurological</data>
-</node>
-<node id="Calciumnon-ionized">
-  <data key="d0">Circulatory, Metabolic, Neurological</data>
-</node>
-<node id="PCO2ArterialmmHg">
-  <data key="d0">Inflammatory, Respiratory</data>
-</node>
-<node id="BrainNatiureticPeptideBNP">
-  <data key="d0">Inflammatory, Respiratory</data>
-</node>
-<node id="CReactiveProteinCRP">
-  <data key="d0">Inflammatory, Respiratory</data>
-</node>
-<node id="CKCPK">
-  <data key="d0">Cardiac</data>
-</node>
-<node id="BMI">
-  <data key="d0">Cardiac</data>
-</node>
-<node id="NSURG">
-  <data key="d0">Cardiac</data>
-</node>
-<node id="Hematocritserum">
-  <data key="d0">Risk Factors</data>
-</node>
-<node id="LDH">
-  <data key="d0">Risk Factors</data>
-</node>
-<node id="anchor_age">
-  <data key="d0">Risk Factors</data>
-</node>
-<node id="diabetes">
-  <data key="d0">Risk Factors</data>
-</node>
-<node id="BUNAlbumin">
-  <data key="d0">Risk Factors</data>
-</node>
-<node id="Sodiumserum">
-  <data key="d0">Coagulopathy</data>
-</node>
-<node id="LacticAcid">
-  <data key="d0">Coagulopathy</data>
-</node>
-<node id="FoleymL_sum">
-  <data key="d0">Coagulopathy</data>
-</node>
-<node id="VSURG">
-  <data key="d0">Coagulopathy</data>
-</node>
-<edge source="HRbpm" target="PO2ArterialmmHg"/>
-<edge source="HRbpm" target="BUNCreatinine"/>
-<edge source="PO2ArterialmmHg" target="BUNCreatinine"/>
-<edge source="Creatinineserum" target="PlateletCount"/>
-<edge source="Creatinineserum" target="Norepinephrinemg_avg"/>
-<edge source="Creatinineserum" target="NMED"/>
-<edge source="Creatinineserum" target="eGFR"/>
-<edge source="Creatinineserum" target="MotorResponse"/>
-<edge source="Creatinineserum" target="GCS"/>
-<edge source="Creatinineserum" target="Calciumnon-ionized"/>
-<edge source="PlateletCount" target="Norepinephrinemg_avg"/>
-<edge source="PlateletCount" target="NMED"/>
-<edge source="PlateletCount" target="eGFR"/>
-<edge source="PlateletCount" target="MotorResponse"/>
-<edge source="PlateletCount" target="GCS"/>
-<edge source="PlateletCount" target="Calciumnon-ionized"/>
-<edge source="Norepinephrinemg_avg" target="NMED"/>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><graph edgedefault="undirected"><node id="ABPmmmHg"/>
+<node id="Norepinephrinemg_avg"/>
+<node id="Creatinineserum"/>
+<node id="eGFR"/>
+<node id="heart_failure"/>
+<node id="BMI"/>
+<node id="PO2ArterialmmHg"/>
+<node id="SpO2"/>
+<node id="CompliancecmH2OLseconds"/>
+<node id="ArterialBaseExcess"/>
+<node id="Sodiumserum"/>
+<node id="Potassiumserum"/>
+<node id="HCO3serum"/>
+<node id="Calciumnon-ionized"/>
+<node id="IonizedCalcium"/>
+<node id="Albumin"/>
+<node id="BUN"/>
+<node id="Chlorideserum"/>
+<node id="Aniongap"/>
+<node id="FoleymL_sum"/>
+<node id="organ_dysfunction"/>
+<node id="GCS"/>
+<node id="EyeOpening"/>
+<node id="MotorResponse"/>
+<node id="LDH"/>
+<node id="INR"/>
+<node id="anchor_age"/>
+<node id="Sepsis3"/>
+<node id="PTT"/>
+<node id="TotalBilirubin"/>
+<node id="AST"/>
+<node id="VerbalResponse"/>
+<node id="Hematocritserum"/>
+<node id="RRinspmin"/>
+<node id="TemperatureFF"/>
+<node id="BUNAlbumin"/>
+<node id="diabetes"/>
+<node id="hypertension"/>
+<node id="obesity"/>
+<node id="NMED"/>
+<node id="NSURG"/>
+<node id="TSURG"/>
+<node id="CMED"/>
+<node id="TRAUM"/>
+<edge source="ABPmmmHg" target="Norepinephrinemg_avg"/>
+<edge source="ABPmmmHg" target="Creatinineserum"/>
+<edge source="ABPmmmHg" target="eGFR"/>
+<edge source="ABPmmmHg" target="heart_failure"/>
+<edge source="ABPmmmHg" target="BMI"/>
+<edge source="Norepinephrinemg_avg" target="Creatinineserum"/>
 <edge source="Norepinephrinemg_avg" target="eGFR"/>
-<edge source="Norepinephrinemg_avg" target="MotorResponse"/>
-<edge source="Norepinephrinemg_avg" target="GCS"/>
-<edge source="Norepinephrinemg_avg" target="Calciumnon-ionized"/>
-<edge source="NMED" target="eGFR"/>
-<edge source="NMED" target="MotorResponse"/>
-<edge source="NMED" target="GCS"/>
-<edge source="NMED" target="Calciumnon-ionized"/>
-<edge source="eGFR" target="MotorResponse"/>
-<edge source="eGFR" target="GCS"/>
+<edge source="Norepinephrinemg_avg" target="heart_failure"/>
+<edge source="Norepinephrinemg_avg" target="BMI"/>
+<edge source="Creatinineserum" target="eGFR"/>
+<edge source="Creatinineserum" target="heart_failure"/>
+<edge source="Creatinineserum" target="BMI"/>
+<edge source="Creatinineserum" target="organ_dysfunction"/>
+<edge source="Creatinineserum" target="GCS"/>
+<edge source="Creatinineserum" target="EyeOpening"/>
+<edge source="Creatinineserum" target="MotorResponse"/>
+<edge source="Creatinineserum" target="LDH"/>
+<edge source="Creatinineserum" target="INR"/>
+<edge source="Creatinineserum" target="anchor_age"/>
+<edge source="eGFR" target="heart_failure"/>
+<edge source="eGFR" target="BMI"/>
+<edge source="eGFR" target="ArterialBaseExcess"/>
+<edge source="eGFR" target="Sodiumserum"/>
+<edge source="eGFR" target="Potassiumserum"/>
+<edge source="eGFR" target="HCO3serum"/>
 <edge source="eGFR" target="Calciumnon-ionized"/>
-<edge source="MotorResponse" target="GCS"/>
-<edge source="MotorResponse" target="Calciumnon-ionized"/>
-<edge source="GCS" target="Calciumnon-ionized"/>
-<edge source="PCO2ArterialmmHg" target="BrainNatiureticPeptideBNP"/>
-<edge source="PCO2ArterialmmHg" target="CReactiveProteinCRP"/>
-<edge source="BrainNatiureticPeptideBNP" target="CReactiveProteinCRP"/>
-<edge source="CKCPK" target="BMI"/>
-<edge source="CKCPK" target="NSURG"/>
+<edge source="eGFR" target="IonizedCalcium"/>
+<edge source="eGFR" target="Albumin"/>
+<edge source="eGFR" target="BUN"/>
+<edge source="eGFR" target="Chlorideserum"/>
+<edge source="eGFR" target="Aniongap"/>
+<edge source="eGFR" target="FoleymL_sum"/>
+<edge source="heart_failure" target="BMI"/>
+<edge source="heart_failure" target="diabetes"/>
+<edge source="heart_failure" target="hypertension"/>
+<edge source="heart_failure" target="obesity"/>
+<edge source="heart_failure" target="NMED"/>
+<edge source="heart_failure" target="NSURG"/>
+<edge source="heart_failure" target="TSURG"/>
+<edge source="heart_failure" target="CMED"/>
+<edge source="heart_failure" target="TRAUM"/>
+<edge source="BMI" target="organ_dysfunction"/>
+<edge source="BMI" target="GCS"/>
+<edge source="BMI" target="EyeOpening"/>
+<edge source="BMI" target="MotorResponse"/>
+<edge source="BMI" target="LDH"/>
+<edge source="BMI" target="INR"/>
+<edge source="BMI" target="anchor_age"/>
+<edge source="BMI" target="diabetes"/>
+<edge source="BMI" target="hypertension"/>
+<edge source="BMI" target="obesity"/>
+<edge source="BMI" target="NMED"/>
 <edge source="BMI" target="NSURG"/>
-<edge source="Hematocritserum" target="LDH"/>
-<edge source="Hematocritserum" target="anchor_age"/>
-<edge source="Hematocritserum" target="diabetes"/>
-<edge source="Hematocritserum" target="BUNAlbumin"/>
+<edge source="BMI" target="TSURG"/>
+<edge source="BMI" target="CMED"/>
+<edge source="BMI" target="TRAUM"/>
+<edge source="PO2ArterialmmHg" target="SpO2"/>
+<edge source="PO2ArterialmmHg" target="CompliancecmH2OLseconds"/>
+<edge source="SpO2" target="CompliancecmH2OLseconds"/>
+<edge source="ArterialBaseExcess" target="Sodiumserum"/>
+<edge source="ArterialBaseExcess" target="Potassiumserum"/>
+<edge source="ArterialBaseExcess" target="HCO3serum"/>
+<edge source="ArterialBaseExcess" target="Calciumnon-ionized"/>
+<edge source="ArterialBaseExcess" target="IonizedCalcium"/>
+<edge source="ArterialBaseExcess" target="Albumin"/>
+<edge source="Sodiumserum" target="Potassiumserum"/>
+<edge source="Sodiumserum" target="HCO3serum"/>
+<edge source="Sodiumserum" target="Calciumnon-ionized"/>
+<edge source="Sodiumserum" target="IonizedCalcium"/>
+<edge source="Sodiumserum" target="Albumin"/>
+<edge source="Sodiumserum" target="Sepsis3"/>
+<edge source="Sodiumserum" target="PTT"/>
+<edge source="Sodiumserum" target="TotalBilirubin"/>
+<edge source="Sodiumserum" target="AST"/>
+<edge source="Sodiumserum" target="Aniongap"/>
+<edge source="Sodiumserum" target="GCS"/>
+<edge source="Sodiumserum" target="VerbalResponse"/>
+<edge source="Sodiumserum" target="EyeOpening"/>
+<edge source="Sodiumserum" target="MotorResponse"/>
+<edge source="Potassiumserum" target="HCO3serum"/>
+<edge source="Potassiumserum" target="Calciumnon-ionized"/>
+<edge source="Potassiumserum" target="IonizedCalcium"/>
+<edge source="Potassiumserum" target="Albumin"/>
+<edge source="HCO3serum" target="Calciumnon-ionized"/>
+<edge source="HCO3serum" target="IonizedCalcium"/>
+<edge source="HCO3serum" target="Albumin"/>
+<edge source="Calciumnon-ionized" target="IonizedCalcium"/>
+<edge source="Calciumnon-ionized" target="Albumin"/>
+<edge source="Calciumnon-ionized" target="BUN"/>
+<edge source="Calciumnon-ionized" target="Chlorideserum"/>
+<edge source="Calciumnon-ionized" target="Aniongap"/>
+<edge source="Calciumnon-ionized" target="FoleymL_sum"/>
+<edge source="IonizedCalcium" target="Albumin"/>
+<edge source="Albumin" target="Hematocritserum"/>
+<edge source="BUN" target="Chlorideserum"/>
+<edge source="BUN" target="Aniongap"/>
+<edge source="BUN" target="FoleymL_sum"/>
+<edge source="Chlorideserum" target="Aniongap"/>
+<edge source="Chlorideserum" target="FoleymL_sum"/>
+<edge source="Aniongap" target="FoleymL_sum"/>
+<edge source="Aniongap" target="Sepsis3"/>
+<edge source="Aniongap" target="PTT"/>
+<edge source="Aniongap" target="TotalBilirubin"/>
+<edge source="Aniongap" target="AST"/>
+<edge source="Aniongap" target="GCS"/>
+<edge source="Aniongap" target="VerbalResponse"/>
+<edge source="Aniongap" target="EyeOpening"/>
+<edge source="Aniongap" target="MotorResponse"/>
+<edge source="organ_dysfunction" target="GCS"/>
+<edge source="organ_dysfunction" target="EyeOpening"/>
+<edge source="organ_dysfunction" target="MotorResponse"/>
+<edge source="organ_dysfunction" target="LDH"/>
+<edge source="organ_dysfunction" target="INR"/>
+<edge source="organ_dysfunction" target="anchor_age"/>
+<edge source="organ_dysfunction" target="VerbalResponse"/>
+<edge source="organ_dysfunction" target="RRinspmin"/>
+<edge source="organ_dysfunction" target="TemperatureFF"/>
+<edge source="organ_dysfunction" target="PTT"/>
+<edge source="organ_dysfunction" target="Sepsis3"/>
+<edge source="organ_dysfunction" target="BUNAlbumin"/>
+<edge source="GCS" target="EyeOpening"/>
+<edge source="GCS" target="MotorResponse"/>
+<edge source="GCS" target="LDH"/>
+<edge source="GCS" target="INR"/>
+<edge source="GCS" target="anchor_age"/>
+<edge source="GCS" target="Sepsis3"/>
+<edge source="GCS" target="PTT"/>
+<edge source="GCS" target="TotalBilirubin"/>
+<edge source="GCS" target="AST"/>
+<edge source="GCS" target="VerbalResponse"/>
+<edge source="GCS" target="RRinspmin"/>
+<edge source="GCS" target="TemperatureFF"/>
+<edge source="EyeOpening" target="MotorResponse"/>
+<edge source="EyeOpening" target="LDH"/>
+<edge source="EyeOpening" target="INR"/>
+<edge source="EyeOpening" target="anchor_age"/>
+<edge source="EyeOpening" target="Sepsis3"/>
+<edge source="EyeOpening" target="PTT"/>
+<edge source="EyeOpening" target="TotalBilirubin"/>
+<edge source="EyeOpening" target="AST"/>
+<edge source="EyeOpening" target="VerbalResponse"/>
+<edge source="EyeOpening" target="RRinspmin"/>
+<edge source="EyeOpening" target="TemperatureFF"/>
+<edge source="MotorResponse" target="LDH"/>
+<edge source="MotorResponse" target="INR"/>
+<edge source="MotorResponse" target="anchor_age"/>
+<edge source="MotorResponse" target="Sepsis3"/>
+<edge source="MotorResponse" target="PTT"/>
+<edge source="MotorResponse" target="TotalBilirubin"/>
+<edge source="MotorResponse" target="AST"/>
+<edge source="MotorResponse" target="VerbalResponse"/>
+<edge source="LDH" target="INR"/>
 <edge source="LDH" target="anchor_age"/>
-<edge source="LDH" target="diabetes"/>
-<edge source="LDH" target="BUNAlbumin"/>
-<edge source="anchor_age" target="diabetes"/>
-<edge source="anchor_age" target="BUNAlbumin"/>
-<edge source="diabetes" target="BUNAlbumin"/>
-<edge source="Sodiumserum" target="LacticAcid"/>
-<edge source="Sodiumserum" target="FoleymL_sum"/>
-<edge source="Sodiumserum" target="VSURG"/>
-<edge source="LacticAcid" target="FoleymL_sum"/>
-<edge source="LacticAcid" target="VSURG"/>
-<edge source="FoleymL_sum" target="VSURG"/>
+<edge source="INR" target="anchor_age"/>
+<edge source="INR" target="PTT"/>
+<edge source="INR" target="Sepsis3"/>
+<edge source="INR" target="BUNAlbumin"/>
+<edge source="anchor_age" target="VerbalResponse"/>
+<edge source="anchor_age" target="RRinspmin"/>
+<edge source="anchor_age" target="TemperatureFF"/>
+<edge source="Sepsis3" target="PTT"/>
+<edge source="Sepsis3" target="TotalBilirubin"/>
+<edge source="Sepsis3" target="AST"/>
+<edge source="Sepsis3" target="VerbalResponse"/>
+<edge source="Sepsis3" target="BUNAlbumin"/>
+<edge source="PTT" target="TotalBilirubin"/>
+<edge source="PTT" target="AST"/>
+<edge source="PTT" target="VerbalResponse"/>
+<edge source="PTT" target="BUNAlbumin"/>
+<edge source="TotalBilirubin" target="AST"/>
+<edge source="TotalBilirubin" target="VerbalResponse"/>
+<edge source="AST" target="VerbalResponse"/>
+<edge source="VerbalResponse" target="RRinspmin"/>
+<edge source="VerbalResponse" target="TemperatureFF"/>
+<edge source="RRinspmin" target="TemperatureFF"/>
+<edge source="diabetes" target="hypertension"/>
+<edge source="diabetes" target="obesity"/>
+<edge source="diabetes" target="NMED"/>
+<edge source="diabetes" target="NSURG"/>
+<edge source="diabetes" target="TSURG"/>
+<edge source="diabetes" target="CMED"/>
+<edge source="diabetes" target="TRAUM"/>
+<edge source="hypertension" target="obesity"/>
+<edge source="hypertension" target="NMED"/>
+<edge source="hypertension" target="NSURG"/>
+<edge source="hypertension" target="TSURG"/>
+<edge source="hypertension" target="CMED"/>
+<edge source="hypertension" target="TRAUM"/>
+<edge source="obesity" target="NMED"/>
+<edge source="obesity" target="NSURG"/>
+<edge source="obesity" target="TSURG"/>
+<edge source="obesity" target="CMED"/>
+<edge source="obesity" target="TRAUM"/>
+<edge source="NMED" target="NSURG"/>
+<edge source="NMED" target="TSURG"/>
+<edge source="NMED" target="CMED"/>
+<edge source="NMED" target="TRAUM"/>
+<edge source="NSURG" target="TSURG"/>
+<edge source="NSURG" target="CMED"/>
+<edge source="NSURG" target="TRAUM"/>
+<edge source="TSURG" target="CMED"/>
+<edge source="TSURG" target="TRAUM"/>
+<edge source="CMED" target="TRAUM"/>
 </graph></graphml>
