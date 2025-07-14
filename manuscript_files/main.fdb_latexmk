@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1752499579.33663 "main.aux" "main.bbl" "main" 1752499659.45999 2
+["bibtex main"] 1752507904.08038 "main.aux" "main.bbl" "main" 1752507904.19116 2
   "./references.bib" 1752047510 5862 6f0854df94912f0f54d6d11d4c907823 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1752499659.08853 11925 ab51fe761d8f3eb066076d34961d0fa3 "pdflatex"
+  "main.aux" 1752507904.0778 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1752499648.65256 "/Users/jwolber/Documents/GRACE/manuscript_files/main.tex" "main.pdf" "main" 1752499659.46029 2
+["pdflatex"] 1752507888.36772 "/Users/jwolber/Documents/GRACE/manuscript_files/main.tex" "main.pdf" "main" 1752507903.97544 2
   "/Users/jwolber/Documents/GRACE/manuscript_files/main.tex" 1752477065.52821 32939 352b4c7374dad30fb83817066f124cc3 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -168,16 +168,16 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1726666916.18357 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1726666844 8221429 383b26a9af32fc3d743cdd4c2bdcadfe ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "images/adni_initial_kg.png" 1752499593.7321 6173193 19c403e2688447e23058bb213e2c6c15 ""
-  "images/adni_optimized_kg.png" 1752499637.33903 1335675 f5a6f97faec7098130e37a210ea09fe5 ""
+  "images/adni_initial_kg.png" 1752507829.26809 12972183 739f6ea37a385180a842ca8069af027f ""
+  "images/adni_optimized_kg.png" 1752507887.87345 6963716 1085da646c62865c0413c22065bfc62d ""
   "images/adni_shap_interpreted_graph.png" 0 -1 0 ""
   "images/general_workflow.png" 1752101749.04499 113179 69ee79eca86330446a6e999ce2a9c71a ""
   "images/mimic_shap_interpreted_graph.png" 1752490459.07751 3826640 901d56c0f26be5f2b097b5ea9f6e2397 ""
   "images/multi_constraint_effect.png" 0 -1 0 ""
   "images/windows.png" 1752047512 212558 b9d6f7dcd5f90602229104a4356a5d9a ""
-  "main.aux" 1752499659.08853 11925 ab51fe761d8f3eb066076d34961d0fa3 "pdflatex"
-  "main.bbl" 1752499579.48747 0 d41d8cd98f00b204e9800998ecf8427e "bibtex main"
-  "main.out" 1752499659.08984 4235 0a816afd50a42fbe5f17d4f1f3999136 "pdflatex"
+  "main.aux" 1752507904.0778 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "main.bbl" 1752507904.18989 0 d41d8cd98f00b204e9800998ecf8427e "bibtex main"
+  "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1752477065.52821 32939 352b4c7374dad30fb83817066f124cc3 ""
   "performance_results.tex" 1752101393.74868 623 c2b7db29f993de93792072738bf39295 ""
   (generated)
